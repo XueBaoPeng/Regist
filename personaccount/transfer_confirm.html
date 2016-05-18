@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>转账确认</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>	
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>  	   
+	<script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>  
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>	 
+	<script src="../src/js/personaccount/transfer_confirm.js"></script>
+</head>
+<body class="bg-gray">
+	<div class="container">
+		<!--景区-->
+		<div class="transfer-confirm-spot" id="spot">
+			<script type="text/html" id="tempSpot">
+			<div class="confirm-top">
+				<ul class="ul-left">					
+					<li>收款方类型</li>
+					<li>景区简称</li>
+					<li>景区全称</li>
+					<li>负责人姓名</li>
+					<li>负责人邮箱</li>
+					<li>转账金额</li>
+					<li>手续费</li>
+					<li>备注</li>
+				</ul>
+				<ul class="ul-right">
+					<li>景区</li>
+					<li>故宫</li>
+					<li>{{data.allName}}</li>
+					<li>{{data.name}}</li>
+					<li>{{data.mall}}</li>
+					<li>&yen;500.00</li>
+					<li>&yen;2.00</li>
+					<li>月结款请查收</li>
+				</ul>
+			</div>
+			<div class="confirm-bot">
+				<ul class="ul-left">
+					<li>&nbsp;&nbsp;&nbsp;付款总额</li>
+					<li>支付密码</li>
+				</ul>
+				<ul class="ul-right2">
+					<li><a class="unit">&yen;</a><num>500.00</num>元</li>
+					<li><input type="password"></li>
+					<li><a href="javascript:void(0)" class="forget">忘记密码?</a></li>
+				</ul>
+			</div>
+			 </script>
+			<!--<button class="confirm-btn">确认转账</button>-->
+		</div>
+		<!--个人-->
+		<div class="transfer-confirm-person" id="person">
+			<script type="text/html" id="tempPerson">
+			<div class="confirm-top">
+				<ul class="ul-left">					
+					<li>收款方类型</li>
+					<li>用户名</li>
+					<li>姓名</li>
+					<li>绑定手机号</li>
+					<li>转账金额</li>
+					<li>手续费</li>
+					<li>备注</li>
+				</ul>
+				<ul class="ul-right">					
+					<li>个人</li>
+					<li>happyto1244</li>
+					<li>{{data.name}}</li>
+					<li>{{data.tel}}</li>
+					<li>&yen;500.00</li>
+					<li>&yen;2.00</li>
+					<li>月结款请查收</li>
+				</ul>
+			</div>
+			<div class="confirm-bot">
+				<ul class="ul-left">
+					<li>&nbsp;&nbsp;&nbsp;付款总额</li>
+					<li>支付密码</li>
+				</ul>
+				<ul class="ul-right2">
+					<li><a class="unit">&yen;</a><num>500.00</num>元</li>
+					<li><input type="password"></li>
+					<li><a href="javascript:void(0)" class="forget">忘记密码?</a></li>
+				</ul>
+			</div>
+			</script>
+			<!--<button class="confirm-btn">确认转账</button>-->
+		</div>
+		<!--导游-->
+		<div class="transfer-confirm-guide" id="guide">
+			<script type="text/html" id="tempGuide">
+			<div class="confirm-top">
+				<ul class="ul-left">					
+					<li>收款方类型</li>					
+					<li>导游姓名</li>
+					<li>手机号</li>
+					<li>转账金额</li>
+					<li>手续费</li>
+					<li>备注</li>
+				</ul>
+				<ul class="ul-right">					
+					<li>导游</li>					
+					<li>*祖蓝</li>
+					<li>188****0234</li>
+					<li>&yen;500.00</li>
+					<li>&yen;2.00</li>
+					<li>月结款请查收</li>
+				</ul>
+			</div>
+			<div class="confirm-bot">
+				<ul class="ul-left">
+					<li>&nbsp;&nbsp;&nbsp;付款总额</li>
+					<li>支付密码</li>
+				</ul>
+				<ul class="ul-right2">
+					<li><a class="unit">&yen;</a><num>500.00</num>元</li>
+					<li><input type="password"></li>
+					<li><a href="javascript:void(0)" class="forget">忘记密码?</a></li>
+				</ul>
+			</div>
+			</script>
+			<!--<button class="confirm-btn">确认转账</button>-->
+		</div>		
+		<!--酒店-->
+		<div class="transfer-confirm-hotel" id="hotel">
+			<script type="text/html" id="tempHotel">
+			<div class="confirm-top">
+				<ul class="ul-left">
+					<li>收款方类型</li>
+					<li>酒店简称</li>					
+					<li>酒店全称</li>
+					<li>负责人姓名</li>
+					<li>负责人邮箱</li>
+					<li>转账金额</li>
+					<li>手续费</li>
+					<li>备注</li>
+				</ul>
+				<ul class="ul-right">
+					<li>酒店</li>
+					<li>雅安</li>
+					<li>{{data.allName}}</li>
+					<li>{{data.name}}</li>
+					<li>{{data.mall}}</li>
+					<li>&yen;500.00</li>
+					<li>&yen;2.00</li>
+					<li>月结款请查收</li>
+				</ul>
+			</div>
+			<div class="confirm-bot">
+				<ul class="ul-left">
+					<li>&nbsp;&nbsp;&nbsp;付款总额</li>
+					<li>支付密码</li>
+				</ul>
+				<ul class="ul-right2">
+					<li><a class="unit">&yen;</a><num>500.00</num>元</li>
+					<li><input type="password"></li>
+					<li><a href="javascript:void(0)" class="forget">忘记密码?</a></li>
+				</ul>
+			</div>
+			 </script>
+			<!--<button class="confirm-btn">确认转账</button>-->
+		</div>
+		<!--旅行社-->
+		<div class="transfer-confirm-travel" id="travel">
+			<script type="text/html" id="tempTravel">
+			<div class="confirm-top">
+				<ul class="ul-left">					
+					<li>收款方类型</li>
+					<li>旅行社简称</li>
+					<li>旅行社全称</li>
+					<li>负责人姓名</li>
+					<li>负责人邮箱</li>
+					<li>转账金额</li>
+					<li>手续费</li>
+					<li>备注</li>
+				</ul>
+				<ul class="ul-right">
+					<li>旅行社</li>
+					<li>七星</li>
+					<li>{{data.allName}}</li>
+					<li>{{data.name}}</li>
+					<li>{{data.mall}}</li>
+					<li>&yen;500.00</li>
+					<li>&yen;2.00</li>
+					<li>月结款请查收</li>
+				</ul>
+			</div>
+			<div class="confirm-bot">
+				<ul class="ul-left">
+					<li>&nbsp;&nbsp;&nbsp;付款总额</li>
+					<li>支付密码</li>
+				</ul>
+				<ul class="ul-right2">
+					<li><a class="unit">&yen;</a><num>500.00</num>元</li>
+					<li><input type="password"></li>
+					<li><a href="javascript:void(0)" class="forget">忘记密码?</a></li>
+				</ul>
+			</div>
+			 </script>
+			<!--<button class="confirm-btn">确认转账</button>-->
+		</div>
+		<button class="confirm-btn">确认转账</button>
+	</div>
+</body>
+</html>

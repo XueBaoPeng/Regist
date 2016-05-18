@@ -1,0 +1,21 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": [{
+    "name": "北京秋景篇—京城景色正宜人",
+    "id": "20001",
+    "image": "../testdata/spot/index/img/1.jpg",
+    "price": "99",
+    "marketPrice": "120",
+    "promotion": "1",
+    "promotionContent": "9"
+  },{
+    "name": "北京鸟巢滑雪场入门票",
+    "id": "20002",
+    "image": "../testdata/spot/index/img/2.jpg",
+    "price": "79",
+    "marketPrice": "100",
+    "promotion": "2",
+    "promotionContent": ""
+  }]
+}

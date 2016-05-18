@@ -1,0 +1,109 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":[{ 
+		"roomId": "1001",
+		"roomName":"豪华行政大床房",
+		"roomImg":"../src/images/hotel/room_09.jpg",
+		"roomPrice":"200",
+		"promotion":true,
+		"roomArea":"33-44",
+		"roomNum":"1",
+		"refund":true,
+		"bedType":["大床","180*200"],
+		"bedRules":[{ 
+				"type":["单早","免费WIFI","无宽带"],
+				"policy":["不可取消","即时确认"],
+				"discount":true,
+				"price":"200"			
+			},{
+				"type":["单早","免费WIFI","无宽带"],
+				"policy":["不可取消","即时确认"],
+				"discount":true,
+				"price":"200"
+			},{
+				"type":["单早","免费WIFI","无宽带"],
+				"policy":["不可取消","即时确认"],
+				"discount":true,
+				"price":"200"
+		}]
+	},{ 
+			"roomId": "1002",
+			"roomName":"豪华行政大床房2",
+			"roomImg":"../src/images/hotel/room_09.jpg",
+			"roomPrice":"200",
+			"promotion":true,
+			"roomArea":"33-44",
+			"roomNum":"2",
+			"refund":true,
+			"bedType":["大床","180*200"],
+			"bedRules":[{ 
+				"type":["单早","免费WIFI","无宽带"],
+				"policy":["不可取消","即时确认"],
+				"discount":true,
+				"price":"200"			
+			},{
+				"type":["单早","免费WIFI","无宽带"],
+				"policy":["不可取消","即时确认"],
+				"discount":true,
+				"price":"200"
+			},{
+				"type":["单早","免费WIFI","无宽带"],
+				"policy":["不可取消","即时确认"],
+				"discount":true,
+				"price":"200"
+		}]
+	},{ 
+			"roomId": "1001",
+			"roomName":"豪华行政大床房",
+			"roomImg":"../src/images/hotel/room_09.jpg",
+			"roomPrice":"200",
+			"promotion":true,
+			"roomArea":"33-44",
+			"roomNum":"3",
+			"refund":true,
+			"bedType":["大床","180*200"],
+			"bedRules":[{ 
+					"type":["单早","免费WIFI","无宽带"],
+					"policy":["不可取消","即时确认"],
+					"discount":true,
+					"price":"200"			
+				},{
+					"type":["单早","免费WIFI","无宽带"],
+					"policy":["不可取消","即时确认"],
+					"discount":true,
+					"price":"200"
+				},{
+					"type":["单早","免费WIFI","无宽带"],
+					"policy":["不可取消","即时确认"],
+					"discount":true,
+					"price":"200"
+			}]
+		},{ 
+				"roomId": "1002",
+				"roomName":"豪华行政大床房2",
+				"roomImg":"../src/images/hotel/room_09.jpg",
+				"roomPrice":"200",
+				"promotion":true,
+				"roomArea":"33-44",
+				"roomNum":"3",
+				"refund":true,
+				"bedType":["大床","180*200"],
+				"bedRules":[{ 
+					"type":["单早","免费WIFI","无宽带"],
+					"policy":["不可取消","即时确认"],
+					"discount":true,
+					"price":"200"			
+				},{
+					"type":["单早","免费WIFI","无宽带"],
+					"policy":["不可取消","即时确认"],
+					"discount":true,
+					"price":"200"
+				},{
+					"type":["单早","免费WIFI","无宽带"],
+					"policy":["不可取消","即时确认"],
+					"discount":true,
+					"price":"200"
+			}]
+}]
+}

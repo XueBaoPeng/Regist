@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>旅行社</title>
+    <link rel="stylesheet" href="../src/js/widget/swiper/swiper-3.2.7.min.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/line.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/widget/swiper/swiper-3.2.7.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/line/index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="travelInfo">
+        <script type="text/html" id="tmplTravel">
+            <div class="top">
+                <div class="banner">
+                    <div id="swiper-imgs" class="swiper-container">
+                        <ul class="swiper-wrapper">
+                            {{each data.travelImages as banner}}
+                            <li class="swiper-slide"><img src={{banner.imgsrc}} alt="{{banner.imgname}}"></li>
+                            {{/each}}
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div><!-- 北京国际旅行社 -->
+            <div class="hotel-tit">
+                <img class="hotel-tit-img" src="../src/images/line/hotel_tit.png">
+                <span class="hotel-tit-text">{{data.travelName}}</span>
+            </div>
+            <div class="hotel-con">
+                <div id="swiperNav" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        {{each data.navTypes as nav i}}
+                        <div class="nav-menu swiper-slide" onclick="navClick(this,'{{nav.id}}')">
+                            <span class="hotel-icon-span"><img class="hotel-icon-img" src="{{nav.imgsrc}}"></span>
+                            <span class="hotel-icon-text">{{nav.imgname}}</span>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <!--<div class="swiper-pagination"></div>-->
+                </div>
+                <!--<ul class="hotel-ul swiper-slide">-->
+                    <!--{{each data.navTypes as nav i}}-->
+                    <!--{{if i<4}}-->
+                    <!--<li class="hotel-icon-li" onclick="navClick('{{nav.id}}','{{nav.imgname}}')">-->
+                        <!--<span class="hotel-icon-span"><img class="hotel-icon-img" src="{{nav.imgsrc}}"></span>-->
+                        <!--<span class="hotel-icon-text">{{nav.imgname}}</span>-->
+                    <!--</li>-->
+                    <!--{{/if}}-->
+                    <!--{{/each}}-->
+                <!--</ul>-->
+            </div>
+        </script>
+    </div>
+    <div id="hotList">
+        <script type="text/html" id="tmplHot">
+            <!-- 当季热销 -->
+            <div class="season-hot">
+                <div class="season-hot-tit">
+                    <img class="season-hot-icon" src="../src/images/line/hot_tit.png" height="51" width="43">
+                    <span class="season-hot-text">当季热销</span>
+                </div>
+                <ul class="season-hot-con">
+                    {{each data as hot}}
+                 <li class="season-hot-li" onclick="hotClick('{{hot.lineId}}','{{hot.lineName}}');">
+                        <div class="season-detail">
+                            <div class="season-detail-title">
+                                <div class="season-detail-content">{{hot.lineName}}</div>
+                                </div>
+                            <!--<div class="season-detail-hit">{{hot.lineWay}}</div>暂不实现-->
+                        </div>
+                        <span class="season-detail-price">￥<span>{{hot.lineWay}}</span> 起</span><!--{{hot.linePrice}}-->
+                        <div class="season-mask"></div>
+                        <img class="hotel-icon-li-img" src="{{hot.lineImg}}"  width="100%">
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </script>
+    </div>
+</div>
+</body>
+</html>

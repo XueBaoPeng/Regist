@@ -1,0 +1,53 @@
+{
+  "gorderList":[
+  {
+    "id":"0",
+    "thumbnail":"data/spot_search/spot-pic1.png",
+    "recommend":true,
+    "title":"【爆款】北京旅游圣诞节特价出游必选形成 元旦春节 周六日大特价。周六日大特价。",
+    "goodReputation":"90%",
+    "location":"北京朝阳",
+    "price":"1000.00",
+    "originalPrice":"999.00",
+    "discount":true,
+    "remnant":true
+  },
+  {
+    "id":"1",
+    "thumbnail":"data/spot_search/spot-pic1.png",
+    "recommend":false,
+    "title":"【哈哈】北京旅游圣诞节特价出游必选形成。",
+    "goodReputation":"88%",
+    "location":"北京海淀",
+    "price":"600.00",
+    "originalPrice":"1999.00",
+    "discount":false,
+    "remnant":true
+  },
+  {
+    "id":"2",
+    "thumbnail":"data/spot_search/spot-pic1.png",
+    "recommend":true,
+    "title":"【爆款】北京旅游圣诞节特价出游必选形成 元旦春节 周六日大特价。周六日大特价。",
+    "goodReputation":"90%",
+    "location":"北京朝阳",
+    "price":"1000.00",
+    "originalPrice":"999.00",
+    "discount":true,
+    "remnant":true
+  },
+  {
+    "id":"3",
+    "thumbnail":"data/spot_search/spot-pic1.png",
+    "recommend":true,
+    "title":"【爆款】北京旅游圣诞节特价出游必选形成 元旦春节 周六日大特价。周六日大特价。",
+    "goodReputation":"90%",
+    "location":"北京朝阳",
+    "price":"1000.00",
+    "originalPrice":"999.00",
+    "discount":true,
+    "remnant":true
+  }
+]
+}
+

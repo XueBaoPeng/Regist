@@ -1,0 +1,30 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data":{
+    "roomId": 28,
+    "hotelId": 9,
+    "title":"北京雅乐大酒店",
+    "type":"标准大床房",
+    "refund":"支持退款",
+    "images":["../src/images/hotel/rro_03.jpg","../src/images/hotel/rro_03.jpg","../src/images/hotel/rro_03.jpg","../src/images/hotel/rro_03.jpg","../src/images/hotel/rro_03.jpg"],
+    "address":"北京朝阳区望京SOHO",
+    "price":"300",
+    "rules": {
+    	"basicEquipment":["单早","免费WIFI","免费宽带"],
+    	"personNum":"2",    
+        "gift":"1、购买就送两张游泳票",        
+        "area":"45m",
+	    "floor":"6层",
+	    "window":"有窗",
+	    "scenery":"景色",
+	    "extrabed":"免费加床",
+	    "bedType":"一张 大床 180*200",
+	    "price":"300"  
+    },
+    "roomFacilities":["独立卫浴","浴缸","一次性拖鞋","WIFI","电视","暖气","吹风机","沙发","阳台"],
+    "cancelPolicy":"入住当天14：00之前免费取消，否则需支付全额房费。" ,   
+    "specials":["尽量无烟","尽量高层","尽量静音"],
+    "debitNote":"如需发票，离店时请向前台索取"   
+  }
+}

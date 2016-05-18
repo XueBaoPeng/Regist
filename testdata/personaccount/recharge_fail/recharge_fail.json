@@ -1,0 +1,8 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": {
+    "fail":"充值失败",
+    "image":"../src/images/personaccount/fail.png"
+  }
+}

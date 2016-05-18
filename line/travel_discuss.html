@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>发表评价</title>
+	<link rel="stylesheet" href="../src/js/widget/jquery.fileupload/css/jquery.fileupload.css">
+	<!--<link rel="stylesheet" href="../src/js/widget/jquery.fileupload/css/jquery.fileupload-ui.css">-->
+	<link href="../src/js/widget/layer/need/layer.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/common.css">
+	<link rel="stylesheet" href="../src/css/spot.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/widget/jquery.raty/jquery.raty.js"></script>
+	<script src="../src/js/widget/jquery.fileupload/js/vendor/jquery.ui.widget.js"></script>
+	<script src="../src/js/widget/jquery.fileupload/js/jquery.iframe-transport.js"></script>
+	<script src="../src/js/widget/jquery.fileupload/js/jquery.fileupload.js"></script>
+	<script src="../src/js/widget/jquery.raty/jquery.raty.js"></script>
+	<script src="../src/js/widget/layer/layer.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/line/travel_discuss.js"></script>
+</head>
+<body class="bg-gray">
+<div class="spot-publish-top">
+	<div class="spot-publish-tip">请写下对线路的评价，分享您的感受，对其他小伙伴帮助很大。</div>
+	<div class="spot-limit">(5-100个字)</div>
+	<textarea name="txtContent" id="txtContent" class="spot-write"></textarea>
+	<div class="spot-load-photo">
+		<ul id="upImages">
+			<!--<li data-id=""><img src="../src/images/spot/photo.png" alt=""></li>-->
+		</ul>
+        <span class="upload fileinput-button btn-upload spot-load-btn">
+            <i class="icon-plus icon-white"></i>
+            <span></span>
+            <input id="fileupload" type="file" name="fileupload" multiple/>
+        </span>
+	</div>
+</div>
+<!-- star -->
+<div class="spot-publish-score">
+	<div class="spot-score-tit">整体评价</div>
+	<div class="spot-score-type"><span>交通行程</span>
+		<div id="chkScenery"></div>
+		<div id="hidScenery" class="hide"></div>
+	</div>
+	<div class="spot-score-type"><span>住宿餐饮</span>
+		<div id="chkService"></div>
+		<div id="hidService" class="hide"></div>
+	</div>
+	<div class="spot-score-type"><span>日程安排</span>
+		<div id="chkTraffic"></div>
+		<div id="hidTraffic" class="hide"></div>
+	</div>
+	<div class="spot-score-type"><span>导游服务</span>
+		<div id="chkFacilities"></div>
+		<div id="hidFacilities" class="hide"></div>
+	</div>
+</div>
+<button id="btnSave" class="btn-blue-large spot-publish-commit" data-url="travel_comments.html" >提交</button>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": [{
+    "title": "2015年2月",
+    "num":[
+      {
+        "image":"../src/images/personaccount/rec-01.png",
+        "property":"退款","numlist":"业务单号:161897585228825",
+        "rise":"+10.00",
+        "time":"01-30 13:44"
+      },
+      {
+        "image":"../src/images/personaccount/rec-01.png",
+        "property":"退款","numlist":"业务单号:161897585228825",
+        "rise":"+10.00",
+        "time":"01-30 13:44"
+      },
+      {
+        "image":"../src/images/personaccount/rec-01.png",
+        "property":"退款","numlist":"业务单号:161897585228825",
+        "rise":"+10.00",
+        "time":"01-30 13:44"
+      }
+    ]
+  },
+    {
+      "title": "2015年2月",
+      "num":[
+        {"image":"../src/images/personaccount/rec-01.png",
+          "property":"退款","numlist":"业务单号:161897585228825",
+          "rise":"+10.00",
+          "time":"01-30 13:44"
+        },
+        {
+          "image":"../src/images/personaccount/rec-01.png",
+          "property":"退款","numlist":"业务单号:161897585228825",
+          "rise":"+10.00",
+          "time":"01-30 13:44"
+        },
+        {
+          "image":"../src/images/personaccount/rec-01.png",
+          "property":"退款","numlist":"业务单号:161897585228825",
+          "rise":"+10.00",
+          "time":"01-30 13:44"
+        }
+      ]
+    }]
+}
+

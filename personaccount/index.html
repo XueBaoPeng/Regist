@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>个人账户</title>
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>    
+    <script src="../src/js/lib/artTemplate/template.js"></script>   
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/index.js">	</script>
+</head>
+<body>
+	<div class="container" id="container">
+		<script id="template" type="text/html">		
+		<div class="account-part">
+			<ul class="part-ul">
+				<a href="javascript:;" onclick="transactionRecord()">
+				<li class="part-li part-li1" >
+					<div class="part-li-left">						
+						<div class="ico-acc-cdt"></div>
+					</div>
+					<div class="part-li-right">
+						<p class="part-tit">承兑通账户</p>
+						<p class="part-num">&yen;{{data.chengduitong}}</p>
+					</div>
+				</li>
+				</a>
+				<a href="javascript:;" onclick="tubeiRecord()">
+				<li class="part-li" >
+					<div class="part-li-left">					
+						<div class="ico-acc-tb"></div>
+					</div>
+					<div class="part-li-right">
+						<p class="part-tit">兔贝账户</p>
+						<p class="part-num">&yen;{{data.tubei}}</p>
+					</div>
+				</li>
+				</a>
+				<a href="javascript:;" onclick="myCoupon()">
+				<li class="part-li part-li3" >
+					<div class="part-li-left">						
+						<div class="ico-acc-yhq"></div>
+					</div>
+					<div class="part-li-right">
+						<p class="part-tit">我的优惠券</p>
+						<p class="part-num">{{data.coupon}}</p>
+					</div>
+				</li>
+				</a>
+				<a href="javascript:;"  onclick="myIntegral()">
+				<li class="part-li">
+					<div class="part-li-left">						
+						<div class="ico-acc-jf"></div>
+					</div>
+					<div class="part-li-right">
+						<p class="part-tit">我的积分</p>
+						<p class="part-num">{{data.integral}}</p>
+					</div>
+				</li>
+				</a>
+			</ul>
+		</div>
+		<div class="account-detail">
+			<ul class="detail-ul">
+				<li onclick="rechargeMoney()">
+					<div class="detail-li-left ico-charge-left">					
+					</div>
+					<div class="detail-li-right">
+						<span class="detail-tit">充值</span>					
+						<span class="ico-hotel-btn right-btn"></span>
+					</div>
+				</li>
+				<li onclick="buyTubei()">
+					<div class="detail-li-left ico-buy-left">						
+					</div>
+					<div class="detail-li-right">
+						<span class="detail-tit">购买兔贝</span>						
+						<span class="ico-hotel-btn right-btn"></span>
+					</div>
+				</li>
+				<li onclick="cashMoney()">
+					<div class="detail-li-left ico-cash-left">					
+					</div>
+					<div class="detail-li-right">
+						<span class="detail-tit">提现</span>					
+						<span class="ico-hotel-btn right-btn"></span>
+					</div>
+				</li>
+				<li onclick="transferMoney()">
+					<div class="detail-li-left ico-money-left">					
+					</div>
+					<div class="detail-li-right">
+						<span class="detail-tit">转账</span>					
+						<span class="ico-hotel-btn right-btn"></span>
+					</div>
+				</li>
+				<li class="detail-li-last" onclick="myCard()">
+					<div class="detail-li-left ico-card-left">						
+					</div>
+					<div class="detail-li-right">
+						<span class="detail-tit">我的银行卡</span>
+						<div class="detail-card">
+							<span>{{data.bankcard}}张</span>							
+							<span class="ico-hotel-btn right-btn"></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		</script>
+	</div>
+</body>
+</html>

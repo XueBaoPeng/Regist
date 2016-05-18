@@ -1,0 +1,44 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": [
+    {
+      "lineId":"3001",
+      "name": "经典德意志全景印象",
+      "id": "10001",
+      "image": "../testdata/line/index/pic1.png",
+      "price": "6900",
+      "marketPrice": "8000",
+      "promotion": "",
+      "promotionContent": "10日深度自由旅行"
+    },
+    {
+      "lineId":"3002",
+      "name": "花呗关西盛唐遗风经典全景",
+      "id": "10001",
+      "image": "../testdata/line/index/pic2.png",
+      "price": "13900",
+      "marketPrice": "15000",
+      "promotion": "",
+      "promotionContent": "15日深度自驾旅行"
+    },{
+      "lineId":"3003",
+      "name": "花呗关西盛唐遗风经典全景",
+      "id": "10001",
+      "image": "../testdata/line/index/pic3.png",
+      "price": "6999",
+      "marketPrice": "9000",
+      "promotion": "",
+      "promotionContent": "10日深度自驾旅行"
+    },{
+      "lineId":"3004",
+      "name": "经典德意志全景印象",
+      "id": "10001",
+      "image": "../testdata/line/index/pic4.png",
+      "price": "5999",
+      "marketPrice": "7000",
+      "promotion": "",
+      "promotionContent": "9日深度自由旅行"
+    }
+  ]
+}

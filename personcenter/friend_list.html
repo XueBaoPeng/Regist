@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>兔友列表</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link href="../src/css/personcenter.css" rel="stylesheet">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/config.js"></script>
+  <script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/personcenter/friend_list.js"></script>
+</head>
+<body>
+<div class="friendList-container">
+  <div class="friendList-top" id="friendList-top">
+    <div class="searchBox">
+      <img src="../src/images/area/look_03.png" class="searchImg">
+      <input class="searchInput" id="searchInput" placeholder="输入您要查找的好友">
+    </div>
+    <div class="searchBtn" id="searchBtn">搜索</div>
+  </div>
+  <div class="listBox ">
+    <div class="code">
+      <span><a name="a">A</a></span>
+      <span><a name="b">B</a></span>
+      <span><a name="c">C</a></span>
+      <span><a name="d">D</a></span>
+      <span><a name="e">E</a></span>
+      <span><a name="f">F</a></span>
+      <span><a name="g">G</a></span>
+      <span><a name="h">H</a></span>
+      <span><a name="i">I</a></span>
+      <span><a name="j">J</a></span>
+      <span><a name="k">K</a></span>
+      <span><a name="l">L</a></span>
+      <span><a name="m">M</a></span>
+      <span><a name="n">N</a></span>
+      <span><a name="o">O</a></span>
+      <span><a name="p">P</a></span>
+      <span><a name="q">Q</a></span>
+      <span><a name="r">R</a></span>
+      <span><a name="s">S</a></span>
+      <span><a name="t">T</a></span>
+      <span><a name="u">U</a></span>
+      <span><a name="v">V</a></span>
+      <span><a name="w">W</a></span>
+      <span><a name="x">X</a></span>
+      <span><a name="y">Y</a></span>
+      <span><a name="z">Z</a></span>
+    </div>
+    <div class="screen-result" id="screen-result">
+      <div class="wrapper">
+      <div class="scroller">
+        <div class="pullDown">
+          <span>下拉刷新</span>
+        </div>
+        <ul class="list" id="list">
+          <!--关注的好友-->
+          <script type="text/html" id="template">
+            <div class="title follow">
+              <img src="../src/images/area/star_09.png">
+              <span>关注的好友</span>
+            </div>
+            {{if data.attention!=null}}
+                {{each data.attention as attention i}}
+                <li onclick="detailClick(this)" data-url="contacts_detail.html" data-id="{{attention.id}}">
+                <img src={{attention.headImg}} class="head">
+                  <span class="name">{{attention.name}}</span>
+                </li>
+                {{/each}}
+            {{/if}}
+            {{if data.noAttention!=null}}
+               {{ each data.noAttention as noAttention i}}
+                <div class="title">{{noAttention.letter}}</div>
+                    {{each noAttention.friendList as friend i}}
+                    <li onclick="detailClick(this)" data-url="contacts_detail.html" data-id="{{friend.id}}">
+                    <img src={{friend.headImg}} class="head">
+                      <span class="name">{{friend.name}}</span>
+                    </li>
+                    {{/each}}
+                {{/each}}
+            {{/if}}
+          </script>
+        </ul>
+        <div class="pullUp">
+          <span>上拉加载更多</span>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data":{
+    "supplierId":"10001",
+    "supplierName":"哈尔滨 亚布力滑雪旅游度假区",
+    "level":"4",
+    "images":["../testdata/area/index/img/banner1.png","../testdata/area/index/img/banner2.png","../testdata/area/index/img/banner3.png"],
+    "feedback":"95%",
+    "comment":"89",
+    "address":"北京市朝阳区望京SOHO T2-A-910",
+    "theme":"景点主题",
+    "operationTime":"全年运营/10月12日-3月32日",
+    "operationCycle":"每周六闭关休整",
+    "openTime":"24小时开放/旺季8:00-17:00(4月-10月)",
+    "hasParking":"是",
+    "sketch":"星湖园本着以爱国、敬业、诚信、守法、贡献的十字方针，以优质的服务，标准化，制度化，人性化的科学管理理念，多元化的战略目标，以宾客带来预约的心灵体验和高品质的文化。",
+    "scenicSpots":[{
+      "scenicId":"90001",
+      "scenicName":"星湖园温泉",
+      "scenicProfiles":"愉悦的心灵体验和高品位的文化享受",
+      "scenicDetail":"",
+      "scenicImage":"../src/images/spot/detailb.png"
+    },{
+      "scenicId":"90002",
+      "scenicName":"西湖温泉",
+      "scenicProfiles":"景色优美，愉悦的心灵体验和高品位的文化享受",
+      "scenicDetail":"",
+      "scenicImage":"../src/images/spot/detailb.png",
+      "scenicLikes":"50"
+    }]
+  }
+}

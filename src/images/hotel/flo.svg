@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>iconfont-didian</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="首页" sketch:type="MSArtboardGroup" transform="translate(-276.000000, -347.000000)" fill="#2296F0">
+            <g id="第二栏-" sketch:type="MSLayerGroup" transform="translate(-3.000000, 328.000000)">
+                <path d="M283.503679,19 C281.016274,19 279,21.0145125 279,23.4991476 C279,25.9838496 283.503679,30.9977103 283.503679,30.9977103 C283.503679,30.9977103 288.007546,25.9838496 288.007546,23.4991476 C288.007546,21.0145125 285.990741,19 283.503679,19 L283.503679,19 Z M283.503679,25.3737549 C282.260173,25.3737549 281.251865,24.3666574 281.251865,23.1242228 C281.251865,21.8819053 282.260241,20.8746741 283.503679,20.8746741 C284.747184,20.8746741 285.755612,21.8819053 285.755612,23.1242228 C285.755612,24.3666574 284.747184,25.3737549 283.503679,25.3737549 L283.503679,25.3737549 Z" id="iconfont-didian" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

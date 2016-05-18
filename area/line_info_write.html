@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>旅游线路下单</title>
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/pay.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/area/guide_info_write.js"></script>
+</head>
+<body class="line_info_write">
+    <div class="container">
+      <script type="text/html" id="template">
+        <ul class="top_liw">
+            <li>发团日期：<span>{{startTime}}</span></li>
+            <li>返程日期：<span>{{backTime}}</span></li>
+        </ul>
+        <!-- option -->
+        <ul class="option">
+            <li class="adult">
+                <div class="opt-type">成人</div>
+                <div class="opt-price">单价<span>&yen;{{adultPrice}}/人</span></div>
+                <div class="opt-num">
+                    <a class="minus">-</a>
+                    <!--<div class="amount">0</div>-->
+                    <div class="amount">0</div>
+                    <a class="add">+</a>
+                </div>
+            </li>
+            <li class="child">
+                <div class="opt-type">儿童</div>
+                <div class="opt-price">单价<span>&yen;{{childrenPrice}}/人</span></div>
+                <div class="opt-num">
+                    <a class="minus">-</a>
+                    <div class="amount">0</div>
+                    <a class="add">+</a>
+                </div>
+            </li>
+            <li class="single">
+                <div class="opt-type">单房差</div>
+                <div class="opt-price">单价<span>&yen;{{singlePrice}}/人</span></div>
+                <div class="opt-num">
+                    <a class="minus">-</a>
+                    <div class="amount">0</div>
+                    <a  class="add">+</a>
+                </div>
+            </li>
+        </ul>
+        <!-- 温馨提示 -->
+        {{if notice}}
+        <div class="reminder">
+           <div class="reminder-con">
+                <div class="reminder-tit">温馨提示</div>
+             {{each notice as item}}
+                <div class="reminder-con-top">
+                    <span>{{item.title}}：</span>{{item.content}}
+                </div>
+             {{/each}}
+            </div>
+        </div>
+        {{/if}}
+        <!-- 联系人信息 -->
+        <div class="contacts-msg">
+            <div class="contacts-tit">联系人信息</div>
+            <div class="name">
+                <label>姓名</label>
+                <input type="text" placeholder="必填">
+            </div>
+            <div class="phone">
+                <label>手机号</label>
+                <input type="text" placeholder="请输入11位手机号码">
+            </div>
+        </div>
+        <!-- 游客信息 -->
+        <div class="tourist-msg">
+            <div class="tourist-tit">游客信息</div>
+            <div class="tourist-opt">
+                <ul class="tourist-opt">
+                    <li><div class="people"></div> <span>张三</span></li>
+                    <li><div class="people"></div><span>李思思</span></li>
+                    <li><div class="people"></div><span>邓超</span></li>
+                    <li><div class="people"></div><span>李晨</span></li>
+                    <li><div class="people"></div><span>李兵营</span></li>
+                </ul>
+                <img src="../src/images/area/down.jpg" alt="" class="btn-down">
+            </div>
+            <div class="tourist-bg clear"></div>
+            <div class="tourist-name">
+                <label>姓名</label>
+                <input type="text" placeholder="必填">
+            </div>
+            <!-- 证件类型 -->
+            <div class="tourist-type">
+                <label>证件类型</label>
+                <input type="text" placeholder="身份证">
+                <img src="../src/images/area/down.jpg"  alt="" class="btn-down">
+            </div>
+            <!-- 证件号码 -->
+            <div class="tourist-id">
+                <label>证件号码</label>
+                <input type="text" placeholder="请输入证件号码">
+            </div>
+            <div class="tourist-bg clear"></div> 
+            <div class="tourist-name">
+                <label>姓名</label>
+                <input type="text" placeholder="必填">
+            </div>
+            <!-- 证件类型 -->
+            <div class="tourist-type">
+                <label>证件类型</label>
+                <input type="text" placeholder="身份证">
+                <img src="../src/images/area/down.jpg"  alt="" class="btn-down">
+            </div>
+            <!-- 证件号码 -->
+            <div class="tourist-id">
+                <label>证件号码</label>
+                <input type="text" placeholder="请输入证件号码">
+            </div>
+        </div>
+        <!-- 确认信息 -->
+        <ul class="tourist-confirm">
+            <li class="tourist-li-left">订单总额：<num>&yen;88888</num></li>
+            <li class="tourist-li-right commit" onclick="detailClick(this)" data-url="line_pay_info.html">确认行程</li>
+        </ul>
+        </script>
+    </div>
+</body>
+</html>

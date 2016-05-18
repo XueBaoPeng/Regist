@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>诚兑通转账-成功</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personaccount.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personaccount/success.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="success-tip">
+        <!--<img src="../src/images/personaccount/success.png" alt="">-->
+        <div class="success-tip-con">
+            <span class="ico-buy-success"></span>
+            <span>转账成功!</span>
+        </div>
+    </div>
+    <div id="container">
+        <script id="template" type="text/html">
+            <div class="success-msg">
+                <p>
+                    <span class="success-span-left">收款方:</span>
+                    <span class="success-span-right">{{data.gathering}}</span>
+                </p>
+                <p>
+                    <span class="success-span-left">转账金额:</span>
+                    <span class="success-span-right">&yen;{{data.sum}}</span>
+                </p>
+            </div>
+        </script>
+    </div>
+    <a href="index.html">
+        <button class="success-btn-return">返回我的账户</button>
+    </a>
+</div>
+</body>
+</html>

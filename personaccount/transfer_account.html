@@ -1,0 +1,193 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>转账</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/widget/layer/layer.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/transfer_account.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="transfer-type" onclick="change(this)">
+			<span class="transfer-span">收款方类型</span>
+			<span id="sel-full" class="sel-full" data-val="3">个人</span>
+			<span class="transfer-img"></span>
+		</div>
+		<!--根据不同显示内容-->
+		<div class="transfer-all" id="transfer-all">
+			<!--个人----->
+
+		<div class="transfer-people">
+		<div class="transfer-name">
+			<span class="transfer-span" id="transfer-span">用户名</span>
+			<input class="transfer-span2 transfer-use" id="transfer-use" placeholder="请输入用户名" value="" onkeyup="nameUp(this)"/>
+			<!--值为空的时候-->
+
+			<!--出错提醒-->
+			<div class="transfer-error hide">未找到此用户，请输入正确的用户名此用户未进行实名认证，无法转账</div>
+		</div>
+			<div id="transfer">
+				<script type="text/html" id="tmplTra">
+					<div id="transfer-type" data-ownerId="4" data-ownerType="5"></div>
+		<div class="transfer-msg-tp">
+			<p>
+				<span class="transfer-span">姓名</span>
+				<span class="transfer-span2">{{data.name}}</span>
+			</p>
+			<p>
+				<span class="transfer-span">绑定手机号</span>
+				<span class="transfer-span2">{{data.tel}}</span>
+			</p>
+		</div>
+		</script>
+			</div>
+			</div>
+		<!--景区-->
+		<div class="transfer-people hide">
+			<div class="transfer-name">
+				<span class="transfer-span transfer-title">景区简称</span>
+				<input class="transfer-span2 transfer-use" placeholder="请输入景区简称" value="" onkeyup="spotUp(this)"/>
+				<!--出错提醒-->
+				<div class="transfer-error hide" >未找到此景区，请输入正确的景区简称</div>
+			</div>
+			<div id="spot">
+				<script type="text/html" id="tmplSpot">
+		<div class="transfer-msg-tp">
+			<p>
+				<span class="transfer-span transfer-title">景区全称</span>
+				<span class="transfer-span2">{{data.allName}}</span>
+			</p>
+			<p>
+				<span class="transfer-span">负责人姓名</span>
+				<span class="transfer-span2">{{data.name}}</span>
+			</p>
+			<p>
+				<span class="transfer-span">负责人邮箱</span>
+				<span class="transfer-span2">{{data.mall}}</span>
+			</p>
+		</div>
+				</script>
+			</div>
+		</div>
+
+			<!--酒店-->
+			<div class="transfer-people hide">
+				<div class="transfer-name">
+					<span class="transfer-span transfer-title">酒店简称</span>
+					<input class="transfer-span2 transfer-use" placeholder="请输入酒店简称" value="" onkeyup="hotelUp(this)"/>
+					<!--出错提醒-->
+					<div class="transfer-error hide">未找到此酒店，请输入正确的景区简称</div>
+				</div>
+				<div id="hotel">
+					<script type="text/html" id="tmplHotel">
+				<div class="transfer-msg-tp">
+					<p>
+						<span class="transfer-span transfer-title">酒店全称</span>
+						<span class="transfer-span2">{{data.allName}}</span>
+					</p>
+					<p>
+						<span class="transfer-span">负责人姓名</span>
+						<span class="transfer-span2">{{data.name}}</span>
+					</p>
+					<p>
+						<span class="transfer-span">负责人邮箱</span>
+						<span class="transfer-span2">{{data.mall}}</span>
+					</p>
+				</div>
+				</script>
+					</div>
+			</div>
+			<!--旅行社-->
+			<div class="transfer-people hide">
+				<div class="transfer-name">
+					<span class="transfer-span transfer-title">旅行社简称</span>
+					<input class="transfer-span2 transfer-use" placeholder="请输入旅行社简称" value="" onkeyup="lineUp(this)"/>
+					<!--出错提醒-->
+					<div class="transfer-error hide">未找到此旅行社，请输入正确的景区简称</div>
+				</div>
+				<div id="line">
+					<script type="text/html" id="tmplLine">
+				<div class="transfer-msg-tp">
+					<p>
+						<span class="transfer-span transfer-title">旅行社全称</span>
+						<span class="transfer-span2">{{data.allName}}</span>
+					</p>
+					<p>
+						<span class="transfer-span">负责人姓名</span>
+						<span class="transfer-span2">{{data.name}}</span>
+					</p>
+					<p>
+						<span class="transfer-span">负责人邮箱</span>
+						<span class="transfer-span2">{{data.mall}}</span>
+					</p>
+				</div>
+				</script>
+					</div>
+			</div>
+		<!--导游-->
+		<div class="transfer-people hide">
+			<div class="transfer-name">
+				<span class="transfer-span">导游姓名</span>
+				<input class="transfer-span2 transfer-use" placeholder="请输入导游姓名" value="" onkeyup="guiUp(this)"/>
+				<!--出错提醒-->
+				<div class="transfer-error hide">未找到此导游，请输入正确的导游姓名</div>
+			</div>
+			<div id="gui">
+				<script type="text/html" id="tmplGui">
+			<div class="transfer-msg-tp">
+				<p>
+					<span class="transfer-span">手机号码</span>
+					<span class="transfer-span2">{{data.tel}}</span>
+				</p>
+
+			</div>
+			</script>
+				</div>
+		</div>
+		</div>
+		<div class="transfer-money">
+			<span class="transfer-span" id="money-more">转账金额</span>
+			<input type="text" id="transfer-input" class="transfer-input" placeholder="请输入转账金额" value="">
+			<span class="transfer-unit">元</span>
+		</div>
+		<div class="transfer-name">
+			<span class="transfer-span">支付密码</span>
+			<input  id="transfer-money" type="password" placeholder="请输入支付密码" class="transfer-span2 transfer-use" value=""/>
+
+		</div>
+		<div class="transfer-name transfer-bor">
+			<span class="transfer-span">手续费</span>
+			<span class="transfer-money-zero">0元</span>
+			<!--<input class="transfer-span2 transfer-use" value=""/>-->
+
+		</div>
+		<div class="transfer-remark">备注</div>
+		<textarea id="remark-input"  class="remark-input"></textarea>
+		<div class="remark-tip">备注内容对方可以看到</div>
+
+
+		<button class="next" data-id="{{data.id}}"  onclick="next()">确认转账</button>
+	</div>
+<!--弹出层-->
+	<div class="transfer-list hide" id="transfer-list">
+
+	<ul class="transfer-list-content" >
+		<li class="cuttrnt-color" onclick="setSecond(this)" data-val="3">个人</li>
+		<li onclick="setSecond(this)" data-val="4">景区</li>
+		<li onclick="setSecond(this)" data-val="5">酒店</li>
+		<li onclick="setSecond(this)" data-val="6">旅行社</li>
+		<li onclick="setSecond(this)" data-val="7">导游</li>
+	</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>酒店发表评价</title>
+    <link rel="stylesheet" href="../src/js/widget/jquery.fileupload/css/jquery.fileupload.css">
+    <!--<link rel="stylesheet" href="../src/js/widget/jquery.fileupload/css/jquery.fileupload-ui.css">-->
+    <link href="../src/js/widget/layer/need/layer.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/hotel.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/widget/jquery.raty/jquery.raty.js"></script>
+    <script src="../src/js/widget/jquery.fileupload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="../src/js/widget/jquery.fileupload/js/jquery.iframe-transport.js"></script>
+    <script src="../src/js/widget/jquery.fileupload/js/jquery.fileupload.js"></script>
+    <script src="../src/js/widget/jquery.raty/jquery.raty.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/hotel/hotel_discuss.js"></script>
+</head>
+<body class="bg-gray">
+<div class="spot-publish-top">
+    <div class="spot-publish-tip">请写下对酒店的入住评价，分享您的感受，对其他小伙伴帮助很大。</div>
+    <div class="spot-limit">(5-100个字)</div>
+    <textarea name="txtContent" id="txtContent" class="spot-write"></textarea>
+    <div class="spot-load-photo">
+        <ul id="upImages">
+            <!--<li data-id=""><img src="../src/images/spot/photo.png" alt=""></li>-->
+        </ul>
+        <span class="upload fileinput-button btn-upload spot-load-btn">
+            <i class="icon-plus icon-white"></i>
+            <span></span>
+            <input id="fileupload" type="file" name="userfile" multiple/>
+        </span>
+    </div>    
+</div>
+<!-- star -->
+<div class="spot-publish-score">
+    <div class="spot-score-tit">酒店整体评价</div>
+    <div class="spot-score-type"><span>地理位置</span>
+        <div id="hotelPosition"></div>
+        <div id="hidPosition" class="hide"></div>
+    </div>
+    <div class="spot-score-type"><span>设备设施</span>
+        <div id="hotelInstitution"></div>
+        <div id="hidInstitution" class="hide"></div>
+    </div>
+    <div class="spot-score-type"><span>清洁程度</span>
+        <div id="hotelClean"></div>
+        <div id="hidClean" class="hide"></div>
+    </div>
+    <div class="spot-score-type"><span>酒店服务</span>
+        <div id="hotelService"></div>
+        <div id="hidService" class="hide"></div>
+    </div>
+     <div class="spot-score-type"><span>舒适感</span>
+        <div id="hotelComfort"></div>
+        <div id="hidComfort" class="hide"></div>
+    </div>
+    <div class="spot-score-type"><span>性价比</span>
+        <div id="hotelPerformance"></div>
+        <div id="hidPerformance" class="hide"></div>
+    </div>    
+</div>
+<!--出行方式-->
+<!--<div class="about-hotel-type" >
+	<p class="about-hotel-title">出行方式</p>
+	<span class="active about-type"> 独自一人</span>
+	<span class="about-type">团体出行</span>
+	<span class="about-type">情侣/夫妻</span>
+	<span class="about-type">三五好友</span>
+</div>-->
+<!--出行目的-->
+<!--<div class="about-hotel-purpose" >
+	<p class="about-hotel-title">出行目的</p>
+	<span class="about-type active">休闲度假</span>
+	<span class="about-type">商务出行</span>
+</div>-->
+<button id="btnSave" class="btn-blue-large spot-publish-commit booking">提交</button>
+</body>
+</html>

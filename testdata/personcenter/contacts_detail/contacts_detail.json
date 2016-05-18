@@ -1,0 +1,12 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":{
+	 	"name":"李凤宝",
+	  "nickname":"羊羊羊",
+	  "sex":"man",
+	  "totalMoney":"260",
+	  "collect":true
+}
+}
+

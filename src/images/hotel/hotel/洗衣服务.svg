@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="23px" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>洗衣服务</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,0.7326 L18,0.7326 L18,22 L0,22 L0,0.7326 Z"></path>
+    </defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" transform="translate(-117.000000, -460.000000)">
+            <g id="洗衣服务" sketch:type="MSLayerGroup" transform="translate(118.000000, 460.000000)">
+                <path d="M15.134976,21.6327467 L13.990176,21.63348 C13.882896,21.63348 13.784256,21.5726133 13.734576,21.4758133 L13.183776,20.3985467 C12.847536,20.0612133 12.395376,19.8727467 11.923776,19.8727467 L6.249456,19.8727467 C5.817456,19.8727467 5.400576,20.0311467 5.073696,20.3193467 L4.337136,21.4912133 C4.284576,21.5748133 4.193856,21.6254133 4.095936,21.6261467 L2.864736,21.6327467 C1.091376,21.6327467 0.359856,20.1543467 0.359856,18.3481467 L0.359856,1.83274667 C0.359856,1.42941333 0.683856,1.09941333 1.079856,1.09941333 L16.919856,1.09941333 C17.315856,1.09941333 17.639856,1.42941333 17.639856,1.83274667 L17.639856,19.0800133 C17.639856,20.4836133 16.513056,21.6320133 15.134976,21.6327467 L15.134976,21.6327467 Z" id="Stroke-1" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <mask id="mask-2" sketch:name="Clip 4" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <path d="M17.64,4.9192 L0.36,4.9192 L0.36,4.18586667 L17.64,4.18586667 L17.64,4.9192 Z" id="Fill-3" fill="#555555" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                <path d="M3.90024,1.09926667 L4.62024,1.09926667 L4.62024,4.91846667 L3.90024,4.91846667 L3.90024,1.09926667 Z" id="Fill-5" fill="#555555" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                <path d="M15.83784,3.21566667 L14.39784,3.21566667 L14.39784,2.48233333 L15.83784,2.48233333 L15.83784,3.21566667 Z" id="Fill-6" fill="#555555" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                <path d="M13.341672,11.8855 C13.341672,14.3157667 11.407752,16.2855 9.021672,16.2855 C6.635592,16.2855 4.701672,14.3157667 4.701672,11.8855 C4.701672,9.45523333 6.635592,7.4855 9.021672,7.4855 C11.407752,7.4855 13.341672,9.45523333 13.341672,11.8855 L13.341672,11.8855 Z" id="Stroke-7" stroke="#555555" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                <path d="M4.789584,12.1428267 C4.789584,12.1428267 6.581664,9.61282667 8.937504,11.7944933 C11.293344,13.97616 13.341744,12.1428267 13.341744,12.1428267" id="Stroke-8" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

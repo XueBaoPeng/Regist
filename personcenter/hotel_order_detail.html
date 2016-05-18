@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>酒店订单详情</title>
+    <link href="../src/js/widget/layer/need/layer.css" rel="stylesheet">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/personcenter.css" rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+  	<script src="../src/js/util/webviewInterface.js"></script>
+  	<script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/template_extend.js"></script>
+  	<script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/hotel_order_detail.js"></script>
+</head>
+<body>
+    <div class="spotMain" id="spotMain">
+    <div id="top">
+      <script type="text/html" id="template1">
+      <!-- 展开 -->
+       <div class="order-open">
+         <div id="process" class="order-open-con">
+            <!-- 展开左侧 -->
+             {{each data.records as records i}}
+             {{if i==0}}
+             <div class="order-open-row">
+                 <span class="span-circle-bigline"></span>
+                 <div class="order-open-right">
+                     <ul>
+                         <li class="order-li-tit">{{records.recContent}}</li>
+                         <li class="order-li-con">{{records.recDate | formatDate:'yyyy-MM-dd hh:mm:ss'}}</li>
+                     </ul>
+                 </div>
+             </div>
+             {{else}}
+                {{if i==(data.records.length-1)}}
+                 <div class="order-open-row">
+                     <span class="circle-small"></span>
+                     <div class="order-open-right">
+                         <ul>
+                             <li class="order-li-tit">{{records.recContent}}</li>
+                             <li class="order-li-con">{{records.recDate | formatDate:'yyyy-MM-dd hh:mm:ss'}}</li>
+                         </ul>
+                     </div>
+                 </div>
+                {{else}}
+                 <div class="order-open-row">
+                     <span class="span-circle-little"></span>
+                     <div class="order-open-right">
+                         <ul>
+                             <li class="order-li-tit">{{records.recContent}}</li>
+                             <li class="order-li-con">{{records.recDate | formatDate:'yyyy-MM-dd hh:mm:ss'}}</li>
+                         </ul>
+                     </div>
+                 </div>
+                {{/if}}
+             {{/if}}
+             {{/each}}
+             <div class="order-open-btn" id="btnExpend" onclick="showOpen();">
+                 <span class="ico-spot-down"></span><p>展开</p>
+             </div>
+         </div>
+       </div>              
+       <div class="order-price">
+       		<p>订单金额：<span class="price">&yen;<num>{{data.orderMoney}}</num></span><span class="comment">
+       			<button onclick="delClick('{{data.orderId}}')">删除</button></span>
+       		</p>
+       </div>	
+       {{each data.roomList as roomList i}}
+       <div class="order-title">       
+	       	<p class="title">{{roomList.roomName}} <button onclick="commentClick(this)" data-id="{{data.orderId}}" data-roomId="{{roomList.roomId}}" >评价</button></p>
+	       	<div class="room-type">
+	       		{{roomList.type}}<span class="right">&yen;{{roomList.price}}</span>
+	       	</div>
+	       	<div class="order-time">
+	       		{{roomList.startDate}}-{{roomList.endDate}}<span>{{roomList.totalDay}} </span> <span>{{roomList.num}} {{roomList.roomNum}}间</span>
+	       	</div>
+	       	<div class="hotel-bones">
+	       		{{if roomList.roomVerion.Breakfast=="Two"}}
+	       		双早
+	       		{{else if roomList.roomVerion.Breakfast=="One"}}
+	       		单早
+	       		{{else}}
+	       		多早
+	       		{{/if}}
+	       		{{if roomList.roomVerion.WIFI=="Free"}}	       		
+	       		免费WIFI
+	       		{{else}}
+	       		无WIFI
+	       		{{/if}}
+	       		{{if roomList.roomVerion.Broadband=="Free"}}	       		
+	       		免费宽带
+	       		{{else}}
+	       		无宽带
+	       		{{/if}}
+	       	</div>
+	       	<div class="check-in-people"><lable>入住人:</lable>{{roomList.CertificateStr}}</div>
+	       	<div class="check-in-time"><lable>酒店入住时间:</lable>{{roomList.roomTripJson}}</div>
+	       	{{if roomList.roomVerion.GiftDes!=""}}
+	       	<div class="order-gift"><lable>礼品:</lable>{{roomList.roomVerion.GiftDes}}</div>
+	       	{{/if}}	   
+       </div>
+        {{/each}}
+       <div class="hotel-confirm">
+         <div class="confirm-num"><lable class="lable-confirm">酒店确认号</lable>{{data.orderCode}}</div>
+         <div class="hotel-ticket"><lable class="lable-confirm">酒店发票</lable>{{data.bill}}</div>
+        <div class="special-request"><lable class="lable-confirm">特殊要求</lable> 
+        	{{if data.specials.length==0}}
+        		无
+        	{{else}}
+        	{{each data.specials as specials i}}
+        		{{specials}}
+        	{{/each}}
+        	{{/if}}
+        </div>
+       </div>
+      <div class="hotel-order">
+        <div class="order-num"><lable class="lable-order">订单号</lable>{{data.orderCode}}</div>
+        <div class="order-contact"><lable class="lable-order">订单联系人</lable>{{data.contact}}</div>
+        <div class="order-tel"><lable class="lable-order">联系电话</lable>{{data.contactPhone}}</div>
+      </div>
+      </script>  
+    </div>
+    <div id="bottom">
+      	<script type="text/html" id="template2">
+      		<div class="around-spot">
+      			<div class="spot-left"></div>
+      			<div class="spot-center"><img src="../src/images/personcenter/remen_icon.png" class="spot-center-pic"/>周边热门景点</div>
+      			<div class="spot-right"></div>
+      		</div>
+      		 <div class="spotImg">
+               {{each data as item i}}
+                <dl onclick="spotDetail('{{item.id}}')">
+                    <dt><img src="{{item.img}}" alt="" /> </dt>
+                    <dd>
+                        <p class="spot-name" >{{item.name}}</p>                   
+                        <p class="spot-center">
+                        	<span class="left">{{item.range}}km</span>
+                        	<span class="right">
+                        		<b><a>&yen;</a>{{item.price}}<i>起</i></b>
+                        	</span>
+                        </p>
+                    </dd>
+                </dl>
+                {{/each}}
+            </div>
+      	</script>
+    </div>
+    </div>
+</body>
+</html>

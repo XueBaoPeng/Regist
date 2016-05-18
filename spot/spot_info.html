@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>景点信息</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/spot_info.js"></script>
+</head>
+<body class="spot-info">
+    <div id="container" class="content spotMain-msg">
+        <div id="content">
+        <script id="tmplContent" type="text/html">
+         <div class="spot-msg-tit">
+         <span class="ico-tip"></span>
+             <span data-title="" data-url="index.html" onclick="supplierNameClick(this);">{{data.supplierName}}</span>
+             {{if data.level!=""}}
+             <span class="spot-4a"><num>{{data.level}}</num>级景区</span>
+             {{/if}}
+         </div>
+         <ul class="spot-msg-con">
+             <li>
+                 <label>景区地址</label>
+                 <span>{{data.address}}</span>
+             </li>
+             <li>
+                 <label>景点主题</label>
+                 <span>{{data.theme}}</span>
+             </li>
+             <li>
+                 <label>开放时间</label>
+                 <span>{{data.openTime}}</span>
+             </li>
+             <!--<li>-->
+                 <!--<label>&nbsp;</label>-->
+                 <!--<span>淡季8:00-17:00(4月-10月)</span>-->
+             <!--</li>-->
+             <li>
+                 <label>运营时间</label>
+                 <span>{{data.operationTime}}</span>
+             </li>
+             <li>
+                 <label>运营周期</label>
+                 <span>{{data.operationCycle}}</span>
+             </li>
+             <li>
+                 <label>有停车场</label>
+                 <span>{{if data.hasParking}}是{{else}}否{{/if}}</span>
+             </li>
+         </ul>
+         {{if data.sketch !=""}}
+         <div class="spot-msg-tit">
+             <span class="ico-tip"></span>概况
+         </div>
+         {{/if}}
+         <div class="spot-svrvey">{{data.sketch}}</div>
+        </script>
+        </div>
+         <!-- 景点 -->
+         <div class="spot-msg-tit">
+             <span class="ico-tip"></span>景点
+         </div>
+         <ul id="spotsList" class="spot-pic-detail">
+             <script id="tmplSpotSite" type="text/html">
+             {{each data as site index}}
+             <li data-title="{{site.secnicName}}" data-url="spot_detail.html?id={{site.secnicId}}" onclick="detailClick(this);">
+                 <img src="{{site.spotsImg}}" alt="" class="spot-img-bg">
+                 <div class="spot-cover-text">
+                     <p class="spot-cover-pt">{{site.secnicName}}</p>
+                     <p class="spot-cover-pb">{{site.secnicSketch}}</p>
+                 </div>
+                 <div class="spot-use"><span class="ico-spot-like-write"></span>有用({{site.likeCount}})</div>
+                 <div class="spot-cover-bg"></div>
+             </li>
+             {{/each}}
+             </script>
+         </ul>
+
+         <!-- 分享 -->
+         <div class="spot-share hide">
+             <p class="spot-share-tit">分享到</p>
+             <ul class="spot-share-go">
+                 <li>
+                     <div class="spot-share-pic"><img src="../src/images/spot/weixin.png" height="80" width="80" alt=""></div>
+                     <span>微信</span>
+                 </li>
+                 <li>
+                    <div class="spot-share-pic"><img src="../src/images/spot/QQ.png" height="80" width="80" alt=""></div>
+                     <span>QQ</span>
+                 </li>
+                 <li>
+                    <div class="spot-share-pic"><img src="../src/images/spot/friend.png" height="80" width="80" alt=""></div>
+                     <span>朋友圈</span>
+                 </li>
+                 <li class="li-space">
+                     <div class="spot-share-pic"><img src="../src/images/spot/space.png" height="80" width="80" alt=""></div>
+                     <span>空间</span>
+                 </li>
+                 <li>
+                     <div class="spot-share-pic"><img src="../src/images/spot/sina.png" height="80" width="80" alt=""></div>
+                     <span>微博</span>
+                 </li>
+             </ul>
+         </div>
+    </div>
+</body>
+</html>

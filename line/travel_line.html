@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>线路列表</title>
+    <!--<link rel="stylesheet" href="../src/js/widget/jquery.range/css/jquery.range.css">-->
+    <link rel="stylesheet" href="../src/js/widget/jRange/jquery.range.css">
+    <!--<link rel="stylesheet" href="../src/js/lib/jquery.mobile/themes/happyto-theme.css">-->
+    <!--<link rel="stylesheet" href="../src/js/lib/jquery.mobile/themes/jquery.mobile.structure-1.4.5.css">-->
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/line.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <!--<script src="../src/js/lib/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>-->
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <!--<script src="../src/js/widget/jquery.range/js/jquery.range.js"></script>-->
+    <script src="../src/js/widget/jRange/jquery.range.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <!--<script src="../src/js/line/choose_city.js"></script>-->
+    <script src="../src/js/line/travel_line.js"></script>
+
+</head>
+<body>
+<div id="container" class="holidayMain">
+    <ul id="topNav" class="topNav">
+        <!--<span class="ico-down"></span>-->
+        <li data-type="1" data-tl="sales_num" class="active desc">销量</li>
+        <li data-type="3" data-tl="price" class="desc">价格</li>
+        <li data-type="2" data-tl="appraise" class="desc">好评率</li>
+        <li data-type="0" data-tl="filter" class="desc">筛选</li>
+    </ul>
+    <div id="search" class="choose hide">
+        <ul class="chooseList">
+            <li>
+                <div class="top-title">
+                    <span class="topLeft">出游方式</span>
+                    <div class="topRight">
+                        <span class="text"></span>
+                        <div class="down"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div id="lineOuting" class="menu additional">
+                    <div class="menu-va" data-value="0">不限</div>
+                    <div class="menu-va" data-value="1">自由行</div>
+                    <div class="menu-va" data-value="2">跟团游</div>
+                </div>
+            </li>
+            <li class="no-border no-padding">
+                <!-- 出发地 -->
+                <ul class="place">
+                    <li class="place-start">
+                        <a id="linkAddrStr" href="javascript:;"><label>出发地</label>
+                            <input id="txtAddrStart" readonly="readonly" type="text" placeholder="请选择出发地"  value=""   onclick="starCity(this,1)" data-type=1>
+                            <img src="../src/images/line/right@.png" alt="" width=8 height=13>
+                        </a>
+                    </li>
+                    <li class="place-stop"  >
+                        <a id="linkAddrEnd" href="javascript:;"><label>目的地</label>
+                            <input id="txtAddrEnd" readonly="readonly"  type="text" placeholder="请选择目的地" value="" onclick="starCity(this,2)" data-type=2>
+                            <img class="place-img" src="../src/images/line/right@.png" alt="" width=8 height=13>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="top-title">
+                    <span class="topLeft">行程天数</span>
+                    <div class="topRight">
+                        <span class="text"></span>
+                        <div class="down"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="menu additional">
+                    <div class="menu-range">
+                        <input id="iptDays" class="range-slider" type="hidden" value=""/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="top-title">
+                    <span class="topLeft">出发月份</span>
+                    <div class="topRight">
+                        <span class="text"></span>
+                        <div class="down"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="menu additional">
+                    <div class="menu-range">
+                        <input id="iptMonths" class="range-slider" type="hidden" value=""/>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="top-title">
+                    <span class="topLeft">游玩主题</span>
+                    <div class="topRight">
+                        <span class="text"></span>
+                        <div class="down"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="menu additional" id="lineTheme">
+                    <script id="tmplTheme" type="text/html">
+                    {{each data as theme}}
+                    <div class="menu-va" data-value="{{theme.lineThemeId}}">{{theme.lineThemeName}}</div>
+                    {{/each}}
+                    </script>
+                </div>
+            </li>
+            <li>
+                <div class="top-title">
+                    <span class="topLeft">价格范围</span>
+                    <div class="topRight">
+                        <span class="text"></span>
+                        <div class="down"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="menu additional">
+                    <div class="menu-range">
+                        <input id="iptPrices" class="range-slider" type="hidden" value=""/>
+                    </div>
+                </div>
+            </li>
+            <li class="hyyadd">
+                <div class="top-title">
+                    <span class="topLeft">线路分类</span>
+                    <div class="topRight">
+                        <span class="text"></span>
+                        <div class="down"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div id="lineType" class="menu additional">
+                    <script id="tmplLinesType" type="text/html">
+                        {{each data as theme}}
+                        <div class="menu-va" data-value="{{theme.lineTypeId}}">{{theme.lineTypeName}}</div>
+                        {{/each}}
+                    </script>
+                </div>
+            </li>
+        </ul>
+        <div class="btns">
+            <div id="btnClear" class="empty">清空筛选</div>
+            <div id="btnConfirm" class="ok">确定</div>
+        </div>
+    </div>
+    <div id="lineContent" class="wrapper_content">
+        <div class="wrapper">
+            <div class="scroller">
+                <div class="pullDown">
+                    <span>下拉刷新</span>
+                </div>
+                <ul id="lineList" class="content">
+                    <script type="text/html" id="tmplLines">
+                        {{each data as item}}
+                        <li class="freefoot" onclick="lineDetailClick('{{item.id}}');">
+                            <a href="#">
+                                <div class="free-left">
+                                    <img src="{{item.image}}" alt="{{item.travleTitle}}" width="106" height="79">
+                                    {{if item.travleWay.length>0}}
+                                    <span>{{item.travleWay}}</span>
+                                    {{/if}}
+                                </div>
+                                <div class="free-right">
+                                    <p class="text">{{item.travleTitle}}</p>
+                                    <div class="title">
+                                        <div class="title-left">
+                                            <p><span>{{item.travelTheme}}</span></p>
+                                            <p>
+                                                <span class="time">{{item.timeRange}}</span>
+                                                {{if item.recommend}}
+                                                <i class="discount">折</i>
+                                                {{/if}}
+                                                {{if item.remnant}}
+                                                <i class="coupon">券</i>
+                                                {{/if}}
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="title-right">
+                                    <span class="money">￥ </span>{{item.price}}<span class="qi">起</span></div>
+                            </a>
+
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+                <div class="pullUp">
+                    <span>上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+        <div id="spinner">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<section id="cityPage" data-role="page" >
+    <div data-role="main" class="ui-content">
+        <div class="city">
+            <div class="choose">
+                <ul id="cityList">
+                    <script type="text/html" id="tmplCity">
+                        {{each data as data i}}
+                        <li data-value="{{data.cityId}}">{{data.cityName}}</li>
+                        {{/each}}
+                    </script>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

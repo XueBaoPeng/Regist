@@ -1,0 +1,398 @@
+/*index.html*/
+.index { background: #eee; }
+.spotMain { width: 100%; }
+.spotMain .top { background: #fff; height: 200px; }
+.spotMain .top img { width: 100%; height: 200px; overflow: hidden; }
+.spot-detail { width: 100%; height: auto; background: #fff; padding: 10px 15px 15px; border-bottom: 1px solid #eee; }
+.spot-detail .title { font-size: 1.6rem; color: #333; text-align: left; }
+.spot-detail .discuss { width: 100%; overflow: hidden; margin-top: 10px; }
+.spot-detail .discuss ul { float: left; width: 80%; }
+.spot-detail .discuss ul li { float: left; margin-right: 10px; text-align: left; }
+.spot-detail .discuss ul li img { width: 13px; height: 13px; }
+.spot-detail .discuss ul li .num { color: #F7B813; font-size: 1.2rem; }
+.spot-detail .discuss span { float: right; font-size: 1.2rem; color: #666; }
+.spot-detail .time { text-align: left; margin-top: 15px; }
+.spot-detail .time span { color: #333; font-size: 1.4rem; position: relative; }
+/*地址*/
+.spotMain .adress { background: #fff; padding: 10px 4%; overflow: hidden; }
+.spotMain .adress .ad { font-size: 1.4rem; color: #333; float: left; }
+.spotMain .adress .map { float: right; color: #2296f0; font-size: 1.2rem; }
+.spotMain .adress .map img { float: left; margin-top: 2px; width: 10px; height: 13px; margin-right: 5px; float: left; margin-top: 2px; }
+/*导航图标*/
+.spotMain .menu { width: 100%; background: #fff; }
+.menu-icon { margin: 15px 20px 20px 20px; font-size: 1.4rem; overflow: hidden; }
+.menu-icon li { float: left; margin: 15px 6.2% 15px 0; width: 20%; text-align: center; }
+.menu-icon li:last-child { margin-right: 0; }
+.menu-icon li span { display: inline-block; width: 100%; }
+.menu-icon li .com { margin-top: 10px; }
+.menu-icon li .ticket { color: #F95150; }
+.menu-icon li .spot { color: #25C4AE; }
+.menu-icon li .picture { color: #2396F1; }
+.menu-icon li .news { color: #F97A1D; }
+/*景区图片*/
+.spotImg img { display: block; width: 100%; height: 142px; overflow: hidden; }
+.spotImg .text { width: 100%; background: #fff; padding: 10px 20px 15px 5px; text-align: left; }
+.spotImg .text p { width: 100%; font-size: 1.7rem; color: #333; margin-bottom: 10px; }
+.spotImg .text p span { font-size: 1.2rem; color: #999; }
+.spotImg .text p b { font-size: 2rem; color: #FC8215; font-weight: normal; }
+.spotImg .spot-third p i { background: url("../images/area/度假_04.png") no-repeat; background-size: 100%; }
+.about { margin: 10px 15px; overflow: hidden; text-align: left; }
+.about span { display: inline-block; margin-top: 3px; height: 12px; line-height: 12px; font-size: 1.4rem; color: #333;}
+.about .ico-hotel-btn { margin-top: 2px; }
+.lineImg { margin: 10px 15px; overflow: hidden; }
+.lineImg a { display: inline; }
+.lineImg a:last-child dl { margin-right: 0; }
+.lineImg dl { float: left; width: 48%; margin-right: 4%; background: #fff; }
+.lineImg dl dt img { width: 100%; min-height: 125px; border: 0; }
+.lineImg dl dd { background: #fff; padding: 10px 5px; }
+.lineImg dl dd p { font-size: 1.4rem; color: #333; text-align: left; }
+.lineImg dl dd p.price { color: #FC8215; font-size: 1rem; text-align: right; }
+.lineImg dl dd p.price b { text-align: right; font-weight: normal; font-size: 1.6rem; }
+.lineImg dl dd p.price b span { font-size: 1rem; color: #666; }
+.lineImg dl dd .price b i { font-size: 1.2rem; font-style: normal; color: #666; }
+.roundImg dl dd p { overflow: hidden; }
+.roundImg dl dd p.price span { float: left; font-size: 1rem; color: #666; }
+.roundImg dl dd p.price b { float: right; }
+.roundImg dl dd p.price b a { font-size: 1.2rem; }
+/*news-details.html*/
+.newsDetailMain { width: 100%; background: #fff; padding-top: 25px; }
+.newsDetailBox { margin: 0 4%; padding-bottom: 135px; }
+.newsDetailBox .title { text-align: center; }
+.newsDetailBox .title p { font-size: 1.6rem; color: #333; margin-bottom: 10px; }
+.newsDetailBox .title span { font-size: 1.2rem; color: #666; margin-right: 20px; }
+.newsDetailBox .picture { margin-top: 15px; height: 170px; overflow: hidden; border-radius: 3px; }
+.newsDetailBox .picture img { width: 100%; height: 170px; }
+.newsDetailBox .new-content { margin-top: 15px; font-size: 1.4rem; color: #333; }
+.newsDetailBox .new-content p { font-size: 1.4rem; color: #787876; line-height: 20px; text-indent: 2em; margin-bottom: 20px; }
+/*news.html*/
+.newsMain { width: 100%; background: #fff; }
+.newsBox { overflow: hidden; margin: 0 4%; padding: 10px 0; border-bottom: 1px solid #eee; }
+.news-left { width: 26%; float: left; height: 75px; }
+.news-left img { width: 100%; height: 75px; overflow: hidden; }
+.news-right { width: 69%; float: right; }
+.news-right span { font-size: 1.6rem; color: #333; line-height: 20px; }
+.news-right .new-date { font-size: 1.4rem; color: #666; text-align: right; float: right; }
+.news-right .new-brief { margin-top: 10px; font-size: 1.4rem; color: #666; }
+.order-detail-top { padding-left: 4%; height: 75px; background: #fff; color: #666; font-size: 1.4rem; text-align: left; }
+.order-detail-top span { margin-left: 10px; }
+.order-detail-top num { margin-left: 10px; color: #fc8215; }
+.order-top-p1 { padding-top: 15px; margin-bottom: 10px; }
+.order-process-show { padding-bottom: 10px; background: #2296f0; color: #fff; text-align: left; overflow: hidden; }
+.order-process { margin-left: 38px; margin-top: 36px; font-size: 1.5rem; }
+.order-process li { position: relative; clear: both; line-height: 18px; }
+.order-process-circle { float: left; width: 18px; height: 18px; text-align: center; }
+.circle-small { position: absolute; z-index: 3; left: 5px; top: 5px; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #fff; }
+.circle-large { position: absolute; left: 0; z-index: 1; display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: #fff; opacity: 0.5; -moz-opacity: 0.5; filter: alpha(opacity=50); }
+.order-process-type { float: left; margin-left: 12px; font-size: 1.8rem; }
+.order-process-line { float: left; margin-top: -5px; width: 18px; text-align: center; }
+.order-process-line span { display: inline-block; width: 2px; height: 55px; background: #fff; }
+.order-process-state { float: left; margin-top: 12px; margin-left: 12px; }
+.order-process-more { margin-left: 40%; width: 20%; text-align: center; }
+/*具体内容*/
+.order-ticket-main { margin-top: 10px; overflow: hidden; background: #fff; text-align: left; }
+.order-ticket-type { margin: 0 4%; height: 40px; line-height: 40px; background: #fff; border-bottom: 1px solid #eee; color: #333; font-size: 1.5rem; }
+.order-ticket-type span { float: left; margin-top: 13px; display: inline-block; margin-right: 5px; width: 3px; height: 15px; background: #fc8215; }
+/*内容开始*/
+.order-ticket-detail { padding: 0 4%; overflow: hidden; background: #F7FAFF; }
+.order-ticket-main { padding-bottom: 15px; }
+.order-ticket-name { margin-top: 12px; font-size: 1.4rem; }
+.order-ticket-detail p { margin-top: 12px; font-size: 1.4rem; color: #777779; }
+.order-ticket-detail p:last-child { padding-bottom: 10px; }
+.order-label { display: inline-block; width: 75px; color: #777779; font-size: 1.4rem; }
+.order-ticket-num { margin-top: 5px; color: #999997; }
+.order-line { margin-top: 15px; margin-bottom: 12px; height: 1px; overflow: hidden; background: #efedee; }
+.order-ticket-num span { margin-right: 10px; }
+.order-apply-btn { float: right; margin-top: -9px; width: 70px; height: 30px; background: #eee; border: 0; border-radius: 3px; font-size: 1.2rem; color: #333; }
+.order-date { margin-bottom: 10px; font-size: 1.3rem; color: #777779; }
+.order-validity, .order-explain { color: #777779; font-size: 1.3rem; }
+.order-explain { margin-top: 10px; padding-bottom: 22px; }
+.t10 { margin-top: 10px; }
+.col-orange { color: #fc8215; }
+.col-orange i { font-style: normal; font-size: 1.2rem; }
+/*order-none.html*/
+.orderNoneMain { width: 100%; }
+.order-date { width: 100%; background: #fff; border-bottom: 1px solid #ccc; padding: 0 15px; overflow: hidden; line-height: 50px; }
+.date-left { float: left; width: 90%; height: 40px; line-height: 40px; }
+.date-left .link-date { height: 40px; line-height: 40px; }
+.date-left span { font-size: 1.4rem; color: #333; }
+.date-left .playdate { display: inline-block; float: right; text-align: right; overflow: hidden; }
+.ticket { font-size: 1.3rem; color: #333; }
+.dateTicket { background-color: #fff; }
+.dateTicket ul { padding: 0 15px; width: 100%; height: auto; }
+.dateTicket ul li { border-bottom: 1px solid #eee; height: 44px; line-height: 44px; overflow: hidden; text-align: center; }
+.dateTicket ul li:last-child { border-bottom: 0px; }
+.dateTicket ul li div { float: left; width: 34%; }
+.dateTicket ul li div:first-child { width: 37%; text-align: left; }
+.dateTicket ul li div:last-child { margin-top: 10px; text-align: right; float: right; width: 27%; }
+.dateTicket ul li .discount .vername { color: #333; font-size: 1.4rem; margin-right: 3%; }
+.dateTicket ul li .discount .verdis { display: inline-block; width: 30px; height: 15px; background: #FC8215; line-height: 15px; text-align: center; font-size: 0.8rem; color: #fff; border-radius: 3px; }
+.dateTicket ul li .price .emu { color: #FC8215; font-size: 1.2rem; }
+.dateTicket ul li .price .cash { color: #FC8215; font-size: 1.8rem; margin-right: 5px; }
+.dateTicket ul li .price .original { color: #b7b7b7; font-size: 1.2rem; text-decoration: line-through; }
+.dateTicket ul li .number a { display: inline-block; width: 25px; height: 25px; line-height: 25px; text-align: center; background: #2296f0; font-size: 1.2rem; color: #fff; }
+.dateTicket ul li .number .add { border-radius: 0 3px 3px 0; float: left; }
+.dateTicket ul li .number .minus { border-radius: 3px 0 0 3px; float: left; clear: right; }
+.dateTicket ul li .number a.stopDown { background: #90caf7; }
+.dateTicket ul li .number span { display: inline-block; width: 25px; height: 25px; line-height: 25px; font-size: 1.3rem; color: #333; background-color: #f7faff; text-align: center; margin: 0; padding: 0; float: left; }
+.ticketer { width: 100%; margin-top: 10px; background: #fff; }
+.ticketer ul li { line-height: 50px; padding: 0 15px; font-size: 1.4rem; color: #333; }
+.ticketer ul li span:first-child { color: #666; margin-right: 15px; }
+.ticketer ul li:first-child { border-bottom: 1px solid #ccc; }
+/*order-noSpread.html*/
+.ticket-detail-top img { width: 100%; height: 100%; }
+.ticket-detail-tit { padding: 10px 15px; background-color: #fff; border-bottom: 1px solid #eee; }
+.ticket-detail-tit .ticket-p1 { line-height: 24px; font-size: 1.6rem; color: #333; }
+.ticket-detail-tit .ticket-p2 { margin: 10px 0 0; font-size: 1.2rem; color: #fc8215; }
+.orderNoneMain { width: 100%; }
+.book-order-date { width: 100%; height: 40px; line-height: 40px; background: #fff; border-bottom: 1px solid #eee; padding: 0 15px; overflow: hidden; }
+.book-order-date .seldata { display: inline-block; width: 100%; height: 40px; line-height: 40px; }
+.date-right { float: right; height: 40px; line-height: 40px; }
+.date-right img { width: 9px; height: 13px; vertical-align: middle; }
+.ticketer { width: 100%; margin-top: 10px; background: #fff; }
+.ticketer ul li { line-height: 50px; padding: 0 4%; font-size: 1.4rem; color: #333; }
+.ticketer ul li span:first-child { color: #666; margin-right: 15px; }
+.ticketer ul li:first-child { border-bottom: 1px solid #ccc; }
+/*出行人信息*/
+.passage { width: 100%; background: #fff; margin-top: 10px; }
+.passage ul li { line-height: 50px; margin: 0 4%; border-bottom: 1px solid #ccc; font-size: 1.4rem; color: #333; }
+.passage ul li:last-child { border-bottom: none; }
+.passage ul li:not(:nth-child(2)) span:first-child {
+color:#666;
+margin-right:15px;
+}
+.passage ul li:nth-child(2) span { display: inline-block; width: 20%; height: 35px; border: 1px solid #666; line-height: 35px; text-align: center; border-radius: 5px; margin-right: 4.5%; }
+.passage ul li .active { background: #2396F1; color: #fff; border: 0!important; }
+.passage ul li:nth-child(2) p { text-align: center; line-height: 35px; }
+.passage ul li:nth-child(2) p img { width: 14px; height: 8px; margin-left: 5px; }
+.passage ul li a { font-size: 1.2rem; float: right; }
+.order { margin-top: 50px; overflow: hidden; }
+.money { width: 50%; height: 45px; float: left; background: #fff; line-height: 45px; text-align: center; font-size: 1.4rem; color: #333; }
+.money span { color: #FC8215; font-size: 1.8rem; }
+.goPay { width: 50%; height: 45px; float: left; background: #FC8215; line-height: 45px; text-align: center; color: #fff; font-size: 1.8rem; }
+/*spot-detail.css*/
+.spotMain { text-align: center; }
+.spot-detail-top { width: 100%; height: 215px; }
+.spot-detail-top img { width: 100%; height: 215px; }
+.spot-detail-tip { margin: 15px auto 10px; font-weight: 600; font-size: 1.8rem; color: #333; }
+.spot-detail-like { color: #777; font-size: 1.2rem; height: 15px; line-height: 15px; }
+.spot-detail-tip2 { margin: 15px 4% 0 4%; color: #777; font-size: 1.4rem; text-align: center; }
+.spot-line { margin-top: 20px; margin-bottom: 15px; height: 1px; background: #eee; overflow: hidden; }
+.spot-detail-tip3 { margin-left: 4%; margin-right: 4%; color: #777; font-size: 1.4rem; text-align: left; }
+.spot-detail-tip3 p { margin-bottom: 20px; text-align: left; text-indent: 2rem; }
+.spot-detail-pic { margin-left: 4%; margin-right: 4%; width: 96%; }
+.spot-detail-pic li { margin-bottom: 10px; height: 170px; width: 96%; border-radius: 5px; }
+.spot-detail-pic li img { width: 100%; height: 170px; }
+/*spot-msg.css*/
+.spot-msg-tit { clear: both; padding: 0 4%; margin-top: 10px; height: 40px; line-height: 40px; border-bottom: 1px solid #eee; background: #fff; font-size: 1.4rem; color: #333; }
+.spot-msg-tit .ico-tip { float: left; margin-top: 13px; margin-right: 5px; display: inline-block; width: 3px; height: 12px !important; background: #fc8215; border-radius: 100%; }
+.spot-4a { font-size: 1.4rem; margin-left: 10px; color: #666; }
+.spot-4a num { color: #FC8213; }
+.spot-msg-con { padding: 15px 4% 15px; background-color: #fff; color: #777; font-size: 1.4rem; }
+.spot-msg-con li { clear: both; height: 30px; line-height: 30px; }
+.spot-msg-con label { float: left; display: inline-block; width: 19.1%; font-size: 1.3rem; color: #777; }
+.spot-msg-con span { float: left; display: inline-block; width: 80%; text-align: right; }
+.spot-svrvey { padding: 15px 7.73% 30px 4%; height: auto; color: #777; font-size: 1.4rem; background: #fff; }
+.spot-msg-bg { height: 23px; }
+.spot-msg-bg div:nth-child(1) { height: 13px; background: #fff; }
+.spot-msg-bg div:nth-child(2) { height: 10px; background: #eee; }
+/*景点*/
+.spot-pic-detail { padding: 10px 4% 0; background-color: #fff; color: #fff; font-size: 1.4rem; }
+.spot-pic-detail li { position: relative; margin-bottom: 10px; width: 99%; height: 170px; overflow: hidden; }
+.spot-img-bg { width: 100%; height: 170px; }
+.spot-cover-text { position: absolute; z-index: 3; bottom: 0; height: 50px; width: 100%; }
+.spot-cover-text p { margin-left: 10px; }
+.spot-cover-pb { width: 60%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; -moz-text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; }
+.spot-cover-pt { margin-top: 4px; }
+.spot-use { position: absolute; line-height: 18px; height: 18px; vertical-align: middle; z-index: 3; right: 5px; bottom: 13px; }
+.spot-use span { float: left; display: block; }
+.spot-cover-bg { position: absolute; z-index: 1; bottom: 0; height: 50px; width: 100%; background: #000; opacity: 0.5; -moz-opacity: 0.5; filter: alpha(opacity=50); }
+/*分享*/
+.spot-share-tit { padding-bottom: 20px; border-bottom: 1px solid #eee; text-align: center; font-size: 1.5rem; }
+.spot-share-go { padding: 10px 9.3%; overflow: hidden; }
+.spot-share-go li { float: left; margin-right: 14%; margin-bottom: 15px; width: 14%; font-size: 1.2rem; text-align: center; }
+.spot-share-pic { margin-bottom: 8px; width: 40px; height: 40px; }
+.spot-share-pic img { width: 100%; height: 40px; }
+.spot-share-go li.li-space { margin-right: 0; }
+.spotMain-msg { text-align: left; }
+/*spot-pic*/
+.spot-pic { margin: 0 auto; display: inline-block; }
+.spot-pic a { display: inline-block; float: left; width: 165px; height: 165px; }
+.spot-pic img { width: 100%; height: 165px; }
+.spot-pic-ul { margin-left: 4%; display: inline-block; }
+.spot-pic-ul li { float: left; margin-top: 15px; margin-right: 4%; width: 46%; height: 165px; }
+.spot-pic-ul li img { width: 100%; height: 165px; }
+/*ticket-book2.css*/
+.ticket-book { width: 100%; background: #fff; }
+.book-con { padding: 10px 15px; height: 115px; border-bottom: 1px solid #eee; overflow: hidden; }
+.book-con-left { float: left; width: 42%; height: 93px; border-radius: 3px; }
+.book-con-left img { width: 100%; height: 93px; }
+.book-con-right { float: left; margin-left: 2.6%; width: 55%; }
+.book-con-tit { margin-top: 10px; font-size: 1.6rem; }
+.book-num { margin-top: 10px; color: #666; font-size: 1.4rem; }
+.book-num num { color: #FC8215; }
+/*门票价格 */
+.book-price { clear: both; }
+.book-price li { clear: both; position: relative; padding: 0 4%; width: 100%; height: 45px; line-height: 45px; border-bottom: 1px solid #eee; }
+.price-tit { float: left; font-size: 1.5rem; }
+.price-count { float: left; display: inline-block; margin-top: 13px; margin-left: 10px; width: 32px; height: 15px; line-height: 15px; border-radius: 3px; background: #FC8215; color: #fff; text-align: center; }
+.price-num { margin-right: 10px; color: #FC8215; font-size: 1.5rem; }
+.price-num num { font-size: 1.2rem; }
+.price-del { color: #666; }
+.price-right { float: right; }
+.book-price li.li3 { height: 70px; }
+.ticket-more { position: relative; line-height: 10px; clear: both; font-size: 1.4rem; color: #666; text-align: center; }
+.ticket-more a { color: #666; }
+.ticket-more img { width: 13px; height: 8px; }
+/*须知*/
+.book-detail .ico-tip { margin-top: 2px; }
+.evaluate-con-two .book-more { color: #2198F2; }
+.ticket-notice { padding: 0 4%; height: 40px; background-color: #fff; line-height: 40px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; font-size: 1.4rem; color: #333; }
+.ticket-notice-bg { background-color: #fff; }
+.ticket-notice-bg div:last-child { border-bottom: 0px; }
+.ticket-notice-con { margin: 0 15px; background: #fff; border-bottom: 1px solid #eee; font-size: 1.4rem; }
+.notice-p1 { padding-top: 10px; font-size: 1.4rem; }
+.notice-p3 { margin-top: 5px; color: #666; }
+.notice-p2 { padding: 5px 0; color: #666; font-size: 1.2rem; line-height: 20px; }
+.ico-spot-notice span { font-size: 1.4rem; color: #333; }
+/*评价*/
+.ticket-evaluate { padding: 0 4%; height: 40px; line-height: 40px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; background: #fff; font-size: 1.3rem; color: #333; }
+.evaluate-content { margin-bottom: 5px; }
+.ticket-evaluate-con { padding: 0 15px; background: #fff; overflow: hidden; }
+.evaluate-con-first { padding-top: 20px; }
+.evaluate-head { float: left; font-size: 1.5rem; }
+.evaluate-head img { float: left; width: 28px; height: 28px; border-radius: 14px; }
+.evaluate-head span { float: left; display: inline-block; margin: 5px 0 0 5px; font-size: 1.4rem; color: #333; }
+.evaluate-use { margin-top: 7px; float: right; color: #FC8215; }
+.evaluate-con-two { clear: both; }
+.evaluate-p1.hide { padding-top: 15px; width: 100%; line-height: 22px; word-break: break-all; font-size: 1.4rem; display: -webkit-box!important; overflow: hidden; -webkit-text-overflow: ellipsis; -moz-text-overflow: ellipsis; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow: ellipsis; -webkit-box-orient: vertical; -moz-box-orient: vertical; -o-box-orient: vertical; -ms-box-orient: vertical; box-orient: vertical; -webkit-line-clamp: 2; -moz-line-clamp: 2; -o-line-clamp: 2; -ms-line-clamp: 2; line-clamp: 2; }
+.evaluate-p1.show { padding-top: 15px; width: 100%; line-height: 22px; word-break: break-all; font-size: 1.4rem; display: -webkit-box!important; overflow: hidden; -webkit-text-overflow: ellipsis; -moz-text-overflow: ellipsis; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow: ellipsis; -webkit-box-orient: vertical; -moz-box-orient: vertical; -o-box-orient: vertical; -ms-box-orient: vertical; box-orient: vertical; -webkit-line-clamp: 0; -moz-line-clamp: 0; -o-line-clamp: 0; -ms-line-clamp: 0; line-clamp: 0; }
+.evaluate-p2 { margin: 10px 0; }
+.evaluate-p2 a { color: #2197F1; }
+/*图片*/
+.ticket-detail-pic { clear: both; padding: 0 4%; background: #fff; overflow: hidden; }
+.ticket-detail-pic li { float: left; margin-right: 2%; margin-bottom: 10px; width: 23%; height: 75px; }
+.ticket-detail-pic li img { width: 100%; height: 75px; overflow: hidden; }
+/*显示时间*/
+.ticket-time { clear: both; padding-left: 4%; overflow: hidden; background: #fff; color: #666; font-size: 1.4rem; }
+/*酒店回复*/
+.hotel-reply { padding: 8px 4% 20px 4%; background: #fff; font-size: 1.4rem; border-bottom: 1px solid #eee; }
+.hotel-reply p { padding: 9px; background: #F7FAFF; }
+/*立即预定*/
+.ticket-btn { position: fixed; bottom: 0; margin-top: 10px; height: 45px; line-height: 45px; width: 100%; font-size: 1.6rem; }
+.ticket-total { float: left; height: 45px; line-height: 45px; border-top: 1px solid #e5e5e5; }
+.ticket-total span { margin-left: 5px; color: #FC8215; }
+.ticket-book-btn { margin: 0!important; padding: 0!important; height: 45px; line-height: 45px; font-size: 1.6rem; text-shadow: none!important; }
+/*spot_comments.html*/
+.discussBox { width: 100%; font-size: 1.4rem; }
+.title-total { background: #fff; overflow: hidden; margin-top: 20px; }
+.title-total .title-left { float: left; width: 28%; margin-left: 2%; text-align: center; margin-top: 5px; }
+.title-total .title-left p { font-size: 1.2rem; color: #999; }
+.title-total .title-left span { font-size: 3rem; color: #eea920; line-height: 18px; }
+.title-total .title-right { width: 64%; float: left; margin-left: 5.3%; }
+.title-total .title-right ul { width: 96%; margin-right: 4%; overflow: hidden; }
+.title-total .title-right ul li { float: left; width: 50%; margin-bottom: 10px; font-size: 1.2rem; }
+.title-total .title-right span { display: inline-block; width: 52.5%; color: #999; }
+.title-total .title-right a { color: #fea41a; }
+/*等级评论*/
+.grade { width: 100%; height: 45px; line-height: 45px; background: #fcfcfc; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee; margin-top: 15px; }
+.grade ul { overflow: hidden; margin-top: 1px; }
+.grade ul li { float: left; display: inline-block; width: 20%; font-size: 1.2rem; color: #666666; text-align: center; }
+.grade ul li span { display: block; line-height: 20px; }
+.grade ul .current span { color: #1E9AF6; }
+.current { border-bottom: 2px solid #1E9AF6; }
+.top-left { float: left; line-height: 25px; font-size: 1.4rem; color: #333; }
+.top-left img { width: 30px; height: 30px; vertical-align: middle; margin-right: 5px; border-radius: 15px; }
+.top-right { float: right; line-height: 25px; font-size: 1.2rem; color: #F7861E; }
+.comminfo { margin: 5px 0; line-height: 20px; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+/*.comminfo.hide{line-clamp:2; -webkit-line-clamp: 2; }*/
+/*.comminfo.show{line-clamp:0; -webkit-line-clamp: 0;}*/
+
+/**/
+.top-total .top-right { float: right; line-height: 25px; font-size: 1.2rem; color: #F7861E; }
+.gray { color: #cfcfcf; }
+.top-total { overflow: hidden; }
+.comment .discuss { width: 100%; overflow: hidden; padding: 0 4%; margin-top: 15px; }
+.discuss p.hide { font-size: 1.4rem; color: #333; line-height: 20px; margin: 10px 0; overflow : hidden; text-overflow: ellipsis; display: -webkit-box; line-clamp: 2; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.discuss p.show { font-size: 1.4rem; color: #333; margin: 10px 0; min-height: 40px; line-clamp: 0; -webkit-line-clamp: 0; }
+.discuss .more { color: #1c94eb; font-size: 1.4rem; }
+.discuss .discussDate { margin-left: 14px; margin-bottom: 8px; color: #666666; }
+.comment .discuss ul { width: 100%; overflow: hidden; margin: 10px 0; }
+.comment .discuss ul li:nth-child(4n) { margin-right: 0; }
+.comment .discuss ul li img { width: 80px; height: 80px; margin-right: 10px; }
+.comment .discuss time { display: block; color: #9a9a9c; font-size: 1.2rem; }
+.comment .discuss time span { margin-left: 10px; }
+.comment .discuss .answer { margin: 10px 0 20px; background: #F7FAFF; padding: 10px; font-size: 1.4rem; color: #333333; line-height: 20px; }
+/*spot_problems.html*/
+.spot-problem { border-bottom: 1px solid #eee; line-height: 17px; overflow: hidden; }
+.problem-sign { float: left; margin-right: 11px; width: 17px; height: 17px; border-radius: 3px; }
+.problem { display: inline-block; padding: 0 20px; margin-top: 10px; min-height: 85px; border-bottom: 1px solid #eee; }
+.problem p { float: left; width: 90%; }
+.problem-tit { height: 20px; line-height: 20px; color: #333; font-size: 1.4rem; }
+.problem-answer { display: inline-block; clear: both; margin-top: 10px; color: #666; font-size: 1.2rem; }
+.problem-time { height: 20px; line-height: 20px; clear: both; margin: 10px 0; text-align: right; font-size: 1.2rem; color: #666; }
+/*spot_publish.html*/
+.spot-publish-top { padding: 0 4%; background: #fff; overflow: hidden; font-size: 1.2rem; color: #666; }
+.spot-publish-tip, .spot-limit { margin-top: 12px; }
+.spot-write { margin-top: 10px; padding: 3%; width: 100%; height: 65px; border: 1px solid #eee; }
+.spot-load-photo { margin-top: 15px; padding-bottom: 10px; }
+.spot-load-photo li { margin-right: 5px; margin-bottom: 5px; float: left; width: 75px; height: 75px; overflow: hidden; }
+.spot-load-photo li img { width: 100%; height: 75px; }
+.spot-load-btn { background: url(../images/spot/camera.png) no-repeat center #eee; background-size: 32px 28px; }
+/*星级评价*/
+.spot-publish-score { margin-top: 10px; padding-bottom: 20px; padding-left: 4%; overflow: hidden; background: #fff; color: #666; font-size: 1.5rem; }
+.spot-score-tit { margin-top: 20px; font-size: 1.6rem; color: #333; }
+.spot-score-type { overflow: hidden; margin-top: 10px; font-size: 1.4rem; color: #666; }
+.spot-score-type span { float: left; margin-right: 10%; width: 20%; }
+.spot-score-type div { float: left; }
+.spot-publish-commit { margin-top: 15px; height: 45px; line-height: 45px; font-size: 1.6rem; }
+/*spot_traffic.html*/
+.spot-map { width: 100%; height: 235px; overflow: hidden; }
+.spot-straffic-type { margin-left: 4%; height: 40px; line-height: 40px; color: #333; font-size: 1.4rem; }
+.spot-straffic-type span { margin-top: 12px; }
+.spot-straffic-msg { padding: 0 4% 30px 4%; font-size: 1.4rem; color: #666; }
+.spot-straffic-tit { margin: 10px 0; height: 20px; line-height: 20px; color: #333; }
+.spot-straffic-tit span { height: 20px; line-height: 20px; }
+/*退票order_refund.html*/
+body.order-refund { background: #eee; font-size: 1.2rem; }
+.order-refund-top { position: relative; padding: 10px 4%; overflow: hidden; background: #fff; font-size: 1.5rem; }
+.refund-top-pic { float: left; width: 70px; height: 70px; border-radius: 5px; overflow: hidden; }
+.refund-top-pic img { width: 100%; height: 70px; }
+.refund-top-con { float: left; margin-left: 3.3%; width: 72%; color: #333; }
+.pro-versions { display: inline-block; width: 100%; height: 30px; line-height: 30px; }
+.refund-ticket-type { color: #666; float: left; width: 40%; }
+.refund-ticket-price { float: left; font-size: 1.2rem; color: #b7b7b7; }
+.order-refund .opt-num { float: right; }
+.order-refund .opt-num a { display: inline-block; float: left; width: 28px; height: 28px; line-height: 28px; background: #2296F0; text-align: center; color: #fff; font-size: 2.5rem; }
+.order-refund .opt-num input { float: left; width: 34px; height: 28px; border: 0; background: #F7FAFF; text-align: center; padding: 0; }
+.order-refund .opt-num .link-disable { background: #90caf7; }
+.refund-total { margin-top: 10px; padding: 0 4%; height: 45px; line-height: 45px; color: #333; background: #fff; font-size: 1.4rem; overflow: hidden; }
+.refund-money { float: right; color: #FC8E15; }
+/*退款原因*/
+.refund-reasons { font-size: 1.5rem; color: #333; }
+.refund-reason, .other-reason { padding-bottom: 20px; background: #fff; font-size: 1.5rem; color: #333; }
+.other-reason { margin-top: 10px; }
+.refund-reason li { padding: 0 4%; height: 41px; line-height: 41px; border-bottom: 1px solid #EDEDED; }
+.refund-reason li.check { background-position: 15px 13px; }
+.refund-reason li span { margin-left: 20px; }
+.refund-reason-tit { display: inline-block; padding: 0 4%; margin-top: 10px; width: 100%; height: 40px; line-height: 40px; background: #fff; border-bottom: 1px solid #EDEDED; }
+.refund-reason-con .ico-uncheck { display: inline-block; width: 13px; height: 13px; }
+.other-reason-tit { padding: 0 4%; height: 46px; line-height: 46px; }
+.other-reason-con .other { margin: 0 4%; width: 92%; border: 1px solid #ccc; padding: 5px 5px; }
+.order-refund-bot { display: inline-block; margin-top: 20px; width: 100%; }
+.apply-refund { height: 45px; line-height: 45px; font-size: 1.8rem; }
+/*增加的线路退票option*/
+.option { padding-left: 3.3%; padding-right: 3.3%; background: #fff; }
+.opt-type { padding: 20px 0; font-size: 1.5rem; }
+.opt-price { padding-bottom: 14px; font-size: 1.3rem; color: #666; }
+.opt-price span { margin-left: 10px; color: #fc8215; }
+.option li { position: relative; border-bottom: 1px solid #DEDEDE; }
+.opt-num { position: absolute; right: 0; top: 22px; }
+.opt-num a { display: inline-block; float: left; width: 28px; height: 28px; line-height: 20px; background: #2296F0; text-align: center; color: #fff; font-size: 2.5rem; }
+.opt-num a.hyy { background: #8dc7f7; }
+.opt-num a:active { background: #68b8f6; }
+.opt-num .amount { float: left; width: 35px; height: 28px; border-top: 1px solid #9ED1F8; border-bottom: 1px solid #9ED1F8; text-align: center; line-height: 28px; color: #32312f; background: #e4f2fd; }
+.line-add { border-bottom: 1px solid #ededed; }
+.other-reason-con textarea { margin: 0 auto; padding: 10px; margin-bottom: 16px; border: 0; width: 100%; height: 176px; box-shadow: 1px 1px 8px #ccc; resize: none; outline: none }
+.other-reason-con { padding: 0 4%; }
+.refund-reason-tit .ico-tip { margin-top: 12px; }
+.other-reason-tit .ico-tip { margin-top: 16px; }

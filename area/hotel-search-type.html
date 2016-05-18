@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>酒店搜索-酒店类型</title>
+    <link href="../src/js/widget/swiper/swiper-3.2.7.min.css" rel="stylesheet">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/area/hotel-search-type.css"  rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/widget/swiper/swiper-3.2.7.min.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/area/js/index.js"></script>
+
+</head>
+<body>
+    <div class="container">
+      <!-- 筛选条件 -->
+       <div class="screen-condition">
+           <ul class="screen-ul">
+               <li><a>销量</a></li>
+               <li><a>价格</a></li>
+               <li><a>好评率</a></li>
+               <li><a class="hotel-active">筛选</a></li>
+           </ul>
+       </div> 
+       <!-- 酒店类型 -->
+       <div class="hotel-type clear">
+         <div class="already-choice">
+              <ul class="already-ul">
+                 <li class="already-li">
+                    <a class="choice-a">经济连锁</a><span class="choice-close">x</span>
+                 </li>
+              </ul>
+              <button class="clear-choice">清空筛选</button>
+          </div>
+          <div class="hotel-type-option">
+              <ul class="option-ul">
+                 <li class="option-li option-li-active">
+                    <a>酒店类型</a>
+                    <span class="option-tip"></span>
+                    <ul class="option-ul2">
+                       <li class="option-li2"><a>不限</a></li>
+                       <li class="option-li2"><a>经济连锁</a></li>
+                       <li class="option-li2"><a>星级连锁</a></li>
+                       <li class="option-li2"><a>经济酒店</a></li>
+                       <li class="option-li2"><a>商务酒店</a></li>
+                       <li class="option-li2"><a>宾馆</a></li>
+                    </ul>
+                 </li>
+                 <li class="option-li">
+                   <a>酒店星级</a>
+                 </li>
+                 <li class="option-li">
+                   <a>价格区间</a>
+                 </li>
+                 <li class="option-li">
+                   <a>促销优惠</a>
+                 </li>
+              </ul>
+          </div>
+          <div class="hotel-opt-btn clear">
+             <button class="hotel-opt-no">取消</button>
+             <button class="hotel-opt-yes">确定</button>
+          </div>
+       </div>
+       <div class="hotel-cover-bg"></div>
+       <!-- 入住离店日期 -->
+       <ul class="date clear">
+           <li class="date-live">
+               <p class="date-tit">入住</p>
+               <p class="date-detail">
+                   <span class="span-date">2016-01-23</span>
+                   <span class="span-week">明天</span>
+               </p>
+           </li>
+           <li class="date-leave">
+               <p class="date-tit">离店</p>
+               <p class="date-detail">
+                   <span class="span-date">2016-01-23</span>
+                   <span class="span-week">星期五</span>
+               </p>
+           </li>
+       </ul>
+       <!-- 筛选结果 -->
+       <div class="screen-result clear">
+            <ul class="result-ul">
+                <li class="result-li">
+                    <div class="result-li-left">
+                        <div class="result-tip">区域推荐</div>
+                        <img src="img/spot-pic1.png" alt="">
+                    </div>
+                    <div class="result-li-right">
+                        <p class="p-sketch">
+                            2天1晚|酒店提供住宿一晚+自助早餐+温泉中心+娱乐大礼包温泉中心+娱乐大礼包温泉中心+娱乐大礼
+                        </p>
+                        <p class="p-rate">好评率：100%</p>
+                        <p class="p-type">豪华型</p>
+                        <p class="p-tip">
+                            <span class="span-zhe">折</span>
+                            <span class="span-wei">尾</span>
+                        </p>
+                        <p class="p-address clear">北京朝阳</p>
+                        <p class="p-price">
+                            <i>&yen;</i><span>1090.45</span>
+                            起
+                        </p>
+                    </div>
+                </li>
+                <li class="result-li">
+                    <div class="result-li-left">
+                        <div class="result-tip">区域推荐</div>
+                        <img src="img/spot-pic1.png" alt="">
+                    </div>
+                    <div class="result-li-right">
+                        <p class="p-sketch">
+                            2天1晚|酒店提供住宿一晚+自助早餐+温泉中心+娱乐大礼包温泉中心+娱乐大礼包温泉中心+娱乐大礼
+                        </p>
+                        <p class="p-rate">好评率：100%</p>
+                        <p class="p-type">豪华型</p>
+                        <p class="p-tip">
+                            <span class="span-zhe">折</span>
+                            <span class="span-wei">尾</span>
+                        </p>
+                        <p class="p-address clear">北京朝阳</p>
+                        <p class="p-price">
+                            <i>&yen;</i><span>1090.45</span>
+                            起
+                        </p>
+                    </div>
+                </li>
+                <li class="result-li">
+                    <div class="result-li-left">
+                        <div class="result-tip">区域推荐</div>
+                        <img src="img/spot-pic1.png" alt="">
+                    </div>
+                    <div class="result-li-right">
+                        <p class="p-sketch">
+                            2天1晚|酒店提供住宿一晚+自助早餐+温泉中心+娱乐大礼包温泉中心+娱乐大礼包温泉中心+娱乐大礼
+                        </p>
+                        <p class="p-rate">好评率：100%</p>
+                        <p class="p-type">豪华型</p>
+                        <p class="p-tip">
+                            <span class="span-zhe">折</span>
+                            <span class="span-wei">尾</span>
+                        </p>
+                        <p class="p-address clear">北京朝阳</p>
+                        <p class="p-price">
+                            <i>&yen;</i><span>1090.45</span>
+                            起
+                        </p>
+                    </div>
+                </li>
+                <li class="result-li">
+                    <div class="result-li-left">
+                        <div class="result-tip">区域推荐</div>
+                        <img src="img/spot-pic1.png" alt="">
+                    </div>
+                    <div class="result-li-right">
+                        <p class="p-sketch">
+                            2天1晚|酒店提供住宿一晚+自助早餐+温泉中心+娱乐大礼包温泉中心+娱乐大礼包温泉中心+娱乐大礼
+                        </p>
+                        <p class="p-rate">好评率：100%</p>
+                        <p class="p-type">豪华型</p>
+                        <p class="p-tip">
+                            <span class="span-zhe">折</span>
+                            <span class="span-wei">尾</span>
+                        </p>
+                        <p class="p-address clear">北京朝阳</p>
+                        <p class="p-price">
+                            <i>&yen;</i><span>1090.45</span>
+                            起
+                        </p>
+                    </div>
+                </li>
+            </ul>
+       </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的银行卡</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/my_card.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="card-con">
+			<ul id="myBank">
+				<script id="tmplBank" type="text/html">
+					{{each data as bank}}
+					<li class="card-detail">
+						<div class="card-iconr ico-detail-card">
+							<!--<img src="../src/images/personaccount/pay-a.png"  alt="">-->
+						</div>
+						<div class="card-mid">
+							<p class="mid-p1">交通银行</p>
+							<p class="mid-p2">储蓄卡</p>
+						</div>
+						<div class="ico-detail-close"></div>
+						<!--<img src="../src/images/personaccount/close.png"  alt="" class="close">-->
+						<div class="card-number-this">**** **** **** 5221</div>
+					</li>
+					{{/each}}
+				</script>
+			</ul>
+		</div>
+		<div class="card-add">+添加银行卡</div>
+	</div>
+</body>
+</html>

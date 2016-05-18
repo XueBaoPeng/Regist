@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>tingche</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" transform="translate(-176.000000, -81.000000)" stroke-linecap="round" stroke="#555555">
+            <g id="tingche" sketch:type="MSLayerGroup" transform="translate(177.000000, 82.000000)">
+                <path d="M19.6774194,10 C19.6774194,15.3445161 15.3445161,19.6774194 10,19.6774194 C4.65548387,19.6774194 0.322580645,15.3445161 0.322580645,10 C0.322580645,4.65548387 4.65548387,0.322580645 10,0.322580645 C15.3445161,0.322580645 19.6774194,4.65548387 19.6774194,10 L19.6774194,10 Z" id="Stroke-1" sketch:type="MSShapeGroup"></path>
+                <path d="M10.2777419,4.68877419 L7.47903226,4.68877419 L7.47903226,10.7365161 L10.2777419,10.7365161 C12.2209677,10.7365161 13.8112903,9.37587097 13.8112903,7.71264516 C13.8112903,6.04941935 12.2209677,4.68877419 10.2777419,4.68877419 L10.2777419,4.68877419 Z" id="Stroke-3" sketch:type="MSShapeGroup"></path>
+                <path d="M7.47916129,4.68877419 L7.47916129,15.3113548" id="Stroke-5" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

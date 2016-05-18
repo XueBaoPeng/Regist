@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <title>线路详情</title>
+  <link rel="stylesheet" href="../src/js/widget/swiper/swiper-3.2.7.min.css">
+  <link rel="stylesheet" href="../src/css/common.css">
+  <link rel="stylesheet" href="../src/css/line.css">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/widget/swiper/swiper-3.2.7.min.js"></script>
+  <script src="../src/js/widget/jquery.raty/jquery.raty.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/config.js"></script>
+  <script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/line/line_detail.js"></script>
+</head>
+<body class="gooddetail">
+<div class="goodDetail">
+  <div id="roomList">
+    <script type="text/html" id="tmplRoomList">
+      <div class="goodDetailTop">
+        <div class="top">
+          <div class="swiper-container">
+            <ul class="swiper-wrapper">
+              {{each data.banner as banner i}}
+              <li class="swiper-slide"><img src="{{banner}}"></li>
+              {{/each}}
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="bar">
+          <span class="barLeft">[{{data.travelType}}]{{data.startCity}}</span>
+          <span class="barRight">产品编号：{{data.goodsId}}</span>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="title">{{data.travelTitle}}</div>
+        <div class="price">
+          <p>￥ <span>{{data.travelPrice}}</span>起/人</p>
+          <p class="mount">{{data.buy}}人已购买</p>
+        </div>
+        <div class="discuss">
+          <p class="text">好评率</p>
+          <p class="percent">{{data.percent}}%</p>
+          <ul class="star">
+            <li id="spotStar" data-number="{{data.starAmount}}"></li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <!--加套餐内容-->
+        <div id="lineMeal" class="set">
+          {{each data.mealList as item i}}
+          <div class="meal-all" >
+            <div class="meal" onclick="more(this)">
+              <div class="input-bg" ></div>
+              <input name="checkMeal" type="checkbox" value="{{item.MealId}}" class="meal-left" onclick="mealCheck(this)" style="opacity: 0"/>
+              <div class="meal-title">{{item.MealName}}</div>
+              <div class="meal-right">
+                <img class="meal-triangle" src="../src/images/line/right@.png" width=6 height=10/>
+              </div>
+            </div>
+            <p class="meal-introduce">{{item.Description}}</p>
+          </div>
+          {{/each}}
+        </div>
+      <!--加内容-->
+      <div class="groom">
+        <div class="title">
+          <img src="../src/images/line/tui_03.jpg">
+          <span class="groom-size">{{#data.groomTitle}}</span>
+          <div class="clear"></div>
+        </div>
+        <ul class="listText">
+          <li>{{#data.groomList}}</li>
+        </ul>
+      </div>
+      <ul class="tab">
+        <li class="routeTab current">行程介绍</li>
+        <li class="feeTab">费用说明</li>
+        <li class="bookTab">预定须知</li>
+        <li class="featureTab">产品特色</li>
+      </ul>
+      <div class="content">
+        <div class="item route">
+          {{each data.tripInfo as item index}}
+          <div class="day">
+            <div class="number">{{item.title}}</div>
+            <span class="pathTitle">{{item.path}}</span>
+            <div class="clear"></div>
+            {{each item.detail as item index}}
+            <div class="pathDetail">
+              <span class="pathLogo {{item.pathLogo}}"></span>
+              <span class="pathDetailTitle">{{item.detailTitle}}</span>
+              <div class="clear"></div>
+              <div class="detailText">
+                {{if item.spotTime=="" }}
+                <p style="display: none">{{item.spotTime}}</p>
+                {{else}}
+                <p>{{item.spotTime}}</p>
+                {{/if}}
+                {{if item.content=="" }}
+                <p style="display: none">{{item.content}}</p>
+                {{else}}
+                <p>{{#item.content}}</p>
+                {{/if}}
+              </div>
+              {{if item.spotImg==""}}
+              <img src="{{item.spotImg}}" class="spotImg" style="display: none">
+              {{else}}
+              <img src="{{item.spotImg}}" class="spotImg">
+              {{/if}}
+            </div>
+            {{/each}}
+          </div>
+          {{/each}}
+        </div>
+        <div class="item fee" style="overflow: hidden">
+          <div class="explain">
+            <h3 class="explainTitle"><span>|</span>费用包含</h3>
+          {{#data.constInclude}}
+            </div>
+          <div class="explain">
+            <h3 class="explainTitle"><span>|</span>费用不包含</h3>
+            {{#data.constNoInclude}}
+          </div>
+          <div class="explain">
+            <h3 class="explainTitle"><span>|</span>自费项目</h3>
+            {{#data.costSelf}}
+          </div>
+          </div>
+        <div class="item book">
+          <div class="explain">
+            <h3 class="explainTitle"><span>|</span>预订须知</h3>
+            {{#data.bookingNotice}}
+          </div>
+        {{if data.remark==""}}
+          <div class="remark" style="display: none">
+            <div class="text">
+              <p class="title">备注信息</p>
+              <p>{{#data.remark}}</p>
+            </div>
+        </div>
+          {{else}}
+          <div class="remark">
+            <div class="text">
+              <p class="title">备注信息</p>
+              <p>{{#data.remark}}</p>
+            </div>
+          </div>
+          {{/if}}
+        </div>
+        <ul class="item feature">
+          <div class="explain">
+            <h3 class="explainTitle"><span>|</span>产品特色</h3>
+            {{#data.feature}}
+          </div>
+        </ul>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="call">
+          <div class="callBox">
+            <img src="../src/images/line/call_03.jpg">
+            <span>联系商家</span>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        {{each data.mealList as d i}}
+      <div class="buy playdate" id="appDate" data-value="" data-url="line_calendar.html?x" onclick="detailClick(this)">立即预定</div>
+       {{/each}}
+
+        <div class="clear"></div>
+        <div class="bottomBox">
+          <div id="all-box" style="position:absolute; width:100%; height:2000px;background:#000"></div>
+          <div class="telephone">
+
+            <div class="notice">为了节省您的时间,请告知客服此产品的产品编号</div>
+            <div class="goodsId">产品编号：{{data.goodsId}}</div>
+            <div class="telephoneNumber">{{data.businessTel}}（免长途费）</div>
+            <div class="callBtn">
+              <div class="btnBox">
+                <!--<img src="../src/images/line/call2_03.jpg">-->
+                <a href="tel:{{data.businessTel}}"><span>播打电话</span></a>
+              </div>
+            </div>
+            <div class="callBtn cancel">
+              <div class="btnBox">
+                <!--<img src="../src/images/line/cancel_11.jpg">-->
+                <span>关闭</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="arrow-down"></div>
+          <div class="arrow-down2"></div>
+        </div>
+      </div>
+
+    </script>
+  </div>
+</div>
+<div style="height:60px;width:100%;"></div>
+</body>
+</html>

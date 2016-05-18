@@ -1,0 +1,58 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": [
+    {
+      "id": "1120",
+      "travelWay": "自由行",
+      "image": "../testdata/line/travel_line/1.jpg",
+      "travelTitle": "[宜兴2日1晚，房车首推]住宜兴开元精舍酒店，游张公洞景区（含漂流、等等）",
+      "recommend": true,
+      "goodReputation": "98",
+      "timeRange": "5天4晚",
+      "price": "3999",
+      "originalPrice": "6999",
+      "remnant": true,
+      "travelTheme": "山水景观，主题体验"
+    },
+    {
+      "id": "1122",
+      "travelWay": "自由行",
+      "image": "../testdata/line/travel_line/1.jpg",
+      "travelTitle": "住宜兴开元精舍酒店，游张公洞景区（含漂流、等等）",
+      "recommend": true,
+      "goodReputation": "95",
+      "timeRange": "2天1晚",
+      "price": "1999",
+      "originalPrice": "3999",
+      "remnant": false,
+      "travelTheme": "山水景观"
+    },
+    {
+      "id": "1123",
+      "travelWay": "自由行",
+      "image": "../testdata/line/travel_line/2.jpg",
+      "travelTitle": "住宜兴开元精舍酒店，游张公洞景区（含漂流、等等）",
+      "recommend": true,
+      "goodReputation": "92",
+      "timeRange": "3天2晚",
+      "price": "3999",
+      "originalPrice": "6999",
+      "remnant": true,
+      "travelTheme": "山水景观，主题体验"
+    },
+    {
+      "id": "1124",
+      "travelWay": "自由行",
+      "image": "../testdata/line/travel_line/1.jpg",
+      "travelTitle": "住宜兴开元精舍酒店，游张公洞景区（含漂流、等等）",
+      "recommend": true,
+      "goodReputation": "99",
+      "timeRange": "6天5晚",
+      "price": "5999",
+      "originalPrice": "9999",
+      "remnant": true,
+      "travelTheme": "主题体验"
+    }
+  ]
+}

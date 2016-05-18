@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>新闻公告</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/news.js"></script>
+</head>
+<body>
+    <div id="container" class="newsMain">
+        <div class="wrapper">
+            <div class="scroller">
+                <div class="pullDown">
+                    <span>下拉刷新</span>
+                </div>
+                <div id="newsList">
+                    <script id="tmplNews" type="text/html">
+                        {{each data as item index}}
+                        <div class="newsBox" data-title="{{item.newsTitle}}" data-url="news_detail.html?id={{item.newsId}}" onclick="newDetailClick(this);">
+                            <div class="news-left"><img src="{{item.newsImage}}"></div>
+                            <div class="news-right">
+                                <span>{{item.newsTitle}}</span>
+                                <p class="new-brief">{{item.newsBrief}}</p>
+                                <p class="new-date">{{item.newsDate}}</p>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </script>
+                </div>
+
+                <div class="pullUp">
+                    <span>上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

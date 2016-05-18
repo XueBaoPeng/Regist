@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>酒店商务中心</title>
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/hotel.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link rel="stylesheet" href="../src/js/widget/lightGallery/css/lightgallery.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lightgallery.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-thumbnail.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-fullscreen.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>    
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config_1.js"></script>
+    <script src="../src/js/dbutil_1.js"></script>
+    <script src="../src/js/hotel/hotel_business.js"></script>  
+</head>
+<body>
+<div class="container-business" id="container">
+	<script type="text/html" id="template">    
+    <ul class="infoList">
+        <li>
+            <img src="../src/images/hotel/call_03.jpg" class="call"> <span class="telephoneNumber">{{data.telephoneNumber}}</span>
+        </li>
+        <li>
+            <span class="phoneTime">电话服务时间: {{data.phoneTime}}</span>
+        </li>
+        <li>
+            <p class="title">服务内容:</p>
+            <p>{{data.serviceItem}} </p>
+        </li>
+        <li>
+            <p class="title">服务说明:</p>
+            <div class="content">{{data.serviceNote}}</div>
+        </li>
+    </ul>
+    <div class="photo">
+        <p class="photoText">相册</p>
+        <div class="photoList" id="photoList">        	
+        	{{each data.photoList as photoList i}}
+               <a href="{{photoList.src}}"><img src="{{photoList.src}}" art="{{photoList.txt}}"> </a>
+             {{/each}}        
+        </div>
+    </div>
+    </script>
+</div>
+<!--轮播图全屏预览-->
+    <section id="showFull" class="photo-full hide">
+        <div class="oriphoto"><img src="" data-idx="" alt=""></div>
+        <div class="pho"></div>
+    </section>
+</body>
+</html>

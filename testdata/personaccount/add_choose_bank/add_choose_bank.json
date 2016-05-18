@@ -1,0 +1,28 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": [{
+    "image":"../src/images/personaccount/zhongxin-bank.png",
+    "name":"中信银行"
+  },
+    {
+      "image":"../src/images/personaccount/zhonguo-bank.png",
+      "name":"中国银行"
+    },
+    {
+      "image":"../src/images/personaccount/jianshe-bank.png",
+      "name":"建设银行"
+    },
+    {
+      "image":"../src/images/personaccount/gongshang-bank.png",
+      "name":"工商银行"
+    },
+    {
+      "image":"../src/images/personaccount/nongye-bank.png",
+      "name":"工商银行"
+    },
+    {
+      "image":"../src/images/personaccount/zhaoshang-bank.png",
+      "name":"农业银行"
+    }]
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>玩转本地</title>
+  <link href="../src/js/widget/swiper/swiper-3.2.7.min.css" rel="stylesheet">
+  <link href="../src/css/reset.css" rel="stylesheet">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link href="../src/css/area/localFun.css" rel="stylesheet">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/widget/swiper/swiper-3.2.7.min.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/area/localFun.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <div class="top">
+    <div class="swiper-container">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide"><img src="../src/images/area//a1.jpg"></li>
+        <li class="swiper-slide"><img src="../src/images/area//a2.jpg"></li>
+        <li class="swiper-slide"><img src="../src/images/area//a3.jpg"></li>
+      </ul>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <ul class="tab">
+    <li class="spotTab current">景区门票</li>
+    <li class="roomTab">酒店房间</li>
+    <li class="routeTab">旅游线路</li>
+    <li class="guideTab">导游服务</li>
+  </ul>
+  <div class="main">
+    <ul class="item spot">
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <div class="zhe">折</div>
+          <span class="priceNo">￥5800.00</span>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <div class="zhe">折</div>
+          <span class="priceNo">￥5800.00</span>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <div class="zhe">折</div>
+          <span class="priceNo">￥5800.00</span>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <div class="zhe">折</div>
+          <span class="priceNo">￥5800.00</span>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <div class="zhe">折</div>
+          <span class="priceNo">￥5800.00</span>
+        </div>
+      </li>
+    </ul>
+    <ul class="item room">
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【爆款】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+    </ul>
+    <ul class="item route">
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【嘻嘻】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【嘻嘻】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【嘻嘻】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//spot_07.png" class="spotImg">
+          <div class="tip">区域推荐</div>
+        </div>
+        <div class="spotRight">
+          <div class="title">【嘻嘻】北京旅游圣诞节特价出游必选行程元旦春节周六日大特价</div>
+          <p class="comment">好评率：98.4%</p>
+          <span class="type">豪华型</span>
+          <div class="zhe">尾</div>
+          <div class="clear"></div>
+          <span class="area">北京.朝阳</span>
+          <p class="price">
+            <span>￥6900.00</span>
+            起
+          </p>
+        </div>
+      </li>
+    </ul>
+    <ul class="item guide">
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//lan_03.png" class="spotImg">
+          <div class="tip">导游</div>
+        </div>
+        <div class="spotRight">
+            <div class="guideLeft">
+                <span class="name">王祖蓝</span>
+                <span class="text">好评率:98.2%</span>
+                <span class="text">北京西城区</span>
+            </div>
+            <div class="guideRight">
+               <p><span>￥198.25</span>元/天</p>
+               <span class="time">每天8小时</span>
+            </div>
+            <div class="clear"></div>
+            <div class="content">双廊骑行、五星住宿、双廊骑行、五星住宿、双廊骑行、五星住宿</div>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//lan_03.png" class="spotImg">
+          <div class="tip">向导</div>
+        </div>
+        <div class="spotRight">
+          <div class="guideLeft">
+            <span class="name">王祖蓝</span>
+            <span class="text">好评率:98.2%</span>
+            <span class="text">北京西城区</span>
+          </div>
+          <div class="guideRight">
+            <p><span>￥198.25</span>元/天</p>
+            <span class="time">每天8小时</span>
+          </div>
+          <div class="clear"></div>
+          <div class="content">双廊骑行、五星住宿、双廊骑行、五星住宿、双廊骑行、五星住宿</div>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//lan_03.png" class="spotImg">
+          <div class="tip">导游</div>
+        </div>
+        <div class="spotRight">
+          <div class="guideLeft">
+            <span class="name">王祖蓝</span>
+            <span class="text">好评率:98.2%</span>
+            <span class="text">北京西城区</span>
+          </div>
+          <div class="guideRight">
+            <p><span>￥198.25</span>元/天</p>
+            <span class="time">每天8小时</span>
+          </div>
+          <div class="clear"></div>
+          <div class="content">双廊骑行、五星住宿、双廊骑行、五星住宿、双廊骑行、五星住宿</div>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//lan_03.png" class="spotImg">
+          <div class="tip">向导</div>
+        </div>
+        <div class="spotRight">
+          <div class="guideLeft">
+            <span class="name">王祖蓝</span>
+            <span class="text">好评率:98.2%</span>
+            <span class="text">北京西城区</span>
+          </div>
+          <div class="guideRight">
+            <p><span>￥198.25</span>元/天</p>
+            <span class="time">每天8小时</span>
+          </div>
+          <div class="clear"></div>
+          <div class="content">双廊骑行、五星住宿、双廊骑行、五星住宿、双廊骑行、五星住宿</div>
+        </div>
+      </li>
+      <li>
+        <div class="spotLeft">
+          <img src="../src/images/area//lan_03.png" class="spotImg">
+          <div class="tip">导游</div>
+        </div>
+        <div class="spotRight">
+          <div class="guideLeft">
+            <span class="name">王祖蓝</span>
+            <span class="text">好评率:98.2%</span>
+            <span class="text">北京西城区</span>
+          </div>
+          <div class="guideRight">
+            <p><span>￥198.25</span>元/天</p>
+            <span class="time">每天8小时</span>
+          </div>
+          <div class="clear"></div>
+          <div class="content">双廊骑行、五星住宿、双廊骑行、五星住宿、双廊骑行、五星住宿</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

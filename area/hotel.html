@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>酒店</title>
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/area/hotel.css" rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/area/holiday.js"></script>
+</head>
+<body>
+<div class="container">
+    <!-- 筛选条件 -->
+    <div class="navigation">
+        <ul class="nav-ul">
+            <li data-type="sales">销量</li>
+            <li data-type="price">价格</li>
+            <li data-type="appraise">好评率</li>
+            <li data-type="filter">筛选</li>
+        </ul>
+    </div>
+    <!-- 入住离店日期 -->
+    <ul class="date clear">
+        <li class="date-live">
+            <p class="date-tit">入住</p>
+            <p class="date-detail">
+                <span class="span-date">2016-01-23</span>
+                <span class="span-week">明天</span>
+            </p>
+        </li>
+        <li class="date-leave">
+            <p class="date-tit">离店</p>
+            <p class="date-detail">
+                <span class="span-date">2016-01-23</span>
+                <span class="span-week">星期五</span>
+            </p>
+        </li>
+    </ul>
+    <!-- 筛选结果 -->
+    <div class="screen-result">
+        <div class="wrapper">
+            <div class="scroller">
+                <div class="pullDown">
+                    <span>下拉刷新</span>
+                </div>
+                <ul class="result-ul">
+                    <script type="text/html" id="template">
+                        {{each hotel_list as list i}}
+                        <li class="result-li">
+                            <div class="result-li-left">
+                                <div class="result-tip">区域推荐</div>
+                                <img src="../src/images/area/spot-pic1.png">
+                            </div>
+                            <div class="result-li-right">
+                                <p class="p-sketch">
+                                    2天1晚|酒店提供住宿一晚+自助早餐+温泉中心+娱乐大礼包温泉中心+娱乐大礼包温泉中心+娱乐大礼
+                                </p>
+                                <p class="p-rate">好评率：100%</p>
+                                <p class="p-type">豪华型</p>
+                                <p class="p-tip">
+                                    <span class="span-zhe">折</span>
+                                    <span class="span-wei">尾</span>
+                                </p>
+                                <p class="p-address clear">北京朝阳</p>
+                                <p class="p-price">
+                                    <i>&yen;</i><span>1090.45</span>起
+                                </p>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+                </ul>
+                <div class="pullUp">
+                    <span>上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

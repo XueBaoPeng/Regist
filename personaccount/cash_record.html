@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>承兑通提现记录</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personaccount.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personaccount/cash_record.js"></script>
+</head>
+<body>
+<div id="container" class="container">
+    <div class="wrapper">
+        <div class="scroller">
+            <div class="pullDown">
+                <span>下拉刷新</span>
+            </div>
+            <div id="content">
+                <script id="tmplContent" type="text/html">
+                    {{each data as item index}}
+                    <div class="record-month">
+                        <span class="month-span-left">{{item.title}}</span>
+                        <span class="month-span-right">已提现 {{item.cash}}</span>
+                    </div>
+                    <div class="record-detail">
+                        <ul>
+                            {{each item.num as item index}}
+                            <li>
+                                <div class="detail-left">
+                                    <p class="detail-card">提现-{{item.property}}</p>
+                                    <p class="detail-time">{{item.time}}</p>
+                                </div>
+                                <div class="detail-right">
+                                    {{if item.status==4}}
+                                    <p class="detail-money less-active">{{item.sum}}</p>
+                                    {{else}}
+                                    <p class="detail-money add-active ">{{item.sum}}</p>
+                                    {{/if}}
+                                    <p class="detail-state">{{item.success}}</p>
+
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/each}}
+                </script>
+            </div>
+            <div class="pullUp">
+                <span>上拉加载更多</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

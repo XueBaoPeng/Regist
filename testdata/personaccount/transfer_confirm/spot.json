@@ -1,0 +1,14 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": {
+    "type":"景区",//收款方类型
+    "shortName":"故宫",
+    "allName":"北京故宫博物馆",
+    "name":"张三",//负责人姓名
+    "email":"123@happyto.com",
+    "transAmount":"200",//转账金额
+    "charge":"2.00",//手续费
+    "remark":"月结款请查收"
+  }
+}

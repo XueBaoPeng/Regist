@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>酒店图片</title>
+    <!--<link rel="stylesheet" href="../src/js/widget/PhotoSwipe/photoswipe.css">-->
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link rel="stylesheet" href="../src/js/widget/lightGallery/css/lightgallery.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/hotel.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <!--<script src="../src/js/widget/PhotoSwipe/photoswipe.js"></script>-->
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lightgallery.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-thumbnail.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-fullscreen.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/hotel/hotel_images.js"></script>
+</head>
+<body>
+    <div class="spotMain" id="container">
+        <div class="wrapper">
+            <div class="scroller">
+                <div class="pullDown">
+                    <span>下拉刷新</span>
+                </div>
+                <div id="albumList" class="spot-pic">
+                    <script id="tmplAlbums" type="text/html">
+                        {{each data as item index}}
+                            <a href="{{item.imglink}}"><img src="{{item.imglink}}" alt="{{item.imageName}}" /></a>
+                        {{/each}}
+                    </script>
+                </div>
+                <div class="pullUp">
+                    <span>上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!--轮播图全屏预览-->
+    <section id="showFull" class="photo-full hide">
+        <div class="oriphoto"><img src="" data-idx="" alt=""></div>
+        <div class="pho"></div>
+    </section>
+</body>
+</html>

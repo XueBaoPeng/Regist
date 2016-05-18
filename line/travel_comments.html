@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>用户点评</title>
+	<link rel="stylesheet" href="../src/css/common.css">
+	<link rel="stylesheet" href="../src/css/spot.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+	<script src="../src/js/util/pullIscroll.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/line/travel_comments.js"></script>
+</head>
+<body>
+<div id="container" class="discussBox">
+	<div class="wrapper">
+		<div class="scroller">
+			<!--<div class="pullDown">-->
+			<!--<span>下拉刷新</span>-->
+			<!--</div>-->
+			<div id="commentList">
+				<div id="commentTop">
+					<script id="tmplBasic" type="text/html">
+						<div class="title-total">
+							<div class="title-left" onclick="moreShow(this)">
+								<span>{{data.score}}%</span>
+								<p>好评率</p>
+							</div>
+							<div class="title-right">
+								<ul>
+									<li><span>日程安排:</span>
+										<a>{{data.scenery}}分</a>
+									</li>
+									<li><span>交通行程:</span>
+										<a>{{data.traffic}}分</a>
+									</li>
+									<li><span>导游服务:</span>
+										<a>{{data.service}}分</a>
+									</li>
+									<li><span>住宿饮食:</span>
+										<a>{{data.facilities}}分</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div id="commGrade" class="grade">
+							<ul>
+								<li class="current" data-value="0" onclick="searchClick(this);"><span>全部</span><span>{{data.totalEvalCount}}</span></li>
+								<li data-value="1" onclick="searchClick(this);"><span>好评</span><span>{{data.praiseEvalCount}}</span></li>
+								<li data-value="2" onclick="searchClick(this);"><span>中评</span><span>{{data.mediumEvalCount}}</span></li>
+								<li data-value="3" onclick="searchClick(this);"><span>差评</span><span>{{data.badEvalCount}}</span></li>
+								<li data-value="4" onclick="searchClick(this);"><span>有图</span><span>{{data.pictureEvalCount}}</span></li>
+							</ul>
+						</div>
+					</script>
+				</div>
+				<!--评论信息-->
+				<div id="conmmentCon">
+					<script id="tmplComment" type="text/html">
+						{{each data.comment as item i}}
+						<div class="discuss">
+							<div class="top-total">
+								<div class="top-left" ><img src="{{item.portrait}}">{{item.contentPerson}}</div>
+								<!--<div class="top-right"><div class="ico-use-active"></div>有用<span>（{{item.zanCount}}</span>）-->
+								<!--</div>-->
+								<div class="top-right" data-boolean="{{item.zanFlag}}">
+									<!--{{if data.zanFlag==true}}-->
+									<!--<div class="ico-use-active"></div>有用（<span>{{item.zanCount}}</span>）-->
+									<!--{{else}}-->
+									<!--<div class="ico-use"></div>有用（<span>{{item.zanCount}}</span>）-->
+									<!--{{/if}}-->
+									{{if item.zanFlag}}
+									<div class="top-right" onclick="saveEvaluation('{{item.id}}','{{item.zanFlag}}');">
+										<div class="ico-use-active"></div>有用（{{item.zanCount}}）</div>
+									{{else}}
+									<div class="top-right" onclick="saveEvaluation('{{item.id}}','{{item.zanFlag}}');"><div class="ico-use"></div>有用（{{item.zanCount}}）</div>
+									{{/if}}
+								</div>
+
+
+							</div>
+							<p id="commInfo" class="hide">{{item.content}}</p>
+							<a id="btnMore" onclick="moreShow(this)" href="javascript:void(0);" class="more">查看更多</a>
+							<ul>
+								{{each data.comment.pictures as img}}
+								<li><img src="{{img}}"></li>
+								{{/each}}
+							</ul>
+							<div class="clearBoth"></div>
+							<time>{{item.createTime}}<span></span></time>
+							{{if item.replyContent==""}}
+							<div class="answer" style="display:none">{{item.replyContent}}</div>
+							{{else}}
+							<div class="answer">{{item.replyContent}}</div>
+							{{/if}}
+						</div>
+
+						{{/each}}
+					</script>
+				</div>
+			</div>
+			<div class="pullUp">
+				<span>上拉加载更多</span>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

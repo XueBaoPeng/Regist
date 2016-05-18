@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>承兑通充值</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<link href="../src/js/widget/layer/need/layer.css" rel="stylesheet">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/widget/layer/layer.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/recharge.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="recharge-tit-r">充值金额</div>
+		<div class="recharge-money-r">
+			<span class="money-span-left-r">金额</span>
+			<input id="txtMoney" type="text" class="money-input-r" placeholder="请输入您要充值的金额">
+			<span class="money-span-right-r">元</span>
+		</div>
+		<div class="recharge-tit-r">支付方式</div>
+		<div class="apply-con-r">
+			<ul id="selectBankPay">
+				<script id="tmplBank" type="text/html">
+					{{each data as bank index}}
+					<li data-paytype="6">
+						<div class="li-left-r">
+							<div class="ico-left-r"></div>
+							<!--<img src="../src/images/personaccount/pay-a.png"  alt="">-->
+						</div>
+						<div class="li-mid-r">
+							<p class="mid-p1-r">{{bank.bankName}}（{{bank.bankType}}）</p>
+							<p class="mid-p2-r">尾号{{bank.cardNo}}</p>
+						</div>
+						<div class="pic-opt"></div>
+					</li>
+					{{/each}}
+				</script>
+			</ul>
+			<ul id="selectPay">
+				<li data-paytype="5">
+					<div class="li-left-r">
+						<div class="ico-left-wx"></div>
+					</div>
+					<div class="li-mid-r">
+						<p class="mid-p1-r">微信支付</p>
+						<p class="mid-p2-r">推荐安装微信5.0及以上版本的试用</p>
+					</div>
+					<div class="pic-opt"></div>
+				</li>
+				<li data-paytype="4">
+					<div class="li-left-r">
+						<div class="ico-left-zfb"></div>
+					</div>
+					<div class="li-mid-r">
+						<p class="mid-p1-r">支付宝支付</p>
+						<p class="mid-p2-r">推荐有支付宝账号的用户使用</p>
+					</div>
+					<div class="pic-opt"></div>
+				</li>
+			</ul>
+		</div>
+		<button id="btnNext" class="next">下一步</button>
+	</div>
+</body>
+</html>

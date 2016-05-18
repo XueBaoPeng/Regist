@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>二维码</title>
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personcenter.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/recommond.js"></script>
+</head>
+<body>
+<div class="container" id="container">
+    <script type="text/html" id="template">
+        <div class="box">
+            <div class="info">
+                <img src="{{data.headImg}}" class="headImg">
+                <div class="infoRight">
+                    <p class="userName">
+                        <span>{{data.username}}</span>
+                        {{if data.sex=="woman"}}
+                        <img src="../src/images/personcenter/woman_03.png">
+                        {{else if data.sex=="man"}}
+                        <img src="../src/images/personcenter/sex_09.png">
+                        {{/if}}
+                    </p>
+                    <p class="code">推荐码: <span>{{data.code}}</span>
+                    </p>
+                </div>
+            </div>
+            <img src="{{data.codeImg}}" class="erweima">
+            <div class="text">扫一扫二维码注册成为我的免友吧</div>
+        </div>
+    </script>
+</div>
+</body>
+</html>

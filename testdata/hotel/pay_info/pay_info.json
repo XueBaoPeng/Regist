@@ -1,0 +1,24 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": {
+    "orderId": "100000003",
+    "orderCode": "M22341213222",
+    "orderMoney": "160",
+    "productList": [
+      {
+        "productName":"标准大床房",
+        "Breakfast":"单早",
+        "WIFI":"免费",
+        "Broadband":"免费",
+        "bedType":"一张大床",
+        "bedSize":"1.8*2",
+        "GiftDes": "进店有礼品相送",
+        "GiftUseDes": "离店后即可可享用"
+      }
+    ],
+    "linkman": "刘勇",
+    "telephone": "13500001111",
+    "effectiveTime":"30"
+  }
+}

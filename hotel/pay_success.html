@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>支付成功</title>
+    <link rel="stylesheet" href="../src/css/hotel.css" />
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/pay.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/hotel/pay_success.js"></script>
+</head>
+<body class="order_success_main">
+    <div class="container">
+        <img src="../src/images/area/order-success.png"  alt="" class="order-img-ok">      
+        <div class="order-tit-ok">预定成功</div>      
+        <p class="remark" id="remark"></p>      
+        <div class="order-btn">
+            <button class="order-return" onclick="backHome(this)">返回首页</button>
+            <button class="order-detail-success" onclick="detailClick(this)" >订单详情</button>
+        </div>
+   
+    <div id="bottom" class="spot-bottom">
+      	<script type="text/html" id="template">
+      		<div class="around-spot">
+      			<div class="spot-left"></div>
+      			<div class="spot-center"><img src="../src/images/personcenter/remen_icon.png" class="spot-center-pic"/>周边热门景点</div>
+      			<div class="spot-right"></div>
+      		</div>
+      		 <div class="spotImg">
+               {{each data as item i}}
+                <dl onclick="spotDetail('{{item.id}}')">
+                    <dt><img src="{{item.img}}" alt="" /> </dt>
+                    <dd>
+                        <p class="spot-name" >{{item.name}}</p>                   
+                        <p class="spot-center">
+                        	<span class="left">{{item.range}}km</span>
+                        	<span class="right">
+                        		<b><a>&yen;</a>{{item.price}}<i>起</i></b>
+                        	</span>
+                        </p>
+                    </dd>
+                </dl>
+                {{/each}}
+            </div>
+      	</script>
+    </div>
+    </div>
+</body>
+</html>

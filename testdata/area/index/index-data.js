@@ -1,0 +1,39 @@
+{
+    "banner":[
+        {
+            "img": "testdata/area/index/img/banner1.png",
+            "url": "http://www.baidu.com"
+        },
+        {
+            "img": "testdata/area/index/img/banner2.png",
+            "url": "http://www.jd.com"
+        },
+        {
+            "img": "testdata/area/index/img/banner3.png",
+            "url": "http://www.taobao.com"
+        }
+    ], "mini_banner":{
+        "img":"testdata/area/index/img/tui.png", "url":"http://gonglue.travel.sina.cn/?rid=2487&vt=4"
+    },"play_local":[{
+        "img": "testdata/area/index/img/route3.png",
+        "type":"line",
+        "url":"",
+        "price": "10000",
+        "largeTitle": "黑龙江漠河2日1晚跟团游·全程住宿东北特色火炕！一价全含！",
+        "smallTitle": "国外行"
+    }, {
+        "img": "testdata/area/index/img/ticket1.png",
+        "type":"spot",
+        "url":"",
+        "price": "90",
+        "largeTitle": "哈尔滨极地馆",
+        "smallTitle": "圣诞特价景区"
+    }, {
+        "img": "testdata/area/index/img/hotel2.png",
+        "type":"hotel",
+        "url":"",
+        "price": "200",
+        "largeTitle": "亚布力广电国际酒店",
+        "smallTitle": "豪华酒店"
+    }]
+}

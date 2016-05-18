@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>info-write</title>
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/area/line_write_info.css" rel="stylesheet" type="text/css" >
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/area/line_write_info.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- top -->
+        <ul class="top">
+            <li>发团日期：<span>2016-02-14</span></li>
+            <li>返程日期：<span>2016-02-14</span></li>
+        </ul>
+        <!-- option -->
+        <ul class="option">
+            <li>
+                <div class="opt-type">成人</div>
+                <div class="opt-price">单价<span>&yen;999/人</span></div>
+                <div class="opt-num">
+                    <a>-</a>
+                    <input type="text" value="0">
+                    <a>+</a>
+                </div>
+            </li>
+            <li>
+                <div class="opt-type">儿童</div>
+                <div class="opt-price">单价<span>&yen;999/人</span></div>
+                <div class="opt-num">
+                    <a>-</a>
+                    <input type="text" value="0">
+                    <a>+</a>
+                </div>
+            </li>
+            <li>
+                <div class="opt-type">单房差</div>
+                <div class="opt-price">单价<span>&yen;999/人</span></div>
+                <div class="opt-num">
+                    <a>-</a>
+                    <input type="text" value="0">
+                    <a>+</a>
+                </div>
+            </li>
+        </ul>
+        <!-- 温馨提示 -->
+        <div class="reminder">
+           <div class="reminder-con">
+                <div class="reminder-tit">温馨提示</div>
+                <div class="reminder-con-top">
+                    <span>单房差：</span>本产品是按“双人共住一间房”核算的单人价格，所以当出行人数为奇数或者有游客需要单独住一间房时，需要补齐另外半间房的费用
+                </div>
+                <div class="reminder-con-bot">
+                    <span>退款规则：</span>
+                    本产品是按“双人共住一间房”核算的单人价格，所以当出行人
+                </div>
+            </div>
+        </div>
+        <!-- 联系人信息 -->
+        <div class="contacts-msg">
+            <div class="contacts-tit">联系人信息</div>
+            <div class="name">
+                <label>姓名</label>
+                <input type="text" placeholder="必填">
+            </div>
+            <div class="phone">
+                <label>手机号</label>
+                <input type="text" placeholder="请输入11位手机号码">
+            </div>
+        </div>
+        <!-- 游客信息 -->
+        <div class="tourist-msg">
+            <div class="tourist-tit">游客信息</div>
+            <div class="tourist-opt">
+                <ul class="tourist-opt">
+                    <li><img src="images/opt_b.png"  alt=""><span>张三</span></li>
+                    <li><img src="images/opt_a.png"  alt=""><span>李思思</span></li>
+                    <li><img src="images/opt_a.png"  alt=""><span>邓超</span></li>
+                    <li><img src="images/opt_a.png"  alt=""><span>李晨</span></li>
+                    <li><img src="images/opt_a.png"  alt=""><span>李兵营</span></li>
+                </ul>
+                <img src="images/down.png" alt="" class="btn-down">
+            </div>
+            <div class="tourist-bg clear"></div>
+            <div class="tourist-name">
+                <label>姓名</label>
+                <input type="text" placeholder="必填">
+            </div>
+            <!-- 证件类型 -->
+            <div class="tourist-type">
+                <label>证件类型</label>
+                <input type="text" placeholder="身份证">
+                <img src="images/down.png"  alt="" class="btn-down">
+            </div>
+            <!-- 证件号码 -->
+            <div class="tourist-id">
+                <label>证件号码</label>
+                <input type="text" placeholder="请输入证件号码">
+            </div>
+            <div class="tourist-bg clear"></div> 
+            <div class="tourist-name">
+                <label>姓名</label>
+                <input type="text" placeholder="必填">
+            </div>
+            <!-- 证件类型 -->
+            <div class="tourist-type">
+                <label>证件类型</label>
+                <input type="text" placeholder="身份证">
+                <img src="images/down.png"  alt="" class="btn-down">
+            </div>
+            <!-- 证件号码 -->
+            <div class="tourist-id">
+                <label>证件号码</label>
+                <input type="text" placeholder="请输入证件号码">
+            </div>
+        </div>
+        <!-- 确认信息 -->
+        <ul class="tourist-confirm">
+            <li class="tourist-li-left">订单总额：<num>&yen;88888</num></li>
+            <li class="tourist-li-right">确认行程</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>退票</title>
+    <link href="../src/js/widget/layer/need/layer.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/line/order_refund.js"></script>
+</head>
+<body class="order-refund">
+<div id="productList" class="order-refund-top">
+    <script id="tmplProduct" type="text/html">
+        <div class="refund-top-pic"><img src="{{data.ProductImg}}"  alt="{{data.productName}}"></div>
+        <div class="refund-top-con">
+            <div class="refund-ticket">{{data.productName}}</div>
+            <div id="versionList">
+                <div class="pro-versions" data-id="{{data.versionId}}">
+                    <div class="refund-ticket-type">{{data.versionName}}</div>
+                    <div class="refund-ticket-price">¥<span class="ver-price">{{data.versionPrice}}</span></div>
+                    <div class="opt-num">
+                        <a onclick="minusClick(this);">-</a>
+                        <input class="ver-num" type="text" readonly="readonly" data-num="{{data.versionNum}}" value="{{data.versionNum}}">
+                        <a class="link-disable" onclick="addClick(this);">+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+<div class="refund-total">
+    <span>退款总金额</span>
+    <span class="refund-money">¥<span id="totalMoney"></span></span>
+</div>
+<div class="refund-reasons">
+    <div class="refund-reason-tit"><span></span>退款原因</div>
+    <ul id="reasonList" class="refund-reason">
+        <script id="tmplReason" type="text/html">
+            {{each data as val}}
+            <li class="refund-reason-con check ico-uncheck">
+                <span>{{val}}</span>
+            </li>
+            {{/each}}
+        </script>
+    </ul>
+</div>
+<ul class="other-reason">
+    <li class="other-reason-tit">
+        <span></span>其他原因
+    </li>
+    <li class="other-reason-con">
+        <textarea class="other" id="txtOther" rows="5"></textarea>
+    </li>
+</ul>
+<div class="order-refund-bot"><button id="btnRefundApply" class="btn-blue-large apply-refund">提交申请</button></div>
+</body>
+</html>

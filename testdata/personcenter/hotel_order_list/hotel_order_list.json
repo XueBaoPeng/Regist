@@ -1,0 +1,136 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":[{
+	"id":"1",
+	"name":"北京雅乐大酒店1",
+	"totalMoney":"800",	
+	"roomList":[{
+		"roomName":"标准大床房",
+		"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+		"time": "2016/01/09-2016/01/10",
+		"totalTime":"共一晚",
+		"price":"200",
+        "count":"2"
+		},{
+		"roomName":"标准大床房",
+		"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+		"time": "2016/01/09-2016/01/10",
+		"totalTime":"共一晚",
+		"price":"200",
+        "count":"2"
+        }
+        ],
+	"status":"交易成功"
+	},{
+		"id":"2",
+		"name":"北京雅乐大酒店",
+		"totalMoney":"300",
+		"saleContent":{ },
+		"roomList":[{
+			"roomName":"标准大床房2",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+			},{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+	        }
+	        ],
+	"status":"已付款"
+	},{
+		"id":"3",
+		"name":"北京雅乐大酒店3",
+		"totalMoney":"300",
+		"saleContent":{ },
+		"roomList":[{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+			},{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+	        }
+	        ],
+	"status":"待付款"
+	},{
+		"id":"4",
+		"name":"北京雅乐大酒店4",
+		"totalMoney":"300",
+		"saleContent":{ },
+		"roomList":[{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+			},{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+	        }
+	        ],
+	"status":"退款申请中"
+	},{
+		"id":"5",
+		"name":"北京雅乐大酒店5",
+		"totalMoney":"300",
+		"saleContent":{ },
+		"roomList":[{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+			},{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+	        }
+	        ],
+	"status":"已确认"
+	},{
+		"id":"6",
+		"name":"北京雅乐大酒店6",
+		"totalMoney":"300",
+		"saleContent":{ },
+		"roomList":[{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+			},{
+			"roomName":"标准大床房",
+			"roomImg":"../testdata/personcenter/hotel_order_list/pic-b.png",
+			"time": "2016/01/09-2016/01/10",
+			"totalTime":"共一晚",
+			"price":"200",
+	        "count":"2"
+	        }
+	        ],
+		"status":"交易关闭"
+	}]
+}

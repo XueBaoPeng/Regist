@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>星星 copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="酒店详情" sketch:type="MSArtboardGroup" transform="translate(-167.000000, -83.000000)">
+            <g id="星星-copy" sketch:type="MSLayerGroup" transform="translate(167.000000, 83.000000)">
+                <circle id="Oval-12" fill="#FFCD19" sketch:type="MSShapeGroup" cx="7.5" cy="7.5" r="7.5"></circle>
+                <polygon id="Star-1" fill="#FFFFFF" sketch:type="MSShapeGroup" points="7.5 10.125 4.41412743 11.7473392 5.00347664 8.31116961 2.50695329 5.87766078 5.95706371 5.37633039 7.5 2.25 9.04293629 5.37633039 12.4930467 5.87766078 9.99652336 8.31116961 10.5858726 11.7473392 "></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

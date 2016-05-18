@@ -1,0 +1,20 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": [{
+      "lineTypeId":"",
+      "lineTypeName":"跟团游"
+    },
+    {
+      "lineTypeId":"",
+      "lineTypeName":"亲子游"
+    },
+    {
+      "lineTypeId":"",
+      "lineTypeName":"蜜月游"
+    },
+    {
+      "lineTypeId":"",
+      "lineTypeName":"自由行"
+    }]
+}

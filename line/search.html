@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>搜索</title>
+    <link rel="stylesheet" href="../src/js/widget/jquery.range/css/jquery.range.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/line.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/widget/jquery.range/js/jquery.range.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/line/travel_line.js"></script>
+    <script src="../src/js/line/search.js"></script>
+</head>
+<body>
+
+<!--接线---------------------------------------------->
+    <div class="container-search">
+        <!-- 出发地 -->
+        <ul class="place add-place">
+            <li class="place-start">
+                <a href="choose_city.html?type=1&id=4"><label class="add-lable">出发地:</label>
+                <input type="text" placeholder="请选择出发地"  value="">
+                <img src="../src/images/line/btn.svg" alt=""></a>
+            </li>
+            <li class="place-stop">
+                <a href="choose_city.html?type=2&id=4"><label class="add-lable">目的地:</label>
+                <input type="text" placeholder="请选择目的地" value="">
+                <img src="../src/images/line/btn.svg" alt="" ></a>
+            </li>
+        </ul>
+        <!-- 线路主题 -->
+        <div id="roomList">
+            <script type="text/html" id="tmplRoomList">
+        <div class="subject clear">
+            <label>线路主题:</label>
+            <ul>
+                {{each data as d i}}
+                <li>{{d.lineThemeName}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div id="container" class="holidayMain">
+            <div id="search" class="choose">
+                <ul class="chooseList">
+                    <li>
+                        <div class="top-title">
+                            <span class="topLeft">行程天数</span>
+                            <div class="topRight">
+                                <span class="text"></span>
+                                <!--<div class="down"></div>-->
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class=" additional">
+                            <div class="menu-range">
+                                <input id="iptDays" class="range-slider" type="hidden" value="10"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="top-title">
+                            <span class="topLeft">出发月份</span>
+                            <div class="topRight">
+                                <span class="text"></span>
+                                <!--<div class="down"></div>-->
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class=" additional">
+                            <div class="menu-range">
+                                <input id="iptMonths" class="range-slider" type="hidden" value="10"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="top-title">
+                            <span class="topLeft">价格范围</span>
+                            <div class="topRight">
+                                <span class="text"></span>
+                                <!--<div class="down"></div>-->
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class=" additional">
+                            <div class="menu-range">
+                                <input id="iptPrices" class="range-slider" type="hidden" value="10"/>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div id="lineContent" class="wrapper_content">
+                <div class="wrapper">
+                    <div class="scroller">
+                        <div class="pullDown hide">
+                            <span>下拉刷新</span>
+                        </div>
+
+                        <div class="pullUp hide">
+                            <span>上拉加载更多</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="spinner">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        </script>
+            </div>
+        <button class="search-btn">搜索</button>
+    </div>
+</body>
+</html>

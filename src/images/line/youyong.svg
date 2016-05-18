@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>iconfont-like</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="酒店点评" sketch:type="MSArtboardGroup" transform="translate(-296.000000, -234.000000)">
+            <g id="点评1" sketch:type="MSLayerGroup" transform="translate(-9.000000, 227.000000)">
+                <g id="有用(12)-+-Oval-218-+-iconfont-like" transform="translate(305.000000, 7.000000)" sketch:type="MSShapeGroup">
+                    <g id="iconfont-like">
+                        <circle id="Oval-218" fill="#FC8215" cx="7.5" cy="7.5" r="7.5"></circle>
+                        <path d="M12.5690232,5.67867806 L8.50133089,5.67867806 C8.16793651,5.67867806 7.96789988,5.42975499 8.10125763,5.14965242 L8.66807082,3.53150997 C8.76808303,3.2514188 8.60139194,3.00248433 8.26794872,3.00248433 L7.50111111,3.00248433 C7.16766789,3.00248433 6.73426129,3.22030769 6.56752137,3.46927635 L5.36726496,5.21193162 C5.16717949,5.4608661 5.03382173,5.92765812 5.03382173,6.23882621 L5.03382173,10.6888319 C5.03382173,11 5.36726496,11 5.36726496,11 L10.6018803,11 C10.9352625,11 11.3020513,10.7510655 11.4020635,10.4709744 L12.9690965,6.2077037 C13.0691087,5.92765812 12.9024176,5.67867806 12.5690232,5.67867806 L12.5690232,5.67867806 Z" id="Fill-1" fill="#FFFFFF"></path>
+                        <path d="M4.333663,5.67867806 L3.60014652,5.67867806 C3.26671551,5.67867806 3,5.92765812 3,6.23882621 L3,10.4398519 C3,10.7510655 3.26671551,11 3.60014652,11 L4.333663,11 C4.50035409,11 4.63371184,10.8755328 4.63371184,10.719943 L4.63371184,5.95876923 C4.63371184,5.80319088 4.50035409,5.67867806 4.333663,5.67867806 L4.333663,5.67867806 Z" id="Fill-2" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

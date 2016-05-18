@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>个人信息</title>
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/personcenter.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/contacts_info.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="bar" onclick="addContactClick();">
+        <div class="center">
+            <img src="../src/images/personcenter/add_03.png"><span>新增常用旅客</span>
+        </div>
+    </div>
+    <ul id="personList" class="personList">
+        <script type="text/html" id="tmplPerson">
+            {{each data as item i}}
+            <li data-id="{{item.contactId}}" onclick="checkPerson(this);">
+                <div class="contact-left"></div>
+                <div class="contact-right">
+                    <div class="ct-name">
+                        <span class="ct-span-left">姓名</span>
+                        <span class="ct-span-right">{{item.contactName}}</span>
+                    </div>
+                    <div class="ct-id">
+                        <span class="ct-span-left">身份证</span>
+                        <span class="ct-span-right">{{item.number}}</span>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+    </ul>
+    <div id="winDel" class="notice">
+        <div class="noticeBox">
+            <p class="title">确认删除?</p>
+            <p class="content">确认删除选中的常用旅客，删除后将不可复原</p>
+            <div class="btns">
+                <div id="btnCancel" class="cancel">取消</div>
+                <div id="btnConfirm" class="delete">确定</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": {
+    "lines": [
+      {
+        "id": "1001",
+        "name": "北京冬季5晚6日自由行神的线路",
+        "price": "1380",
+        "img": "../src/images/spot/spot04.jpg"
+      },
+      {
+        "id": "1002",
+        "name": "上海冬季5晚6日自由行神的线路",
+        "price": "2380",
+        "img": "../src/images/spot/spot02.jpg"
+      }
+    ],
+    "spots": [
+      {
+        "id": "2001",
+        "name": "北京冬季5晚6日自由行神的线路",
+        "price": "5100",
+        "img": "../src/images/spot/spot03.jpg",
+        "range": "0.8"
+      },
+      {
+        "id": "2002",
+        "name": "北京冬季3晚4日自由行神的线路",
+        "price": "3100",
+        "img": "../src/images/spot/spot05.jpg",
+        "range": "0.8"
+      }
+    ],
+    "hotels": [
+      {
+        "id": "3001",
+        "name": "北京冬季5晚6日自由行神的线路",
+        "price": "价格",
+        "img": "../src/images/spot/spot04.jpg",
+        "range": "0.8"
+      },
+      {
+        "id": "3002",
+        "name": "北京冬季5晚6日自由行神的线路",
+        "price": "价格",
+        "img": "../src/images/spot/spot05.jpg",
+        "range": "0.8"
+      }
+    ]
+  }
+}

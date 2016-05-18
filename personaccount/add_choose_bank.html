@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>银行卡选择</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/add_choose_bank.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="bank-main">
+			<ul>
+				<div  id="container">
+					<script id="template" type="text/html">
+						{{each data as item index}}
+				<li><img src="{{item.image}}"><span>{{item.name}}</span><i class="ico-hotel-btn"></i></li>
+						{{/each}}
+					</script>
+					</div>
+
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

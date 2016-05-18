@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>承兑通提现</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">	
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<link rel="stylesheet" type="text/css" href="../src/js/widget/layer/need/layer.css"/>
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/widget/layer/layer.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/cash.js"></script>
+</head>
+<body  class="bg-gray body">
+	<div class="cash-top" id="cash-top">
+		<div id="cashBank">
+		<script id="tmplBank" type="text/html">
+			<div class="cash-tit">收款银行卡</div>
+			{{if data.BankList.length>0}}
+			<div class="cash-card" onclick="bankCheck();">
+				{{each data.BankList as bank i}}
+				{{if i==0 }}
+				<span class="ico-card-icon ico-bank-zs cash-img"></span>
+				<span id="bankName">{{bank.bankName}}</span><span id="bankType">{{bank.bankType}}</span><span class="sin">（</span><span id="bankNo">{{bank.cardNo}}</span><span class="sin">）</span>
+				<span class="ico-hotel-btn"></span>
+				<input id="hidBankId" type="hidden" value="{{bank.bankId}}"/>
+				{{/if}}
+				{{/each}}
+			</div>		
+			<div class="cash-tip">
+				<p class="use">可用余额：<span id="labBalance">{{data.chengduitong}}</span>元</p>
+			</div>
+			<div class="cash-total">
+				<span class="total-left">提现金额</span>
+				<input id="txtMoney" type="text" placeholder="本次可提现{{data.chengduitong}}" class="total-mid" onchange="loadDrawingFee();"/>
+				<span class="total-right">元</span>
+			</div>
+			<div class="cash-hand">手续费：<span id="labFee">0.00</span>元</div>
+			<div class="cash-remark">备注</div>		
+			<textarea id="txtRemark" name="" rows="" cols="" class="remark-input"></textarea>
+			<button class="cash-submit" id="btnCommit" onclick="commitClick()">提交</button>
+			{{else}}
+			<div class="cash-card" onclick="bankBind()">
+				<span class="ico-card-icon ico-bank-zs cash-img"></span>
+				<span>添加银行卡</span>
+				<span class="ico-hotel-btn"></span>
+			</div>
+			{{/if}}
+			<!--<input id="hidAccountId" type="hidden" value="{{data.accountId}}"/>-->
+		</script>
+		</div>
+	</div>
+	<!--点击银行列表-->
+	<div id="winBank" class="cont-bank">
+		<div class="title">
+			<a id="linkBack" href="#">返回</a>
+		</div>
+		<ul id="bankList" class="choose-bank cash-bottom">
+			<script id="tmplBankChoose" type="text/html">
+				{{each data.BankList as bank i}}
+				<li onclick="chooseBank(this)">
+					<span class="icon-bank-zx"></span>
+					<span id="labBankName">{{bank.bankName}}</span><span id="labBankType">{{bank.bankType}}</span><span class="sin">（</span><span id="labBankNo">{{bank.cardNo}}</span><span class="sin">）</span><span id="labBankId" class="hide">{{bank.bankId}}</span>
+				</li>
+				{{/each}}
+			</script>
+		</ul>
+	</div>
+
+	<!--点击弹出输入密码-->
+	<div id="enterPassWord">
+		<!--<div class="enter-password">
+			<div class="enter-password-top"><span>请输入支付密码</span>
+				<span class="ico-account-close" id="close"></span>
+			</div>
+			<div class="enter-password-center">
+				<div class="money">&yen;200</div>
+				<form id="password" disabled="disabled">
+		            <input readonly="" class="pass" type="password" maxlength="1" value="" disabled="disabled">
+		            <input readonly="" class="pass" type="password" maxlength="1" value="" disabled="disabled">
+		            <input readonly="" class="pass" type="password" maxlength="1" value="" disabled="disabled">
+		            <input readonly="" class="pass" type="password" maxlength="1" value="" disabled="disabled">
+		            <input readonly="" class="pass" type="password" maxlength="1" value="" disabled="disabled">
+		            <input readonly="" class="pass pass_right" type="password" maxlength="1" value="" disabled="disabled">
+	        	</form>
+				<p class="enter-password-error">支付密码不正确</p>
+			</div>
+			<div class="enter-password-bottom">
+				<span class="cancel" onclick="close()">取消</span>
+				<span class="ensure">确定</span>
+			</div>
+		</div>-->
+	</div>
+</body>             
+</html>

@@ -1,0 +1,15 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":{
+	"telephoneNumber":"010-3728736",
+	"phoneTime":"0:00-24:00",
+	"serviceItem":"送餐、更换洗漱用品、更换床单、洗衣/熨衣、泡泡浴、夜床服务、叫醒服务、打扫客房。",
+	"serviceNote":"如需预订，请直接拨打预订电话进行预订。",
+	"photoList":[
+		{"src":"../src/images/hotel/room_09.jpg","txt":"客房图片1"},
+		{"src":"../src/images/hotel/room_09.jpg","txt":"客房图片1"},
+		{"src":"../src/images/hotel/room_09.jpg","txt":"客房图片1"}
+	]
+}
+}

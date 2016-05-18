@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>门票预定详情</title>
+    <link rel="stylesheet" href="../src/js/lib/jquery.mobile/themes/happyto-theme.css">
+    <link rel="stylesheet" href="../src/js/lib/jquery.mobile/themes/jquery.mobile.structure-1.4.5.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <link rel="stylesheet" href="../src/js/widget/jquery.spotcalendar/calendar.css">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/widget/jquery.spotcalendar/mobilecalendar.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/book_detail.js"></script>
+</head>
+<body class="book-detail">
+<div id="page" data-role="page" class="content">
+    <div id="content">
+        <div id="product">
+        <script id="template" type="text/html">
+            <div class="ticket-detail-top">
+                <img src="{{data.bannerImg}}" alt="{{data.title}}">
+            </div>
+            <div class="ticket-detail-tit">
+                <p id="productName" class="ticket-p1">{{data.title}}</p>
+                <p class="ticket-p2">{{data.prompt}}</p>
+            </div>
+            <div class="book-order-date">
+                <a href="#selDate" class="seldata" data-transition="slideup">
+                    <div class="date-left">
+                        <div class="ico-spot-date"></div><span>游玩日期</span><span id="appDate" class="playdate font-12" data-value="">选择日期</span>
+                    </div>
+                    <div class="mar-t10 ico-hotel-btn "></div>
+                </a>
+            </div>
+            <div class="dateTicket">
+                <ul id="versions">
+                    {{each data.ticketType as item index}}
+                    <li data-id="{{item.versionId}}">
+                        <div class="discount"><span class="vername">{{item.name}}</span>{{if item.discount<10}}<span class="verdis">{{item.discount}}折</span>{{/if}}</div>
+                        <div class="price"><span class="emu">¥</span><span class="cash">{{item.price}}</span><span class="original">¥{{item.originalPrice}}</span>
+                        </div>
+                        <div class="number">
+                            <a id="minus{{index}}" class="minus stopDown" onclick="minus(this)">-</a>
+                            <span class="amount">0</span>
+                            <a id="add{{index}}" class="add" onclick="add(this)">+</a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div><!-- 须知 -->
+            <div class="ticket-notice">
+                <div class="ico-spot-notice"></div>
+                <span>须知</span>
+            </div>
+            <div class="ticket-notice-bg">
+                <div class="ticket-notice-con">
+                    <p class="notice-p1"><span class="ico-tip"></span>预定须知</p>
+                    <p class="notice-p2">{{#data.reserveNotice}}</p>
+                </div>
+                <div class="ticket-notice-con">
+                    <p class="notice-p1"><span class="ico-tip"></span>使用规则</p>
+                    <p class="notice-p2">{{#data.useRule}}</p>
+                </div>
+                <div class="ticket-notice-con">
+                    <p class="notice-p1"><span class="ico-tip"></span>退款规则</p>
+                    <p class="notice-p2">{{#data.refundRule}}</p>
+                </div>
+            </div>
+        </script>
+        </div>
+        <!-- 评价 -->
+        <div class="ticket-evaluate">
+            <div class="ico-spot-evaluate"></div>评价
+        </div>
+        <div id="containEva">
+        <div class="wrapper">
+            <div class="scroller">
+                <div id="evaluate" class="evaluate-content">
+            <script id="tmplEvaluate" type="text/html">
+            {{each data as eva}}
+            <div class="ticket-evaluate-con">
+                <div class="evaluate-con-first">
+                    <div class="evaluate-head"><img src="{{eva.portrait}}"><span>{{eva.contentPerson}}</span></div>
+                    {{if eva.zanFlag}}
+                        <div class="evaluate-use" onclick="saveEvaluation('{{eva.id}}','true')"><span class="ico-use"></span><span>有用({{eva.zanCount}})</span>
+                    {{else}}
+                        <div class="evaluate-use" onclick="saveEvaluation('{{eva.id}}','false')"><span class="ico-use-active"></span><span>有用({{eva.zanCount}})</span>
+                    {{/if}}
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="evaluate-con-two">
+                    <p id="commInfo" class="evaluate-p1 hide">{{eva.content}}</p>
+                    <p class="evaluate-p2">
+                        <a id="btnMore" onclick="moreShow(this)" href="javascript:void(0)" class="book-more">查看更多</a>
+                    </p>
+                </div>
+            </div>
+                <ul class="ticket-detail-pic">
+                    {{each eva.pictures as img}}
+                    <li><img src="{{img}}" alt=""></li>
+                    {{/each}}
+                </ul>
+                <div class="ticket-time">{{eva.createTime}}</div>
+                <div class="hotel-reply">
+                    <p>景区回复：{{eva.replyContent}}</p>
+                </div>
+            </div>
+            {{/each}}
+            </script>
+        </div>
+                <div class="pullUp">
+                    <span>上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="ticket-btn">
+        <div class="btn-write-small ticket-total">总价:<span>¥</span><span id="total">0.00</span></div>
+        <div class="btn-write-small ticket-total">
+        <button id="btnBooking" onclick="bookingClick();" class="btn-orange-large ticket-book-btn ui-btn">立即预定</button>
+        </div>
+    </div>
+</div>
+<section id="selDate" data-role="page" class="hp-page">
+    <!--<header class="hp-header head-top">-->
+        <!--<a id="linkBack" href="javascript:;" class="ui-btn back" data-role="button" data-rel="back"></a>-->
+        <!--<h1 class="hp-title">选择日期</h1>-->
+    <!--</header>-->
+    <header class="hp-header head-sliver">
+        <a id="linkBack" class="ui-btn btn-close" data-transition="slidedown" data-rel="back">关闭</a>
+    </header>
+    <article data-role="content" class="hp-content">
+        <div id="calendar" class="Time-main"></div>
+    </article>
+</section>
+</body>
+</html>

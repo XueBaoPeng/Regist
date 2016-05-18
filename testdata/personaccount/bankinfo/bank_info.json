@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": [
+    {
+      "bankName": "中国招商银行",
+      "cardNo": "6228480402564890020",
+      "bankImg": "http://image.happyto.com/h5/spot/bank1.jpg",
+      "bankType": "信用卡"
+    }
+  ]
+}

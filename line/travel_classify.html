@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+	<title>线路分类</title>
+	<link rel="stylesheet" href="../src/css/common.css">
+	<link rel="stylesheet" href="../src/css/line.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/jquery/plugin/iscroll.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<!--<script src="../src/js/lib/jquery/plugin/jquery.hiSlider.min.js"></script>-->
+	<script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+    <!--<script src="../src/js/util/initialize.js"></script>-->
+    <script src="../src/js/line/index.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/line/travel_classify.js"></script>
+</head>
+<body>
+	 <div class="recorverMain">
+		 <div class="content">
+			 <div id="roomList">
+				 <script type="text/html" id="tmplRoomList">
+			 <ul>
+				 <li class="title"><img src="../src/images/line/menu.png" class="titleImg"><span>全部商品</span><img  src="../src/images/line/next01.png" class="next"></li>
+				 {{each data as item i}}
+				<li class="title" data-url="travel_line.html?lineTypeId={{item.lineTypeId}}" onclick="ifyClick(this)"><i></i><span>{{item.lineTypeName}}</span><img  src="../src/images/line/next02.png" class="next"></li>
+				 {{/each}}
+			 </ul>
+			 </script>
+				 </div>
+			 <div class="line"></div>
+		 </div>
+	 </div>
+</body>
+</html>

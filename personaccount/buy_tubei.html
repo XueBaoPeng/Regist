@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购买兔贝</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personaccount.css">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personaccount/buy_tubei.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="buy-tubei">
+        <ul>
+            <li>
+                <span class="buy-span-left">当前兔贝余额</span> <span class="buy-span-right span-first"><num id="labBalance">0.00</num>兔贝</span>
+            </li>
+            <li>
+                <span class="buy-span-left">购买数量</span>
+                <span class="buy-span-right"><input id="txtNum" type="text" placeholder="0.1兔贝"/></span>
+            </li>
+            <li>
+                <span class="buy-span-left">需支付</span> <span class="buy-span-right"><span id="labPay">0.1</span>元</span>
+            </li>
+        </ul>
+    </div>
+    <div class="pay-method">
+        <div id="payMethod" class="cont-bottom">
+            <div class="title">选择支付方式</div>
+            <ul id="selectAccountPay" class="ul-pay">
+                <li data-paytype="1">
+                    <div class="ico-transaction-tb pay-tb"></div>
+                    <div class="tip-top">账户余额</div>
+                    <div class="tip-bot">可用余额<span id="labAccBalance"></span>元</div>
+                    <div class="pic-opt"></div>
+                </li>
+            </ul>
+            <ul id="selectBankPay" class="ul-pay">
+                <script id="tmplBank" type="text/html">
+                    {{each data.BankList as bank}}
+                    <li data-paytype="6">
+                        <div class="ico-bank ico-bank-gs"></div>
+                        <div class="tip-top">{{bank.bankName}}（尾号{{bank.cardNo}}）</div>
+                        <div class="tip-bot">已绑定银行卡,直接付款</div>
+                        <div class="pic-opt"></div>
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+            <ul id="selectPay" class="ul-pay">
+                <li data-paytype="5">
+                    <div class="ico-pay-weixin"></div>
+                    <div class="tip-top">微信支付</div>
+                    <div class="tip-bot">推荐安装微信5.0以上版本的使用</div>
+                    <div class="pic-opt"></div>
+                </li>
+                <li class="li-zfb" data-paytype="4">
+                    <div class="ico-pay-zfb"></div>
+                    <div class="tip-top">支付宝支付</div>
+                    <div class="tip-bot">推荐有支付宝账号的用户使用</div>
+                    <div class="pic-opt"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="buy-pay">
+        <button id="btnPay" class="buy-confirm-btn">确认支付</button>
+    </div>
+
+    <!--<div>-->
+        <!--<p class="buy-tip">-->
+            <!--使用<span id="labBankName"></span>（<span id="labBankNo"></span>）<span>付款</span>-->
+            <!--<a id="linkChange" href="javascript:void(0)">更换</a>-->
+        <!--</p>-->
+    <!--</div>-->
+</div>
+<!--<div id="winPay" class="pay-win">-->
+    <!--<div class="cont-top"></div>-->
+    <!--<div class="cont-bottom">-->
+        <!--<div class="title">选择支付方式<span id="btnClose" class="del ico-detail-close"></span></div>-->
+        <!--<ul id="selectAccountPay" class="ul-pay">-->
+            <!--<li data-paytype="0">-->
+                <!--<div class="ico-transaction-tb pay-tb"></div>-->
+                <!--<div class="tip-top">账户余额</div>-->
+                <!--<div class="tip-bot">可用余额<span id="labAccBalance"></span>元</div>-->
+                <!--<div class="pic-opt"></div>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<ul id="selectBankPay" class="ul-pay">-->
+            <!--<li data-paytype="0">-->
+                <!--<div class="ico-bank ico-bank-gs"></div>-->
+                <!--<div class="tip-top">中信银行（尾号5221）</div>-->
+                <!--<div class="tip-bot">已绑定银行卡,直接付款</div>-->
+                <!--<div class="pic-opt"></div>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <!--<ul id="selectPay" class="ul-pay">-->
+            <!--<li data-paytype="5">-->
+                <!--<div class="ico-pay-weixin"></div>-->
+                <!--<div class="tip-top">微信支付</div>-->
+                <!--<div class="tip-bot">推荐安装微信5.0以上版本的使用</div>-->
+                <!--<div class="pic-opt"></div>-->
+            <!--</li>-->
+            <!--<li class="li-zfb" data-paytype="4">-->
+                <!--<div class="ico-pay-zfb"></div>-->
+                <!--<div class="tip-top">支付宝支付</div>-->
+                <!--<div class="tip-bot">推荐有支付宝账号的用户使用</div>-->
+                <!--<div class="pic-opt"></div>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
+</body>
+</html>

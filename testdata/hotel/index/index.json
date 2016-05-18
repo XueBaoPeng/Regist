@@ -1,0 +1,36 @@
+{
+"code":0,
+"msg":"业务信息",
+	"data":{	
+		"banner":["../src/images/hotel/top.png"	,"../src/images/hotel/top.png",	"../src/images/hotel/top.png" ],			 
+		"specialService":[
+			{"cateringServices":true,"id":"1"},
+			{"hotelReception":false,"id":"2"},
+			{"roomService":true,"id":"3"},
+			{"conciergeService":true,"id":"4"},
+			{"roomService":true,"id":"5"},
+			{"businessServices":false,"id":"6"}
+		],		
+		"hotelTel":"010-3560832",
+		"hotelName":"北京雅乐大酒店",
+		"hotelLeve":"3",
+		"hotelType":"商务型酒店",
+		"hotelAddress":"北京市朝阳区望京SOHO T2-A-910",
+		"hotelBones":["../src/images/hotel/hotel/24小时前台.svg","../src/images/hotel/hotel/spa.svg" ,"../src/images/hotel/hotel/中式餐厅.svg"],
+		"adImage":[
+					{"imgsrc":"../src/images/hotel/pic.png","imglink":"http://www.baidu.com"},
+					{"imgsrc":"../src/images/hotel/pic-b.png","imglink":"http://www.baidu.com"}],
+		"preferential":{
+					"sales":true,
+					"gift":true
+		},
+		"price":"200",
+		"comment":{
+					"record":"1892",
+					"score":"4.5",
+					"recommend":"95%",
+					"lastContent":"房间大小ok,向海，但是有工地。 陈前台check in 的那位意外的员工都很友善，看到小朋友不开心会主动上前询问并送上小礼物，友知道东荟城和机场，比较方便，早餐很好，特别号。",
+					"nickname":"张三"},
+		"roomList":[]
+	}
+}

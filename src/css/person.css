@@ -1,0 +1,47 @@
+/*登录密码框部分*/
+/*.login-form{width:100%;height:auto}*/
+.section{position:relative;font-size: 1.6rem;padding-top: 10px;}
+.section div{margin: 0 2% 10px;padding:0 4%;width: 96%;height:48px;border:1px solid #f0f0f0;line-height: 48px;color:#515151; background:#fff}
+.section input{border:0;outline:none;width:42%; font-size: 1.4rem}
+.section .login-name,.section .login-password{display: inline-block;width:23%;}
+.section .login-btn{margin: 10px 2%;margin-top:0;width: 96%;height:44px; background-color:#bddcff; color:#fff;font-size:1.6rem;border-radius: 5px; }
+/*激活颜色*/
+.section .login-btn.active{ background:#2296f0}
+.login-forget{margin-top:5px;padding:0 4%;overflow: hidden;font-size: 1.4rem;}
+.login-forget a{ color:#61b2f1}
+.login-forget .frist-forget{float:left}
+.login-forget .last-forget{float:right}
+.password-eye{display: inline-block;height:12px;width:17px; background: url("../images/person/chakan_hui.png"); background-size:17px 12px }
+/*注册*/
+.registe{ overflow: hidden;width:94%;margin:0 3%;margin-bottom:10px;background:url("../images/person/one.png") no-repeat; background-size: 100% 50px}
+.registe li{ float:left;width:33.3%;height:50px;font-size: 1.2rem; line-height: 50px; text-align: center; color:#ccc}
+.section .input-width{width:67%}
+.registe li.registe-tel-num{color:#61b2f1}
+.registe li.registe-num-num{color:#c5defb}
+.registe li:nth-child(2){}
+.registe li:nth-child(3){}
+.section .login-color{background:#bddcff}
+.section .registe-bg{background:url("../images/person/three.png") no-repeat;background-size: 100% 50px}
+.section .registe-reset{background:url("../images/person/tow.png") no-repeat;background-size: 100% 50px}
+.password-error span.icon-tel{background:url("../images/person/tishi_icon.png") no-repeat 0 center;background-size:12px 12px;}
+
+/*输入错误的弹出层*/
+.section .password-error{padding:0;margin:0; margin-bottom:10px;left:0;top:0;height:25px;width:100%;
+    color:#ea5142;text-align:center;line-height:25px;font-size: 1.2rem;background:rgba(255,216,224,1);
+}
+.password-error span{display:inline-block;margin:0 auto;padding-left:15px;background:url("../images/person/cuohao_icon.png") no-repeat 0 center;background-size:12px 12px;}
+.registe-tel{display: inline-block;width:100%;padding-bottom:10px;font-size: 1.4rem;text-align: center; color:#b2b1b1}
+.validate-num{background:url("../images/person/qingchu_hui.png") no-repeat right center;background-size:16px 16px}
+.new-tel{display: inline-block;width:31%;font-size: 1.4rem; padding-left:4%; border-left: 1px solid #f5f5f5;color:#61b2f1; text-align: center}
+.section .new-color{color:#b2b1b1}
+.forget-bg{margin-left:2%;padding-left:20px;background:url("../images/person/duigou_lan.png") no-repeat 0 center; background-size: 14px 14px;color:#b2b1b1}
+/*密码*/
+.section .password-style{margin:0;width:100%;border:none;border-top:1px solid #f0f0f0}
+.section .password-style:last-child{border-bottom:1px solid #f0f0f0;}
+.ico-x{ display: inline-block; width:6%;height:16px;background:url("../images/person/qingchu_hui.png") no-repeat;background-size:16px 16px}
+.section .btn-mar{margin-top:10px;background:#bddcff}
+.section .style-bor{border-bottom:1px solid #f0f0f0}
+
+/*关闭眼睛*/
+.close-eye{display: inline-block;height:12px;width:17px; background: url("../images/person/buxianshi.png"); background-size:17px 12px}
+.body-bg{background-color:#f5f5f5}

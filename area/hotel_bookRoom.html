@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>酒店预订</title>
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/pay.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/area/hotel_bookRoom.js"></script>
+</head>
+<body class="hotel_bookRoom">
+<div class="container">
+    <div class="wrapper">
+        <div class="scroller">
+            <div class="bar_hbr">预订详情</div>
+            <div class="top">
+                <img src="../src/images/area/rro_03.jpg" class="topLeft">
+                <div class="topRight">
+                    <p class="hotelName">北京雅乐大酒店</p>
+                    <p>地址：北京市朝阳区望京SOHO</p>
+                </div>
+            </div>
+            <ul class="timeList">
+                <li>
+                    <span class="text">入住日期</span>
+                    <span class="time">2015-01-28 周一</span>
+                </li>
+                <li>
+                    <span class="text">退房日期</span>
+                    <span class="time">2015-01-28 周二</span>
+                </li>
+            </ul>
+            <div class="hotelInfo">
+                <p class="price">
+                    <span class="infoLeft">标准大床房</span>
+                    <span class="infoRight">￥300</span>
+                <div class="clear"></div>
+                </p>
+                <p class="item">
+                    <span>早餐：单早</span>
+                    <span>宽带：免费</span>
+                    <span>WIFI：收费</span>
+                </p>
+                <p class="item">
+                    <span>床型大小：1张大床1.8*2m</span>
+                </p>
+                <p class="item">
+                    <span>礼品：购买即送两张游泳票</span>
+                </p>
+            </div>
+            <div class="hotelInfo">
+                <p class="price">
+                    <span class="infoLeft">标准大床房</span>
+                    <span class="infoRight">￥300</span>
+                <div class="clear"></div>
+                </p>
+                <p class="item">
+                    <span>早餐：单早</span>
+                    <span>宽带：免费</span>
+                    <span>WIFI：收费</span>
+                </p>
+                <p class="item">
+                    <span>床型大小：1张大床1.8*2m</span>
+                </p>
+                <p class="item">
+                    <span>礼品：购买即送两张游泳票</span>
+                </p>
+            </div>
+            <div class="bar_hbr">房间数量</div>
+            <ul class="amount">
+                <li>
+                    <span class="room">标准大床房</span>
+                    <div class="rightAmount">
+                        <div class="minus">-</div>
+                        <div class="box">2间房</div>
+                        <div class="add">+</div>
+                    </div>
+                </li>
+                <li>
+                    <span class="room">标准双床房</span>
+                    <div class="rightAmount">
+                        <div class="minus">-</div>
+                        <div class="box">2间房</div>
+                        <div class="add">+</div>
+                    </div>
+                </li>
+            </ul>
+            <div class="bar_hbr">标准大床房</div>
+            <ul class="userList">
+                <li class="item">
+                    <div class="require this">赵一波</div>
+                    <div class="require">赵一波</div>
+                    <div class="require">赵一波</div>
+                    <div class="require">赵一波</div>
+                    <div class="clear"></div>
+                    <div class="more_hbr"><span>更多</span>
+                        <div class="moreImg"></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="userLeft">入住人姓名</span>
+                    <input value="李福贵">
+                </li>
+                <li>
+                    <span class="userLeft">身份证号码</span>
+                    <input value="142732199301256320">
+                </li>
+            </ul>
+            <div class="bar_hbr">标准双床房</div>
+            <ul class="userList">
+                <li class="item">
+                    <div class="require this">赵一波</div>
+                    <div class="require">赵一波</div>
+                    <div class="require">赵一波</div>
+                    <div class="require">赵一波</div>
+                    <div class="clear"></div>
+                    <div class="more_hbr stop"><span>收起</span>
+                        <div class="moreImg"></div>
+                    </div>
+                </li>
+                <li>
+                    <span class="userLeft">入住人姓名</span>
+                    <input value="李凤宝">
+                </li>
+                <li>
+                    <span class="userLeft">身份证号码</span>
+                    <input value="142732199301256320">
+                </li>
+            </ul>
+            <div class="bar_hbr">订单联系人</div>
+            <ul class="userList">
+                <li>
+                    <span class="userLeft">入住人姓名</span>
+                    <input value="李凤宝">
+                </li>
+                <li>
+                    <span class="userLeft">联系电话</span>
+                    <input placeholder="(预订成功后订单将发送到此号码)">
+                </li>
+            </ul>
+            <div class="bar_hbr">特殊要求</div>
+            <ul class="userList">
+                <li class="item">
+                    <div class="require this">尽量无烟</div>
+                    <div class="require">尽量高层</div>
+                    <div class="require">尽量静音</div>
+                </li>
+                <li>
+                    <input placeholder="备注" class="remark">
+                </li>
+            </ul>
+            <div class="bar_hbr">发票</div>
+            <ul class="userList">
+                <li>
+                    如需发票，离店时请向前台索取
+                </li>
+            </ul>
+            <div class="bar_hbr">取消预订政策</div>
+            <ul class="userList policyList">
+                <li>
+                    <div class="policy">入住前3天18:00之前免费取消，否则扣除首晚房费</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom_hbr">
+        <div class="price_hbr">
+            总价：<span>￥168.00</span>
+        </div>
+        <div class="pay_hbr" onclick="detailClick(this)" data-url="hotel_pay_info.html">确认支付</div>
+    </div>
+</div>
+
+</body>
+</html>

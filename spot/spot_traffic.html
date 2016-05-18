@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>景区交通信息</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/spot_traffic.js"></script>
+</head>
+<body>
+<div id="container">
+    <div class="spot-map"><iframe id="ifrMap" scrolling="no" style="border:none;height:230px;width:100%;" src=""></iframe></div>
+    <div class="spot-straffic-type">
+        <span class="ico-tip"></span>交通信息
+    </div>
+    <div id="traffiLine" class="spot-straffic-msg">
+        <script id="tempTraffic" type="text/html">
+            {{if data.bus !=""}}
+            <div class="spot-straffic-tit">
+                <div class="ico-spot-bus"></div><span>公交线路</span>
+            </div>
+            <p>{{data.bus}}</p>
+            {{/if}}
+            {{if data.driving}}
+            <div class="spot-straffic-tit">
+                <div class="ico-spot-car"></div><span>自驾线路</span>
+            </div>
+            <p>{{data.driving}}</p>
+            {{/if}}
+        </script>
+    </div>
+</div>
+</body>
+</html>

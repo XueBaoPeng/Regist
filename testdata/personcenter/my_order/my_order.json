@@ -1,0 +1,105 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data":
+  [
+    {
+      "title":"北京雅乐大酒店",
+      "status":"退款申请中",
+      "pay":"300.00",
+      "type":"1",
+      "orderList":[
+        {
+          "instanceImg":"../testdata/personcenter/my_order/pic-b.png",
+          "orderTitle":"标准大床房",
+          "time": "2016/01/09-2016/01/10",
+          "price":"200",
+          "count":"2"
+        },
+        {
+          "instanceImg":"../testdata/personcenter/my_order/pic.png",
+          "orderTitle":"大床房",
+          "time":"2016/01/09-2016/01/10",
+          "price":"200",
+          "count":"1"
+        }
+      ]
+    },
+    {
+      "title":"亚布力滑雪场",
+      "status":"待付款",
+      "pay":"900.00",
+      "type":"2",
+      "orderList":[
+        {
+          "instanceImg":"../testdata/personcenter/my_order/pic-b.png",
+          "orderTitle":"亚布力滑雪场大门票(全天可用)",
+          "orderItemList":[
+            {
+              "itemTitle":"k成人平日票",
+              "price":"32",
+              "count":"1"
+            },
+            {
+              "itemTitle":"成人平日票",
+              "price":"12",
+              "count":"3"
+            }
+          ]
+        },
+        {
+          "instanceImg":"../testdata/personcenter/my_order/pic-b.png",
+          "orderTitle":"亚布力滑雪场大门票(全天可用)",
+          "orderItemList":[
+            {
+              "itemTitle":"成人平日票",
+              "price":"12",
+              "count":"5"
+            },
+            {
+              "itemTitle":"儿童平日票",
+              "price":"62",
+              "count":"1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title":"中国青年国际旅行社",
+      "status":"已参团",
+      "pay":"600.00",
+      "type":"3",
+      "orderList":[
+        {
+          "instanceImg": "../testdata/personcenter/my_order/pic.png",
+          "orderTitle": "特价路线：北京、大理、丽江、昆明、玉龙雪山双飞7日游",
+          "time": "2016/01/09-2016/01/10"
+        },
+        {
+          "instanceImg": "../testdata/personcenter/my_order/pic-b.png",
+          "orderTitle": "特价路线：北京、大理、丽江、昆明",
+          "time": "2016/09/09-2016/01/10"
+        }
+      ]
+    },
+    {
+      "title":"导游服务",
+      "status":"已付款",
+      "pay":"8800.00",
+      "type":"4",
+      "orderList":[
+        {
+          "instanceImg": "../testdata/personcenter/my_order/pic-b.png",
+          "orderTitle": "奔驰450+导游服务奔驰450+导游服务奔驰450+导游服务奔驰450+导游服务",
+          "time": "2016/01/09-2016/01/10"
+        },
+        {
+          "instanceImg": "../testdata/personcenter/my_order/pic.png",
+          "orderTitle": "标准大床房",
+          "time": "2016/01/09-2016/01/10"
+        }
+      ]
+    }
+  ]
+}

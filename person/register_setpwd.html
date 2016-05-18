@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册设置密码</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/person.css">
+    <link href="../src/css/common.css" rel="stylesheet">
+</head>
+<body class="body-bg">
+<header class="header">注册
+    <span class="header-left"></span>
+</header>
+<section class="section">
+    <!--输入错误的弹出层  并且父级的padding-top:0-->
+    <div class="password-error hide"><span>两次输入的不一致，请重新输入</span></div>
+    <!--该号码已经注册，请直接登录  按钮文字变成发送校验码-->
+    <ul class="registe registe-reset">
+        <li class="registe-num-num">输入手机号</li>
+        <li class="registe-num-num">输入验证码</li>
+        <li class="registe-tel-num">设置密码</li>
+    </ul>
+    <div class="">
+        <span class="login-password">密码</span>
+        <input type="text" class="input-width" name="" value=""  placeholder="6-20位数字、字母、符号组合"/>
+        <!--<span class="password-eye"></span>-->
+        <span class="ico-x hide"></span><!--小X隐藏-->
+    </div>
+    <div class="">
+        <span class="login-name ">确认密码</span>
+        <input type="text" name="" class="input-width" value="" placeholder="请再次输入密码" />
+    </div>
+    <input class="login-btn" type="button" value="确认"/><!--切换的颜色色值#2296f0-->
+</section>
+</body>
+</html>

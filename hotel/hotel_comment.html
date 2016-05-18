@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+	<title>酒店点评</title>
+	<link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link rel="stylesheet" href="../src/js/widget/lightGallery/css/lightgallery.css">
+	<link rel="stylesheet" href="../src/css/common.css">
+	<link rel="stylesheet" href="../src/css/hotel.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lightgallery.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-thumbnail.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-fullscreen.js"></script>
+	<script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>  	   
+	<script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>  
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>	 
+    <script src="../src/js/hotel/hotel_comment.js"></script>
+</head>
+<body>
+	 <div class="discussBox" id="container">  
+	 	<div class="wrapper">
+	       	<div class="scroller">
+	            <!--<div class="pullDown">-->
+	                <!--<span>下拉刷新</span>-->
+	            <!--</div>-->
+		 	<div id="commentTop">
+			 	<script type="text/html" id="template_top">
+				<div class="title-total">
+					<div class="title-left">
+						<span>{{data.goodRate}}%</span>
+						<p>好评率</p>
+					</div>
+					<div class="title-right">
+						<ul>
+							<li><span>地理位置:</span><a>{{data.position}}分</a></li>
+							<li><span>设施服务:</span><a>{{data.facilities}}分</a></li>
+							<li><span>酒店服务:</span><a>{{data.feeling}}分</a></li>
+							<li><span>清洁程度:</span><a>{{data.clearing}}分</a></li>
+							<li><span>舒适感:</span><a>{{data.service}}分</a></li>
+							<li><span>性价比:</span><a>{{data.costeffective}}分</a></li>
+						</ul>
+					</div>
+				</div>
+				 <div class="grade" id="commGrade" >
+					 <ul>
+						 <li class="current" onclick="searchClick(this)" data-value="0" ><span>全部</span><span>{{data.Statistics.all}} </span></li>
+						 <li onclick="searchClick(this)" data-value="1" ><span>好评</span><span>{{data.Statistics.good}}</span></li>
+						 <li onclick="searchClick(this)" data-value="2" ><span>中评</span><span>{{data.Statistics.middle}}</span></li>
+						 <li onclick="searchClick(this)" data-value="3" ><span>差评</span><span>{{data.Statistics.bad}}</span></li>
+						 <li onclick="searchClick(this)" data-value="4" ><span>有图</span><span>{{data.Statistics.haspic}}</span></li>
+					 </ul>
+				 </div>
+				 </script>
+			</div>
+			 <!--评论信息-->
+			 <div id="commentList">
+				 <script type="text/html" id="template_list">
+				 <div class="discuss">
+				 	{{each data as data i}}
+				 	<div class="discuss-center">
+					 <div class="top-total" >
+						<div class="top-left">
+							{{if data.portrait ==""}}
+							<img src="../src/images/hotel/touxiang.png"/>
+							{{else}}
+							<img src="{{data.portrait}}">
+							{{/if}}
+							{{if data.contentPerson}} 
+							{{data.contentPerson}}										
+							{{else}}  
+							匿名用户					
+							{{/if}}
+						</div>
+						<div class="top-right" >
+							{{if data.zanFlag==true}} 
+							<img src="../src/images/hotel/like_huise.png">有用（<span>{{data.zanCount}}</span>） 							
+							{{else}}
+							<img src="../src/images/hotel/like_xuanzhong.png" onclick="addScoreClick('{{data.zanFlag}}','{{data.id}}')">有用（<span>{{data.zanCount}}</span>） 
+							{{/if}}							
+						</div>
+					 </div>
+					 <p class="less" >
+						{{data.content}}
+					 </p>
+					 <a class="more" onclick="more(this)">查看更多</a>
+					 {{if data.pictures.length!=0}}
+					 <div class="pcicture-list" id="pcicture-list">
+					 	{{each data.pictures as pictures j}}
+						 <a	href="{{pictures}}"><img class="pictures" src="{{pictures}}"> </a>				 
+						 {{/each}}
+					 </div>
+					 {{/if}}
+					 <div class="clearBoth"></div>
+					 <span class="time">{{data.createTime}}</span>	
+					 {{if data.replyContent}}
+					 <div class="answer">
+						 酒店回复：{{data.replyContent}}
+					 </div>	
+					 {{/if}}
+					 </div>
+					 {{/each}}			
+			     </div>
+			     </script>
+			 </div>	
+		     <div class="pullUp">
+	                <span>上拉加载更多</span>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!--轮播图全屏预览-->
+    <section id="showFull" class="photo-full hide">
+        <div class="oriphoto"><img src="" data-idx="" alt=""></div>
+        <div class="pho"></div>
+    </section>
+</body>
+</html>

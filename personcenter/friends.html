@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的兔友</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personcenter.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/friends.js"></script>
+</head>
+<body>
+<div class="container-friend" id="container">
+    <script type="text/html" id="tempFriend">
+        <div class="friend-top">
+            <div class="topBox">
+                <div class="priceBox">
+                    <span class="price">{{data.price}}</span>元
+                </div>
+                <p>兔天使收益</p>
+            </div>
+        </div>
+        <ul class="lib">
+            <li onclick="friendsClick();">
+                <div class="left">兔友列表</div>
+                <div class="right">
+                    <div class="tem">
+                        <span>{{data.friends}}位好友</span><img src="../src/images/area/go_13.png" class="go">
+                    </div>
+                </div>
+            </li>
+            <li onclick="qrCodeClick();">
+                <div class="left">二维码召集令</div>
+                <div class="right">
+                    <img src="../src/images/area/er_10.png" class="code">
+                    <img src="../src/images/area/go_13.png" class="go">
+                </div>
+            </li>
+        </ul>
+    </script>
+</div>
+</body>
+</html>

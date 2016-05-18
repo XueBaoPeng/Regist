@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值成功</title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personaccount.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personaccount/recharge_success.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="container">
+        <script id="template" type="text/html">
+            <div class="success-con">
+                <p class="success-tit">
+                    <!--<img src="../src/images/personaccount/success.png" alt="充值成功">-->
+                    <span class="ico-buy-success"></span>
+                    <span>充值成功</span>
+                </p>
+                <p class="success-result">
+                    <span class="result-left">您已成功充值</span><span class="result-right">¥<span id="labMoney"></span></span>
+                </p>
+            </div>
+        </script>
+    </div>
+    <div>
+        <button id="btnBack" class="return-account">返回我的账户</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>酒店房间详情</title>
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/pay.css">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/area/hotel_detail.js"></script>
+</head>
+<body class="bg-color-white3 hotel_detail">
+<div class="container">
+  <div class="date">
+    <div class="startDate">
+      入住日期
+      <span>01-18</span>
+    </div>
+    <div class="shu"></div>
+    <div class="endDate">
+      退房日期
+      <span>01-28</span>
+    </div>
+  </div>
+  <div class="screen-result">
+    <div class="wrapper">
+      <div class="scroller">
+        <div class="pullDown">
+          <span>下拉刷新</span>
+        </div>
+        <ul class="roomList result-ul">
+          <script type="text/html" id="template">
+            {{each list as item i}}
+          <li onclick="detail(this)" data-url="hotel_roomInfo.html">
+            <div class="top">
+              <span class="title">{{item.title}}</span>
+              <span>(不支持退款)</span>
+              {{if item.promotion}}
+              <div class="sale">促销</div>
+              {{/if}}
+            </div>
+            <img src={{item.thumbnail}} class="room">
+            <div class="roomDetail">
+              <p>
+                <img src="../src/images/area/people_03.jpg" class="people">
+                <img src="../src/images/area/people_03.jpg" class="people">
+                <img src="../src/images/area/people_03.jpg" class="people">
+              </p>
+              <p class="wifi">
+                <span>单早</span>
+                <span>免费WIFI</span>
+                <span>无宽带</span>
+                <!--<img src="images/go_03.jpg" class="go">-->
+              </p>
+              <p>
+                <span>面积:{{item.area}}㎡</span>
+                <span>床型:一张大床1.8m*2.0m</span>
+              </p>
+              <p>
+                <span>有窗</span>
+                <span>独立卫浴</span>
+              </p>
+            </div>
+            <div class="clear"></div>
+          </li>
+            <div class="bar">
+              <div class="book" onclick="detailClick(this)" data-url="hotel_bookRoom.html">预订</div>
+              <div class="barRight">
+                <span>￥{{item.price}}</span>/晚
+              </div>
+            </div>
+            {{/each}}
+          </script>
+        </ul>
+        <div class="pullUp">
+          <span>上拉加载更多</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="bottom">-->
+    <!--<div class="totalPrice">-->
+      <!--总价：-->
+      <!--<span>￥0.00</span>-->
+    <!--</div>-->
+    <!--<div class="book" onclick="detailClick(this)" data-url="hotel_roomInfo.html">立即预订</div>-->
+  <!--</div>-->
+</div>
+</body>
+</html>

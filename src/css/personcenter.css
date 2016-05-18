@@ -1,0 +1,551 @@
+/*——————————addContant新增常用联系人样式————————————*/
+html, body { width: 100%; height: 100%; position: relative; overflow-x: hidden; }
+.addConcontainer {
+    font-size: 1.4rem;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+.addConcontainer ul {
+    padding-top: 10px;
+}
+
+.addConcontainer ul li {
+	overflow: hidden;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #eeeeee;
+    background: #ffffff;
+    line-height: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.addConcontainer ul li:last-child {
+    border-bottom: none;
+}
+.addConcontainer span.left {
+	float: left;
+	display: inline-block;
+	width: 23%;
+}
+.addConcontainer input.name {
+	margin-top: 8px;
+	float: left;
+	width: 70%;
+	height: 30px;
+	line-height: 30px;
+	border: 0;
+}
+.addConcontainer input.code {
+	margin-top: 8px;
+	float: left;
+	width: 70%;
+	height: 30px;
+	line-height: 30px;
+	border: 0;
+}
+
+.save {
+    width: 90%;
+    height: 44px;
+    line-height: 44px;
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-align: center;
+    background: #2396f1;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 20px;
+    letter-spacing: 3px;
+}
+
+.addConcontainer ul li .left {
+    float: left;
+    font-size: 1.6rem;
+}
+
+.addConcontainer ul li .right {
+    float: right;
+    color: #666666;
+    font-size: 1.4rem;
+}
+
+.addConcontainer ul li .right span {
+    margin-right: 6px;
+    float: left;
+}
+
+.addConcontainer ul li .right img {
+    float: left;
+    margin-top: 17px;
+}
+
+/*_____________________________menu.css_________________________*/
+.menu { position: absolute; top: 0; bottom: 0; width: 100%; background: rgba(0,0,0,0.5); display:none;}
+.menu ul { position: absolute; bottom: 0; width: 100%; background: #ffffff; font-size: 1.4rem; }
+.menu ul li { width: 100%; height: 35px; border-top: 1px solid #e0e0e0; line-height: 35px; text-align: center; }
+.menu ul li.finish{text-align: right;padding-right: 25px; color:#2196F3;font-size:14px;}
+.menu li.active{border-bottom:0;}
+/*———————contact常用联系人——————————————————*/
+html, body { background: #eeeeee; width: 100%; height: 100%; }
+.center { width: 140px; margin: 0 auto; font-size: 1.6rem; color: #289af2; }
+.center img { width: 20px; height: 20px; margin-right: 15px; }
+/*——————————联系人详情contactsDetail———————————*/
+.top { width: 100%; height: 75px; background: #ffffff; /*margin-top: 10px;*/ position: relative; border-bottom: 1px solid #eeeeee; }
+.top .headImg { float: left; width: 60px; height: 60px; border-radius: 50%; margin-top: 8px; margin-left: 15px; }
+.top .topRight { position: absolute; left: 85px; right: 0; top: 0; bottom: 0;/*background: #2396f1;*/
+}
+.top .topRight .user { margin-top: 15px; overflow: hidden; }
+.top .topRight .user .userName { font-size: 1.6rem; float: left; margin-top: 3px; }
+.top .topRight .user .man { float: left; width: 15px; height: 15px; margin-left: 5px; margin-top: 4px; background-image: url("../images/personcenter/sex_09.png"); background-size: 100% 100%; }
+.top .topRight .user .woman { float: left; width: 15px; height: 15px; margin-left: 5px; margin-top: 4px; background-image: url("../images/personcenter/woman_03.png"); background-size: 100% 100%; }
+.top .topRight .user .star { width: 19px; height: 18px; float: right; margin-right: 15px; background-image: url("../images/personcenter/star_03.png"); background-size: 100% 100%; }
+.top .topRight .user .starHui { background-image: url("../images/personcenter/starh_03.png"); background-size: 100% 100%; }
+.top .topRight .name { color: #666666; margin-top: 10px; }
+.bar {width:100%; height: 45px;line-height:45px; background: #ffffff;}
+.bar .text { float: left; margin-left: 15px; font-size: 1.6rem; width:auto;}
+.bar .price { float: right; color: #fc8; margin-right: 15px; }
+.remark { width: 100%; height: 45px; background: #ffffff; margin-top: 10px; line-height: 45px; }
+.remark .remarkLeft { float: left; margin-left: 15px; font-size: 1.6rem; }
+.remark .remarkRight { float: right; margin-right: 15px; margin-top: 17px; }
+/*———————————————contactsInfo联系人信息——————————*/
+.container { font-size: 1.4rem; color: #333333; position: relative; width: 100%; height: 100%;  }
+.passengerList { width: 100%; }
+.passengerList li { width: 100%; height: 60px; background: #ffffff; border-bottom: 1px solid #eeeeee; }
+.passengerList li:last-child { border-bottom: none; }
+.passengerList li .left { float: left; width: 20px; height: 20px; margin-left: 15px; margin-top: 18px; margin-right: 17px; background: url("../images/personcenter/iconfont-duigouhui.svg"); background-size: 100% 100%; }
+.passengerList li .choose { background: url("../images/personcenter/iconfont-duigou.svg"); background-size: 100% 100%; }
+.passengerList li .left img { width: 100%; height: 100%; }
+.passengerList li .right { float: left; }
+.clear { clear: both; }
+.passengerList li .right span { display: block; float: left; }
+.passengerList li .right .name { font-size: 1.6rem; }
+.passengerList li .right .id { color: #666666; font-size: 1.4rem; }
+ul li .right .type { width: 70px; }
+.passengerList li .right .name { margin-top: 10px; margin-bottom: 10px; }
+.notice { position: absolute; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; background: rgba(0,0,0,0.2); display: none; }
+.noticeBox { position: relative; width: 71%; height: 150px; background: #f3f3f3; margin: 0 auto; border-radius: 5px; margin-top: 45%; padding-top: 10px; padding-left: 12px; padding-right: 12px; }
+.noticeBox .title { text-align: center; font-size: 1.6rem; line-height: 20px; margin-top: 10px; }
+.noticeBox .content { text-align: center; margin-top: 8px; line-height: 18px; }
+.btns { position: absolute; bottom: 0; left: 0; width: 100%; height: 44px; border-top: 1px solid #b6b6b6; color: #1785ff; font-size: 1.6rem; }
+.btns div { line-height: 44px; text-align: center; float: left; width: 49%; }
+.btns div:first-child { border-right: 1px solid #b6b6b6; }
+/*________________________________________________friendList好友列表————————————————————————————*/
+body, html { /*padding-top: 60px;*/
+    /*overflow: hidden;*/
+}
+.friendList-container { background: #eee; }
+.friendList-top { width: 100%; height: 45px; background: #e5e5e5; padding-top: 7px;/*position:fixed;*/
+    /*top:0;*/
+    /*z-index: 1000;*/
+}
+.friendList-top .searchBox { position: absolute; left: 15px; right: 70px; height: 30px; background: #ffffff; border-radius: 5px; text-align: center; margin: 0 auto; line-height: 30px; font-size: 1.4rem; }
+.friendList-top .searchBtn { float: right; width: 50px; height: 30px; line-height: 30px; background: #2396f1; border-radius: 5px; text-align: center; color: #ffffff; margin-right: 13px; font-size: 1.5rem; }
+.friendList-top .searchBox .searchImg { float: left; width: 15px; margin-left: 8px; margin-top: 9px; }
+.friendList-top .searchBox input { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 5px; padding-left: 33px; z-index: 200; background: rgba(255,255,255,0); }
+.listBox { width: 100%; height: 100%;/*position: relative;*/
+    /*margin-top: 45px;*/
+    /*overflow-y: auto;*/
+}
+.listBox .code { position: fixed; right: 10px; top: 70px; width: 12px; color: #999999; font-size: 1.4rem; text-align: center; line-height: 19px; z-index: 100; }
+.listBox .code a { color: #999999; font-size: 1.4rem; }
+.list { width: 100%; }
+.list .title { height: 25px; line-height: 25px; font-size: 1.4rem; color: #999999; padding-left: 13px; }
+.list .title img { width: 13px; float: left; margin-top: 6px; margin-right: 6px; }
+.list .title span { float: left; }
+.list li { width: 100%; height: 50px; background: #ffffff; border-bottom: 1px solid #eeeeee; padding-left: 13px; padding-right: 13px; }
+.list li .head { width: 36px; height: 36px; border-radius: 50%; margin-top: 7px; float: left; margin-right: 10px; }
+.list li .name { line-height: 50px; font-size: 1.6rem; color: #333333; float: left; }
+/*—————————hotelOrderList酒店预订列表——————————————————*/
+/*头部*/
+.order-list-tab { height: 44px; line-height: 44px; background: #fff; font-size: 1.5rem; }
+.order-list-ul li { float: left; width: 50%; text-align: center; height: 44px; }
+.order-list-ul li a { padding: 0 5px; display: inline-block; color: #333; height: 44px;}
+.order-list-ul li a.order-active { color: #2396F1; border-bottom: 2px solid #2396F1; }
+/*公共*/
+/*头部*/
+.my-order { clear: both;font-size: 1.5rem; }
+.my-order-tit { padding: 0 4%; height: 40px; line-height: 40px; background: #fff; border-bottom: 1px solid #eee;}
+.order-name { color: #333;display: inline-block;text-overflow: ellipsis;white-space: nowrap;width: 75%;  overflow: hidden; }
+.order-state { float: right; color: #F7A623; width:25%; text-align: center;}
+/*主体*/
+.my-order-con { clear: both; height: 92px; /*background: #F7FAFF;*/ overflow: hidden; }
+.my-order-con-line{padding:0 4%;margin:10px 0;line-height: 20px;}
+.my-order-con-line .open-time{color:#999;padding-top:5px;}
+.my-order-left { float: left; margin: 10px 4% 0 4%; width: 18.6%; height: 70px; border-radius: 5px; }
+.my-order-left img { width: 100%; height: 70px; }
+.my-order-right { float: left; margin-top: 10px; margin-right: 4%; width: 69.3%; color:#999}
+.no-payment-name{color:#555}
+/*底部*/
+.my-order-result { clear: both; padding: 0 4%; height: 40px; line-height: 40px; background: #fff; font-size:1.3rem;color: #999; border-top: 1px solid #eee;}
+.my-order-result .mon-sign { font-size:1.3rem;color: #FE8113; }
+.my-order-result .commment-button{width:70px;line-height:20px;padding:5px 0px;background:#fff;border:1px solid #ccc;border-radius:3px;font-size:12px;float:right;margin:4px 0px 5px 4px; }
+.my-order-result .commment-button-off,.my-order-result .commment-button-back{display: none;}
+.refund-applying { background: #ffffff; margin-bottom: 10px; }
+.apply-money { margin-left: 3px; color: #FE8113;font-size: 18px; }
+
+/*退款申请中*/
+.refund-type { color: #333; font-size:1.4rem}
+.refund-date { margin-top: 10px; }
+.refund-num { margin-top: 10px; color: #333; }
+.refund-num span { font-size:1.4rem;font-weight: 600; }
+/*待付款*/
+.no-payment { margin-bottom: 10px; background: #fff; }
+.my-order-con { margin-bottom: 5px; }
+/*.no-payment-name { color: #333; }*/
+.no-payment-type { clear: both; margin-top: 10px;font-size:1.3rem;color:#999; }
+
+.no-span-right { float: right; }
+.my-order-pay{float:right;margin:4px 0 5px 4px;padding:5px 0;width:70px;border:1px solid #ccc;border-radius:3px;background:#fff;text-align:center;font-size:9pt;line-height:20px}
+.my-order-pay-none{display: none;}
+/*已参团*/
+.have-offered { background: #ffffff; margin-bottom: 10px; }
+.have-offered-name { color: #333; line-height: 20px; height: 40px; display: -webkit-box !important; overflow: hidden; -webkit-text-overflow: ellipsis; -moz-text-overflow: ellipsis; -o-text-overflow: ellipsis; -ms-text-overflow: ellipsis; text-overflow: ellipsis; -webkit-box-orient: vertical; -moz-box-orient: vertical; -o-box-orient: vertical; -ms-box-orient: vertical; box-orient: vertical; -webkit-line-clamp: 2; -moz-line-clamp: 2; -o-line-clamp: 2; -ms-line-clamp: 2; line-clamp: 2; }
+.have-offered-date { margin-top: 12px; color: #999; font-size: 1.3rem; }
+.have-offered-date span { margin-left: 5px; }
+/*已付款*/
+.have-pay { margin-bottom: 10px; background: #ffffff; }
+.have-pay-name { color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; -moz-text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; }
+.have-pay-date { margin-top: 12px; color: #999; font-size: 1.3rem; }
+.have-pay-date span { margin-left: 5px; }
+/********************************************全部订单*/
+.order-list-con { margin-top: 10px; display: none; }
+.order-list-con li { padding-left: 4%; height: 50px; line-height: 50px; border-bottom: 1px solid #eee; background: #fff; font-size: 1.5rem; color: #333; }
+.order-icon { float: left; margin-top: 10px; width: 32px; height: 32px; }
+.order-list-con li span { float: left; margin-left: 10px; }
+.order-link { float: right; margin-top: 21px; margin-right: 4%; }
+/*————————————————————————————登录页面的样式——————————————————————*/
+/*头部*/
+.login-top { position: relative; height: 185px; /*background: url("../../src/images/personcenter/bg_top.png") no-repeat; background-size: 100%; */color: #fff; text-align: center; }
+.login-bg{width:100%; height: 185px;}
+.login-top .title{line-height: 64px; font-size: 1.6rem; } 
+.login-con .login-row:hover{ background: #f6f6f6; }		
+.login-head-yes { position: absolute; bottom: 38px; left: 50%; margin-left: -35px; width: 70px; height: 70px; }
+.login-head-pic { position: absolute; left: 5px; top: 5px; z-index: 3; width: 60px; height: 60px; border-radius: 50%; /*background: url("../../src/images/personcenter/head.jpg") no-repeat; background-size: 100%;*/ }
+.login-head-bg { position: absolute; z-index: 2; width: 70px; height: 70px; border-radius: 50%; background: #000; opacity: 0.3; filter: alpha(opacity=30); -moz-opacity: 0.3; }
+.login-state { position: absolute; bottom: 22px; width: 100%; text-align: center; font-size: 1.3rem; }
+/*主体*/
+.login-con { clear: both; margin-top: 15px; margin-bottom:64px}
+.login-row { padding: 0 4%; height: 50px; width: 100%; line-height: 50px; background: #fff; border-bottom: 1px solid #eee; font-size: 1.7rem; color: #333; }
+.login-row .login-span{line-height: 50px;}
+.login-right{float:right;color:#999;font-size: 1.4rem;}
+.login-row .right-btn {margin: 15px 0;  margin-left: 10px;}
+.login-con .login-row:active { color: #ff0000; }
+.login-con .login-con-left-img{vertical-align: middle;width: 30px;height:30px; display: inline-block;}
+.nav-menu-img{vertical-align: middle;width: 30px;height:30px; display: inline-block;}
+/*.login-row img { float: left; display: inline-block;  width: 18px; }
+.my-orders img,.my-money img,.my-collect img { margin-top: 16px; height: 18px; }
+.my-travel img,.my-friend img, .my-set img { margin-top: 16px; height: 18px; }*/
+
+/*.login-active {*/
+/*background: #f6f6f6;*/
+/*}*/
+
+/*——————————————————————myfriends我的好友——————————————————————————*/
+.friend-top { width: 100%; height: 180px; background: #f5a623; text-align: center; }
+.friend-top .topBox { width: 180px; text-align: center; margin: 0 auto; padding-top: 50px; font-size: 1.4rem; color: #ffffff; }
+.friend-top .price { font-size: 4.0rem; }
+.friend-top .topBox p { margin-top: 15px; }
+.lib { margin-top: 10px; background: #ffffff; width: 100%; }
+.lib li { width: 100%; height: 50px; border-bottom: 1px solid #eeeeee; line-height: 50px; }
+.lib li .left { float: left; font-size: 1.6rem; color: #333333; margin-left: 15px; }
+.lib li .right { float: right; color: #999999; font-size: 1.4rem; margin-right: 15px; }
+.lib li .right .go { width: 8px; margin-left: 5px; }
+.code { /*width: 16px;*/ }
+/*——————recommond推荐码——————————————*/
+.box { width: 80%; /*height: 60%;*/padding-bottom:20px; background: #ffffff; border-radius: 5px; position: absolute; left: 0; right: 0; margin: 0 auto; top: 16%; }
+.box .info { overflow: hidden; }
+.box .info .headImg { width: 60px; height: 60px; float: left; border-radius: 50%; margin-top: 10px; margin-left: 10px; }
+.box .info .infoRight { float: left; }
+.box .info .infoRight .userName { margin-top: 20px; margin-left: 11px; font-size: 1.6rem; overflow: hidden; }
+.box .info .infoRight img { width: 15px; height: 15px; }
+.box .info .infoRight .code { color: #999999; margin-left: 11px; margin-top: 10px; }
+.box .info .infoRight .code span { color: #2296f0; }
+.box .erweima { clear: both; display: block; width: 75%; margin: 20px auto; border: 1px solid #edf4ff; border-radius: 3px; }
+.text { width: 100%; text-align: center; color: #999999; }
+ @media screen and (max-width: 320px) {
+.box { width: 85%; height: 70%; top: 11%; }
+}
+/*_________________setRemark设置备注名————————————*/
+.bar input { width: 100%; height: 100%; border: none; padding-left: 15px; padding-right: 15px; }
+
+/*—————————————————personalmsg个人信息——————————————————*/
+/*公用*/
+.msg-left { float: left; display: inline-block; padding-left: 4%; font-size: 1.7rem; color: #333; }
+.msg-right { float: right; display: inline-block; margin-right: 4%; font-size: 1.4rem; color: #666; }
+/*头像*/
+.msg-head { /*margin-top: 10px;*/ height: 70px; line-height: 70px; background: #fff; overflow: hidden; }
+.msg-head-pic { display: inline-block; /*margin-top: 11px;*/ width: 50px; height: 50px; border-radius: 50%; background: url("../images/area/pic.png") no-repeat; }
+.msg-head .msg-link { margin-left: 8px; margin-top: -41px; }
+/*用户名*/
+.msg-name, .msg-date { height: 45px; line-height: 45px; background: #fff; border-top: 1px solid #eee; }
+.birthday-date{outline: none;border:none;text-align: right;color:#666;}
+/*昵称*/
+.msg-nickname { height: 45px; line-height: 45px; background: #fff; }
+/*性别*/
+.msg-sex { margin-top: 10px; height: 45px; line-height: 45px; background: #fff; }
+/*手机号码*/
+.msg-phone { height: 45px; line-height: 45px; background: #fff; }
+/*修改密码*/
+.msg-pwd { margin-top: 10px; height: 45px; line-height: 45px; background: #fff; }
+/*退出*/
+.msg-quit { position: fixed; bottom: 0; width: 100%; height: 45px; line-height: 45px; background: #F6F6F6; border: 0; border-top: 1px solid #ccc; font-size: 1.5rem; color: #FF1C3A; text-align: center; }
+
+/*添加下面弹出框*/
+.zhezhao{position:absolute;top:0;display:none;width:100%;height:100%;background:rgba(0,0,0,.5)}
+/*图像选择遮罩层*/
+.container .msg-head-bottom{position:fixed;bottom:0;display:none;width:100%}
+.container .msg-head-bottom div{border-bottom:1px solid #ccc;background:#fff;text-align:center;font-size:14px;line-height:35px}
+.container .msg-head-bottom div.choose{border-bottom:10px solid #EDEDED;}
+/*出生日期遮罩层*/	
+.container .msg-date-bottom{position:fixed;bottom:0;display:none;width:100%}
+.container .msg-date-bottom .finish{padding-right:1.5rem;border-bottom:1px solid #ccc;background:#F5F5F5;color:#2296F0;text-align:right;font-size:1.8rem;line-height:50px}
+.container .msg-date-bottom .date{height:100px;border-bottom:1px solid #ccc;background:#fff;text-align:center;font-size:1.8rem;line-height:50px}
+/*性别选择遮罩层*/
+.msg-sex-bottom{position:fixed;bottom:0;display:none;width:100%}
+.msg-sex-bottom div{border-bottom:1px solid #ccc;background:#fff;text-align:center;font-size:14px;line-height:35px}
+.msg-sex-bottom .finish{padding-right:15px;background:#F5F5F5;color:#2296F0;text-align:right}
+.msg-sex-bottom .active{border-bottom:1px solid #ccc}
+
+
+/*-----------------------personalmsg.html----------------------------*/
+/*公用*/
+.msg-left { float: left; display: inline-block; padding-left: 4%; font-size: 1.7rem; color: #333; }
+.msg-right { float: right; display: inline-block; margin-right: 4%; font-size: 1.4rem; color: #666; }
+/*头像*/
+.msg-head { /*margin-top: 10px*/; height: 70px; line-height: 70px; background: #fff; overflow: hidden; }
+.msg-head-pic { display: inline-block; margin-top: 11px; width: 50px; height: 50px; border-radius: 50%; background: url("../images/area/pic.png") no-repeat; background-size: 100% 100%; }
+.msg-head .msg-link { margin-left: 8px; /*margin-top: -41px; */ vertical-align: middle;}
+/*用户名*/
+.msg-name, .msg-date { height: 45px; line-height: 45px; background: #fff; border-top: 1px solid #eee; }
+/*昵称*/
+.msg-nickname { height: 45px; line-height: 45px; background: #fff; }
+/*性别*/
+.msg-sex { margin-top: 10px; height: 45px; line-height: 45px; background: #fff; }
+/*手机号码*/
+.msg-phone { height: 45px; line-height: 45px; background: #fff; }
+/*修改密码*/
+.msg-pwd { margin-top: 10px; height: 45px; line-height: 45px; background: #fff; }
+/*退出*/
+.msg-quit { position: fixed; bottom: 0; width: 100%; height: 45px; line-height: 45px; background: #F6F6F6; border: 0; border-top: 1px solid #ccc; font-size: 1.5rem; color: #FF1C3A; text-align: center; }
+.myOrder-container { padding-top: 0; }
+
+/*------------------hotel_order_detail.html 酒店订单详情-------------------------*/
+.spotMain{width:100%}
+.order-detail-top{padding-left:4%;height:75px;background:#fff;color:#666;font-size:1.5rem}
+.order-detail-top span{margin-left:10px}
+.order-detail-top num{margin-left:10px;color:#fcb215}
+.order-top-p1{margin-bottom:10px;padding-top:15px}
+/*门票信息*/
+.order-ticket{margin-top:10px;padding-right:4%;padding-left:4%;background:#fff}
+.order-tit{height:40px;background:#fff;color:#333;font-size:1.5rem;line-height:40px;border-bottom: 1px solid #efedee;}
+.order-tit span{float:left;display:inline-block;margin-top:9pt;margin-right:5px;width:4px;height:15px;background:#fcb215}
+.order-ticket-tit{width:100%;margin-top:9pt;font-size:1.4rem; color:#333;}
+.order-ticket-tit .right{float:right;color: #fc8215;}
+.order-ticket-tit span{width:72%;display:inline-block;margin-right:10px;}
+.order-ticket-price{margin-top:9pt;margin-bottom:7px;color:#777779;font-size:1.3rem}
+.order-label{display:inline-block;width:75px;color:#777779}
+.order-ticket-num{color:#999997}
+.order-line{overflow:hidden;margin-top:15px;margin-bottom:9pt;height:1px;background:#efedee}
+.order-ticket-num span{margin-right:10px}
+.order-apply-btn{float:right;margin-top:-9px;width:70px;height:30px;line-height:30px;color:#333;border:1px solid #ccc;font-size:12px;border-radius:3px;background:#fff;text-align:center;}
+.order-date{margin-bottom:10px}
+.order-date,.order-explain,.order-validity{color:#777779;font-size:1.3rem}
+.order-explain{margin-top:10px;  padding-bottom: 10px;  border-bottom: 1px solid #efedee;}
+.order-explain:nth-last-child(1){border-bottom: 0;}
+.order-bg-2{height:10px;background:#fff}
+.order-ticket2{padding-top:10px;padding-right:4%;padding-left:4%;background:#fff}
+.order-ticket-tit2{font-size:1.4rem}
+/*订单信息*/
+.order-msg{margin-top:10px;padding:0 4% 20px;background:#fff}
+.order-msg div{margin-bottom:13px;}
+.order-msg div num{color:#fc8215}
+.order-msg div span{margin-right:10px}
+/*联系人信息*/
+.order-people{margin-top:10px;padding:0 4%;background:#fff}
+.order-phone{height:36px;line-height:36px}
+/*出游人信息*/
+.order-travel{margin-top:10px;padding:0 4%;background:#fff;font-size:1.4rem;padding-bottom: 10px;}
+.order-travel .order-ticket-tit,.order-travel-con{margin-bottom:8px}
+.order-detail-bottom{width:100%;height:40px;line-height:40px;background:#fff;text-align:right;}
+/*顶部展开状态*/
+.order-open{background:#2396f1;color:#fff;font-size:1.4rem}
+.order-open-con{margin:0 10%;padding-top:37px}
+/*按钮*/
+.order-open-btn{display:inline-block;width:100%;clear:both;margin:5px 0;text-align:center}
+.order-open-btn span{display:block;margin:5px auto 0;}
+/*右侧*/
+.order-open-right{float:left;margin-left:30px}
+.order-open-right ul li{line-height: 20px;}
+/*.order-li-tit{font-weight:600}*/
+.order-li-con{margin-top:5px;}
+/*左侧*/
+.order-open-row{display:inline-block;width:100%;padding:0 10px;border:0;}
+.order-open-left{position:relative;float:left;width:18px;text-align:center}
+.circle-small,.span-circle-big,.span-circle-bigline,.span-circle-little{position:absolute;display:inline-block;width:10px;height:10px;margin-top:5px;border-radius:50%;background:#fff}
+.span-circle-little:after{content:"";display: block;position:relative;left:4px;width:2px;height:50px;background:#fff}
+.span-circle-bigline:before{content:"";display: block;position:relative;left:-4px;top:-4px;z-index:5;width:18px;height:18px;opacity:.5;-moz-opacity:.5;filter:alpha(opacity=50);border-radius:50%;background:#fff}
+.span-circle-bigline:after{content:"";display: block;position:relative;top:-4px;left:4px;width:2px;height:40px;background:#fff}
+.span-circle-big:before{content:"";display: block;position:relative;left:-4px;top:-4px;z-index:5;width:18px;height:18px;opacity:.5;-moz-opacity:.5;filter:alpha(opacity=50);border-radius:50%;background:#fff}
+
+.order-open-line{position:relative;float:left;margin-top:5px;width:2px;height:60px;background:#fff}
+.order-open-line-no{position:relative;float:left;margin-top:5px;}
+
+.order-price{height:50px;line-height: 50px;background: #fff;font-size:1.5rem;margin-bottom:10px;padding-left:4%;padding-right:4%}
+.order-price .price{color:#fc8215;font-size:1.4rem;font-weight: 600;}
+.order-price .price num{font-size:1.8rem;font-weight: 600;}
+.order-price .comment{float:right;}
+.order-price .comment button{padding:5px 15px;margin-right: 10px;background: #fff; width: 70px;height: 30px;color: #333;border: 1px solid #ccc;font-size: 12px;border-radius: 3px;}
+.order-title{font-size:15px;background: #fff;font-size:14px;margin-bottom: 10px;padding-bottom:5px;}
+.order-title lable{padding-right:10px;}
+.order-title .title{line-height: 40px;border-bottom: 1px solid #eee; background: #fff;padding-left:4%;padding-right:4%; font-size:16px;}
+.order-title .title button{  padding: 5px 15px;
+    margin-right: 10px;
+    margin-top:5px;
+    background: #fff;
+    width: 70px;
+    height: 30px;
+    color: #333;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    border-radius: 3px;
+    float:right;
+    } 
+.order-title .room-type,.order-title .order-time,.order-title .hotel-bones,.order-title .check-in-people,.order-title .check-in-time,.order-title .order-gift{
+		line-height: 26px;padding-left:4%;padding-right:4%;}
+.order-title .room-type{margin-top:5px;}
+.order-title .room-type .right{float:right;color:#fc8215}
+.order-title .order-gift{padding-bottom:5px}
+.hotel-confirm {padding-left: 4%;padding-right: 4%;background: #fff;font-size: 15px;margin-top:10px}
+.hotel-confirm .confirm-num,.hotel-confirm .hotel-ticket,.hotel-confirm .special-request{border-bottom: 1px solid #eee;line-height: 45px;}
+.hotel-confirm .special-request{border:0;}
+.hotel-confirm .lable-confirm{width:100px;display: inline-block;}
+.hotel-order{margin-top:10px;background: #fff;padding-left: 4%;padding-right: 4%;font-size:15px;}
+.hotel-order .order-num,.hotel-order .order-contact,.hotel-order .order-tel{line-height:45px;border-bottom:1px solid #eee;}
+.hotel-order .lable-order{width:100px;display:inline-block}
+.hotel-order .order-tel{border:0}
+
+
+/*-------------hotel-order-detail.html酒店订单详情------------------*/
+.about-order{margin-top:10px;margin-bottom:10px;background: #fff;padding:8px 4%;font-size:14px;color:#333;}
+.about-order p{line-height:25px;}
+.about-line{font-size:14px;color:#333;background: #fff;padding:8px 4%;margin-bottom: 10px;}
+.about-line p{line-height: 25px;}
+.about-travel {font-size:14px;color:#333;background: #fff;padding:8px 4%;margin-bottom: 10px;}
+.about-travel p{line-height: 25px;}
+.about-travel p.title{font-size:15px;font-weight: 600; border-bottom: 1px solid #ccc;}
+.about-travel p.about-line{border-bottom: 1px solid #ccc;height:15px;padding:0;}
+.about-travel p.about-line:nth-last-child(1){border-bottom: 0;display:none;}
+.about-contact-person {font-size:14px;color:#333;background: #fff;padding:8px 4%;margin-bottom: 10px;}
+.about-contact-person p{line-height: 25px;}
+.about-ele-code{font-size:14px;color:#333;background: #fff;padding:8px 4%;margin-bottom: 10px;}
+.about-ele-code p{line-height: 25px;}
+.about-bottom {width:100%;font-size:18px;}
+.about-bottom span{width:50%;height:50px;display: inline-block;text-align: center;color:#333;line-height: 50px;background: #fff;float:left;}
+.about-bottom span.comment{background: #FF8432;color:#fff}
+.about-bottom span.commment-button{width:100%;background: #FF8432;color:#fff}
+/*————————————订单筛选spot_order——————————————*/
+.spot-order-search{position:absolute;z-index:99;width:100%;height:100%;background:#fff;color: #787677;}
+.order-screen { padding: 20px 4%; }
+.order-screen-tip {
+	clear: both;
+	margin-bottom: 10px;
+	font-size: 1.3rem;
+}
+.order-screen-option {
+	width: 100%;
+}
+.order-screen-option ul {
+	overflow: hidden;
+}
+.order-screen-option ul li {
+	float: left;
+	margin-right: 5.3%;
+	margin-bottom: 5.3%;
+	border-radius: 3px;
+	border: 1px solid #777;
+	width: 26.6%;
+	height: 36px;
+	line-height: 36px;
+	background: #fff;
+	text-align: center;
+}
+.order-screen-option ul li a {
+	color: #787677;
+}
+.order-screen-option ul li.order-screen-active {
+	background: #2396f1;
+	border: 1px solid #2396f1;
+}
+.order-screen-option ul li.order-screen-active a {
+	color: #fff;
+}
+.order-ctl{position: fixed; bottom: 0;width:100%;height:50px;line-height:50px;border-top:1px solid #ccc;}
+
+/*———————————contacts_info.html——————————————*/
+.personList li {
+	margin-top: 10px;
+	padding-left: 4%;
+	height: 60px;
+	background: #fff;
+	overflow: hidden;
+}
+.contact-left {
+	float: left;
+	margin-top: 24px;
+}
+.contact-right {
+	float: left;
+	margin-left: 5%;
+	width: 90%;
+}
+div.ct-name {
+	margin-top: 12px;
+	font-size: 1.4rem;
+	color: #333;
+}
+div.ct-id {
+	margin-top: 12px;
+	font-size: 1.3rem;
+	color: #666;
+}
+span.ct-span-left {
+	margin-right: 10px;
+	display: inline-block;
+	width: 40px;
+	text-align: left;
+}
+.menu div {
+    position: absolute;
+    bottom: 105px;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    background: #fff;
+    text-align: right;
+    color: #2196F3;
+    font-size: 1.4rem;
+}
+.menu div span {
+    margin-right: 4%;
+}
+/*个人信息-personal_msg.html*/
+.person-load-btn {
+    margin-top: 5px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+/*——————————————————————————————修改昵称——————————————————————————*/
+.bar {
+    margin-top: 10px;
+}
+#txtNick {
+    padding-left: 4%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.6rem;
+    color: #333;
+}

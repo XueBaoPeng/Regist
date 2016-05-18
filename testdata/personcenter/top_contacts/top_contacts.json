@@ -1,0 +1,22 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": [
+    {
+      "contactId": "0001",
+      "contactName": "王丹"
+    },
+    {
+      "contactId": "0002",
+      "contactName": "王二"
+    },
+    {
+      "contactId": "0003",
+      "contactName": "王四"
+    },
+    {
+      "contactId": "0004",
+      "contactName": "猩猩"
+    }
+  ]
+}

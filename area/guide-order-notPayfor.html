@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>线路付款</title>
+  <!--<link href="../src/css/reset.css" rel="stylesheet">-->
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link href="../src/css/area/guide-order-notPayfor.css" rel="stylesheet" >
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/area/guide-order-notPayfor.js"></script>
+</head>
+<body>
+<div class="orderMain">
+  <div class="screen-result">
+    <div class="wrapper">
+      <div class="scroller">
+        <div class="orderDetail">
+          <script type="text/html" id="template">
+          <div class="order-number common">
+            <ul>
+              <li><span>订单编号：</span><span>{{orderId}}</span></li>
+              <li><span>订单金额：</span>￥{{codeSum}}（{{codeSumDetail}}）</li>
+              <li><span>订单状态：</span>{{orderStatus}}</li>
+              <li><span>下单时间：</span>{{orderTime}}</li>
+            </ul>
+          </div>
+          <div class="lineName common">
+            <ul>
+              <li><span>线路名称：</span>{{routeName}}</li>
+              <li><span>出发城市：</span>{{startCity}}</li>
+              <li><span>出团日期：</span>{{startTime}}</li>
+              <li><span>回团日期：</span>{{backTime}}</li>
+            </ul>
+          </div>
+          <div class="peoplenews common">
+            <ul>
+              <li>出行人信息</li>
+              {{each contactList as item i}}
+              <li>
+                <p><span>联系人：</span>{{item.name}}</p>
+
+                <p><span>证件号：</span>{{item.cardId}}</p>
+
+                <p><span>手机号：</span>{{item.phoneNo}}</p>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          <div class="contact common">
+            <ul>
+              <li><span>联系人：</span>{{contactPeople}}</li>
+              <li><span>手机号：</span>{{contactPhone}}</li>
+            </ul>
+          </div>
+          <div class="mun common">
+            <ul>
+              <li><span>电子码：</span>{{electronicCode}}</li>
+            </ul>
+          </div>
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <div class="buttonBox">
+      <div class="discuss">立即付款</div>
+      <div class="complain">取消订单</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

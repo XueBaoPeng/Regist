@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+    <title>订单详情-流程展开</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+</head>
+<body>
+    <div class="spotMain">
+      <!-- 展开 -->
+       <div class="order-open">
+         <div class="order-open-con">
+            <div class="order-open-left">
+               <div class="order-circle">
+                  <span class="span-circle-little"></span>
+                  <span class="span-circle-big"></span>
+               </div>
+               <div class="order-open-line"></div>
+               <div class="order-circle2">
+                  <span class="span-circle-little"></span>
+               </div>
+               <div class="order-open-line2"></div>
+               <div class="order-circle3">
+                  <span class="span-circle-little"></span>
+               </div>
+               <div class="order-open-line3"></div>
+               <div class="order-circle4">
+                  <span class="span-circle-little"></span>
+               </div>
+            </div>
+            <div class="order-open-right">
+               <ul>
+                  <li class="order-li-tit">已准时到达,入住酒店。</li>
+                  <li class="order-li-con">2016-01-07 15:49</li>
+                  <li class="order-li-tit">酒店已确认,您的房间预定成功。</li>
+                  <li class="order-li-con">2016-01-07 15:49</li>
+                  <li class="order-li-tit">订单已付款,等待酒店确认。</li>
+                  <li class="order-li-con">2016-01-07 15:49</li>
+                  <li class="order-li-tit">订单提交。</li>
+                  <li class="order-li-con">2016-01-07 15:49</li>
+               </ul>
+            </div>
+         </div>
+         <div class="order-open-btn">
+                <img src="../src/images/spot/up.png" alt="">收起
+          </div>
+       </div>
+       <div class="order-detail-top">
+           <p class="order-top-p1">订单编号<span>W01512345</span></p>
+           <p class="order-top-p2">电子票码<num>W01512345</num></p>
+       </div>
+       <!-- 门票信息 -->
+       <div class="order-ticket-main">
+         <div class="order-ticket-type"><span></span>门票信息</div>
+         <div class="order-ticket-detail">
+            <div class="order-ticket-name">亚布力滑雪场大门票</div>
+            <p>
+               <label class="order-label">成人平时票</label><span>&yen;15X5</span>
+            </p>
+           <div class="order-ticket-num">
+                <span>未验证X2</span><span>已过期X2</span><span>已退票X2</span>
+                <button class="order-apply-btn">申请退票</button>
+            </div>
+            <p class="order-ticket-price">
+              <label class="order-label">成人平时票</label><span>&yen;15X5</span>
+           </p>
+           <div class="order-ticket-num">
+                <span>未验证X2</span><span>已过期X2</span><span>已退票X2</span>
+                <button class="order-apply-btn">申请退票</button>
+            </div>
+            <div class="order-line"></div>
+            <p>
+              <label class="order-label">出游日期</label><span>2015-12-32</span>
+            </p>
+            <p>
+              <label class="order-label">门票有效期</label><span>&yen;15X5</span>
+            </p>
+            <p>
+              <label class="order-label">退款说明</label><span>出游日期前一天0点可退</span>
+            </p>
+         </div>
+         <div class="order-ticket-detail t10">
+            <div class="order-ticket-name">亚布力滑雪场大门票</div>
+            <p>
+               <label class="order-label">成人平时票</label><span>&yen;15X5</span>
+            </p>
+           <div class="order-ticket-num">
+                <span>未验证X2</span><span>已过期X2</span><span>已退票X2</span>
+                <button class="order-apply-btn">申请退票</button>
+            </div>
+            <p class="order-ticket-price">
+              <label class="order-label">成人平时票</label><span>&yen;15X5</span>
+           </p>
+           <div class="order-ticket-num">
+                <span>未验证X2</span><span>已过期X2</span><span>已退票X2</span>
+                <button class="order-apply-btn">申请退票</button>
+            </div>
+            <div class="order-line"></div>
+            <p>
+              <label class="order-label">出游日期</label><span>2015-12-32</span>
+            </p>
+            <p>
+              <label class="order-label">门票有效期</label><span>&yen;15X5</span>
+            </p>
+            <p>
+              <label class="order-label">退款说明</label><span>出游日期前一天0点可退</span>
+            </p>
+         </div>
+       </div>
+       <!-- 订单信息 -->
+       <div class="order-ticket-main">
+         <div class="order-ticket-type"><span></span>订单信息</div>
+         <div class="order-ticket-detail">
+            <p><label class="order-label">订单金额</label><span class="col-orange">&yen;125</span></p>
+            <p><label class="order-label">付款方式</label><span>支付宝</span></p>
+            <p><label class="order-label">下单时间</label><span>2015-01-01 12:00:00</span></p>
+            <p><label class="order-label">出游日期</label><span>2015-01-01 12:00:00</span></p>
+         </div>
+       </div>
+       <!-- 联系人信息 -->
+       <div class="order-ticket-main">
+         <div class="order-ticket-type"><span></span>联系人信息</div>
+         <div class="order-ticket-detail">
+            <p>
+               <label class="order-label">手机</label><span>138565455255</span>
+            </p>
+         </div>
+       </div>
+       <!-- 出游人信息 -->
+      <div class="order-ticket-main">
+         <div class="order-ticket-type"><span></span>出游人信息</div>
+         <div class="order-ticket-detail">
+            <div class="order-ticket-name">亚布力滑雪场大门票</div>
+            <p><label class="order-label">出游人1</label><span>小王</span></p>
+            <p><label class="order-label">出游人1</label><span>小王</span></p>
+            <p><label class="order-label">出游人1</label><span>小王</span></p>
+            <div class="order-ticket-name">亚布力滑雪场大门票</div>
+            <p><label class="order-label">出游人1</label><span>小王</span></p>
+            <p><label class="order-label">出游人1</label><span>小王</span></p>
+            <p><label class="order-label">出游人1</label><span>小王</span></p>
+         </div>
+       </div>
+    </div>
+</body>
+</html>

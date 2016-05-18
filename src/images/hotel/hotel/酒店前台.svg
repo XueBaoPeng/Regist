@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>酒店前台</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="首页（下拉）" sketch:type="MSArtboardGroup" transform="translate(-248.000000, -121.000000)" stroke="#333333">
+            <g id="下拉" sketch:type="MSLayerGroup" transform="translate(0.000000, -3.000000)">
+                <g id="酒店前台-+-前台" transform="translate(249.000000, 125.000000)" sketch:type="MSShapeGroup">
+                    <g id="酒店前台">
+                        <path d="M10.862069,2.237112 C10.862069,3.430152 10.0284828,4.397112 9,4.397112 C7.97151724,4.397112 7.13793103,3.430152 7.13793103,2.237112 C7.13793103,1.044072 7.97151724,0.077112 9,0.077112 C10.0284828,0.077112 10.862069,1.044072 10.862069,2.237112 L10.862069,2.237112 Z" id="Stroke-1"></path>
+                        <path d="M4.65517241,8.766 C4.65517241,6.77808 6.60041379,5.166 9,5.166 C11.3995862,5.166 13.3448276,6.77808 13.3448276,8.766" id="Stroke-3" stroke-linecap="round"></path>
+                        <path d="M17.4413793,9.108 L0.55862069,9.108 C0.421448276,9.108 0.310344828,9.23688 0.310344828,9.396 L0.310344828,10.98 C0.310344828,11.13912 0.421448276,11.268 0.55862069,11.268 L1.55172414,11.268 L1.55172414,17.352 C1.55172414,17.51112 1.66282759,17.64 1.8,17.64 L16.2,17.64 C16.3371724,17.64 16.4482759,17.51112 16.4482759,17.352 L16.4482759,11.268 L17.4413793,11.268 C17.5785517,11.268 17.6896552,11.13912 17.6896552,10.98 L17.6896552,9.396 C17.6896552,9.23688 17.5785517,9.108 17.4413793,9.108 L17.4413793,9.108 Z" id="Stroke-5" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

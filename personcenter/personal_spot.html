@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personcenter.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>    
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>  
+    <script src="../src/js/lib/jquery/plugin/iscroll.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/personal_spot.js"></script>
+</head>
+<body>
+<div class="container" id="container">
+	<script id="template" type="text/html">	
+    <div class="login-top">
+    	<img src="../src/images/personcenter/bg_top.png" alt="" class="login-bg" />
+        <span class="title">个人中心</span>  
+        <a href="javascript:;" onclick="personalMsg()">
+	        <div class="login-head-yes" >
+	            <!--<div class="login-head-pic"></div>-->
+	            <img src="{{data.user.userImg}}" alt="" class="login-head-pic" />
+	            <div class="login-head-bg"></div>
+	        </div>
+        </a>
+        <p class="login-state"><span>{{data.user.userName}}</span></p>
+    </div>
+    <div class="login-con">
+     <a href="javascript:;" onclick="myOrder()" style="display:none">
+        <div class="login-row my-orders" >
+        	<span class="icon-person-order login-con-left-img"></span>          
+            <span class="login-span">我的订单</span>
+            <div class="login-right">
+	            <span>{{data.orderCount}}</span>
+	            <span class="ico-hotel-btn right-btn"></span>
+            </div>
+        </div>
+     </a>
+      <a href="javascript:;" onclick="myProperty()">
+        <div class="login-row my-money" >
+        	<span class="icon-person-money login-con-left-img"></span>           
+            <span class="login-span">我的资产</span>            
+            <div class="login-right">
+	            <span>&yen;{{data.asset}}</span>
+	            <span class="ico-hotel-btn right-btn"></span>
+            </div>
+        </div>
+       </a>
+      <a href="javascript:;"  onclick="myCollect()" style="display:none">
+        <div class="login-row my-collect">
+           <span class="icon-person-collect login-con-left-img"></span>
+            <span class="login-span">我的收藏</span><span class="ico-hotel-btn right-btn"></span>
+        </div>
+       </a>
+       <a href="javascript:;"  onclick="myTraveller()">
+        <div class="login-row my-travel" >
+            <span class="icon-person-travel login-con-left-img"></span>
+            <span class="login-span">常用旅客</span><span class="ico-hotel-btn right-btn"></span>
+        </div>
+        </a>
+        <a href="javascript:;"  onclick="myTuYou()">
+        <div class="login-row my-friend" >
+            <span class="icon-person-friend login-con-left-img"></span>
+            <span class="login-span">我的兔友</span><span class="ico-hotel-btn right-btn"></span>
+        </div>
+       </a>
+        <a href="javascript:;"  onclick="mySet()">
+        <div class="login-row my-set">
+          	<span class="icon-person-set login-con-left-img"></span>
+            <span class="login-span">设置</span><span class="ico-hotel-btn right-btn"></span>
+        </div>
+        </a>
+    </div>   
+	<!--景区-->
+	<footer class="com-footer" id="footer">
+		<a href="../spot/index.html">
+		<nav class="nav-menu-spot">
+			<span class="icon-tap-home nav-menu-img"></span>
+			<p class="com-footer-txt">首页</p>
+		</nav>		
+		</a>
+		<a href="spot_order.html">
+		<nav class="nav-menu-spot">
+			<span class="icon-tap-order nav-menu-img"></span>
+			<p class="com-footer-txt">订单</p>
+		</nav>
+		</a>
+		<a href="personal_spot.html">
+		<nav class="nav-menu-spot">
+			<span class="icon-tap-person nav-menu-img"></span>
+			<p class="com-footer-txt">个人中心</p>
+		</nav>
+		</a>
+	</footer>		
+	</script>
+</div>
+
+</body>
+</html>

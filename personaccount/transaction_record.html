@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>承兑通交易记录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+	<script src="../src/js/util/pullIscroll.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/transaction_record.js"></script>
+</head>
+<body>
+	<div id="container" class="container">
+		<!-- 交易记录筛选 -->
+		<div id="contSearch" class="spot-order-search hide">
+			<div class="title">
+				<a id="linkBack" href="#">返回</a>
+			</div>
+			<ul class="Search-all" id="btnSearch">
+				<li data-val="1">
+					<span>购物</span>
+					<span class="right-img ico-hotel-btn"></span>
+				</li>
+				<li data-val="2">
+					<span>退款</span>
+					<span class="right-img ico-hotel-btn"></span>
+				</li>
+				<li data-val="3">
+					<span>提现</span>
+					<span class="right-img ico-hotel-btn"></span>
+				</li >
+				<li data-val="4">
+					<span>充值</span>
+					<span class="right-img ico-hotel-btn"></span>
+				</li>
+				<li data-val="5">
+					<span>转账</span>
+					<span class="right-img ico-hotel-btn"></span>
+				</li>
+				<li data-val="8">
+					<span>佣金</span>
+					<span class="right-img ico-hotel-btn"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<div class="scroller">
+				<div class="pullDown">
+					<span>下拉刷新</span>
+				</div>
+				<div id="content">
+				<script id="tmplContent" type="text/html">
+					{{each data as item index}}
+				<div class="record-month-tr">{{item.title}}</div>
+				<div class="record-detail-tr">
+					<ul>
+						{{each item.num as n index}}
+						<li class="record-li-tr">
+							<div class="detail-li-left-tr">
+								<span class="ico-{{n.propertyStr}}"></span>
+							</div>
+							<div class="detail-li-mid-tr">
+								<p class="detail-opt-tr">{{n.businessStr}}</p>
+								<p class="detail-number-tr">{{n.numlist}}</p>
+							</div>
+							<div class="detail-li-right-tr">
+								{{if n.rise>0}}
+								<p class="detail-money-tr add-active">+{{n.rise}}</p>
+								{{else}}
+								<p class="detail-money-tr less-active">{{n.rise}}</p>
+								{{/if}}
+								<p class="detail-time-tr">{{n.time}}</p>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+					{{/each}}
+				</script>
+				</div>
+				<div class="pullUp">
+					<span>上拉加载更多</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

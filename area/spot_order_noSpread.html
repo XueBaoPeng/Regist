@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>景区下单</title>
+  <link href="../src/css/reset.css" rel="stylesheet">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <!-- <link href="../src/css/area/spot_order-noSpread.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="../src/css/pay.css">
+  <link href="../src/js/widget/calendar/mobiscroll.css" rel="stylesheet">
+  <link href="../src/js/widget/calendar/mobiscroll_002.css" rel="stylesheet">
+  <link href="../src/js/widget/calendar/mobiscroll_003.css" rel="stylesheet">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/widget/calendar/mobiscroll_002.js"></script>
+  <script src="../src/js/widget/calendar/mobiscroll.js"></script>
+  <script src="../src/js/widget/calendar/mobiscroll_003.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/area/spot_order_nospread.js"></script>
+</head>
+<body>
+<div class="orderNoneMain">
+  <div class="order-date-noSpread">
+    <input value="" class="chooseDate" readonly="readonly" name="appDate" id="appDate" type="text">
+    <div class="date-left"><img src="../src/images/area/spot-date.jpg"><span>游玩日期</span>
+    </div>
+    <div class="date-right"><img src="../src/images/area/next02.png"></div>
+  </div>
+  <div class="topBox">
+    <script type="text/html" id="template">
+
+      <div class="order-date ticket">{{title}}</div>
+      <div class="dateTicket">
+        <ul>
+          {{each ticketType as ticket}}
+          <li data-id="{{ticket.id}}">
+            <div class="discount"><span>{{ticket.name}}</span><span>{{ticket.discount}}折</span></div>
+            <div class="price"><span>￥<span class="cash">{{ticket.price}}</span></span><span class="originalPrice">￥{{ticket.originalPrice}}</span>
+            </div>
+            <div class="number">
+              <div class="box stopDown minus">-</div>
+              <div class="amount">0</div>
+              <div class="box add">+</div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="ticketer">
+        <ul>
+          <li>购票人信息</li>
+          <li><span>手机</span><span>{{purchaserPhone}}</span></li>
+        </ul>
+      </div>
+    </script>
+  </div>
+  <!--出行人信息-->
+  <div class="info">
+    <script type="text/html" id="template1">
+      <div class="passage">
+        <ul>
+          {{if traveller.length>0}}
+          <li>出行人信息</li>
+          <li class="peopleName">
+            <!--<span class="active">神奇小明</span>-->
+            {{each traveller as item i}}
+            {{if i>=4}}
+            <span style="display: none" class="name" data-certificateType={{item.certificateType}} data-identityCard="{{item.identityCard}}">{{item.name}}</span>
+            {{else}}
+            <span class="name" data-certificateType={{item.certificateType}} data-identityCard="{{item.identityCard}}">{{item.name}}</span>
+            {{/if}}
+            {{/each}}
+            {{if traveller.length>4}}
+            <p class="peopleMore"><a class="more">更多</a><span class="jiantou"></span></p>
+            {{/if}}
+          </li>
+          {{/if}}
+          <!--<div class="people">-->
+            <!--<li><span>出行人1</span><input value="赵一波"></li>-->
+            <!--<li><span>证件类型</span><input value="身份证"></li>-->
+            <!--<li><span>证件号码</span><input value="534812615631263456163456"></li>-->
+          <!--</div>-->
+        </ul>
+      </div>
+      <!--订单-->
+      <div class="order">
+        <div class="money">应付金额：<span>￥<span class="total"> 170.00</span></span></div>
+        <div class="goPay" onclick="pay(this)" data-url="spot_pay_info.html">去支付</div>
+      </div>
+    </script>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function () {
+    var currYear = (new Date()).getFullYear();
+    var opt={};
+    opt.date = {preset : 'date'};
+    opt.datetime = {preset : 'datetime'};
+    opt.time = {preset : 'time'};
+    opt.default = {
+      theme: 'android-ics light', //皮肤样式
+      display: 'modal', //显示方式
+      mode: 'scroller', //日期选择模式
+      dateFormat: 'yyyy-mm-dd',
+      lang: 'zh',
+      showNow: true,
+      nowText: "今天",
+      startYear: currYear - 10, //开始年份
+      endYear: currYear + 10 //结束年份
+    };
+    $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+    var optDateTime = $.extend(opt['datetime'], opt['default']);
+    var optTime = $.extend(opt['time'], opt['default']);
+    $("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+    $("#appTime").mobiscroll(optTime).time(optTime);
+  });
+</script>
+</body>
+</html>

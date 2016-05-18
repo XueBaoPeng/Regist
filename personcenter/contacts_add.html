@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>新增常用联系人</title>  
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link href="../src/css/personcenter.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/personcenter/contacts_add.js"></script>
+</head>
+<body>
+     <div class="addConcontainer">
+         <ul>
+            <li>
+                <span class="left">姓名</span>
+                <input id="txtName" name="txtName" class="name" type="text">
+             </li>
+           <li>
+             <span class="left">证件类型</span>
+             <div id="selIdType" class="right">
+               <span class="type left" data-id="1">身份证</span>
+               <img src="../src/images/area/btn.svg">
+             </div>         
+           </li>
+           <li>
+             <span class="left">证件号码</span>
+             <input id="txtIdCode" name="txtIdCode" class="code" type="text">
+           </li>
+         </ul>
+         <div class="save" onclick="saveClick(this)" data-url="contacts_info_del.html">保存</div>
+     </div>
+     <div id="conIdentify" class="menu">
+         <div><span id="finish">完成</span></div>
+         <ul id="ulType">
+             <li data-id="1">身份证</li>
+             <li data-id="2">学生证</li>
+             <li data-id="3">护照</li>
+         </ul>
+     </div>
+</body>
+</html>

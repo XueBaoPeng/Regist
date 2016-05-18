@@ -1,0 +1,14 @@
+{
+  "id":"0",
+  "bannerImg":"http://.....jpg",
+  "title":"标题",
+  "prompt":"提示",
+  "travelDate":"游玩日期",
+  "ticketType":[
+    {"name":"儿童","discount":"true","price":"100.00","originalPrice":"300.00"},
+    {"name":"成人","discount":"true","price":"100.00","originalPrice":"300.00"}
+  ],
+  "reserveNotice":"预定须知",
+  "useRule":"使用规则",
+  "refundRule":"退款规则"
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <title>房型列表</title>
+  <link rel="stylesheet" href="../src/js/lib/jquery.mobile/themes/happyto-theme.css">
+  <link rel="stylesheet" href="../src/js/lib/jquery.mobile/themes/jquery.mobile.structure-1.4.5.css">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link href="../src/css/hotel.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/js/widget/jquery.hotelcalendar/calendar.css">
+  <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/widget/jquery.hotelcalendar/mobilecalendar.js"></script>
+  <script src="../src/js/widget/layer/layer.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/config.js"></script>
+  <script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/hotel/roomlist.js"></script>
+</head>
+<body class="bg-gray">
+<div id="page" class="container-roomlist" data-role="page">
+  <div id="topDate" class="date">
+    <a href="#selDateS" class="seldata" data-transition="slidefade">
+      <div class="startDate" >
+        <p class="s-title">入住日期</p>
+        <p id="startDate" class="s-date" data-value=""></p>
+      </div>
+    </a>
+    <div class="shu"></div>
+    <a href="#selDateE" class="seldata" data-transition="slidefade">
+      <div class="endDate" >
+        <p class="s-title">退房日期</p>
+        <p id="endDate" class="s-date" data-value="" ></p>
+      </div>
+    </a>
+  </div>
+  <div id="container" class="roomList">
+    <div class="wrapper">
+      <div class="scroller">
+        <div class="pullDown">
+          <span>下拉刷新</span>
+        </div>
+        <ul id="roomList">
+          <script id="tmplRoomList" type="text/html">
+            {{each data as data i}}
+            <li>
+              <div class="room-list" onclick="more(this)">
+                <img src="{{data.roomImg}}" alt="" class="left" />
+                <div class="center">
+                  <h3>{{data.roomName}}</h3>                  	
+                  <p>
+                    {{if data.roomNum==1}}
+                    <img src="../src/images/hotel/people_03.jpg" class="people">
+                    {{else if data.roomNum==2}}
+                    <img src="../src/images/hotel/people_03.jpg" class="people">
+                    <img src="../src/images/hotel/people_03.jpg" class="people">
+                    {{else}}
+                    <img src="../src/images/hotel/people_03.jpg" class="people">
+                    <img src="../src/images/hotel/people_03.jpg" class="people">
+                    <img src="../src/images/hotel/people_03.jpg" class="people">
+                    {{/if}}
+                  </p>
+                  <p>
+                  	{{data.roomArea}}㎡  {{data.bedType.BedName}} {{data.bedType.BedSize}}                  
+                  </p>
+                </div>
+                <div class="right">
+                  <div><span class="price">￥<num>{{data.roomPrice}}</num></span>起
+                  	<img src="../src/images/hotel/bottom_03.png" alt="" class="top-button" id="Btn">
+                  	<!--<img src="../src/images/hotel/bottom_03.png" alt="" class="top-button" id="Btn-top">-->
+                  </div>
+                </div>
+              </div>
+              {{each data.bedRules as bedRules i}}
+              <div class="room-list-bottom" data-id="{{bedRules.roomVersionId}}">
+                <div class="left">               
+                  <span class="treatment">{{bedRules.Breakfast}}</span>
+                  <span class="treatment">{{bedRules.WIFI}}WIFI</span>
+                  <span class="treatment">{{bedRules.Broadband}}宽带</span>                 
+                  {{if bedRules.Discount}}
+                  <span class="com-discount">折</span>              
+                  {{/if}}
+                  <div class="clear"></div>
+                  <div class="button">
+                  	{{if data.refund==true}}                   
+                    <span class="button-bottom" >可以取消</span> 
+                    {{else}}
+                     <span class="button-bottom" >不可取消</span> 
+                    {{/if}}
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="right-bottom">
+                    <span class="price">￥<num>{{bedRules.AvePrice}}</num></span>
+                    <span class="right-button Booking" data-id="{{bedRules.roomVersionId}}" onclick="detailClick(this)" >预定</span>
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </li>
+            {{/each}}
+          </script>
+        </ul>
+        <div class="pullUp">
+          <span>上拉加载更多</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="bottom">
+      <button class="btn-write-small total-price">
+          总价:￥<span id="total">0.00</span>
+      </button>
+      <button class="btn-orange-small btn-book" onclick="detailClick(this)" data-url="room_booking.html">立即预订</button>
+  </div>-->
+</div>
+
+<section id="selDateS" data-role="page" class="hp-page">
+  <header class="hp-header head-sliver">
+    <a id="linkClose1" class="ui-btn btn-close" data-transition="slidedown" data-rel="back">关闭</a>
+  </header>
+  <article data-role="content" class="hp-content">
+    <div id="calendarStart" class="Time-main"></div>
+  </article>
+</section>
+
+<section id="selDateE" data-role="page" class="hp-page">
+  <header class="hp-header head-sliver">
+    <a id="linkClose2" class="ui-btn btn-close" data-transition="slidedown" data-rel="back">关闭</a>
+  </header>
+  <article data-role="content" class="hp-content">
+    <div id="calendarEnd" class="Time-main"></div>
+  </article>
+</section>
+
+</body>
+</html>

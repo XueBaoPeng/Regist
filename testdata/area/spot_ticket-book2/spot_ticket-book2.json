@@ -1,0 +1,16 @@
+{
+  "list":[
+{
+"id":"0",
+"thumbnail":"http://.....jpg",
+"title":"标题",
+"salesNum":"520",
+"discount":"true",
+"coupon":"true",
+"ticketType":[
+{"name":"成人票","discount":"0.4","price":"20","originalPrice":"50"},
+{"name":"儿童票","discount":"0.4","price":"20","originalPrice":"50"}
+]
+}
+]
+}

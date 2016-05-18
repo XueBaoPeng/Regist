@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>常见问题</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/spot_problems.js"></script>
+</head>
+<body>
+    <div id="container" class="spot-problem">
+        <div class="wrapper">
+            <div class="scroller">
+                <div class="pullDown">
+                    <span>下拉刷新</span>
+                </div>
+                <div id="problemList">
+                    <script id="tmplProblem" type="text/html">
+                        {{each data as item index}}
+                        <div class="problem">
+                            <div class="problem-tit">
+                                <div class="ico-sign-orange problem-sign">Q</div>
+                                <p>{{item.problem}}</p>
+                            </div>
+                            <div class="problem-answer">
+                                <div class="ico-sign-blue problem-sign">A</div>
+                                <p>{{item.answer}}</p>
+                                <div class="problem-time">{{item.lastDate}}</div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </script>
+                </div>
+                <div class="pullUp">
+                    <span>上拉加载更多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

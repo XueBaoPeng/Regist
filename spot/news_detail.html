@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>新闻公告详情</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/news_detail.js"></script>
+</head>
+<body>
+    <div id="container" class="newsDetailMain">
+        <script id="tmplNewDetail" type="text/html">
+        <div class="newsDetailBox">
+            <div class="title">
+                <p>{{data.newsTitle}}</p>
+                <span>时间</span><span>{{data.newsDate}}</span><span>点击{{data.newsRate}}次</span>
+            </div>
+            <div class="picture"><img src="{{data.newsImage}}"> </div>
+            <div class="new-content">{{data.newsBrief}}</div>
+        </div>
+        </script>
+    </div>
+
+</body>
+</html>

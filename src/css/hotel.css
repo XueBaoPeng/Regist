@@ -1,0 +1,303 @@
+/*酒店*/
+/*index.html*/
+.clear{clear:both}
+.container-index{position:relative;margin:0 auto;width:100%;font-family:'Microsoft YaHei',helvetica,arial,sans-serif;margin-bottom:50px}
+
+/*点击电话时下面弹出遮罩层*/
+.call-tel{position:absolute;top:0;bottom:0;width:100%;background: rgba(0,0,0,0.6); text-align: center;margin: 0 auto;line-height: 50px;display:none;z-index:10}
+.call-tel div:nth-last-child(4){position: absolute;bottom:176px;background: #fff;width:90%;height: 50px;margin:0 5% 10px;border-radius: 10px;}
+.call-tel div:nth-last-child(2){position: absolute;bottom:70px;background: #fff;width:90%;height: 50px;margin:0 5% 10px;border-radius: 10px;}
+.call-tel div:nth-last-child(3){position: absolute;bottom:123px;background: #fff;width:90%;height: 50px;margin:0 5% 10px;border-radius: 10px;}
+.call-tel-cancel{position: absolute;bottom:20px;background: #fff;width:90%;height: 50px;margin:0 5% auto;border-radius: 10px;}
+/*swipe*/
+.swiper-container{width:100%;height:100%}
+.swiper-slide{text-align:center;font-size:18px;background:#fff;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}
+.banner{width:100%;position:relative;overflow:hidden}
+.swiper-area{overflow:hidden;position:absolute;top:0;bottom:0;left:0;right:0}
+.top-menu a{color:#000}
+
+/*小图标定位样式*/ 
+.hotel-cons{display:inline-block;width:26px;height:26px}
+.hotel-cons-left{float:left}
+
+/*右上角下拉框*/
+.rightTop{z-index:30;width:50px;height:10px;position:absolute;top:20px;right:10px;display:none}
+.rightTop span{position:absolute;width:8px;height:8px;display:inline-block;border-radius:50%;background:#fff}
+.rightTop span:nth-child(1){left:0}
+.rightTop span:nth-child(2){left:13px}
+.rightTop span:nth-child(3){left:26px}
+.index-top{position:relative}
+
+/*头像*/
+.head{position:absolute;left:15px;top:23px;z-index:2;width:37px;height:37px;border-radius:50%;display:none}
+
+/*酒店名称*/
+.hotel-tit{padding-left:4%;border-bottom:1px solid #eee;  padding-top: 10px;background: #fff;
+    padding-bottom: 5px;}
+.hotel-name{float:left;margin-right:8px;font-weight:600;font-size:1.7rem;color:#333}
+.hotel-score{float:left;margin-top:5px}
+.hotel-score img{width:15px;height:15px}
+.hotel-type{margin-top:3px;margin-bottom:3px;font-size:1.2rem;color:#666}
+
+/*酒店地址*/
+.hotel-address,.hotel-service{height:49px;line-height:49px;border-bottom:1px solid #eee;background: #fff;}
+.address-detail{float:left;margin-left:4%;font-size:1.4rem;width:60%;color:#333;white-space:nowrap;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden}
+.hotel-tel{width:18px;height:18px;margin-top:14px;display:inline-block;float:left}
+.hotel-address a{float:right;padding-right:4%;color:#4B9DFF;font-size:1.4rem;}
+.hotel-address a img{margin-right:3px;width:9px;height:12px;vertical-align: middle;}
+
+/*酒店设施及服务*/
+.service-detail{float:left;margin-top:7px;margin-left:4%;width:50%;height:30px;overflow:hidden}
+.service-detail li{float:left;margin-right:2.6%;width:28px;height:28px;line-height:28px;border-radius:50%;background:#F8F8F8;text-align:center}
+.service-detail li img{margin-top:3px;width:80%;height:80%}
+.service-link{float:right;padding-right:4%;color:#999;font-size:1.4rem}
+.service-link img{float:right;margin-top:18px;margin-left:5px}
+
+/*日期*/
+/*.hotel-date{height:80px;background:#F7FAFF}
+.date-live{float:left;padding-bottom:17px;width:49.5%;background:#F7FAFF}
+.date-leave{float:right;width:50%;padding-bottom:17px;background:#F7FAFF}
+.data-line{float:left;margin-top:11px;width:.5%;height:60px;background:#DFE5F1}
+.date-con{margin:0 20%}
+.date-tit{padding-top:10px;color:#999}
+.data{float:left;color:#FF9C00;font-size:2.8rem}
+.month{float:left;margin-top:3px;margin-left:3px;color:#333}   
+.week{float:left;margin-top:19px;margin-left:-24px;color:#666}
+*目前已取消
+* */
+
+/*图片*/
+.hotel-pic{margin:15px 0 20px 4%}
+.hotel-pic img{width:100%;height:80px;border-radius:5px}
+
+
+/*推荐广告*/
+.ad-pic{float:left;width:45%;height:80px;text-align:center;border:1px solid #ccc}
+.ad-pic:nth-child(2n+1){margin-right:5%}
+
+/*酒店简介*/
+.book-room{padding:20px 4% 15px 4%;border-bottom:1px solid #eee;color:#666;    background: #fff;
+    margin-top: 10px;}
+.hotel-icon{float:left;margin-right:1.3%;display:inline-block;width:4px;height:12px;border-radius:3px}
+.hotel-tit2{float:left;margin-top:-4px;font-size:1.4rem;color:#333;font-weight:600}
+.review-new-content{padding-top:6px;font-size:1.4rem;color:#333;line-height:22px;width:100%;overflow:hidden;display:-webkit-box!important;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;-webkit-line-clamp:2;-moz-line-clamp:2;-o-line-clamp:2;-ms-line-clamp:2;line-clamp:2}
+.book-room .more{padding-top:6px;font-size:1.4rem;color:#666;line-height:22px;width:100%;height:auto;overflow:hidden;-webkit-line-clamp:0;-moz-line-clamp:0;-o-line-clamp:0;-ms-line-clamp:0;line-clamp:0}
+.p-more{padding-top:5px;color:#1c94eb;font-size:1.4rem;}
+.icon-book{background:#4990E2}
+.book-price{float:right;margin-top:-5px;margin-right:7.3%;font-size:1.9rem;color:#FB8315}
+.book-price span{font-size:1.2rem}
+.hotel-btn{float:right;margin-top:-15px}
+.hotel-btn img{position: absolute;top:0;bottom:0;right:4%}
+.book-msg span{display:inline-block;margin-right:3px;padding:1px 3px;border-radius:5px;color:#fff}
+.span-current{background:#5FA2E8}
+.span-gift{background:#E58799}
+.book-msg{margin-top:2px}
+
+/*酒店点评*/
+.hotel-review{padding:17px 4%;border-bottom:1px solid #eee;color:#666;font-size:1.4rem;position:relative;background: #fff;margin-top:10px}
+.icon-review{background:#E328E9}
+.review-total{float:left;margin:-2px 5px 0 8px}
+.review-score{float:left;margin-top:-2px;color:#E93131}
+.review-like{margin-top:-2px;float:right;height:16px;line-height:16px;width:92px;background:#FF9E5F;border-radius:8px;color:#fff;font-size:1.0rem}
+.review-like img{float:left;width:16px;height:16px}
+.review-new-tit{padding-top:6px;color:#999;font-size: 1.2rem;}
+.review-new-con{margin-top:5px;color:#333}
+.hotel-review .hotel-btn{margin-top:0}
+
+/*相关线路*/
+.about-route{margin:10px 0;padding:20px 4% 10px;background: #fff;}
+.icon-route{background:#7ed321}
+.route-detail{position:relative;padding-top:10px;width:100%}
+.route-detail img{width:100%;height:160px;}
+.route-price{position:absolute;min-width:60px;height:30px;padding-left:10px;padding-right:5px;border-radius:15px 0 0 15px;right:0;bottom:20px;color:#fff;font-size:1.5rem;background:#fc8215}
+.route-price num{font-size:1.8rem}
+.route-price span{font-size:1.2rem;line-height:30px}
+.route-tit{margin:5px 0 5px;font-size:1.6rem;color:#333}
+.route-type{margin-top:1rem;color:#666;overflow:hidden}
+.route-type span{float:left;margin-right:5px;color:#999;font-size:1.2rem}
+
+
+/*头部下拉*/
+.top-menu{position:absolute;display:none;z-index:2;right:4%;top:35px;width:130px;font-size:1.4rem}
+.top-menu span{margin-left:105px;display:block;width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:9px solid #fff}
+.top-menu ul{padding-top:10px;background:#fff;border-radius:5px;background:#fff}
+.top-menu ul li{margin:0 5px 10px 5px;height:27px;line-height:27px}
+.top-menu ul li:hover{background:#EDF3FF}
+.top-menu ul li img{float:left;margin-left:10px;margin-right:13px;width:19px;height:27px}
+.top-menu ul li.menu-li-last{margin-bottom:0}
+
+/*选择客房*/
+.hotel-index-book{height:45px;font-size:16px;position:fixed;bottom:0;left:0;right:0;z-index:5;background:#fc8215!important}
+.hotel-index-book:link{background:#EE770D}
+.hotel-index-book:visited{background:#EE770D}
+.hotel-index-book:hover{background:#EE770D}
+.hotel-index-book:active{background:#EE770D}
+/*点击变色*/
+.Booking{background:#fc8215!important}
+.Booking:link{background:#EE770D}
+.Booking:visited{background:#EE770D}
+.Booking:hover{background:#EE770D}
+.Booking:active{background:#EE770D}
+
+/*hotel_business.html*/
+.container-business{width:100%;padding:0 4%;font-size:1.4rem;color:#333}
+.infoList{width:100%}
+.infoList li{width:100%;border-bottom:1px solid #eee;min-height:45px}
+.infoList li .call{width:20px;float:left;margin-top:13px;margin-right:10px}
+.infoList li .telephoneNumber{float:left;line-height:45px;color:#2396f3}
+.infoList li .phoneTime{line-height:45px}
+.infoList li p{margin-bottom:10px}
+.infoList li .title{margin-top:10px;margin-bottom:5px}
+.infoList li .content{line-height:22px;margin-bottom:10px}
+.photo{width:100%;margin-top:20px}
+.photo .photoText{margin-bottom:10px}
+.photo .photoList{width:100%}
+.photo .photoList img{width:100px;height:100px;border-radius:5px;margin-bottom:5px}
+
+/*hotel_detail.html*/
+.container-detail{background:#eee}
+.contentList li{width:100%;padding:15px;background:#fff;overflow:hidden;border-bottom:1px solid #eee}
+.contentList li .title{font-size:2rem;font-weight:600;color:#333;float:left}
+.contentList li .stars{float:left;margin-top:10px;margin-left:7px}
+.contentList li .stars div{float:left;width:15px;height:15px;margin-right:4px;background-image:url(../images/hotel/starg_05.jpg);background-size:100% 100%}
+.contentList li .stars .yellow{background-image:url(../images/hotel/stary_03.jpg);background-size:100% 100%}
+.contentList li .hotelType{color:#666;font-size:1.4rem;margin-left:3px;margin-top:6px}
+.contentList li .phone{width:20px;float:left}
+.contentList li .phoneNumber{float:left;color:#2396f1;font-size:1.4rem;margin-left:10px}
+.contentList li span{font-size:1.4rem;color:#333;margin-right:5px;line-height:20px}
+.contentList li .distance{margin-right:10px}
+.amenity{width:100%;padding-left:15px;height:40px;line-height:40px;font-size:1.6rem;color:#767877}
+.amenityList{width:100%;overflow:hidden;background:#fff;padding:15px}
+.amenityList li{float:left;width:30%;height:28px;line-height:28px;margin-right:5%;margin-bottom:13px;position:relative;overflow:hidden}
+.amenityList li .money{color:#f76323}
+.amenityList li:nth-child(3n){margin-right:0}
+.amenityList li .body-building{margin-top:3px}
+.amenityList li .xi{width:17px;margin-right:10px}
+.amenityList li span{float:left;font-size:1.4rem;color:#333}
+.amenityList li span.hotel-cons-txt{width:60px;height:28px;overflow:hidden}
+.amenityList li .charge{width:22px;height:11px;position:absolute;top:-6px;left:-12px}
+.amenityList li .charge img{width:100%;height:100%}
+.policy{padding:12px;font-size:1.4rem;background:#fff;color:#333}
+.policy .item{overflow:hidden;line-height:23px}
+.policyLeft{width:70px;float:left}
+.policyRight{float:left;width:75%}
+/*
+@media screen and (max-width:700px){.amenityList li{margin-right:21%}
+}
+@media screen and (max-width:600px){.amenityList li{margin-right:10%}
+}
+@media screen and (max-width:420px){.amenityList li{margin-right:7%}
+}
+@media screen and (max-width:380px){.amenityList li{margin-right:4%}
+}
+@media screen and (max-width:360px){.amenityList li{margin-right:0}
+.amenityList{width:100%;overflow:hidden;background:#fff;padding:10px}
+.amenityList li .icon{margin-right:5px}
+}*/
+
+
+
+/*hotel_discuss.html*/
+/*.discussBox { width: 100%; font-size: 1.4rem;}*/
+.title-total { background: #fff; overflow: hidden; margin-top: 15px; }
+.title-total .title-left { float: left; width: 28%; margin-left: 2%; height: 77px; text-align: center; background: #fff9f1; padding-top: 13px; border-radius: 5px; }
+.title-total .title-left p { font-size: 1.2rem; color: #666666; }
+.title-total .title-left span { font-size: 2.3rem; color: #eea920; line-height: 30px; }
+.title-total .title-right { width: 64%; float: left;margin-left: 1.3%;}
+.title-total .title-right ul {width: 100%;margin-right: 4%;overflow: hidden;}
+.title-total .title-right ul li {float: left;width: 50%;margin-bottom: 10px;}
+.title-total .title-right span {display: inline-block;width: 55%; color: #666666; }
+.title-total .title-right  a {margin-left: 5px; color: #fea41a; }
+/*等级评论*/
+.grade { width: 100%; background: #fcfcfc; border-top: 1px solid #eeeeee; border-bottom: 1px solid #eeeeee; margin-top: 15px; padding: 5px 0; }
+.grade ul { overflow: hidden; }
+.grade ul li { float: left; display: inline-block; width: 20%; font-size: 1.2rem; color: #666666; text-align: center; }
+.grade ul li span { display: block; line-height: 20px; }
+.grade ul .current span { color: #1E9AF6; }
+.discuss { width: 100%; overflow: hidden; border-bottom: 1px solid #eee; padding: 0 4%; margin-top: 15px; }
+.top-left { float: left; line-height: 25px; font-size: 1.4rem; color: #333; }
+.top-left img { vertical-align: middle; margin-right: 5px; }
+.top-right { float: right; line-height: 25px; font-size: 1.2rem; color: #F7861E; }
+/**/
+.top-total .top-left { float: left; line-height: 25px; font-size: 1.4rem; color: #333; }
+.top-total .top-left img { vertical-align: middle; margin-right: 5px;  width:35px;height:35px;border-radius: 50%;}
+.top-total .top-right { float: right; line-height: 25px; font-size: 1.2rem; color: #F7861E; }
+.gray { color: #cfcfcf; }
+.top-right img { vertical-align: middle; margin-right: 5px;width:20px }
+.top-total { overflow: hidden; }
+.discuss p.less{font-size:1.2rem;color:#333;line-height:16px;margin:10px 0 5px 0;width:100%;overflow:hidden;display:-webkit-box!important;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;-webkit-line-clamp:1;-moz-line-clamp:1;-o-line-clamp:1;-ms-line-clamp:1;line-clamp:1}
+.discuss p.more{font-size:1.2rem;color:#333;line-height:16px;margin:10px 0 5px 0;width:100%;height:auto;overflow:hidden;-webkit-line-clamp:0;-moz-line-clamp:0;-o-line-clamp:0;-ms-line-clamp:0;line-clamp:0}
+.discuss .more { color: #1c94eb; font-size: 1.4rem; }
+.discuss .discussDate { margin-left: 14px; margin-bottom: 8px; color: #666666; }
+.discuss .pcicture-list { overflow: hidden; margin-top: 10px }
+.discuss .pcicture-list a{ float: left; width: 23%;min-height:65px; margin-right:2%; margin-bottom: 5px;display:inline-block}
+.discuss .pcicture-list a:nth-child(4n) { margin-right: 0; }
+.discuss .pcicture-list a img.pictures { width:100%;min-height:65px }
+.discuss .time { display: block; color: #9a9a9c; font-size: 1.2rem; margin-bottom: 10px; }
+.discuss .answer { background: #F7FAFF; padding: 10px; color: #333333; line-height: 20px; margin-bottom: 20px;word-wrap : break-word  }
+
+/*roomlist.html*/
+#selDate{z-index:-1}
+#selDate_1{z-index:-1}
+.container-roomlist{background:#eee;font-size:1.4rem}
+.container-roomlist .date{height:45px;line-height:45px;font-size:1.4rem;background:#fff;border-bottom: 1px solid #eee;}
+.date div{float:left;width:49%;height:45px;line-height:45px;text-align:center}
+/*.date .seldata{display:inline-block}*/
+.container-roomlist .shu{height:30px;line-height:30px;border-left:1px solid #ccc;width:0;margin-top:7px}
+.date div:active{background:#fff}
+.date .s-title{height:15px;line-height:15px;margin-top:6px;font-size:1.2rem;color:#999}
+.date .s-date{height:25px;line-height:25px;font-size:1.8rem;color:#fc8215}
+.roomList li{list-style:none;margin-bottom:10px;background:#fff;margin-top:10px}
+.roomList li:nth-child(1){margin-top:0}
+.room-list{overflow:hidden;color:#999}
+.room-list .center,.room-list .left,.room-list .right{float:left;text-align:left}
+.room-list .left{width:20%;height:70px;margin:10px;border-radius:5px;display:inline-block}
+.room-list .center{width:40%;padding:10px 0}
+.room-list .center h3{color:#333;font-size:16px;font-weight:500;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+.room-list .right{width:30%;margin:30px 0;}
+.room-list .right div{float:right}
+.center .people{width:14px;margin-top:9px}
+.right .top-button{  width: 12px;float:right;margin:12px 0;margin-left:10px}
+.right .price{color:#fc8215;font-size:12px;}
+.price num{font-size:20px;font-weight:400}
+.room-list-bottom{background:#F6F6F6;overflow:hidden;padding:10px 3%;border-top:1px solid #eee;display:none;overflow:hidden}
+.room-list-bottom .left{float:left;width:63%;overflow:hidden}
+.room-list-bottom .right{float:right;width:37%;margin:10px 0;text-align:right}
+.right-bottom{overflow:hidden}
+.right-bottom .price{float:left}
+.right-bottom .right-button{float:right}
+.room-list-bottom .right-buttom{overflow:hidden}
+.room-list-bottom .left .treatment{float:left;line-height:20px;padding-bottom:10px;margin-right:5px;font-size:14px;color:#555}
+.room-list-bottom .discount{float:left;position:relative;display:inline-block;width:31px;height:17px}
+.room-list-bottom .discount img{position:absolute;width:80%;height:17px;top:2px;}
+.room-list-bottom .discount span{position:absolute;color:#fff;z-index:3;left:6px;line-height:18px;font-size:1.2rem;}
+.room-list-bottom .left .button-bottom{font-size:8px;border:1px solid #ccc;color:#888;background:#fff;border-radius:3px;padding:2px 4px;margin-right:10px;display:inline-block}
+.room-list-bottom .left .active{background: #fff;color:#Fc8215;border:1px solid #Fc8215}
+.room-list-bottom .left .button-bottom:active{border:1px solid #fc8215;color:#FC8215}
+.right-button{color:#fff;background:#FC8215;padding:5px 10px;width:60px;height:30px;display:inline-block;text-align:center;border-radius:5px}
+.right-button:active{background: #EE770D;}
+
+/*hotel_discuss.html 仿 spot_piblish*/
+.spot-publish-top{padding:0 4%;background:#fff;overflow:hidden;font-size:1.2rem;color:#666}
+.spot-limit,.spot-publish-tip{margin-top:12px}
+.spot-write{margin-top:10px;padding:3%;width:100%;height:65px;border:1px solid #eee}
+.spot-load-photo{margin-top:15px;padding-bottom:10px}
+.spot-load-photo li{margin-right:5px;margin-bottom:5px;float:left;width:75px;height:75px;overflow:hidden}
+.spot-load-photo li img{width:100%;height:75px}
+.spot-load-btn{background:url(../images/spot/camera.png) no-repeat center #eee;background-size:32px 28px}
+
+/*星级评价*/
+.spot-publish-score{margin-top:10px;margin-bottom:45px;padding-bottom:20px;padding-left:4%;overflow:hidden;background:#fff;color:#666;font-size:1.5rem}
+.spot-score-tit{margin-top:20px;font-size:1.6rem;color:#333}
+.spot-score-type{overflow:hidden;margin-top:10px;font-size:1.4rem;color:#666}
+.spot-score-type span{float:left;margin-right:10%;width:20%}
+.spot-score-type div{float:left}
+.spot-publish-commit{margin-top:15px;height:45px;line-height:45px;font-size:1.6rem}
+.booking{background:#FC8215;position:fixed;bottom:0}
+.booking:active{background:#ee770d}
+
+.about-hotel-type{margin-top: 10px;background: #fff;padding:10px 4%;color:#333;overflow: hidden;}
+.about-hotel-title{margin-bottom: 10px; font-size:1.4rem;}
+.about-type{border:1px solid #ccc;border-radius: 3px;padding:5px 10px; font-size: 1.4rem;float:left;margin-right: 5px;margin-bottom: 5px;}
+.about-hotel-purpose .active,.about-hotel-type .active{background: #2296F0;border:0;color:#fff;padding:6px 10px}
+.about-hotel-purpose{margin-top: 10px;background: #fff;padding:10px 4%;font-size:1.6rem;overflow: hidden;}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>zaocan</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" transform="translate(-115.000000, -382.000000)" stroke="#555555">
+            <g id="zaocan" sketch:type="MSLayerGroup" transform="translate(116.000000, 383.000000)">
+                <path d="M12.8811034,9.15789474 L14.6206897,9.15789474 C15.2303448,9.15789474 15.7241379,9.72315789 15.7241379,10.4210526 L15.7241379,10.4210526 C15.7241379,11.1189474 15.2303448,11.6842105 14.6206897,11.6842105 L1.37931034,11.6842105 C0.769655172,11.6842105 0.275862069,11.1189474 0.275862069,10.4210526 L0.275862069,10.4210526 C0.275862069,9.72315789 0.769655172,9.15789474 1.37931034,9.15789474 L11.0422069,9.15789474" id="Stroke-1" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M1.42377931,9.15833684 C1.58543448,5.15917895 4.46929655,1.97349474 8.00308966,1.97349474 C11.5015724,1.97349474 14.3628138,5.09665263 14.576331,9.04023158" id="Stroke-3" sketch:type="MSShapeGroup"></path>
+                <path d="M8.73451034,0.922294737 C8.73451034,1.38650526 8.40568276,1.76292632 8.00016552,1.76292632 C7.59409655,1.76292632 7.26526897,1.38650526 7.26526897,0.922294737 C7.26526897,0.458084211 7.59409655,0.0816631579 8.00016552,0.0816631579 C8.40568276,0.0816631579 8.73451034,0.458084211 8.73451034,0.922294737 L8.73451034,0.922294737 Z" id="Stroke-5" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

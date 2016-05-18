@@ -1,0 +1,15 @@
+{
+"code":0,
+"msg":"业务信息",
+"data": [
+  		{"imageName":"酒店图片1","imageUrl":"../src/images/hotel/chanpintu_2.png"},
+  		{"imageName":"酒店图片2","imageUrl":"../src/images/hotel/chanpintu_1.png"},
+  		{"imageName":"酒店图片3","imageUrl":"../src/images/hotel/chanpintu_3.png"},
+  		{"imageName":"酒店图片1","imageUrl":"../src/images/hotel/chanpintu_4.png"},
+  		{"imageName":"酒店图片2","imageUrl":"../src/images/hotel/chanpintu_4.png"},
+  		{"imageName":"酒店图片3","imageUrl":"../src/images/hotel/chanpintu_2.png"},
+  		{"imageName":"酒店图片1","imageUrl":"../src/images/hotel/chanpintu_3.png"},
+  		{"imageName":"酒店图片2","imageUrl":"../src/images/hotel/chanpintu_2.png"},
+  		{"imageName":"酒店图片3","imageUrl":"../src/images/hotel/chanpintu_1.png"}
+	]
+}

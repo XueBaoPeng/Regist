@@ -1,0 +1,59 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": {
+    "travelName": "北京国际旅行社",
+    "travelTel": "010-5566554",
+    "travelImages": [
+      {
+        "imgsrc": "../testdata/line/index/1.jpg",
+        "imgname": "轮播图1"
+      },
+      {
+        "imgsrc": "../testdata/line/index/2.jpg",
+        "imgname": "轮播图2"
+      },
+      {
+        "imgsrc": "../testdata/line/index/3.jpg",
+        "imgname": "轮播图3"
+      },
+      {
+        "imgsrc": "../testdata/line/index/4.jpg",
+        "imgname": "轮播图4"
+      },
+      {
+        "imgsrc": "../testdata/line/index/5.jpg",
+        "imgname": "轮播图5"
+      }
+    ],
+    "travelAddress": "",
+    "navTypes": [
+      {
+        "id":"1",
+        "imgsrc": "../testdata/line/index/a1.png",
+        "imgname": "跟团游"
+      },
+      {
+        "id":"2",
+        "imgsrc": "../testdata/line/index/a2.png",
+        "imgname": "自由行"
+      },
+      {
+        "id":"3",
+        "imgsrc": "../testdata/line/index/a3.png",
+        "imgname": "亲子游"
+      },
+      {
+        "id":"4",
+        "imgsrc": "../testdata/line/index/a4.png",
+        "imgname": "蜜月游"
+      },
+      {
+        "id":"5",
+        "imgsrc": "../testdata/line/index/a5.png",
+        "imgname": "跟团游"
+      }
+    ],
+    "comment": ""
+  }
+}

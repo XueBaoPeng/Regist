@@ -1,0 +1,41 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":[{
+	"id":"1",
+	"name":"北京冬季5晚6日自由行的路线",
+	"price":"1380",
+	"img":"../src/images/spot/spot01.jpg",
+	"range":"1.5Km"	
+	},{
+	"id":"2",
+	"name":"北京冬季5晚6日自由行的路线",
+	"price":"1380",
+	"img":"../src/images/spot/spot02.jpg",
+	"range":"1.5Km"	
+	},{
+	"id":"3",
+	"name":"北京冬季5晚6日自由行的路线",
+	"price":"1380",
+	"img":"../src/images/spot/spot03.jpg",
+	"range":"1.5Km"	
+	},{
+	"id":"4",
+	"name":"北京冬季5晚6日自由行的路线",
+	"price":"1380",
+	"img":"../src/images/spot/spot04.jpg",
+	"range":"1.5Km"	
+	},{
+	"id":"5",
+	"name":"北京冬季5晚6日自由行的路线",
+	"price":"1380",
+	"img":"../src/images/spot/spot01.jpg",
+	"range":"1.5Km"	
+	},{
+	"id":"6",
+	"name":"北京冬季5晚6日自由行的路线",
+	"price":"1380",
+	"img":"../src/images/spot/spot01.jpg",
+	"range":"1.5Km"	
+	}]
+}

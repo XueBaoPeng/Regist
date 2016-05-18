@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>门票预订</title>
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/common.css">
+  <link rel="stylesheet" href="../src/css/pay.css">
+  <!-- <link rel="stylesheet" href="../src/css/area/spot_ticket-book2.css"> -->
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/area/search_common.js"></script>
+  <script src="../src/js/area/spot_ticket_book.js"></script>
+</head>
+<body class="spot_ticket_book">
+  <!-- 筛选结果 -->
+  <div class="screen-result">
+    <div class="wrapper">
+      <div class="scroller">
+        <div class="pullDown">
+          <span>下拉刷新</span>
+        </div>
+        <div class="result-ul">
+          <script type="text/html" id="template">
+            {{each list as item i}}
+            <div class="itemDetail" onclick="detailClick(this)" data-url="spot_book_detail.html?id=" data-id="{{item.id}}">
+              <div  class="result-li-spot-tick" >
+                <div class="book-con">
+                  <div class="book-con-left"><img src={{item.thumbnail}} alt=""></div>
+                  <div class="book-con-right">
+                    <p class="book-con-tit">{{list.title}}</p>
+                    <p class="book-num">
+                      已经售<num>{{item.salesNum }}</num>张
+                      {{if item.coupon }}
+                      <span class="book-quan">券</span>
+                      {{/if}}
+                      {{if item.discount }}
+                      <span class="book-zhe">折</span>
+                      {{/if}}
+                    </p>
+                  </div>
+                </div>
+                <ul class="book-price">
+                  {{each item.ticketType as ticket i}}
+                  {{if i>=2}}
+                  <li style="display:none">
+                    <span class="price-tit">{{ticket.name}}</span>
+                    <span class="price-count">{{ticket.discount}}折</span>
+                    <div class="price-right">
+                      <span class="price-num"><num>&yen;</num>{{ticket.price}}</span>
+                      <del class="price-del">&yen;{{ticket.originalPrice}}</del>
+                    </div>
+                  </li>
+                  {{else}}
+                  <li>
+                    <span class="price-tit">{{ticket.name}}</span>
+                    <span class="price-count">{{ticket.discount}}折</span>
+
+                    <div class="price-right">
+                      <span class="price-num"><num>&yen;</num>{{ticket.price}}</span>
+                      <del class="price-del">&yen;{{ticket.originalPrice}}</del>
+                    </div>
+                  </li>
+                  {{/if}}
+                  {{/each}}
+                </ul>
+              </div>
+            </div>
+            {{if item.ticketType.length>2}}
+            <div class="ticket-more">
+              <a href="">更多</a>
+              <span class="jiantou"></span>
+            </div>
+            {{/if}}
+            {{/each}}
+          </script>
+        </div>
+        <div class="pullUp">
+          <span>上拉加载更多</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

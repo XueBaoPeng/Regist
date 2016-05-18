@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>搜索-选择城市</title>
+	<link rel="stylesheet" href="../src/css/reset.css">
+	<link rel="stylesheet" href="../src/css/line.css">
+	<link rel="stylesheet" href="../src/css/common.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/line/index.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/line/choose_city.js"></script>
+</head>
+<body class="chooseCity">
+	 <div class="chooseBox">
+		 <div class="city">
+			 <div class="choose">
+				 <ul id="cityList">
+					 <script type="text/html" id="tmplCity">
+					 {{each data as data i}}
+					 <li data-value="{{data.cityId}}">{{data.cityName}}</li>
+					 {{/each}}
+					 </script>
+				 </ul>
+			 </div>
+		 </div>
+	 </div>
+</body>
+</html>

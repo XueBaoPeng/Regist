@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>会议室</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,0.0833333333 L20,0.0833333333 L20,18 L0,18 L0,0.0833333333 Z"></path>
+    </defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" transform="translate(-237.000000, -149.000000)">
+            <g id="会议室" sketch:type="MSLayerGroup" transform="translate(238.000000, 150.000000)">
+                <path d="M12.9746667,3.417 C12.9746667,5.07366667 11.6313333,6.417 9.97466667,6.417 C8.318,6.417 6.97466667,5.07366667 6.97466667,3.417 C6.97466667,1.76033333 8.318,0.417 9.97466667,0.417 C11.6313333,0.417 12.9746667,1.76033333 12.9746667,3.417 L12.9746667,3.417 Z" id="Stroke-1" stroke="#555555" sketch:type="MSShapeGroup"></path>
+                <path d="M5.32393333,11.0677333 C5.32393333,8.49906667 7.40593333,6.41706667 9.9746,6.41706667 C12.5346,6.41706667 14.6119333,8.48573333 14.6252667,11.0424" id="Stroke-3" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M6.06166667,7.08266667 C4.44166667,7.04066667 3.14166667,5.714 3.14166667,4.084 C3.14166667,2.42666667 4.48433333,1.084 6.14166667,1.084 C6.25966667,1.084 6.377,1.09066667 6.49166667,1.104" id="Stroke-5" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M1.4908,11.7344667 C1.4908,9.26113333 3.42146667,7.23913333 5.85746667,7.09246667" id="Stroke-7" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M13.9062,7.0906 C15.5262,7.0486 16.8262,5.72193333 16.8262,4.09193333 C16.8262,2.4346 15.4835333,1.09193333 13.8262,1.09193333 C13.7082,1.09193333 13.5908667,1.0986 13.4762,1.11193333" id="Stroke-9" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M18.4771333,11.7423333 C18.4771333,9.269 16.5464667,7.247 14.1104667,7.10033333" id="Stroke-11" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M19.4,17.6666667 L0.6,17.6666667 C0.452666667,17.6666667 0.333333333,17.5473333 0.333333333,17.4 L0.333333333,12.6 C0.333333333,12.4526667 0.452666667,12.3333333 0.6,12.3333333 L19.4,12.3333333 C19.5473333,12.3333333 19.6666667,12.4526667 19.6666667,12.6 L19.6666667,17.4 C19.6666667,17.5473333 19.5473333,17.6666667 19.4,17.6666667 L19.4,17.6666667 Z" id="Stroke-13" stroke="#555555" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <mask id="mask-2" sketch:name="Clip 16" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-16"></g>
+                <path d="M19.4726667,17.3333333 L0.598,17.3333333 L0.598,16.6666667 L19.4726667,16.6666667 L19.4726667,17.3333333 Z" id="Fill-15" fill="#555555" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

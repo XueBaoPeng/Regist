@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>线路订单</title>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <link href="../src/css/reset.css" rel="stylesheet">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/personcenter.css">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>  
+   <script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/personcenter/line_order.js"></script>
+</head>
+<body>
+<div class="container">
+  <!-- 订单筛选 -->
+  <div id="contSearch" class="spot-order-search hide">
+    <div class="order-screen">
+      <div class="order-screen-tip">订单状态</div>
+      <div class="order-screen-option">
+        <ul id="ulOrderStatus">
+          <li class="order-screen-active"><a href="javascript:;" data-value="0">全部</a></li>
+          <li><a href="javascript:;" data-value="1">待付款</a></li>
+          <li><a href="javascript:;" data-value="2">已付款</a></li>
+          <li><a href="javascript:;" data-value="3">已完成</a></li>
+          <li><a href="javascript:;" data-value="4">已关闭</a></li>
+        </ul>
+      </div>
+      <div class="order-screen-tip">下单时间</div>
+      <div class="order-screen-option">
+        <ul id="ulDateRange">
+          <li class="order-screen-active"><a href="javascript:;" data-value="1">一周以内</a></li>
+          <li><a href="javascript:;" data-value="2">一月以内</a></li>
+          <li><a href="javascript:;" data-value="3">三月以内</a></li>
+          <li><a href="javascript:;" data-value="4">三月以上</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="order-ctl">
+      <button id="btnClear" class="btn-hp btn-mid-whi left">清除</button>
+      <button id="btnConfirm" class="btn-hp btn-mid-org">确定</button>
+    </div>
+  </div>
+  <div class="screen-result" id="screen-result">
+    <div class="wrapper">
+      <div class="scroller">
+        <div class="pullDown">
+          <span>下拉刷新</span>
+        </div>
+        <div class="my-order" id="my-order">
+          <!-- 退款申请中 -->         
+          <script type="text/html" id="template">
+            {{each data as item i}}
+            <div class="no-payment" >
+              <div class="my-order-tit">
+                <span class="order-name">{{item.name}}</span>
+                {{if item.status ==1}}
+                <span class="order-state">待付款</span>
+                {{else if item.status ==2}}
+                <span class="order-state">已付款</span>
+                {{else if item.status ==3}}
+                <span class="order-state">已完成</span>
+                {{else if item.status ==4}}
+                <span class="order-state">已关闭</span>
+                {{else if item.status ==5}}
+                <span class="order-state">已确认</span>
+                {{/if}}
+              </div>             
+              <div class="my-order-con-line" data-id="{{item.id}}" onclick="nameClick(this)">
+                {{item.lineDescription}}
+                <p class="open-time"><lable>发团日期:</lable>{{item.deptDate}}</p>
+              </div>
+              <div class="my-order-result">
+              	<span class="apply-money">&yen;{{item.totalMoney}}</span>
+                {{if item.status ==1}}
+               <!--onclick="detailNoClick(this)" data-url="../line/pay_info.html" data-id="{{item.id}}" data-status={{item.status}}-->
+                <button class="my-order-pay" data-id={{item.id}} onclick="payClick(this)">付款</button>
+                {{else if item.status ==2}}
+                <button class="my-order-pay" style="display:none"></button>
+                {{else if item.status ==3}}
+               <button class="my-order-pay" data-id={{item.id}} data-line="{{item.productId}}" data-code="{{item.OrderCode}}" onclick="evaluateClick(this)">评价</button>
+                {{else if item.status ==4}}
+                <button class="my-order-pay" style="display:none"></button>
+                {{else if item.status ==5}}
+                <button class="my-order-pay" style="display:none"></button>
+                {{/if}}
+              </div>
+            </div>
+            {{/each}}
+          </script>
+        </div>
+        <div class="pullUp">
+          <span>上拉加载更多</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //var url = "http://localhost:9555/api/Default/GetAllPerson";
+            //$.getJSON(url, null, function (contacts) {
+            //    $.each(contacts, function (index, contact) {
+            //        var html = "<li><ul>";
+            //        html += "<li>Name: " + person.Name + "</li>";
+            //        html += "<li>Age:" + person.Age + "</li>";
+            //        html += "<li>Gender: " + person.Gender + "</li>";
+            //        html += "</ul>";
+            //        $("#person").append($(html));
+            //    });
+            //});
+
+            $("#btn").click(function () {
+                $.ajax({
+                    type: "post",
+                    url: "http://172.16.1.105:9555/api/Default/GetAllPerson",
+                    dataType: "jsonp",
+                    contentType: "application/json; charset=utf-8",
+                    cache: false,
+                    success: function (persons) {
+                        $.each(persons, function (index, person) {
+                            var html = "<li><ul>";
+                            html += "<li>Name: " + person.Name + "</li>";
+                            html += "<li>Age:" + person.Age + "</li>";
+                            html += "<li>Gender: " + person.Gender + "</li>";
+                            html += "</ul>";
+                            $("#person").append($(html));
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="获取数据" id="btn" />
+    <ul id="person"></ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>景点详情</title>
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/spot.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/spot_detail.js"></script>
+</head>
+<body>
+    <div id="content" class="spotMain">
+        <script id="tmplDetail" type="text/html">
+         <div class="spot-detail-top">
+             <img src="{{data.spotsImg}}" alt="{{data.secnicName}}">
+         </div>
+         <div class="spot-detail-tip">{{data.secnicName}}</div>
+         <div class="spot-detail-like">
+            <span class="ico-spot-like"></span>
+            <span>{{data.likeCount}}人喜欢</span>
+         </div>
+         <div class="spot-detail-tip2">{{data.secnicSketch}}</div>
+         <div class="spot-line"></div>
+         <div class="spot-detail-tip3">{{data.secnicDetail}}</div>
+         <!--<ul class="spot-detail-pic">-->
+             <!--<li><img src="../src/images/spot/detailb.png"  alt=""></li>-->
+             <!--<li><img src="../src/images/spot/detailb.png"  alt=""></li>-->
+             <!--<li><img src="../src/images/spot/detailb.png"  alt=""></li>-->
+         <!--</ul>-->
+        </script>
+    </div>
+</body>
+</html>

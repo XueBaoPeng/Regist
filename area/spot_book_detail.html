@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>门票详情</title>
+  <link href="../src/css/reset.css" rel="stylesheet">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/pay.css">
+  <link href="../src/js/widget/calendar/mobiscroll.css" rel="stylesheet">
+  <link href="../src/js/widget/calendar/mobiscroll_002.css" rel="stylesheet">
+  <link href="../src/js/widget/calendar/mobiscroll_003.css" rel="stylesheet">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/widget/calendar/mobiscroll_002.js"></script>
+  <script src="../src/js/widget/calendar/mobiscroll.js"></script>
+  <script src="../src/js/widget/calendar/mobiscroll_003.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/area/spot_detail.js"></script>
+</head>
+<body>
+<div class="ticket-detail-main">
+  <div class="ticket-top">
+    <div class="topInfo">
+      <script type="text/html" id="template">
+        <div class="ticket-detail-top"><img src={{bannerImg}} alt=""></div>
+        <div class="ticket-detail-tit">
+          <p class="ticket-p1">{{title}}</p>
+          <p class="ticket-p2">{{prompt}}</p>
+        </div>
+      </script>
+    </div>
+    <div class="order-date">
+      <input value="" class="chooseDate" readonly="readonly" name="appDate" id="appDate" type="text">
+      <div class="date-left"><img src="../src/images/area/spot-date.jpg"><span>游玩日期</span></div>
+      <div class="date-right"><img src="../src/images/area/next02.png"> </div>
+    </div>
+    <div class="ticketInfo">
+      <script type="text/html" id="template1">
+        <div class="dateTicket">
+          <ul>
+            {{each ticketType as item i}}
+            <li data-id="{{item.id}}">
+              <div class="discount"><span>{{item.name}}</span><span>{{item.discount}}折</span></div>
+              <div class="price"><span>￥<span class="cash">{{item.price}}</span></span><span class="originalPrice">￥{{item.originalPrice}}</span></div>
+              <div class="number"><div class="box minus">-</div><div class="amount">0</div><div class="box add">+</div></div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        <!-- 须知 -->
+        <div class="ticket-notice">
+          <img src="../src/images/area/notice.png" alt="">须知
+        </div>
+        <div class="ticket-notice-con">
+          <p class="notice-p1"><span></span>预定须知</p>
+          <p class="notice-p3">{{reserveNotice}}</p>
+        </div>
+        <div class="ticket-notice-con">
+          <p class="notice-p1"><span></span>使用规则</p>
+          <p class="notice-p2">{{useRule}}</p>
+        </div>
+        <div class="ticket-notice-con">
+          <p class="notice-p1"><span></span>退款规则</p>
+          <p class="notice-p2">{{refundRule}}</p>
+        </div>
+      </script>
+    </div>
+  </div>
+  <div class="ticket-btn">
+    <div class="ticket-total">总价:<span>&yen;<span class="total"> 0.00</span></span></div>
+    <button class="ticket-book" onclick="detailClick(this)" data-url="spot_order_noSpread.html" >立即预定</button>
+  </div>
+</div>
+<script type="text/javascript">
+  $(function () {
+    var currYear = (new Date()).getFullYear();
+    var opt={};
+    opt.date = {preset : 'date'};
+    opt.datetime = {preset : 'datetime'};
+    opt.time = {preset : 'time'};
+    opt.default = {
+      theme: 'android-ics light', //皮肤样式
+      display: 'modal', //显示方式
+      mode: 'scroller', //日期选择模式
+      dateFormat: 'yyyy-mm-dd',
+      lang: 'zh',
+      showNow: true,
+      nowText: "今天",
+      startYear: currYear - 10, //开始年份
+      endYear: currYear + 10 //结束年份
+    };
+    $("#appDate").mobiscroll($.extend(opt['date'], opt['default']));
+    var optDateTime = $.extend(opt['datetime'], opt['default']);
+    var optTime = $.extend(opt['time'], opt['default']);
+    $("#appDateTime").mobiscroll(optDateTime).datetime(optDateTime);
+    $("#appTime").mobiscroll(optTime).time(optTime);
+  });
+</script>
+</body>
+</html>

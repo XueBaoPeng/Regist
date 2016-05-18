@@ -1,0 +1,617 @@
+/*列表页面(景区 酒店 线路 导游)*/
+
+/*spot_search.html*/
+.clear{clear:both;}
+body{background:#F6F6F6;}
+.container{position:relative;width:100%;}
+
+/*筛选条件*/
+.navigation{height:45px;line-height:45px;border-bottom:1px solid #D3D3D3;background:#F3F3F3;font-size:1.5rem;}
+.nav-ul{padding:0 4%;}
+.nav-ul li{float:left;width:25%;height:44px;line-height:44px;text-align:center;}
+.active{color:#2196F3;border-bottom:2px solid #2196F3;}
+
+/*筛选结果*/
+.result-ul{position:relative;}
+.result-li{clear:both;margin-bottom:10px;padding:0 4%;background:#fff;overflow:hidden;padding-bottom:10px;}
+.result-li-left{float:left;margin-top:10px;position:relative;width:32%;height:88px;}
+.result-li-left img{width:100%;height:88px;}
+.result-tip{position:absolute;padding:5px 7px;z-index:2;background:#FE3845;color:#fff;font-size:1.2rem;}
+.result-li-right{margin-top:10px;float:left;margin-left:3.3%;width:63.3%;height:90px;}
+.p-sketch{min-height:25px;line-height:20px;display:-webkit-box!important;overflow:hidden;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;-webkit-line-clamp:2;-moz-line-clamp:2;-o-line-clamp:2;-ms-line-clamp:2;line-clamp:2;font-size:1.4rem;color:#333;}
+.p-rate{margin-top:3px;font-size:1.2rem;}
+.p-tip-spot{float:right;margin-top:-40px;}
+.p-tip-spot span,.p-tip span{display:inline-block;width:20px;height:15px;line-height:15px;text-align:center;color:#fff;}
+.span-zhe{background:url(../images/area/orange.png) no-repeat;background-size:100%;font-size:1.2rem;}
+.span-wei{background:url(../images/area/blue.png) no-repeat;background-size:100%;font-size:1.2rem;}
+.p-address-spot{margin-top:30px;color:#333;font-size:1.2rem;}
+.p-price{float:right;margin-top:-15px;color:#999;font-size:1.2rem;}
+.p-price span{font-size:1.6rem;color:#fb8215;}
+.p-price i{font-style:normal;color:#fb8215;}
+
+/*筛选条件*/
+.search-top{width:100%;height:auto;}
+.hotel-type{position:absolute;left:0;z-index:6;width:100%;background:#fff;font-size:1.5rem;color:#333;}
+.already-choice{padding:0 4%;line-height:55px;border-bottom:1px solid #D3D3D3;background:#f6f6f6;overflow:hidden;}
+.already-ul{position:relative;float:left;width:100%;height:55px;}
+.already-li{float:left;margin-right:5px;}
+.clear-choice{position:absolute;right:0;top:13px;height:28px;width:73px;border:1px solid #1F94F1;background:#F6F6F6;border-radius:5px;text-align:center;}
+.choice-a{float:left;color:#333;}
+.choice-close{float:left;margin-top:10px;display:inline-block;width:12px;height:12px;line-height:8px;border-radius:50%;background:#FB8315;text-align:center;color:#fff;font-size:1.2rem;}
+
+/*按钮*/
+.hotel-opt-btn{padding-top:15px;margin:0 4%;overflow:hidden;}
+.hotel-opt-btn div{float:left;height:43px;line-height:43px;border:0;text-align:center;}
+.hotel-opt-no{background:#F6F6F6;width:50%;}
+.hotel-opt-yes{width:50%;background:#2396F1;color:#fff;}
+
+/*分类内容*/
+.hotel-type-option{position:absolute;width:90px;height:88%;background:#f6f6f6;}
+.option-ul{width:100%;position:absolute;}
+.option-ul li{height:53px;line-height:53px;}
+.option-ul li a{margin-left:11%;color:#333;}
+.option-tip{float:right;margin-top:22px;margin-right:10px;display:inline-block;width:8px;height:8px;border-radius:50%;background:transparent;}
+.option-li-active{background:#fff;}
+.option-li-active .option-tip{background:#2396F1;}
+.hotel-type-detail{position:relative;float:right;margin-right:4%;width:62%;height:100%;background:#fff;overflow:hidden;}
+.hotel-type-detail li{padding-top:19px;padding-bottom:18px;border-bottom:1px solid #F0F0F0;}
+.hotel-type-detail .choose{color:#2194ef;}
+.detail-ul{display:none;}
+.this{display:block;}
+.common{height:100%;}
+
+/*hotel_search.html*/
+
+/*入住离店日期*/
+.date{height:65px;background:#FBFBFB;border-bottom:1px solid #EAEAEA;color:#636363;font-size:1.3rem;}
+.date li{float:left;width:50%;text-align:center;}
+.date-tit{margin-top:15px;margin-bottom:10px;}
+.span-date{margin-right:2px;color:#2396EF;font-size:1.4rem;}
+
+/*筛选结果*/
+.p-tip{float:right;margin-top:-10px;}
+.p-type{margin-top:5px;}
+.p-address-hotel{margin-top:10px;color:#333;font-size:1.2rem;}
+.p-price{float:right;margin-top:-15px;color:#999;font-size:1.2rem;}
+
+/*guide-search.html*/
+.result-li-guide{clear:both;margin-bottom:10px;padding:0 4%;height:120px;background:#fff;}
+.result-li-left-guide{float:left;margin-top:10px;position:relative;width:31.8%;height:100px;}
+.result-li-left-guide img{width:100%;height:100px;}
+.result-tip-guide{position:absolute;left:-2px;top:0;padding-left:4px;z-index:2;width:40px;height:16px;line-height:16px;background:url(../images/area/bkb_03.png) no-repeat;background-size:100%;color:#fff;font-size:1.2rem;}
+.result-li-right-guide{margin-top:10px;float:left;margin-left:3.3%;width:61.3%;height:90px;font-size:1.3rem;color:#666;}
+.p-type-guide{margin-top:10px;height:30px;line-height:16px;display:-webkit-box!important;overflow:hidden;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;-webkit-line-clamp:2;-moz-line-clamp:2;-o-line-clamp:2;-ms-line-clamp:2;line-clamp:2;}
+.p-name-guide{margin-top:5px;font-size:1.6rem;color:#333;}
+.p-price-guide{float:right;margin-top:-15px;color:#FF7700;}
+.p-price-guide span{font-size:1.8rem;}
+.p-rate-guide{margin-top:8px;margin-bottom:5px;}
+.p-hour-guide{float:right;margin-top:-15px;}
+
+/*门票预定(景区)*/
+.spot_ticket_book{background:#fff;}
+.screen-result{width:100%;}
+.itemDetail{border-bottom:1px solid #eee;}
+.book-con{padding:10px 4%;height:115px;overflow:hidden;}
+.book-con-left{float:left;width:42%;height:93px;border-radius:3px;}
+.book-con-left img{width:100%;height:93px;}
+.book-con-right{float:left;margin-left:10px;width:54%;}
+.book-con-tit{line-height:20px;margin-top:10px;font-size:1.6rem;color:#333;}
+.book-num{margin-top:15px;color:#666;font-size:1.3rem;}
+.book-num num{color:#FC8215;}
+.book-quan,.book-zhe{display:inline-block;width:31px;height:15px;line-height:15px;color:#fff;text-align:center;}
+
+/*门票价格 */
+.book-price{overflow:hidden;width:100%;}
+.book-price li{clear:both;position:relative;padding:0 15px;width:100%;height:40px;line-height:40px;border-top:1px solid #eee;}
+.price-tit{float:left;font-size:1.4rem;color:#333;}
+.price-count{float:left;display:inline-block;margin-top:13px;margin-left:10px;width:32px;height:15px;line-height:15px;border-radius:3px;background:#FC8215;color:#fff;text-align:center;font-size:1rem;font-weight:100;}
+.price-num{width:60px;margin-right:10px;color:#fc8215;font-size:1.8rem;}
+.price-num num{font-size:1rem;}
+.price-origin{color:#b7b7b7;font-size:1.2rem;}
+.price-del{width:60px;color:#b7b7b7;font-size:1.2rem;}
+.price-right{float:right;text-align:right;}
+.ticket-more{width:100%;height:30px;line-height:30px;font-size:1.4rem;color:#666;text-align:center;}
+.ticket-more a{color:#1b6dca;}
+.ticket-more span{display:inline-block;margin-left:0px;background-size:61px 320px;width:12px;height:7px;}
+.pack span{background:url(../images/hotel/pay.png) no-repeat 0 -12px;background-size:61px 320px;}
+.result-li-spot-tick .book-price li:last-child{border-bottom:none;}
+
+/*详情页面(景区 酒店 线路)*/
+
+/*spot_detail.html*/
+.ticket-detail-main{width:100%;}
+.ticket-detail-top{height:215px;}
+.ticket-detail-top img{width:100%;height:215px;}
+.ticket-detail-tit{padding:0 4%;height:86px;background:#fff;border-bottom:1px solid #eee;}
+.ticket-p1{padding-top:15px;font-size:1.5rem;color:#333;}
+.ticket-p2{margin-top:5px;font-size:1.3rem;width:95%;color:#FC8414;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-webkit-text-overflow:ellipsis;}
+.order-date{height:50px;line-height:50px;padding:0 2.5%;background:#fff;border-bottom:1px solid #eee;overflow:hidden;}
+.date-left{float:left;width:100%;height:50px;line-height:50px;}
+.date-left .playdate{display:inline-block;float:right;text-align:right;overflow:hidden;}
+.orderNoneMain .ico-spot-date{margin-top:16px;}
+.date-left span{display:inline-block;font-size:1.4rem;color:#333;}
+.order-date input{position:absolute;z-index:200;width:100%;height:100%;border:none;font-size:1.4rem; /*margin-top:-4px;*/background:rgba(255,255,255,0);padding-left:95px;}
+.date-right{position:absolute;right:10px;top:0;z-index:100;/*float: right;*/}
+.dateTicket{background:#fff;}
+.dateTicket ul { padding: 0 15px; width: 100%; height: auto; }
+.dateTicket ul li { border-bottom: 1px solid #eee; height: 44px; line-height: 44px; overflow: hidden; text-align: center; }
+.dateTicket ul li div:first-child { width: 37%; text-align: left; }
+.dateTicket ul li:last-child { border-bottom: 0px; }
+.dateTicket ul li .price .originalPrice{color:#666;font-size:1.2rem;text-decoration:line-through;}
+.dateTicket ul li .number .box{display:inline-block;width:28px;height:28px;text-align:center;background:#2296F0;font-size:2.5rem;color:#fff;line-height:25px;float:left;}
+
+/*须知*/
+.ticket-notice{padding:0 15px;margin-top:10px;height:40px;line-height:40px;border-bottom:1px solid #eee;background:#fff;font-size:1.5rem;}
+.ticket-notice img{float:left;margin-right:5px;margin-top:11px;width:14px;height:16px;}
+.ticket-notice-con{padding:9px 4%;background:#fff;border-bottom:1px solid #eee;font-size:1.5rem;/*padding-bottom: 6px;*/}
+.notice-p1{margin-bottom:3px;}
+.notice-p1 span{margin-right:5px;display:inline-block;float:left;width:4px;height:15px;background:#F8B914;}
+.notice-p3{margin-top:5px;color:#666;}
+.notice-p2{margin-top:5px;color:#666;}
+
+/*评价*/
+.ticket-evaluate{padding:0 4%;height:40px;line-height:40px;border-bottom:1px solid #eee;background:#fff;font-size:1.5rem;}
+.ticket-evaluate img{float:left;margin-right:5px;margin-top:12px;width:16px;height:16px;}
+.ticket-evaluate-con{padding:0 4%;background:#fff;border-bottom:1px solid #eee;overflow:hidden;}
+.evaluate-con-first{padding-top:20px;height:25px;}
+.evaluate-head{float:left;font-size:1.5rem;font-weight:600;}
+.evaluate-head img{float:left;margin-right:2px;width:27px;height:26px;}
+.evaluate-head span{float:left;display:inline-block;margin-top:5px;}
+.evaluate-use{margin-top:10px;float:right;color:#FC8215;}
+.evaluate-use img{float:left;margin-right:5px;height:15px;width:15px;}
+.evaluate-con-two{clear:both;padding:0 4%;}
+.evaluate-p1{padding-top:15px;margin-left:-15px;width:100%;word-break:break-all;font-size:1.4rem;display:-webkit-box!important;overflow:hidden;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;-webkit-box-orient:vertical;-moz-box-orient:vertical;-o-box-orient:vertical;-ms-box-orient:vertical;box-orient:vertical;-webkit-line-clamp:4;-moz-line-clamp:4;-o-line-clamp:4;-ms-line-clamp:4;line-clamp:4;}
+.evaluate-p2{margin-left:-15px;margin-top:8px;}
+.evaluate-p2 a{color:#2197F1;}
+
+/*图片*/
+.ticket-detail-pic{clear:both;padding:10px 4% 0;background:#fff;overflow:hidden;}
+.ticket-detail-pic li{float:left;margin-right:2%;margin-bottom:10px;width:23%;height:75px;}
+.ticket-detail-pic li img{width:100%;height:75px;}
+
+/*显示时间*/
+.ticket-time{clear:both;padding-left:4%;overflow:hidden;background:#fff;color:#666;font-size:1.4rem;}
+
+/*酒店回复*/
+.hotel-reply{padding:8px 4% 20px 4%;background:#fff;border-bottom:1px solid #eee;font-size:1.4rem;}
+.hotel-reply p{padding:9px;background:#F7FAFF;}
+
+/*立即预定*/
+.ticket-btn{margin-top:10px;margin-bottom:10px;height:45px;font-size:1.6rem;}
+.ticket-total{float:left;width:50%;height:45px;line-height:45px;text-align:center;background:#fff;font-size:1.6rem;}
+.ticket-total span{margin-left:5px;color:#FC8215;}
+.ticket-book{float:left;width:50%;height:45px;line-height:45px;text-align:center;background:#FC8215;font-size:1.6rem;color:#fff;border:0;font-weight:600;}
+
+/*hotel_detail.html*/
+.hotel_detail{background:#eeeeee;}
+.hotel_detail .date{height:44px;background:#f7faff;font-size:1.4rem;color:#48acf8;}
+.hotel_detail .date div{width:49.8%;height:44px;line-height:44px;text-align:center;float:left;background:#F7FAFF;}
+.hotel_detail .date .shu{float:left;border-left:1px solid #cae8ff;width:0;}
+.hotel_detail .date div:active{background:#EDF4FF;}
+.hotel_detail .date div span{font-size:1.8rem;color:#2197f1;}
+.roomList li{list-style:none;padding-top:5px;background:#ffffff;}
+.roomList li .top{color:#333333;margin-top:10px;overflow:hidden;}
+.roomList li .top .title{font-size:1.6rem;margin-right:10px;margin-left:10px;color:#333;}
+.roomList li .top span{float:left;line-height:24px;color:#666;font-size:1.2rem;}
+.roomList li .top .sale{float:left;width:30px;height:24px;line-height:24px;color:#ffffff;border-radius:3px;text-align:center;background:#61a1e8;font-size:1.2rem;margin-left:10px;}
+.roomList li .room{width:70px;height:70px;display:block;float:left;border-radius:5px;margin-top:10px;margin-bottom:15px;margin-left:10px;}
+.roomList li .roomDetail{float:left;margin-left:10px;color:#555555;}
+.roomList li .roomDetail .people{width:14px;margin-right:2px;margin-top:9px;}
+.roomList li .roomDetail p span{margin-right:5px;}
+.roomList li .roomDetail .wifi{margin-top:3px;margin-bottom:3px;}
+.roomList li .roomDetail .wifi .go{width:7px;float:right;}
+.roomList .bar{width:100%;height:38px;background:#f7faff;margin-bottom:10px;border-bottom:1px solid #e5e5e5;}
+.roomList .bar .barRight{float:left;margin-left:15px;line-height:38px;color:#333333;}
+.roomList .bar .barRight span{color:#fc8215;font-size:1.8rem;}
+.roomList .bar .book{float:right;width:90px;height:28px;color:#ffffff;text-align:center;line-height:28px;border-radius:3px;background:#FC8215;margin-top:5px;margin-right:10px;font-size:1.4rem;/*font-weight: 600;*/}
+.bottom{position:fixed;bottom:0;width:100%;height:44px;line-height:44px;}
+.bottom .totalPrice{width:55%;height:44px;background:#ffffff;float:left;text-align:center;font-size:1.4rem;color:#333333;}
+.bottom .totalPrice span{font-size:1.8rem;color:#fc8215;}
+.bottom .book{width:45%;height:44px;background:#fc8215;float:left;text-align:center;font-size:1.6rem;color:#ffffff;font-weight:600;letter-spacing:1px;}
+.bottom .book:active{background:#ec7e1d;}
+@media screen and (max-width:700px){
+	.roomList li .roomDetail{width:85%;}
+}
+@media screen and (max-width:600px){
+	.roomList li .roomDetail{width:82%;}
+}
+@media screen and (max-width:520px){
+	.roomList li .roomDetail{width:80%;}
+}
+@media screen and (max-width:420px){
+	.roomList li .roomDetail{width:77%;}
+}
+@media screen and (max-width:380px){
+	.roomList li .roomDetail{width:74.5%;}
+}
+@media screen and (max-width:360px){
+	.roomList li .roomDetail{width:70.5%;}
+	.roomList li .roomDetail p span{margin-right:0;}
+}
+
+/*line_detail.html*/
+
+/*@import (less) "common.css";*/
+
+/*@color : #272727;*/
+.goodDetail{width:100%;position:relative;}
+.goodDetail .goodDetailTop{position:relative;width:100%;height:33%;overflow:hidden;}
+.goodDetail .goodDetailTop .bar{width:100%;height:30px;line-height:30px;z-index:9999;position:absolute;bottom:0;background:rgba(0,0,0,0.5);color:#ffffff;font-size:1.4rem;}
+.goodDetail .goodDetailTop .bar .barLeft{float:left;margin-left:10px;}
+.goodDetail .goodDetailTop .bar .barRight{float:right;margin-right:10px;}
+.goodDetail .swiper-container-horizontal>.swiper-pagination{bottom:35px;left:0;width:100%}
+.goodDetail .top{overflow:hidden;width:100%;}
+.goodDetail .top img{width:100%;}
+.swiper-pagination{bottom:50px;left:0;width:100%;height:20px;}
+.detail{background:#eeeeee;width:100%;}
+.detail .title{width:90%;margin:0 auto;line-height:25px;font-size:1.6rem;color:#333333;padding-top:8px;}
+.detail .price{float:left;margin-left:2%;margin-top:22px;margin-bottom:20px;}
+.detail .price p{color:#fc8215;font-size:2.1rem;line-height:20px;}
+.detail .price p span{font-size:3rem;margin-right:5px;letter-spacing:-1px;}
+.detail .price .mount{font-size:1.4rem;color:#999999;margin-top:5px;margin-left:5px;}
+.detail .discuss{float:right;width:95px;text-align:center;margin-right:8px;}
+.detail .discuss .star li{display:block;float:left;margin-right:5px;width:14px;height:14px;}
+.detail .discuss .star .grey{background-image:url("../images/area/grey.png");background-size:100% 100%;}
+.detail .discuss .star .yellow{background-image:url("../images/area/yellow.png");background-size:100% 100%;}
+.detail .discuss .star li:last-child{margin-right:0;}
+.detail .discuss .percent{margin-top:3px;margin-bottom:8px;font-size:2.2rem;color:#fc8213;line-height:25px;}
+.detail .discuss .text{color:#333333;font-size:1.4rem;}
+.goodDetail .groom{width:100%;background:#ffffff;border-top:1px solid #CDCDCD;}
+.goodDetail .groom .title{padding-top:15px;margin-bottom:10px;margin-left:18px;}
+.goodDetail .groom .title img{width:32px;float:left;margin-right:10px;}
+.goodDetail .groom .title span{font-size:1.6rem;color:#343434;font-weight:600;float:left;line-height:21px;}
+.goodDetail .groom .listText{width:90%;margin:0 auto;padding-bottom:10px;}
+.goodDetail .groom .listText li{clear:both;width:100%;line-height:20px;display:block;font-size:1.4rem;}
+.goodDetail .groom .listText li img{width:16px;height:16px;margin-top:3px;display:inline; /*float: left;*/margin-right:3px;}
+.goodDetail .groom .listText li span{font-size:1.4rem;color:#333333;}
+.goodDetail .tab{width:100%;height:55px;background:#eeeeee;line-height:55px;margin-bottom:10px;margin-top:5px;border-top:1px solid #CDCDCD;border-bottom:1px solid #CDCDCD;}
+.goodDetail .location{position:fixed;top:-5px;}
+.goodDetail .tab li{display:block;float:left;font-size:1.6rem;color:#333333;width:21%;margin-left:2%;margin-right:2%;text-align:center;}
+.goodDetail .tab .current{height:54px;color:#2396f1;border-bottom:3px solid #2396f1;}
+.goodDetail .content{padding-bottom:10px;background:#ffffff;}
+.goodDetail .content .feature{width:90%;margin:0 auto;}
+.goodDetail .content .feature li{margin-top:15px;list-style:none;}
+.goodDetail .content .feature li .star{display:inline;width:18px;height:18px;}
+.goodDetail .content .feature li span{font-size:1.6rem;line-height:23px;}
+.goodDetail .content .feature li .notice{color:#2396f1;}
+.goodDetail .content .feature li .spotImg{width:100%;margin:10px auto;}
+.goodDetail .content .route{width:100%;}
+.goodDetail .content .route .day{overflow:hidden;}
+.goodDetail .content .route .day .number{width:90px;height:35px;background:#2296f0;border-bottom-right-radius:20px;border-top-right-radius:20px;float:left;font-size:1.6rem;color:#ffffff;text-align:center;line-height:35px;margin-bottom:10px;margin-top:10px;}
+.goodDetail .content .route .day .pathTitle{font-size:1.6rem;color:#2296f0;margin-left:12px;line-height:52px;font-weight:600;}
+.goodDetail .content .route .day .pathDetail{width:90%;margin:0 auto;background:#fafafa;padding-top:15px;}
+.goodDetail .content .route .day .pathDetail .pathLogo{width:20px;height:20px;float:left;margin-top:2px;margin-right:10px;}
+.goodDetail .content .route .day .pathDetail .pathDetailTitle{font-size:1.6rem;color:#333333;float:left;}
+.goodDetail .content .route .day .pathDetail .detailText{clear:both;margin-left:30px;color:#666666;line-height:25px;font-size:1.5rem;margin-top:5px;padding-bottom:10px;}
+.goodDetail .content .route .day .pathDetail .spotImg{width:90%;margin-left:6%;margin-bottom:10px;}
+.goodDetail .bottom{position:fixed;z-index:2;bottom:0;width:100%;height:60px;background:#fff;}
+.goodDetail .bottom .call{float:left;position:relative;border-top:1px solid #cccccc;line-height:60px;width:50%;}
+.goodDetail .bottom .call .callBox{position:absolute;left:0;right:0;height:59px;width:100px;margin:0 auto;}
+.goodDetail .bottom .call .callBox img{width:30px;float:left;margin-top:12px;margin-right:5px;}
+.goodDetail .bottom .call .callBox span{font-size:1.6rem;float:left;}
+.goodDetail .bottom .buy{float:left;width:50%;background:#ff9d00;text-align:center;color:#ffffff;font-size:1.8rem;letter-spacing:1px;line-height:60px}
+.goodDetail .telephone{position:absolute;background:65px;width:90%;height:250px;left:5%;bottom:70px;background:#f6f6f6;border:1px solid #bbbbbb;border-radius:5px;z-index:900;text-align:center;}
+.goodDetail .telephone .notice{width:280px;height:35px;margin:0 auto;line-height:35px;background:#ffffff;border:1px dashed #cbcbcb;border-radius:15px;font-size:1.2rem;margin-top:28px;text-align:center;}
+.goodDetail .telephone .goodsId{width:100%;color:#2296f0;font-size:1.6rem;font-weight:600;text-align:center;margin-top:10px;}
+.goodDetail .telephone .telephoneNumber{width:100%;color:#333333;font-size:1.4rem;text-align:center;margin-top:10px;}
+.goodDetail .telephone .callBtn{width:90%;height:40px;margin:0 auto;border-radius:5px;background:#2296f0;line-height:40px;color:#ffffff;font-size:1.6rem;}
+.goodDetail .telephone .callBtn .btnBox{width:100px;margin:0 auto;margin-top:13px;}
+.goodDetail .telephone .callBtn img{width:25px;float:left;margin-top:9px;margin-right:3px;}
+.goodDetail .telephone .callBtn span{float:left;}
+.goodDetail .telephone .cancel{background:#dddddd;color:#333333;}
+.goodDetail .telephone .cancel span{margin-right:22px;}
+.goodDetail .telephone .cancel img{width:20px;margin-right:6px;}
+.goodDetail .bottom .arrow-down{position:absolute;left:50px;top:-10px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #bbbbbb;}
+.goodDetail .bottom .arrow-down2{position:absolute;left:51px;top:-11px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:8px solid #f6f6f6;z-index:50000;}
+.bottomBox{display:none;}
+.item .explain{width:92%;margin:0 auto;padding-top:25px;border-top:1px dashed #999999;padding-bottom:10px;}
+.item .explain:first-child{border:none;}
+.item .explain .explainTitle{color:#2296f0;font-size:1.6rem;margin-bottom:10px;}
+.book .explain .explainTitle{color:#333333;}
+.book .explain .explainTitle span{color:#2296f0;}
+.item .explain .explainTitle span{font-weight:bolder;margin-right:5px;}
+.item .explain .explainList{font-size:1.4rem;color:#666666;line-height:25px;}
+.item .explain .explainList li{list-style-position:inside;}
+.book .remark{width:90%;margin:0 auto;padding-bottom:10px;border:1px dashed #2296f0;margin-top:10px;background:#f3f8fc;margin-bottom:10px;}
+.book .remark .text{font-size:1.4rem;width:95%;margin:0 auto;margin-top:10px;color:#666666;}
+.book .remark .text .title{color:#333333;}
+
+/*弹框*/
+.jump-travel{position:relative;}
+.jump-tit{height:45px;line-height:45px;background:#2396F1;color:#fff;}
+.jump-tit span{float:left;margin-left:4%;font-size:1.6rem;}
+.jump-close{float:right;margin-top:11px;margin-right:4%;width:24px;height:24px;}
+.jump-con{overflow:hidden;}
+.package-tit{margin-left:4%;margin-right:4%;height:60px;line-height:60px;overflow:hidden;}
+.package-name{font-size:1.5rem;color:#333;}
+.package-price{float:right;margin-right:4%;font-size:1.5rem;color:#333;}
+.package-price span{font-size:1.9rem;color:#FC8215;}
+.package-book{float:right;margin-top:13px;height:35px;line-height:35px;width:35px;border-radius:50%;background:#Fc8215;color:#fff;font-size:1.5rem;text-align:center;}
+.package-none{display:none;}
+.package-con{margin:0 4% 4% 4%;padding-top:20px;font-size:1.3rem;color:#999;line-height:1.7rem;border-top:1px dashed #dedede;}
+.package-btn-up,.package-btn-down{margin:0 auto;font-size:1.4rem;color:#333;width:15%;}
+.package-btn-up img,.package-btn-down img{float:left;margin-top:2px;margin-right:5px;width:15px;height:15px;}
+.jump-bg{margin:19px 4% 0 4%;width:92%;height:10px;background:url(../images/area/bg2.png) no-repeat;}
+.pathDetail:last-child{padding-bottom:50px;}
+
+/*下单页面*/
+
+/*spot_order_noSpread.html*/
+.orderNoneMain{width:100%;}
+.order-date-noSpread{position:relative;width:100%;height:50px;background:#fff;border-bottom:1px solid #eee;padding:0 15px;overflow:hidden;line-height:50px;}
+.date-left .chooseDate{background:rgba(255,255,255,0);margin-left:20px;font-size:1.4rem;border:none;}
+.date-right{position:absolute;right:10px;height:50px;line-height:50px;}
+.ticket{font-size:1.6rem;color:#333;padding:0 4%;}
+.dateTicket{background-color:#fff;}
+.dateTicket ul{padding:0 15px;width:100%;height:auto;}
+.dateTicket ul li{border-bottom:1px solid #eee;height:44px;line-height:44px;overflow:hidden;text-align:center;}
+.dateTicket ul li:last-child{border-bottom:0px;}
+.dateTicket ul li div{float:left;width:34%;}
+.dateTicket ul li div:first-child{width:37%;text-align:left;}
+.dateTicket ul li div:last-child{margin-top:10px;text-align:right;float: right; width: 27%;}
+.dateTicket ul li .discount .vername{color:#333;font-size:1.4rem;margin-right:3%;}
+.dateTicket ul li .discount .verdis{display:inline-block;width:30px;height:15px;background:#FC8215;line-height:15px;text-align:center;font-size:0.8rem;color:#fff;border-radius:3px;}
+.dateTicket ul li .price .emu{color:#FC8215;font-size:1.2rem;}
+.dateTicket ul li .price .cash{color:#FC8215;font-size:1.8rem;margin-right:5px;}
+.dateTicket ul li .price .original{color:#b7b7b7;font-size:1.2rem;text-decoration:line-through;}
+.dateTicket ul li .number a{display:inline-block;width:25px;height:25px;line-height:25px;text-align:center;background:#2296f0;font-size:1.2rem;color:#fff;}
+.dateTicket ul li .number .add{border-radius:0 3px 3px 0;float:left;}
+.dateTicket ul li .number .minus{border-radius:3px 0 0 3px;float:left; clear:right;}
+.dateTicket ul li .number a.stopDown{background:#90caf7;}
+.dateTicket ul li .number span{display:inline-block;width:25px;height:25px;line-height:25px;font-size:1.3rem;color:#333;background-color:#f7faff;text-align:center;margin:0;padding:0;float:left;}
+.ticketer{width:100%;margin-top:10px;background:#fff;}
+.ticketer ul li{height:50px;line-height:50px;padding:0 15px;font-size:1.4rem;color:#333;}
+.ticketer ul li span{margin-right:10px;width:60px;color:#666;}
+.ticketer ul li:first-child{border-bottom:1px solid #eee;height:35px;line-height:35px;font-size:1.4rem;color:#333;}
+
+/*出行人信息*/
+.passage{width:100%;background:#fff;}
+.passage ul li{line-height:50px;margin:0;border-bottom:1px solid #ccc;font-size:1.4rem;color:#333;}
+.passage ul li:not(:nth-child(2)) span:first-child{color:#666;margin-right:15px;}
+.passage .proversion{height:40px;line-height:40px;padding:0 4%;border-bottom:1px solid #eee;font-size:1.4rem;color:#333;}
+.passage .peopleName{display:inline-block;width:100%;height:auto;padding:0 4%;border-bottom:1px solid #eee;}
+.passage .peopleName .name{float:left;width:20%;height:30px;line-height:30px;border:1px solid #ccc;text-align:center;font-size:1.2rem;border-radius:3px;margin-right:3%;margin-top:15px;}
+.passage .peopleName .active{background:#2396F0;color:#fff;border:none!important;}
+.passage .peopleName p{text-align:center;line-height:35px;color:#333;clear:both;}
+a.more{color:#666;}
+.passage .peopleName p img{width:14px;height:8px;margin-left:5px;}
+.passage .notice{font-size:1.2rem;float:right;}
+.info{background-color:#fff;margin-top:10px;font-size:1.4rem;color:#333;}
+.info .peopleTitle{height:35px;line-height:35px;padding:0 4%;border-top:1px solid #eee;border-bottom:1px solid #eee;font-size:1.4rem;color:#333;}
+.info .people{margin:0 10px;height:auto;}
+.info .people div{height:45px;line-height:45px;border-bottom:1px solid #eee;}
+.info .people div input{display:inline-block;width:80%;height:30px;line-height:30px;font-size:1.4rem;color:#333}
+.info .people div span{display:inline-block;width:60px;height:30px;line-height:30px;font-size:1.4rem;color:#666;}
+.peopleMore .jiantou{display:inline-block;width:13px;height:8px;background-image:url("../images/area/down.jpg");background-size:100% 100%;}
+.peopleMore .jiantou.up{background-image:url("../images/area/up.jpg");}
+.order{margin-top:50px;overflow:hidden;}
+.pay-order{margin-top:10px;}
+.money{width:50%;height:45px;float:left;background:#fff;line-height:45px;text-align:center;font-size:1.4rem;color:#666;}
+.money span{color:#FC8215;font-size:1.8rem;}
+.goPay{width:50%;height:45px;float:left;background:#FC8215;line-height:45px;text-align:center;color:#fff;font-size:1.8rem;}
+.spot_pay_info{font-size:1.4rem;}
+
+/*支付页面信息(景区 酒店 线路)*/
+
+/*spot_pay_info.html*/
+.line_pay_info{font-size:1.4rem;}
+.main-bg{background:#fff;}
+
+/*支付剩余时间*/
+.pay-time{height:45px;line-height:45px;text-align:center;font-size:1.6rem;color:#333;}
+
+/*支付金额*/
+.pay-money{border-bottom:1px solid #eee;}
+.pay-money label{color:#333;}
+.pay-money div{height:20px;line-height:20px;float:left;margin:25px 3.3% 0;margin-top:25px;font-size:1.4rem;color:#333;}
+.pay-money .paymoney{float:right;margin-left:15px;color:#fc8215;font-size:1.4rem;}
+.pay-money .payAmount{font-size:2.2rem;}
+.pay-money p{margin-left:3.3%;margin-right:3.3%;padding-top:10px;width:88.6%;height:25px;color:#999;white-space:nowrap;-webkit-text-overflow:ellipsis;-moz-text-overflow:ellipsis;-o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;overflow:hidden;}
+.pay-money p.pay-padding{padding:0;padding-bottom:5px;height:auto;}
+
+/*订单详情*/
+.spot-product{padding-bottom:10px;height:auto;background-color:#fff;border-bottom:1px solid #eee;}
+.pro-title{height:35px;line-height:35px;margin:0 3.3%;}
+.pro-content,.bed-type, .gift, .use-rules{height:35px;line-height:35px;margin:0 3.3%;}
+.pro-content lable,.bed-type lable, .gift lable, .use-rules lable{color:#222;}
+.pro-content span{width:30%;display:inline-block}
+.pro-content span,.bed-type span, .gift span, .use-rules span{color:#666}
+.pro-title span{font-size:1.4rem;color:#333;}
+.pro-version{height:30px;line-height:30px;margin:0 3.3%;}
+.pro-version .ver-name{display:inline-block;width:30%;}
+.pro-version .ver-price{font-size:1.4rem;color:#666;margin-right:5px;}
+.order-detail{padding:10px 0;margin-top:10px;border-top:1px solid #eee;border-bottom:1px solid #eee;}
+.order-detail li{height:35px;line-height:35px;margin-left:3.3%;}
+/*hyy修改margin*/
+.order-detail label{margin-right:10px;font-size:1.4rem;color:#333;}
+.order-detail span{color:#666;}
+.order-people{letter-spacing:5px;}
+.order-detail li.last-li-two{margin-top:14px;}
+.order-detail li.li-last{margin-top:16px;}
+.order-detail li.li-line{margin:17px 3.3% 0 3.3%;height:1px;background:#eee;overflow:hidden;}
+
+/*支付方式上*/
+.pay-method{margin-top:10px;padding-left:3.3%;padding-right:3.3%;border-top:1px solid #eee;border-bottom:1px solid #eee;}
+.ul-top li{height:46px;line-height:46px;border-bottom:1px solid #eee;font-size:1.4rem;}
+.ul-top li label{color:#333;}
+.ul-top li label.method-tit{font-size:1.5rem;color:#333;font-weight: bold}
+.ul-top li span{color:#fc8215;}
+.ul-top li .item{float:right;margin-top:19px;height:18px;width:18px;background:#f6f6f6;border-radius:50%;border:1px solid #cccccc;}
+.ul-top .choose .item{background-image:url("../images/area/opt_b.png");background-size:100% 100%;border:none;}
+.ul-bot li img{width:20px;height:20px;float:left;margin:25px 10px 0 0;}
+.pay-bg{height:4px;background:#F3F3F3;}
+/*hyy*/
+.pay-money{line-height:45px;font-weight: bold}
+.pay-money span{color:#fc8215;}
+.pay-money .payment{color:#fc8215;}
+
+/*支付方式下*/
+.ul-bot li{position:relative;border-bottom:1px solid #F0F0F0;height:71px;}
+.ul-bot li.li-zfb{border-bottom:0;}
+.pic-opt{float:right;margin-top:27px;width:18px;height:18px;background:#f6f6f6;border-radius:50%;border:1px solid #d7d7d7;}
+.chooseThis .pic-opt{background-image:url("../images/area/opt_b.png");background-size:100% 100%;border:none;}
+.tip-top{float:left;margin-top:17px;font-size:1.4rem;color:#333;}
+.tip-bot{position:absolute;left:35px;top:38px;font-size:1.3rem;color:#999;}
+
+/*确认支付按钮*/
+.pay-confirm{margin-top:10px;background:#fc8215;color:#fff;text-align:center;width:100%;height:50px;line-height:50px;border:none;font-size:1.8rem;}
+.payAmount{margin-top:10px;}
+
+/*订单成功页面*/
+.order_success_main{text-align:center;background:#fff;}
+.order-tit-ok{margin-top:10px;color:#333;font-size:1.7rem;}
+.order-img-ok {
+    margin-top: 60px;
+    width: 60px;
+    height: 60px;
+    }
+.remark{text-align: left;color:#888;padding:10px 5px;font-size:14px}
+.order-btn{margin-top:50px;margin-bottom:50px}
+.order-btn button{width:89px;height:36px;line-height:36px;border:1px solid #2396F1;border-radius:15px;font-size:1.5rem;}
+.order-return{margin-right:15px;background:#fff;color:#2396F1;}
+.order-detail-success{background:#2396F1;color:#fff;}
+
+
+/*hotel_roomInfo.html*/
+.hotel_roomInfo{font-size:1.4rem;background:#fff;}
+::-webkit-scrollbar{width:1px;height:1px;}
+.title{line-height:50px;font-size:1.6rem;font-weight:600;padding-left:13px;}
+.title span{font-size:1.4rem;font-weight:normal;margin-left:5px;}
+.imgList{height:100px;overflow-x:scroll;overflow-y:hidden;}
+.imgList .imgBox{white-space:nowrap;}
+.imgList img{width:100px;height:100px;border-radius:3px;display:inline-block;}
+.content_hinfo{padding:15px;}
+.book_hinfo{color:#417506;margin-bottom:5px;}
+.content_hinfo p{clear:both;line-height:20px;width:100%;}
+.content_hinfo p .item{margin-right:5px;float:left;}
+.itemRight{float:right;}
+.itemRight span{font-size:1.8rem;color:#fc8215;}
+.infoList{margin-top:8px;width:100%;margin-bottom:45px;color:#666}
+.infoList li:nth-last-child(1){border-bottom:0}
+.infoList li{overflow:hidden;border-bottom:1px solid #eeeeee;padding-bottom:10px;}
+.infoList li .infoTitle{font-size:1.6rem;margin-bottom:6px;margin-top:8px;color:#333;}
+.infoList .infonum span{display:block;float:left;width:33%;line-height:22px;font-size:1.4rem;color:#666;}
+.bookBtn{width:100%;height:45px;background:#fc8215;text-align:center;line-height:45px;color:#ffffff;font-size:1.6rem;  position: fixed;bottom: 0;}
+.bookBtn:active{background:#ec7e1d;}
+
+/*hotel_bookRoom.html*/
+.hotel_bookRoom{font-size:1.4rem;background:#fff;color:#333;}
+.bar_hbr{width:100%;height:34px;line-height:34px;padding-left:15px;background:#eeeeee;border-bottom:1px solid #e6e6e6;color:#78787a;border-top:1px solid #e6e6e6;}
+.top{clear:both;overflow:hidden;}
+.top img{width:20%;height:70px;display:block;float:left;border-radius:5px;margin-left:10px;margin-top:12px;}
+.top .topRight{margin-top:16px;margin-left:10px;float:left;width:70%}
+.top .topRight .hotelName{font-size:1.8rem;font-weight:600;margin-bottom:6px;}
+.timeList{width:100%;padding-left:15px;padding-right:15px;margin-top:5px;margin-bottom:15px;}
+.timeList li{background:#ffffff;width:100%;height:35px;line-height:35px;border-bottom:1px solid #eeeeee;}
+.timeList li .text{float:left;font-size:1.6rem;}
+.timeList li .time{float:right;}
+.hotelInfo{width:100%;padding-left:15px;padding-right:15px;margin-bottom:15px;}
+.hotelInfo .item{color:#666666;}
+.hotelInfo .price{overflow:hidden;margin-bottom:5px;}
+.hotelInfo .infoLeft{font-size:1.6rem;float:left;}
+.hotelInfo .infoRight{float:right;font-size:1.6rem;font-weight:600;color:#FC8215;}
+.hotelInfo .item span{margin-right:15px;line-height:23px;}
+.amount li{height:45px;width:100%;border-bottom:1px solid #eeeeee;line-height:45px;}
+.amount li:last-child{border:none;}
+.amount li .room{float:left;padding-left:4%}
+.amount li .rightAmount{float:right;margin-top:8px;margin-right:20px;}
+.amount li .rightAmount .minus{width:28px;height:28px;text-align:center;line-height:24px;float:left;color:#ffffff;font-weight:600;border-top-left-radius:3px;border-bottom-left-radius:3px;background:#2396f1;font-size:22px;}
+.amount li .rightAmount .disabled{background:#8DC8F4}
+.amount li .rightAmount .box{height:28px;width:30px;background:#f7faff;text-align:center;line-height:28px;color:#555555;float:left;}
+.amount li .rightAmount .add{width:28px;height:28px;text-align:center;line-height:24px;float:left;color:#ffffff;font-weight:600;border-top-right-radius:3px;border-bottom-right-radius:3px;background:#2396f1;font-size:22px;}
+.amount li .rightAmount .add:active{background:#3291db;}
+.amount li .rightAmount .minus:active{background:#3291db;}
+.userList{width:100%;padding-left:15px;padding-right:15px;}
+.userList li{width:100%;overflow:hidden;min-height:45px;line-height:45px;border-bottom:1px solid #eeeeee;}
+.userList li:last-child{border-bottom:0;}
+.userList li .userLeft{color:#99999b;display:block;margin-right:10px;float:left;width:70px;}
+.userList li input{float:left;border:none;font-size:1.4rem;color:#333333;width:60%;height:45px;line-height:45px;}
+.userList .item{padding-bottom:10px;}
+.userList li .require{width:70px;height:35px;text-align:center;line-height:35px;color:#78787a;border:1px solid #78787a;float:left;border-radius:3px;margin-top:10px;margin-right:15px;}
+.userList li .require.current{background-color:#2196F3;color:#fff;border:0px;}
+.userList li .this{background:#2396f1;color:#ffffff;border:none;}
+.userList li .remark{width:100%;}
+.userList li .policy{line-height:19px;margin-top:13px;margin-bottom:13px;}
+.userList li .more_hbr{clear:both;width:50px;margin:0 auto;line-height:20px;overflow:hidden;margin-top:8px;}
+.userList li .more_hbr span{float:left;}
+.userList li .more_hbr .moreImg{float:left;width:12px;height:7px;background-image:url("../images/area/bottom_03.png");background-size:100% 100%;margin-top:6px;margin-left:6px;}
+.userList li .stop .moreImg{background-image:url("../images/area/top_03.png");background-size:100% 100%;}
+.userList p{border-bottom:1px solid #eee;}
+.userList p .about-check-user{width:70px;margin-right:10px;color:#999;display:inline-block;}
+.userList p input.about-check-info{color:#333;float:none}
+.policyList{margin-bottom:45px;}
+.bottom_hbr{position:fixed;bottom:0;width:100%;z-index:2;height:43px;border-top:1px solid #eeeeee;overflow:hidden;}
+.bottom_hbr div{float:left;text-align:center;line-height:43px;}
+.price_hbr{width:53%;background:#ffffff;}
+.price_hbr span{font-size:1.6rem;color:#fc8215;}
+.pay_hbr{width:47%;background:#fc8215;color:#ffffff;font-size:1.6rem;font-weight:600;}
+.pay_hbr{background:#ec7e1d;}
+
+/*hotel_pay_info*/
+.hotel_pay_info{font-size:1.4rem;}
+
+/*line_info_write.html*/
+
+/*top*/
+.line_info_write input{border:0;}
+.top_liw{width:100%;height:40px;line-height:40px;border:1px solid #DEDEDE;font-size:1.3rem;}
+.top_liw li{float:left;width:50%;text-align:center;}
+.top_liw span{margin-right:3px;color:#2296f0;}
+
+/*option*/
+.option{padding-left:3.3%;padding-right:3.3%;background:#fff;}
+.opt-type{padding-top:20px;font-size:1.5rem;}
+.opt-price{padding-bottom:14px;font-size:1.3rem;color:#666;}
+.opt-price span{margin-left:10px;color:#fc8215;}
+.option li{position:relative;border-bottom:1px solid #DEDEDE;}
+.opt-num{position:absolute;right:0;top:22px;}
+.opt-num a{display:inline-block;float:left;width:28px;height:28px;line-height:25px;background:#2296F0;text-align:center;color:#fff;font-size:2.5rem;}
+.opt-num a:active{background:#68b8f6;}
+.opt-num .amount{float:left;width:35px;height:28px;border-top:1px solid #9ED1F8;border-bottom:1px solid #9ED1F8;text-align:center;line-height:28px;color:#32312f;background:#e4f2fd;}
+
+/*温馨提示*/
+.reminder{padding-top:10px;padding-bottom:5px;background:#fff;}
+.reminder-con{margin:0 auto 15px;padding-left:5px;padding-right:5px;width:93%;border:1px dashed #FDB472;background:#FEFAF6;color:#666;font-size:1.3rem;line-height:1.8rem;padding-bottom:10px;}
+.reminder-con span{color:#333;}
+.reminder-tit{margin-top:12px;font-size:1.5rem;color:#a75309;}
+.reminder-con-top{margin-top:5px;}
+.reminder-con-bot{margin-top:10px;margin-bottom:5px;}
+
+/*联系人信息*/
+.contacts-msg{margin-top:10px;padding:0 3.3%;background:#fff;border-bottom:1px solid #EBEBEB;border-top:1px solid #EBEBEB;}
+.contacts-msg div{height:48px;line-height:48px;}
+.contacts-tit{border-bottom:1px solid #F0F0F0;font-size:1.5rem;}
+.name{border-bottom:1px solid #F0F0F0;}
+.name label,.phone label{float:left;margin-right:12%;display:inline-block;width:13%;}
+.name input,.phone input{float:left;margin-top:17px;width:65%;}
+
+/*游客信息*/
+.tourist-msg{margin-top:10px;padding-left:3.3%;padding-right:3.3%;border-bottom:1px solid #EBEBEB;border-top:1px solid #EBEBEB;background:#fff;}
+.tourist-tit{height:51px;line-height:51px;border-bottom:1px solid #F5F5F5;font-size:1.5rem;}
+.tourist-opt{line-height:50px;border-bottom:1px solid #eee;}
+.tourist-opt ul{float:left;width:88.6%;}
+.tourist-opt ul li{float:left;margin-right:4.4%;font-size:1.3rem;}
+.tourist-opt ul li .people{float:left;width:13px;height:13px;background-image:url("../images/area/opt_a.png");background-size:100% 100%;margin-top:18px;}
+.tourist-opt ul .choose .people{background-image:url("../images/area/opt_b.png");background-size:100% 100%;}
+.tourist-opt ul li span{float:left;margin-left:4px;}
+.btn-down{float:right;margin-top:22px;width:15px;height:9px;}
+
+/*tourist-bg*/
+.tourist-bg{height:3px;background:#F4F4F4;}
+
+/*姓名*/
+.tourist-name,.tourist-type{height:45px;line-height:45px;border-bottom:1px solid #F5F5F5;}
+
+/*身份证号*/
+.tourist-id{height:48px;line-height:48px;border-bottom:1px solid #F5F5F5;}
+.tourist-name label,.tourist-type label,.tourist-id label{float:left;display:inline-block;width:17%;}
+.tourist-name input,.tourist-type input,.tourist-id input{float:left;margin-top:17px;margin-left:8%;width:65%;}
+
+/*确认信息*/
+.tourist-confirm{margin-top:10px;height:58px;width:100%;line-height:58px;background:#fff;}
+.tourist-confirm li{float:left;width:50%;text-align:center;}
+.tourist-li-left{border-top:1px solid #DCDCDC;font-size:1.7rem;}
+.tourist-li-left num{color:#FC8215;}
+.tourist-li-right{background:#FC8215;color:#fff;font-size:2rem;}
+#trans-tooltip,#tip-arrow-top,#tip-arrow-bottom,#tip-left-top,#tip-top,#tip-right-top{height:0!important;padding:0!important;}
+#trans-content{padding:0!important;}

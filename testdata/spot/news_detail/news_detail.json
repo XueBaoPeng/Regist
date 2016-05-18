@@ -1,0 +1,12 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": {
+    "newsId": "10003",
+    "newsTitle": "航拍中国在泰山起航1",
+    "newsBrief": "多元化的战略目标以给宾客带来愉快的心灵体验和高品位的文化享受",
+    "newsDate": "2016-1-13",
+    "newsImage": "../src/images/spot/news-details.jpg",
+    "newsRate":"150"
+  }
+}

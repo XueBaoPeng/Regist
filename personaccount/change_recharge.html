@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改充值</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/change_recharge.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<div class="recharge-tit">充值金额</div>
+		<div class="recharge-money">
+			<span class="money-span-left">金额</span>
+			<input type="text" class="money-input" id="money-input" placeholder="请输入您要充值的金额">
+			<span class="hide">请填写正确的金额</span>
+			<span class="money-span-right">元</span>
+		</div>
+		<div class="recharge-tit">支付方式</div>
+		<div class="apply-con">
+			<ul>
+				<li>
+					<div class="li-left ico-pay-card">
+						<!--<img src="../src/images/personaccount/yl.png"  alt="">-->
+					</div>
+					<div class="li-mid">
+						<p>银行卡支付</p>
+					</div>
+					<div class="li-right">
+						<a href="javascritp:">请选择银行</a>
+						<!--<img src="../src/images/personaccount/btn.svg" alt="">-->
+						<span class="ico-hotel-btn"></span>
+					</div>
+				</li>
+				<div  id="container">
+					<script id="template" type="text/html">
+						{{each data as item index}}
+				<li  onclick="change(this)">
+					<div class="li-left">
+						<img src="{{item.image}}"  alt="">
+					</div>
+					<div class="li-mid">
+						<p>{{item.name}}</p>
+					</div>
+					<div class="li-right"  style="display:none">
+						<img src="../src/images/personaccount/opt_b.png"  alt="">
+					</div>
+				</li>
+						{{/each}}
+					</script>
+				</div>
+
+			</ul>
+		</div>
+
+		<button class="next" onclick="checkPhone()">下一步</button>
+	</div>
+</body>
+</html>

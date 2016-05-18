@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>常用旅客信息</title> 
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/personcenter.css" rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/contacts_info_del.js"></script>
+</head>
+<body>
+<div class="container" id="container">
+	<script type="text/html" id="template">
+    <ul class="passengerList">
+        {{each data as item i}}
+        <li data-id={{item.id}}>
+            <div class="left" onclick="active(this)"></div>
+            <div class="right">
+                <span class="name type">姓名</span> <span class="name">{{item.name}}</span>
+                <div class="clear"></div>
+                <span class="id type">{{item.contactType}}</span> <span class="id">{{item.number}}</span>
+            </div>
+        </li>
+        {{/each}}
+    </ul>    
+    <div class="notice" id="notice" style="display: block;">
+        <div class="noticeBox">
+            <p class="title">确认删除?</p>
+            <p class="content">确认删除选中的常用旅客，删除后将不可复原</p>
+            <div class="btns">
+                <div class="cancel" id="cancel" onclick="cancel()">取消</div>
+                <div class="delete" onclick="del()">确定</div>
+            </div>
+        </div>
+    </div>
+    </script>
+</div>
+</body>
+</html>

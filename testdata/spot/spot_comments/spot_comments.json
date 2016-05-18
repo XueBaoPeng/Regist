@@ -1,0 +1,45 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": {
+    "reputably": "98",
+    "scenery": "4.8",
+    "service": "4.6",
+    "traffic": "4.9",
+    "facilities": "4.7",
+    "statistics": {
+      "allCount": "365",
+      "praiseCount": "211",
+      "mediumCount": "56",
+      "badCount": "90",
+      "hasImgs": "89"
+    },
+    "comment": [
+      {
+        "headImg": "../src/images/guide/touxianhg.svg",
+        "nickname": "aaa",
+        "content": "网上预订很方便，体验非常不错，下次还会光顾,网上预订很方便，体验非常不错，下次还会光顾",
+        "pubDate": "2016-03-01",
+        "reply": "谢谢！我们努力为您提供百分服务",
+        "likeCount": "30",
+        "comImages":["../src/images/guide/line2.jpg","../src/images/guide/line3.jpg","../src/images/guide/line4.jpg"]
+      },{
+        "headImg": "../src/images/guide/touxianhg.svg",
+        "nickname": "bbb",
+        "content": "网上预订很方便，体验非常不错，下次还会光顾",
+        "pubDate": "2016-03-02",
+        "reply": "谢谢！我们努力为您提供百分服务",
+        "likeCount": "50",
+        "comImages":["../src/images/guide/line4.jpg"]
+      },{
+        "headImg": "../src/images/guide/touxianhg.svg",
+        "nickname": "ccc",
+        "content": "网上预订很方便，体验非常不错，下次还会光顾",
+        "pubDate": "2016-03-03",
+        "reply": "谢谢！我们努力为您提供百分服务",
+        "likeCount": "30",
+        "comImages":["../src/images/guide/line3.jpg","../src/images/guide/line4.jpg"]
+      }
+    ]
+  }
+}

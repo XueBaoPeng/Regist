@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>景区下单</title>
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/pay.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/spot/order_place.js"></script>
+</head>
+<body>
+<div class="orderNoneMain">
+    <div class="order-date-noSpread">
+        <div class="date-left"><div class="ico-spot-date"></div><span>游玩日期</span><span name="appDate" id="appDate" class="playdate" ></span>
+        </div>
+    </div>
+    <div class="topBox" id="content">
+        <script type="text/html" id="tempversion">
+            <div class="order-date ticket txt-omit">{{data.title}}</div>
+            <div class="dateTicket">
+                <ul id="versions">
+                    {{each data.ticketType as ticket index}}
+                    <li data-id="{{ticket.versionId}}" data-vname="{{ticket.name}}">
+                        <div class="discount"><span class="vername">{{ticket.name}}</span>{{if ticket.discount<10}}<span class="verdis">{{ticket.discount}}折</span>{{/if}}</div>
+                        <div class="price"><span class="emu">&yen;</span><span class="cash">{{ticket.price}}</span><span class="original">&yen;{{ticket.originalPrice}}</span></div>
+                        <div class="number">
+                            <a id="minus{{index}}" class="minus stopDown" onclick="minus(this)">-</a>
+                            <span class="amount">0</span>
+                            <a id="add{{index}}" class="add" onclick="add(this)">+</a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="ticketer">
+                <ul>
+                    <li>购票人信息</li>
+                    <li><span>手机</span><input id="relPhone" name="relPhone" type="text" class="ipt-full">{{purchaserPhone}}</input></li>
+                </ul>
+            </div>
+        </script>
+    </div>
+    <!--出行人信息-->
+    <div id="travelContact" class="info">
+        <div class="peopleTitle">出行人信息</div>
+        <div id="travInfo">
+            <script id="tmplContact" type="text/html">
+                {{each verContact as item}}
+                <div class="passage" data-id="{{item.verId}}">
+                    <div class="proversion">{{item.verName}}</div>
+                    <div class="peopleName">
+                        {{each item.contacts as cont idx}}
+                        {{if idx>3}}
+                        <span class="name hide" onclick="selectPerson(this)" data-id="{{cont.contactId}}">{{cont.contactName}}</span>
+                        {{else}}
+                        <span class="name" onclick="selectPerson(this)" data-id="{{cont.contactId}}">{{cont.contactName}}</span>
+                        {{/if}}
+                        {{/each}}
+                        {{if item.contacts.length>4}}
+                        <p class="peopleMore" onclick="showMore(this);"><a class="more">更多</a><span class="jiantou"></span></p>
+                        {{/if}}
+                    </div>
+                    <div class="travelPeople">
+                        <div class='people'>
+                            <div><span>出行人</span><input class='peopName'></div>
+                            <div><span>证件类型</span><select class='sel-full peopType'><option value='1'>身份证</option></select></div>
+                            <div><span>证件号码</span><input class='peopIdCard'></div>
+                        </div>
+                    </div>
+                    <div class="bankgap"></div>
+                </div>
+                {{/each}}
+            </script>
+        </div>
+    </div>
+    <!--订单-->
+    <div class="pay-order">
+        <div class="money">应付金额：<span>&yen;<span id="total"> 170.00</span></span></div>
+        <div class="goPay" onclick="orderBook(this)" data-url="pay_info.html">去支付</div>
+    </div>
+</div>
+</body>
+</html>

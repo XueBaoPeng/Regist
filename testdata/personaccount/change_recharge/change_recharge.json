@@ -1,0 +1,13 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": [{
+    "name":"微信支付",
+    "image":"../src/images/personaccount/pay-c.png"
+  },
+    {
+      "name":"微信支付",
+      "image":"../src/images/personaccount/pay-c.png"
+    }
+  ]
+}

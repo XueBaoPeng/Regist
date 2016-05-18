@@ -1,0 +1,64 @@
+{
+"list":[
+  {
+    "id":"0",
+    "thumbnail":"../testdata/area/line_search/img/line1.png",
+    "recommend":false,
+    "title":"赏花游·昆明+石林+大理+丽江+西双版纳8日7晚跟团游·送印象丽江+私人别墅+特色风味大餐",
+    "goodReputation":"98%",
+    "timeRange":"8日7晚",
+    "price":"3580",
+    "originalPrice":"3800",
+    "remnant":true,
+     "travelType":"跟团游"
+  },
+  {
+    "id":"0",
+    "thumbnail":"../testdata/area/line_search/img/line2.png",
+    "recommend":true,
+    "title":"吉林市+长白山+牡丹江+哈尔滨+镜泊湖6日5晚跟团游(2钻)·最美长白山+太阳岛风情 双卧",
+    "goodReputation":"99%",
+    "timeRange":"6日5晚",
+    "price":"1639",
+    "originalPrice":"1800",
+    "remnant":false,
+    "travelType":"跟团游"
+  },
+  {
+    "id":"0",
+    "thumbnail":"../testdata/area/line_search/img/line3.png",
+    "recommend":false,
+    "title":"赏花游·云南+普洱+西双版纳+九乡+原始森林公园+野象谷6日5晚跟团游·四飞！四飞！四飞！★世界唯一雨林主题公园",
+    "goodReputation":"100%",
+    "timeRange":"6日5晚",
+    "price":"5600",
+    "originalPrice":"6000",
+    "remnant":true,
+    "travelType":"跟团游"
+  },
+  {
+    "id":"0",
+    "thumbnail":"../testdata/area/line_search/img/line4.png",
+    "recommend":false,
+    "title":"赏花游·昆明+石林+大理+丽江+西双版纳8日7晚跟团游·送印象丽江+私人别墅+特色风味大餐",
+    "goodReputation":"98%",
+    "timeRange":"8日7晚",
+    "price":"3580",
+    "originalPrice":"3800",
+    "remnant":true,
+    "travelType":"跟团游"
+  },
+  {
+    "id":"0",
+    "thumbnail":"../testdata/area/line_search/img/line5.png",
+    "recommend":true,
+    "title":"吉林市+长白山+牡丹江+哈尔滨+镜泊湖6日5晚跟团游(2钻)·最美长白山+太阳岛风情 双卧",
+    "goodReputation":"99%",
+    "timeRange":"6日5晚",
+    "price":"1639",
+    "originalPrice":"1800",
+    "remnant":false,
+    "travelType":"跟团游"
+  }
+]
+}

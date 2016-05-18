@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>wifi</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" transform="translate(-116.000000, -51.000000)" stroke-linecap="round" stroke="#555555">
+            <g id="wifi" sketch:type="MSLayerGroup" transform="translate(116.000000, 52.000000)">
+                <path d="M0.258064516,3.783192 C4.5563871,-0.880488 11.5251613,-0.880488 15.8229677,3.783192" id="Stroke-1" sketch:type="MSShapeGroup"></path>
+                <path d="M2.69011613,6.421968 C5.64495484,3.215968 10.4361806,3.215968 13.3910194,6.421968" id="Stroke-3" sketch:type="MSShapeGroup"></path>
+                <path d="M5.12216774,9.060744 C6.73403871,7.311864 9.3472,7.311864 10.959071,9.060744" id="Stroke-5" sketch:type="MSShapeGroup"></path>
+                <path d="M9.01341935,13.282808 C8.47612903,13.865768 7.60490323,13.865768 7.0676129,13.282808 C6.53032258,12.699848 6.53032258,11.754568 7.0676129,11.171608 C7.60490323,10.588648 8.47612903,10.588648 9.01341935,11.171608 C9.55070968,11.754568 9.55070968,12.699848 9.01341935,13.282808 L9.01341935,13.282808 Z" id="Stroke-7" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

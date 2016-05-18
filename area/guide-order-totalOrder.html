@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>线路订单列表</title>
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link href="../src/css/area/guide-order-totalOrder.css" rel="stylesheet">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/area/guide-order-totalOrder.js"></script>
+</head>
+<body>
+<div class="screen-result">
+  <div class="wrapper">
+    <div class="scroller">
+      <div class="pullDown">
+        <span>下拉刷新</span>
+      </div>
+      <div class="totalMain">
+        <script type="text/html" id="template">
+          {{each list as item i}}
+          <div class="travel" onclick="detailClick(this)" data-url="guide-order-notPayfor.html">
+            <ul>
+              <li class="travelName"><span>{{item.title}}</span><a>{{item.status}}</a></li>
+              <li><p>{{item.text}}</p>
+                <time>发团日期：{{item.time}}</time>
+              </li>
+              <li><a>￥{{item.price}}</a><span>付款</span></li>
+            </ul>
+          </div>
+          {{/each}}
+        </script>
+      </div>
+      <div class="pullUp">
+        <span>上拉加载更多</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

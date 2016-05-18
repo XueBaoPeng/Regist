@@ -1,0 +1,380 @@
+body,html{font-family:'Microsoft YaHei',helvetica,arial,sans-serif;font-size:62.5%;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+.clear{clear:both;}
+.content{background-color:#ededed;}
+.hide{display:none;}
+.show{display:block;}
+.left{float:left;}
+.right{float:right;}
+.txt-omit{overflow:hidden;text-overflow:ellipsis;word-break:normal;}
+.txt-wrap{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bankgap{height:10px;background-color:#F6F6F6;}
+
+/*footer-tip样式*/
+.com-footer{position:fixed;bottom:0;width:100%;height:50px;background:#eee;text-align:center;border-top:1px solid #ccc}
+.com-footer a{color:#666}
+.com-footer nav.nav-menu-travel{width:25%;height:50px;float:left}
+.com-footer nav.nav-menu-spot{width:33.33%;height: 50px; float:left}
+.com-footer nav:hover{color:#2296f0}
+.com-footer-txt{font-size:1.2rem}
+
+
+/*iscroll*/
+.wrapper{position:relative;width:100%;height:100%;overflow:hidden;}
+.scroller{position:absolute;-webkit-tap-highlight-color:rgba(0,0,0,0);width:100%;min-height:101%;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0);-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;-o-text-size-adjust:none;text-size-adjust:none;}
+.pullDown{width:100%;text-align:center;font-size:12px;height:30px;line-height:30px;}
+.pullUp{width:100%;text-align:center;font-size:12px;height:50px;line-height:50px;}
+.active{color:#2196F3;border-bottom:2px solid #2196F3;}
+.current{color:#2196F3;border:0px;}
+/*相册*/
+.photo-full{z-index:999;position:absolute;top:0;left:0;width:100%;height:100%;background-color:#000;opacity:0.5;}
+.photo-full .oriphoto{width:100%;height:auto;}
+
+/*上传*/
+.btn-upload{display:inline-block;width:75px;height:75px;line-height:75px;}
+.btn-upload input[type="file"]{width:75px;height:75px;line-height:75px;}
+.btn-filespan{display:inline-block;}
+
+/*表单验证*/
+input.error { border: 1px solid red; }
+select.error { border: 1px solid red; }
+label.error { background:url("../images/unchecked.gif") no-repeat 0px 0px; padding-left: 16px; padding-bottom: 2px; font-weight: bold; color: #Ea5200; }
+label.checked {  background:url("../images/checked.gif") no-repeat 0px 0px;}
+
+.com-discount{display:inline-block;height:16px;width:30px;background-color:#fc8215;border-radius:3px;font-size:1.2rem !important;color:#fff !important;;text-align:center;}
+.com-quan{display:inline-block;height:16px;width:30px;background-color:#2296f0;border-radius:3px;font-size:1.2rem !important;;color:#fff !important;;text-align:center;}
+
+/*
+*外边距和内边距大小
+*定义规则：mar-  pad- 开头
+*/
+.mar-t5{margin-top:5px;}
+.mar-t10{margin-top:10px;}
+.mar-t20{margin-top:20px;}
+.mar-t30{margin-top:30px;}
+.mar-r5{margin-right:5px;}
+.mar-r10{margin-right:10px;}
+.mar-r20{margin-right:20px;}
+.mar-r30{margin-right:30px;}
+
+/*
+* 字体Font大小
+*定义规则：font-  开头
+*/
+.font-10{font-size:1rem !important;}
+.font-12{font-size:1.2rem !important;}
+.font-14{font-size:1.4rem !important;}
+.font-16{font-size:1.6rem !important;}
+.font-18{font-size:1.8rem !important;}
+.font-20{font-size:2rem !important;}
+
+
+/*
+* Color样式
+*定义规则：col-  开头
+*/
+.col-white{color:#fff;}
+.col-orange{color:#fc8215;}
+.col-blue{color:#2296f0;}
+
+/*
+* 背景样式
+*定义规则：bg-  开头
+*/
+.bg-gray{background:#eee;}
+.bg-orange{background-color:#fc8215;}
+.bg-blue{background-color:#2296f0;color:#fff;}
+
+/*
+* Input、select样式
+*定义规则：ipt-  开头
+*/
+.ipt-full{width:80%;height:32px;line-height:32px;border:solid 1px #dedede;border-radius:2px;text-indent:5px;color:#333;}
+.sel-full{width:80%;height:32px;border:1px solid #dedede;border-radius:2px;cursor:pointer;-moz-appearance:none;-webkit-appearance:none;}
+.txt-8{    display: inline-block; width: 80%; height: 30px; line-height: 30px; font-size: 1.4rem; color: #333;}
+
+/*
+* Icon图片样式
+*定义规则：ico-  开头
+*/
+.ico-sign-orange{background:#FE8115;color:#fff;text-align:center;}
+.ico-sign-blue{background:#2396F1;color:#fff;text-align:center;}
+.ico-tip{float:left;margin-top:2px;margin-right:5px;display:inline-block;width:3px;height:12px !important;background:#fc8215;border-radius:100%;}
+.ico-up{background:url(../images/line/icon.png) no-repeat 0 0;background-size:30px 13px;}
+.ico-down{background:url(../images/line/icon.png) no-repeat -16px 0;background-size:30px 13px;}
+.ico-uncheck{background:url(../images/opt_a.png) no-repeat 0 0;background-size:13px 13px;}
+.ico-check{background:url(../images/opt_b.png) no-repeat 0 0;background-size:13px 13px;}
+.icon-exp-up{background:url(../images/line/up.png) no-repeat center;background-size:15px 9px;}
+.icon-exp-down{background:url(../images/line/down.png) no-repeat center;background-size:15px 9px;}
+/*spot*/
+.ico-spot-date{float:left;margin-top:11px;margin-right:5px;background:url(../images/spot/spot.png) no-repeat 0 -40px;background-size:40px 571px;width:16px;height:16px;}
+.ico-spot-notice{float:left;margin-top:12px;margin-right:5px;background:url(../images/spot/spot.png) no-repeat 0 -80px;background-size:40px 571px;width:14px;height:16px;}
+.ico-spot-evaluate{float:left;margin-top:12px;margin-right:3px;background:url(../images/spot/spot.png) no-repeat 0 -116px;background-size:40px 571px;width:16px;height:17px;}
+.ico-ticket-book{margin:0 auto;background:url(../images/spot/spot.png) no-repeat 0 -216px;background-size:40px 571px;width:40px;height:40px;}
+.ico-spot-msg{margin:0 auto;background:url(../images/spot/spot.png) no-repeat 0 -261px;background-size:40px 571px;width:40px;height:40px;}
+.ico-spot-pic{margin:0 auto;background:url(../images/spot/spot.png) no-repeat 0 -531px;background-size:40px 571px;width:40px;height:40px;}
+.ico-spot-news{margin:0 auto;background:url(../images/spot/spot.png) no-repeat 0 -306px;background-size:40px 571px;width:40px;height:40px;}
+.ico-spot-show-msg{margin-left:28px;margin-bottom:5px;background:url(../images/spot/up_down.png) no-repeat 0 0;background-size:12px 19px;width:12px;height:7px;}
+.ico-spot-like{display:inline-block;background:url(../images/spot/spot.png) no-repeat 0 -101px;background-size:40px 571px;width:12px;height:11px;}
+.ico-spot-like-write{margin-right:3px;background:url(../images/hotel/hotel.png) no-repeat 0 -68px;background-size:27px 268px;width:15px;height:17px;}
+.ico-share-wx{background:url(../images/spot/spot.png) no-repeat 0 -486px;background-size:40px 571px;}
+.ico-share-qq{background:url(../images/spot/spot.png) no-repeat 0 -486px;background-size:40px 571px;}
+.ico-share-friend{background:url(../images/spot/spot.png) no-repeat 0 -171px;background-size:40px 571px;}
+.ico-share-space{background:url(../images/spot/spot.png) no-repeat 0 -441px;background-size:40px 571px;}
+.ico-share-sina{background:url(../images/spot/spot.png) no-repeat 0 -396px;background-size:40px 571px;}
+.ico-spot-load{display:block;margin-left:20px;margin-top:20px;background:url(../images/spot/spot.png) no-repeat 0 -138px #eee;background-size:40px 571px;width:32px;height:28px;}
+.ico-spot-bus{float:left;margin-top:2px;margin-right:3px;background:url(../images/spot/spot.png) no-repeat 0 0;background-size:40px 571px;width:16px;height:18px;}
+.ico-spot-car{float:left;margin-top:4px;margin-right:3px;background:url(../images/spot/spot.png) no-repeat 0 -22px;background-size:40px 571px;width:16px;height:13px;}
+.ico-spot-show{background:url(../images/hotel/pay.png) no-repeat 0 0;}
+.ico-spot-time{float:left;margin-top:3px;margin-right:3px;background:url(../images/spot/spot.png) no-repeat 0 -61px;background-size:40px 571px;width:15px;height:15px;}
+.ico-spot-down{background:url(../images/spot/up_down.png) no-repeat 0 0px;background-size:12px 19px;width:12px;height:7px;}
+.ico-spot-up{background:url(../images/spot/up_down.png) no-repeat 0 -12px;background-size:12px 19px;width:12px;height:7px;}
+.ico-upload-photo{background:url(../images/spot/spot.png) no-repeat 0 -12px;background-size:40px 571px;width:32px;height:28px;}
+
+/*hotel*/
+.ico-line{background:url(../images/hotel/hotel.png) no-repeat 0 -238px;background-size:27px 268px;width:3px;height:12px;}
+.ico-hotel-call,.ico-hotel-call2{display:inline-block;float:left;margin-top:13px;margin-right:10px;background-image:url(../images/hotel/hotel.png);background-repeat:no-repeat;background-size:27px 268px;width:20px;height:20px;}
+.ico-hotel-call2{margin-top:0;margin-right:0;}
+.ico-hotel-charge{position:absolute;top:-8px;left:-21px;background:url(../images/hotel/hotel.png)  no-repeat;background-position:0 -433px;width:32px;height:16px;}
+.ico-hotel-score div{float:left;margin-right:4px;background-image:url(../images/hotel/hotel.png);background-repeat:no-repeat;background-position:0 -177px;background-size:27px 268px;width:15px;height:15px;}
+.ico-hotel-score div.ico-hotel-yellow{background-size:27px 268px;background-position:0 -70px;}
+.ico-use-active{float:left;margin-right:5px;display:inline-block;background:url(../images/hotel/hotel.png) no-repeat 0px -253px;border-radius:50%;background-size:27px 268px;width:15px;height:15px;}
+.ico-use{background:url(../images/hotel/hotel.png) no-repeat 0px -69px #CDCDCD;float:left;margin-right:5px;display:inline-block;border-radius:50%;background-size:27px 268px;width:15px;height:15px;}
+.ico-hotel-head{position:absolute;left:15px;top:23px;z-index:2;border-radius:50%;background:url(../images/hotel/hotel.png) no-repeat 0 -139px;background-size:27px 268px;width:37px;height:37px;}
+.ico-hotel-btn{display:inline-block;float:right;background:url(../images/hotel/hotel.png) no-repeat 0 -42px;background-size:27px 268px;width:10px;height:16px;}
+.ico-line-btn{display:inline-block;float:right;margin-top:2px;background:url(../images/hotel/hotel.png) no-repeat 0 -84px;width:10px;height:16px;}
+.ico-discount-yellow{display:inline-block;background:url(../images/hotel/hotel.png) no-repeat 0 -90px;background-size:27px 268px;width:29px;height:23px;line-height:23px;color:#fff;text-align:center;font-style:normal;}
+.ico-discount-blue{display:inline-block;background:url(../images/hotel/hotel.png) no-repeat 0 -118px;background-size:27px 268px;width:28px;height:21px;line-height:21px;color:#fff;text-align:center;font-style:normal;}
+.icon-hotel-map{display:inline-block;background:url(../images/hotel/hotel.png) no-repeat 0 -21px;background-size:29px 225px;width:12px;height:16px;color:#fff;text-align:center;font-style:normal;}
+/*pay*/
+.ico-pay-card{float:left;margin-top:22px;margin-right:7px;background:url(../images/hotel/pay.png) no-repeat 0 -125px;background-size:61px 320px;width:28px;height:28px;}
+.ico-pay-main{float:left;margin-top:20px;margin-right:7px;background:url(../images/hotel/pay.png) no-repeat 0 -158px;background-size:61px 320px;width:28px;height:28px;}
+.ico-pay-weixin{float:left;margin-top:24px;margin-right:7px;background:url(../images/hotel/pay.png) no-repeat 0 -180px;background-size:61px 315px;width:28px;height:30px}
+.ico-pay-zfb{float:left;margin-top:20px;margin-right:7px;background:url(../images/hotel/pay.png) no-repeat 0 -210px;background-size:61px 320px;width:28px;height:28px;}
+.ico-tip-ok{margin:60px auto 0;background:url(../images/hotel/pay.png) no-repeat 0 -60px;background-size:61px 320px;width:60px;height:60px;}
+.ico-pay-show{display:inline-block;background:url(../images/hotel/pay.png) no-repeat 0 0;background-size:61px 320px;width:12px;height:7px;}
+.ico-pay-hide{background:url(../images/hotel/pay.png) no-repeat 0 -12px;background-size:61px 320px;width:12px;height:7px;}
+.ico-pay-people{display:inline-block;margin-right:2px;margin-top:9px;background:url(../images/hotel/pay.png) no-repeat 0 -243px;background-size:61px 320px;width:14px;height:12px;}
+
+/*personaccount*/
+.ico-account-close{float:right;display:inline-block;margin-right:10px;margin-top:10px;background:url(../images/personaccount/personaccount.png) no-repeat 0 -231px;background-size:44px 619px;width:16px;height:16px;}
+.ico-bank{float:left;margin-top:20px;margin-right:7px;width:27px;height:27px;background:url(../images/personaccount/bank.png) no-repeat;}
+.ico-bank-zx{background-position:0 -248px;background-size:31px 276px;}
+.ico-bank-zg{background-position:0 -215px;background-size:31px 276px;}
+.ico-bank-js{background-position:0 -31px;background-size:31px 276px;}
+.ico-bank-gs{background-position:0 0;background-size:31px 276px;}
+.ico-bank-ny{background-position:0 -65px;background-size:31px 276px;}
+.ico-bank-zs{background-position:0 -97px;background-size:31px 276px;}
+.ico-add-success{margin:0 auto;background:url(../images/personaccount/personaccount.png) no-repeat 0 -511px;background-size:44px 619px;width:44px;height:44px;}
+.ico-buy-fail{float:left;display:inline-block;background:url(../images/personaccount/personaccount.png) no-repeat 0 -252px;background-size:44px 619px;width:44px;height:44px;}
+.ico-buy-success{float:left;display:inline-block;background:url(../images/personaccount/personaccount.png) no-repeat 0 -511px;background-size:44px 619px;width:44px;height:44px;}
+.ico-card-icon{float:left;margin-left:4.6%;margin-top:17px;width:7.5%;height:28px;background:url(../images/personaccount/bank.png) no-repeat 0 -97px;background-size:31px 276px;width:28px;}
+.ico-cash-left-s{background:url(../images/personaccount/personaccount.png) no-repeat 0 -511px;background-size:44px 619px;width:44px;height:44px;}
+
+/*personaccount 个人账户 中银行卡列表*/
+.icon-bank-zx{background:url(../images/personaccount/bank.png) no-repeat;width:30px;height:30px;background-position:0 -248px;background-size:31px 276px;}
+.icon-bank-zg{background-position:0 -215px;background-size:31px 276px;}
+.icon-bank-js{background-position:0 -31px;background-size:31px 276px;}
+.icon-bank-gs{background-position:0 0;background-size:31px 276px;}
+.icon-bank-ny{background-position:0 -65px;background-size:31px 276px;}
+.icon-bank-zs{background-position:0 -97px;background-size:31px 276px;}
+/*personcenter个人中心首页小图标*/
+.icon-tap-home{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:0px 0px;}
+.icon-tap-order{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-30px 0px;}
+.icon-tap-holiday{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-60px 0px;}
+.icon-tap-person{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-90px 0px;}
+
+.icon-tap-home:hover{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:0px -30px;}
+.icon-tap-order:hover{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-30px -30px;}
+.icon-tap-holiday:hover{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-60px -30px;}
+.icon-tap-person:hover{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-90px -30px;}
+
+.icon-person-order{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:0px -60px;}
+.icon-person-money{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-30px -60px;}
+.icon-person-collect{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-60px -60px;}
+.icon-person-travel{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-90px -60px;}
+.icon-person-friend{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-120px -30px;}
+.icon-person-set{background-size:180px 90px;background-image:url(../images/personcenter/personcenter_index.png);background-repeat:no-repeat;background-position:-150px -60px;}
+
+/*.ico-pay-card {*/
+
+/*margin-top: 28px;*/
+
+/*background: url(../images/personaccount/bank.png) no-repeat 0 -192px;*/
+
+/*background-size: 31px 276px;*/
+
+/*width: 31px;*/
+
+/*height: 18px;*/
+
+/*}*/
+.ico-pay-wx{margin-top:24px;background:url(../images/personaccount/bank.png) no-repeat 0 -130px;background-size:31px 276px;width:28px;height:25px;}
+.ico-pay-zfb{margin-top:22px;background:url(../images/personaccount/bank.png) no-repeat 0 -160px;background-size:31px 276px;width:28px;height:28px;}
+.ico-acc-cdt{margin-top:8px;background:url(../images/personaccount/personaccount.png) no-repeat -2px 0;background-size:44px 619px;width:19px;height:24px;}
+.ico-acc-tb{margin-top:8px;background:url(../images/personaccount/personaccount.png) no-repeat 0 -29px;background-size:44px 619px;width:24px;height:24px;}
+.ico-acc-yhq{margin-top:14px;background:url(../images/personaccount/personaccount.png) no-repeat 0 -62px;background-size:44px 619px;width:24px;height:17px;}
+.ico-acc-jf{margin-top:8px;background:url(../images/personaccount/personaccount.png) no-repeat 0 -87px;background-size:44px 619px;width:24px;height:24px;}
+.ico-charge-left{background:url(../images/personaccount/personaccount.png) no-repeat -1px -117px;background-size:44px 619px;width:16px;height:16px;}
+.ico-buy-left{background:url(../images/personaccount/personaccount.png) no-repeat 0 -140px;background-size:44px 619px;width:17px;height:17px;}
+.ico-cash-left{background:url(../images/personaccount/personaccount.png) no-repeat 0 -163px;background-size:44px 619px;width:17px;height:16px;}
+.ico-money-left{background:url(../images/personaccount/personaccount.png) no-repeat 0 -186px;background-size:44px 619px;width:18px;height:16px;}
+.ico-card-left{background:url(../images/personaccount/personaccount.png) no-repeat 0 -211px;background-size:44px 619px;width:18px;height:13px;}
+.ico-detail-card{background:url(../images/personaccount/bank.png) no-repeat 0 -97px;background-size:31px 276px;}
+.ico-detail-close{background:url(../images/personaccount/personaccount.png) no-repeat 0 -231px;background-size:44px 619px;width:16px;height:16px;}
+.ico-left-r{background:url(../images/personaccount/bank.png) no-repeat 0 -97px;background-size:31px 276px;}
+.ico-left-wx{background:url(../images/personaccount/bank.png) no-repeat 0 -130px;background-size:31px 276px;}
+.ico-left-zfb{background:url(../images/personaccount/bank.png) no-repeat 0 -160px;background-size:31px 276px;}
+.ico-record-zfb{background:url(../images/personaccount/bank.png) no-repeat 0 -160px;background-size:31px 276px;width:28px;height:28px;}
+.ico-record-card{background:url(../images/personaccount/bank.png) no-repeat 0 -248px;background-size:31px 276px;width:27px;height:28px;}
+.ico-record-wx{background:url(../images/personaccount/bank.png) no-repeat 0 -130px;background-size:31px 276px;width:28px;height:25px;}
+.ico-transaction-tk{background:url(../images/personaccount/personaccount.png) no-repeat 0 -301px;background-size:44px 619px;width:30px;height:30px;}
+.ico-transaction-buy{background:url(../images/personaccount/personaccount.png) no-repeat 0 -336px;background-size:44px 619px;width:30px;height:30px;}
+.ico-transaction-tx{background:url(../images/personaccount/personaccount.png) no-repeat 0 -371px;background-size:44px 619px;width:30px;height:30px;}
+.ico-transaction-cz{background:url(../images/personaccount/personaccount.png) no-repeat 0 -406px;background-size:44px 619px;width:30px;height:30px;}
+.ico-transaction-zz{background:url(../images/personaccount/personaccount.png) no-repeat 0 -441px;background-size:44px 619px;width:30px;height:30px;}
+.ico-transaction-yj{background:url(../images/personaccount/personaccount.png) no-repeat 0 -476px;background-size:44px 619px;width:30px;height:30px;}
+.ico-transaction-tb{background:url(../images/personaccount/personaccount.png) no-repeat 0 -560px;background-size:44px 619px;width:30px;height:30px;}
+.ico-new-add{float:left;margin-top:13px;margin-right:5px;display:inline-block;background:url(../images/personcenter/personcenter.png) no-repeat 0 0;background-size:32px 291px;width:20px;height:20px;}
+.ico-sex-man{float:left;margin-left:5px;margin-top:4px;background:url(../images/personcenter/personcenter.png) no-repeat 0 -210px;background-size:32px 291px;width:15px;height:15px;}
+.ico-sex-woman{float:left;margin-left:5px;margin-top:4px;background:url(../images/personcenter/personcenter.png) no-repeat 0 -276px;background-size:32px 291px;width:15px;height:15px;}
+.ico-cd-star-gray{float:right;margin-right:15px;background:url(../images/personcenter/personcenter.png) no-repeat 0 -253px;background-size:32px 291px;width:19px;height:18px;}
+.ico-cd-star{float:right;margin-right:15px;background:url(../images/personcenter/personcenter.png) no-repeat 0 -230px;background-size:32px 291px;width:19px;height:18px;}
+.ico-head{margin-top:30px;}
+
+/*personcenter*/
+.ico-choose-no{width:13px;height:13px;background:url(../images/opt_a.png) no-repeat 0 0;background-size:13px 13px;}
+.ico-choose-have{width:13px;height:13px;background:url(../images/opt_b.png) no-repeat 0 0;background-size:13px 13px;}
+/*线路的icon   .None*/
+.Eat{ background-image:url(../images/line/xingcheng@3x.png); background-position:0 0; }
+.Live{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -20px;}
+.Trip{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -40px;}
+.Play{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -200px;} /*no*/
+.Buy{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -60px}
+.Joy{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -80px;}
+.FrePlay{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -100px; }
+.RouteInfo{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -120px;}
+.Car{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -140px;}
+.Train{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -160px;}
+.Plane{background-image:url(../images/line/xingcheng@3x.png); background-position:0 -180px;}
+/*hotel-cons 酒店设施图标*/
+.WIFI{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:0 0}
+.TCW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-26px 0}
+.KFT{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-52px 0}
+.ZSCT{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-78px 0}
+.XSCT{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-104px 0}
+.ZC{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-286px -26px}
+.JJFW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-260px -52px}
+.DT{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-130px 0}
+.KT{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-156px 0}
+.NQ{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-182px 0}
+.HYS{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-208px 0}
+.SWYYC{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-234px 0}
+.SNYYC{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-260px 0}
+.JSF{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-286px 0}
+.WQ{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-312px 0}
+.SN{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:0 -26px}
+.SPA{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-52px -26px}
+.LQ{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-78px -26px}
+.QPS{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-182px -26px}
+.TQ{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-104px -26px}
+.CFJ{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-208px -26px}
+.JB{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-234px -26px}
+.WZASS{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-260px -26px}
+.AQTD{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-156px -26px}
+.MHQ{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-130px -26px}
+.CS{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-26px -26px}
+.SJFW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-260px -52px}
+.JXFW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:0 -52px}
+.XYFW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-26px -52px}
+.YYFW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-52px -52px}
+.XSQT{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-78px -52px}
+.XDCW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-104px -52px}
+.JDWB{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-130px -52px}
+.DTQKJ{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-156px -52px}
+.SWZX{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-182px -52px}
+.XLJC{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-208px -52px}
+.WYF{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-234px -52px}
+.JYFW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-312px -26px}
+.SZFW{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-312px -26px}
+.JJFW-charge{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-286px -52px}
+.SJFW-charge{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-286px -52px}
+.SZFW-charge{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-312px -52px}
+.ZC-charge{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:0 -78px}
+.JZFW-charge{background-size:337px 104px;background-image:url(../images/hotel/hotel_icon.png);background-repeat:no-repeat;background-position:-312px -52px}
+
+/*交易记录*/
+.ico-WithDrawOrder{background-size:30px 180px;background-image:url(../images/ico_records@2x.png);background-position:0 0;}
+.ico-PayOrder{background-size:30px 180px;background-image:url(../images/ico_records@2x.png);background-position: 0 -30px;}
+.ico-Drawing{background-size:30px 180px;background-image:url(../images/ico_records@2x.png); background-position:0 -60px;}
+.ico-Recharge{background-size:30px 180px;background-image:url(../images/ico_records@2x.png);background-position: 0 -90px;}
+.ico-Transfer{background-size:30px 180px;background-image:url(../images/ico_records@2x.png);background-position:0 -120px;}
+.ico-Earning{background-size:30px 180px;background-image:url(../images/ico_records@2x.png) ;background-position: 0 -150px;}
+.ico-VirtualPayOrder{background-size:30px 180px;background-image:url(../images/ico_records@2x.png);background-position: 0 -30px;}
+.ico-WithDrawOrder_Virtual{background-size:30px 180px;background-image:url(../images/ico_records@2x.png);background-position:0 0;}
+.ico-RechargeVirtual{background-size:30px 180px;background-image:url(../images/ico_records@2x.png);background-position: 0 -90px;}
+
+/*支付*/
+.ico-WeChat{background-size:28px 140px;background-image:url(../images/ico_pay@2x.png);background-position: 0 0;}
+.ico-AliPay{background-size:28px 140px;background-image:url(../images/ico_pay@2x.png);background-position: 0 -28px;}
+.ico-BillPay{background-size:28px 140px;background-image:url(../images/ico_pay@2x.png);background-position: 0 -56px;}
+.ico-BillPeronalBank{background-size:28px 140px;background-image:url(../images/ico_pay@2x.png);background-position: 0 -56px;}
+.ico-Balance{background-size:28px 140px;background-image:url(../images/ico_pay@2x.png);background-position: 0 -84px;}
+.ico-Tubei{background-size:28px 140px;background-image:url(../images/ico_pay@2x.png);background-position: 0 -112px;}
+
+
+/*hotel_images.html 仿spot_pic*/
+.spot-pic{margin:0 auto;display:inline-block;padding:4%;}
+.spot-pic a:nth-child(2n+1){display:inline-block;margin-right:4%;margin-bottom:4%;float:left;width:48%;height: 165px;}
+.spot-pic a:nth-child(2n){display:inline-block;margin-right:0%;margin-bottom:4%;float:left;width:48%;height: 165px;}
+.spot-pic img{width:100%;height: 165px;}
+
+/*酒店热门景区*/
+/*下面的热门景点*/
+.spot-bottom{background:#eee;}
+.around-spot{overflow:hidden;padding-left:4%;padding-right:4%;padding-top:10px;font-size:16px;color:#333;margin:10px 0 10px}
+.around-spot .spot-left,.around-spot .spot-right{border-bottom:1px solid #ccc;line-height:20px;padding:7px 0;float:left;width:25%}
+.around-spot .spot-center{float:left;width:50%;}
+.around-spot .spot-center .spot-center-pic{width:50px;vertical-align:middle;}
+.around-spot .spot-center img{padding-left:10px;padding-right:10px;}
+.spotImg{padding:0 4% 4% 4%;overflow:hidden;}
+.spotImg dl{float:left;width:48%;margin-right:4%;background:#fff;}
+.spotImg dl:nth-child(2n){margin-right:0}
+.spotImg dl dt img{width:100%;min-height:125px;border:0;}
+.spotImg dl dd{background:#fff;padding:10px 5px;}
+.spotImg dl dd p{font-size:1.4rem;color:#333;text-align:left;}
+.spotImg .spot-center{overflow: hidden;}
+.spotImg .left{float:left;color:#999;font-size:1.2rem;line-height:2.0rem}
+.spotImg .right{float:right}
+.spotImg .right b{font-size: 1.6rem; color:#fc8215}
+.spotImg .right a{font-size: 1.0rem;color:#fc8215}
+.spotImg .right i{font-size: 1.0rem; color:#999}
+
+/*
+* 按钮样式,包括a,input button
+*定义规则：btn-  开头
+*/
+.btn-hp{width:100%;height:50px;line-height:50px;border:0;text-align:center;}
+.btn-mid-org{width:50%;background:#fc8215;color:#fff;font-size:1.8rem;}
+.btn-mid-whi{width:50%;background:#fff;color:#000;font-size:1.8rem;}
+.btn-blue-large{border:0;width:100%;background:#2296F0;color:#fff;text-align:center;}
+.btn-orange-large{width:100%;background:#fc8215!important;text-align:center;color:#fff!important;border:none;}
+.btn-write-small{border:0;width:50%;background:#ffffff;color:#333333;text-align:center;}
+.btn-orange-small{border:0;width:50%;background:#fc8215!important;text-align:center;color:#ffffff!important;}
+.btn-link{display:inline-block;text-decoration:none;text-align:center;color:#000;border:1px solid #ccc;border-radius:5px;}
+.btn-smaller{width:60px;height:30px;line-height:30px;}
+.btn-small{width:70px;height:30px;line-height:30px;}
+.btn-mar-r{margin-right:10px;}
+.btn-mar-l{margin-left:10px;}
+/*
+*登录注册密码header 公共部分
+*/
+
+.header{ position:relative;width:100%; height:40px;background:#2296f0;line-height: 40px; text-align: center; font-size: 1.6rem;color:#fff;}
+.header-left{ position:absolute;left:4%;top:11px;width:3.6%; height:20px;;background:url("../images/person/back.png")no-repeat;background-size: 10px 17px;}
+
+
+
+

@@ -1,0 +1,9 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": {
+    "success":"充值成功",
+    "image":"../src/images/personaccount/success.png",
+    "price":"500元"
+  }
+}

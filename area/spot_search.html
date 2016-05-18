@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>景点搜索</title>
+  <link href="../src/css/reset.css" rel="stylesheet">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/pay.css">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/config.js"></script>
+  <script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/area/spot_search.js"></script>
+</head>
+<body class="bg-color-white1">
+<div class="container">
+  <!-- 筛选条件 -->
+  <div class="navigation">
+    <ul class="nav-ul" id="searchTab">
+      <li data-type="1" class="sales active">销量</li>
+      <li data-type="2" class="price">价格</li>
+      <li data-type="3" class="appraise">好评率</li>
+      <li data-type="0" class="filter filter">筛选</li>
+    </ul>
+  </div>
+  <!--筛选内容-->
+  <div id="search" class="hotel-type hide">
+    <div class="search-top">
+      <div class="hotel-type-option">
+        <ul class="option-ul scroller" id="searchType">
+          <li class="option-li-active"><a>景区主题</a><span class="option-tip"></span></li>
+          <li><a>促销优惠</a><span class="option-tip"></span></li>
+        </ul>
+      </div>
+      <div class="hotel-type-detail clear ">
+        <div class="" id="searchSubType">
+          <ul class="detail-ul subject this">
+            <li data-value="">不限</li>
+            <li>名胜古迹</li>
+            <li>自然风景</li>
+            <li>主题公园</li>
+            <li>水乡古镇</li>
+            <li>文化宗教</li>
+            <li>户外拓展</li>
+            <li>农家田园</li>
+          </ul>
+          <ul class="detail-ul onSale">
+            <li data-value="">不限</li>
+            <li>尾品促销</li>
+            <li>折扣促销</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <div class="hotel-opt-btn clear">
+      <div class="hotel-opt-no" id="btnClear">清空</div>
+      <div class="hotel-opt-yes" id="btnConfirm">确定</div>
+    </div>
+  </div>
+  <!-- 查询结果 -->
+  <div id="searchlist" class="screen-result">
+    <div class="wrapper">
+      <div class="scroller">
+        <div class="pullDown">
+          <span>下拉刷新</span>
+        </div>
+        <ul class="result-ul">
+          <script type="text/html" id="template">
+            {{each list as list i}}
+            <li class="result-li" onclick="detailClick(this)" data-url="spot_ticket_book.html?id=" data-id="{{list.id}}">
+              <div class="result-li-left">
+                {{if list.recommend}}
+                <div class="result-tip">区域推荐</div>
+                {{/if}}
+                <img src={{list.thumbnail}} alt="">
+              </div>
+              <div class="result-li-right">
+                <p class="p-sketch">
+                  {{list.title}}
+                </p>
+                <p class="p-rate">好评率：{{list.goodReputation}}</p>
+                <p class="p-address-spot clear">{{list.location}}</p>
+                <p class="p-tip-spot">
+                  <del>&yen;{{list.originalPrice }}</del>
+                  {{if list.discount}}
+                  <span class="span-zhe">折</span>
+                  {{/if}}
+                  {{if list.remnant}}
+                  <span class="span-wei">尾</span>
+                  {{/if}}
+                </p>
+                <p class="p-price">
+                  <i>&yen;</i><span>{{list.price}}</span>
+                  起
+                </p>
+              </div>
+            </li>
+            {{/each}}
+          </script>
+
+        </ul>
+        <div class="pullUp">
+          <span>上拉加载更多</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

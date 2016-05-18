@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>头像 copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="酒店点评" sketch:type="MSArtboardGroup" transform="translate(-16.000000, -227.000000)">
+            <g id="点评1" sketch:type="MSLayerGroup" transform="translate(-9.000000, 227.000000)">
+                <g id="头像-copy" transform="translate(25.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <path d="M13.6216216,28 C21.1446355,28 27.2432432,21.7319865 27.2432432,14 C27.2432432,6.2680135 21.1446355,0 13.6216216,0 C6.09860773,0 0,6.2680135 0,14 C0,21.7319865 6.09860773,28 13.6216216,28 Z" id="头像" fill="#FFFFFF"></path>
+                    <path d="M7.15099039,11.427749 C7.15099039,7.75752301 10.0461074,4.78198605 13.6171761,4.78198605 C17.1883587,4.78198605 20.0833238,7.75752301 20.0833238,11.427749 C20.0833238,13.6103821 19.0596693,15.5469512 17.4789913,16.7586053 C20.4177279,17.830689 22.8113337,20.0854895 24.1180595,22.9659749 C26.0833346,20.5379414 27.265357,17.4165467 27.265357,14.0114421 C27.265357,6.27309344 21.1617686,0 13.6327545,0 C6.10358837,0 0,6.27309344 0,14.0114421 C0,17.3904603 1.16393622,20.4901813 3.10219609,22.9101702 C4.4183829,20.0476485 6.81065883,17.8097964 9.74244216,16.7486862 C8.16917336,15.5364073 7.15099039,13.6042901 7.15099039,11.427749 Z" id="iconfont-touxiang" fill="#CDB485"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

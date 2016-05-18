@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>线路订单详情</title>
+     <link href="../src/css/reset.css" rel="stylesheet">
+     <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/personcenter.css" rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>   
+    <script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/widget/layer/layer.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/line_order_detail.js"></script>
+</head>
+<body>
+    <div class="spotMain" id="spotMain">
+    	<script type="text/html" id="template">
+    	<div class="about-order">
+    		<p><lable>订单编号：</lable><span>{{data.orderCode}}</span></p>
+    		<p><lable>订单金额：</lable>{{data.orderPrice}}</p>
+			{{if data.orderState==1}}
+    		<p><lable>订单状态：</lable>待付款</p>
+			{{else if data.orderState==2}}
+			<p><lable>订单状态：</lable>已付款</p>
+			{{else if data.orderState==3}}
+			<p><lable>订单状态：</lable>已完成</p>
+			{{else if data.orderState==4}}
+			<p><lable>订单状态：</lable>已关闭</p>
+			{{else if data.orderState==5}}
+			<p><lable>订单状态：</lable>已确认</p>
+			{{/if}}
+    		<p><lable>下单时间：</lable>{{data.orderTime}}</p>
+    	</div>
+    	<div class="about-line">
+    		<p><lable>线路名称：</lable>{{data.lineTitle}}</p>
+    		<p><lable>出发城市：</lable>{{data.startCity}}</p>
+    		<p><lable>出团日期：</lable>{{data.startDate}}</p>
+    		<p><lable>回团日期：</lable>{{data.endDate}}</p>	
+    	</div>
+    	<div class="about-travel">
+    		<p class="title">出行人信息</p>
+    		{{each data.travelInfo as travelInfo i}}
+    		<p><lable>联系人：</lable>{{travelInfo.name}}</p>
+    		<p><lable>证件类型：</lable>{{travelInfo.IpNum}}</p>
+    		<p><lable>证件号：</lable>{{travelInfo.tel}}</p>
+    		<p class="about-line"></p>
+    		{{/each}}    		
+    	</div>
+    	<div class="about-contact-person">
+    		<p><lable>联系人：</lable>{{data.contact}}</p>
+    		<p><lable>手机号：</lable>{{data.contactPhone}}</p>
+    	</div>
+    	<div class="about-ele-code">
+    		<p><lable>电子码：</lable>{{data.eleCode}}</p>
+    	</div>
+    	<div class="about-bottom">
+    		{{if data.orderState==1}}
+			<span class="complain" onclick="delClick()">取消订单</span>
+			<span class="comment" onclick="payClick()" data-url="../line/pay_info.html">立即付款</span>
+	      	{{else if data.orderState==2}}
+			<span class="commment-button" onclick="refundClick()">退订</span>
+	      	{{else if data.orderState==4 || data.orderState==5 }}
+	      	<span class="comment" onclick="attClick()" style="display:none">参团</span>
+	      	{{else data.orderState==3}}
+			<span class="commment-button" onclick="evaluateClick ()">评价</span>
+	      	{{/if}}
+    	</div>
+    	</script>
+    </div>
+</body>
+</html>

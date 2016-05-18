@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>我的订单</title>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <link href="../src/css/reset.css" rel="stylesheet">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/personcenter.css">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>  
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/lib/fastclick.js"></script> 
+  <script src="../src/js/util/webviewInterface.js"></script> 
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/config.js"></script>
+  <script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/personcenter/my_order.js"></script>
+</head>
+<body>
+<div class="myOrder-container" id="container">
+  <div class="order-list-tab" id="order-list-tab">
+    <ul class="order-list-ul" id="tab">
+      <li class="recentTab"><a class="order-active">近期订单</a></li>
+      <li class="allTab"><a>全部订单</a></li>
+    </ul>
+  </div>
+  <div id="lastOrder" class="my-order recent">
+    <div class="screen-result" id="screen-result">
+      <div class="wrapper">
+        <div class="scroller">
+          <div class="pullDown">
+            <span>下拉刷新</span>
+          </div>
+          <div class="tem" id="tem" >
+            <script type="text/html" id="template">
+              {{each data as item i}}
+              <!-- 退款申请中 -->
+              {{if item.type=="1"}}
+              <div class="refund-applying">
+                <div class="my-order-tit">
+                  <span class="order-name">{{item.title}}</span>
+                  <span class="order-state">{{item.status}}</span>
+                </div>
+                {{each item.orderList as term i}}
+                <div class="my-order-con">
+                  <div class="my-order-left">
+                    <img src={{term.instanceImg}} alt="">
+                  </div>
+                  <div class="my-order-right">
+                    <p class="refund-type">{{term.orderTitle}}</p>
+                    <p class="refund-date">{{term.time}}</p>
+                    <p class="refund-num"><span>&yen;{{term.price}}</span>X{{term.count}}间</p>
+                  </div>
+                </div>
+                {{/each}}
+                <div class="my-order-result">
+                  实付款:<span class="apply-money">&yen;{{item.pay}}</span>
+                </div>
+              </div>
+              {{/if}}
+              <!--待付款 -->
+              {{if item.type=="2"}}
+              <div class="no-payment">
+                <div class="my-order-tit">
+                  <span class="order-name">{{item.title}}</span>
+                  <span class="order-state">{{item.status}}</span>
+                </div>
+                {{each item.orderList as term i}}
+                <div class="my-order-con">
+                  <div class="my-order-left">
+                    <img src={{term.instanceImg}} alt="">
+                  </div>
+                  <div class="my-order-right">
+                    <p class="no-payment-name">{{term.orderTitle}}</p>
+                    {{each term.orderItemList as orderItem i}}
+                    <p class="no-payment-type">
+                      <span class="no-span-left">{{orderItem.itemTitle}}</span>
+                      <span class="no-span-right">
+                      <num>&yen;{{orderItem.price}}</num>X{{orderItem.count}}张
+                      </span>
+                    </p>
+                    {{/each}}
+                  </div>
+                </div>
+               {{/each}}
+                <div class="my-order-result">
+                  订单金额:<span class="apply-money">&yen;{{item.pay}}</span>
+                  <button class="my-order-pay">付款</button>
+                </div>
+              </div>
+              {{/if}}
+              <!-- 已参团 -->
+              {{if item.type=="3"}}
+              <div class="have-offered">
+                <div class="my-order-tit">
+                  <span class="order-name">中国青年国际旅行社</span>
+                  <span class="order-state">已参团</span>
+                </div>
+                {{each item.orderList as term i}}
+                <div class="my-order-con">
+                  <div class="my-order-left">
+                    <img src={{term.instanceImg}} alt="">
+                  </div>
+                  <div class="my-order-right">
+                    <p class="have-offered-name">{{term.orderTitle}}</p>
+
+                    <p class="have-offered-date">
+                      发团日期<span>{{term.time}}</span>
+                    </p>
+                  </div>
+                </div>
+                {{/each}}
+                <div class="my-order-result">
+                  实付款:<span class="apply-money">&yen;{{item.pay}}</span>
+                </div>
+              </div>
+              {{/if}}
+              <!-- 已付款 -->
+              {{if item.type=="4"}}
+              <div class="have-pay">
+                <div class="my-order-tit">
+                  <span class="order-name">导游服务</span>
+                  <span class="order-state">已付款</span>
+                </div>
+                {{each item.orderList as term i}}
+                <div class="my-order-con">
+                  <div class="my-order-left">
+                    <img src={{term.instanceImg}} alt="">
+                  </div>
+                  <div class="my-order-right">
+                    <p class="have-pay-name">{{term.orderTitle}}</p>
+
+                    <p class="have-pay-date">
+                      起至日期<span>{{term.time}}</span>
+                    </p>
+                  </div>
+                </div>
+                {{/each}}
+                <div class="my-order-result">
+                  实付款:<span class="apply-money">&yen;{{item.pay}}</span>
+                </div>
+              </div>
+              {{/if}}
+              {{/each}}
+            </script>
+          </div>
+          <div class="pullUp">
+            <span>上拉加载更多</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul id="allOrder" class="order-list-con all">
+    <li onclick="detailClick(this)" data-url="line_order.html">
+      <img src="../src/images/personcenter/order-dj.png" alt="" class="order-icon">
+      <span>旅游度假</span>
+      <img src="../src/images/area/btn.svg" alt="link" class="order-link">
+    </li>
+    <li onclick="detailClick(this)" data-url="hotel_order.html">
+      <img src="../src/images/personcenter/order-room.png" alt="" class="order-icon">
+      <span>酒店房间</span>
+      <img src="../src/images/area/btn.svg" alt="link" class="order-link">
+    </li>
+    <li onclick="detailClick(this)" data-url="spot_order.html">
+      <img src="../src/images/personcenter/order-ticket.png" alt="" class="order-icon">
+      <span>景点门票</span>
+      <img src="../src/images/area/btn.svg" alt="link" class="order-link">
+    </li>
+    <li>
+      <img src="../src/images/personcenter/order-ser.png" alt="" class="order-icon">
+      <span>导游服务</span>
+      <img src="../src/images/area/btn.svg" alt="link" class="order-link">
+    </li>
+    <li>
+      <img src="../src/images/personcenter/order-creat.png" alt="" class="order-icon">
+      <span>创客服务</span>
+      <img src="../src/images/area/btn.svg" alt="link" class="order-link">
+    </li>
+  </ul>
+</div>
+</body>
+</html>

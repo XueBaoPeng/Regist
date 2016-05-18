@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购买兔贝成功</title>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/reset.css" rel="stylesheet">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link rel="stylesheet" href="../src/css/personaccount.css">
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personaccount/buy_success.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div  id="container">
+			<script id="template" type="text/html">
+		<div class="fail-con">
+			<p class="fail-tit">
+				<!--<img src="../src/images/personaccount/success.png"  alt="">-->
+				<span class="ico-buy-success"></span>
+				<span>购买成功!</span>
+			</p>
+			<p class="fail-result">您已成功购买<span class="num">{{data.sum}}</span>兔贝</p>
+		</div>
+		</script>
+			</div>
+		<a href="javascript:void(0);"><button class="return-account-success">返回我的账户</button></a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>景区订单详情</title>
+    <link href="../src/js/widget/layer/need/layer.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/personcenter.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+  	<script src="../src/js/util/webviewInterface.js"></script>
+  	<script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/template_extend.js"></script>
+  	<script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/spot_order_detail.js"></script>
+</head>
+<body>
+    <div class="spotMain" id="container">
+      <script type="text/html" id="template">
+      <!-- 展开 -->
+       <div class="order-open">
+         <div id="process" class="order-open-con">
+            <!-- 展开左侧 -->
+             {{each data.records as records i}}
+             {{if i==0}}
+             <div class="order-open-row">
+                 <span class="span-circle-bigline"></span>
+                 <div class="order-open-right">
+                     <ul>
+                         <li class="order-li-tit">{{records.recContent}}</li>
+                         <li class="order-li-con">{{records.recDate | formatDate:'yyyy-MM-dd hh:mm:ss'}}</li>
+                     </ul>
+                 </div>
+             </div>
+             {{else}}
+                {{if i==(data.records.length-1)}}
+                 <div class="order-open-row">
+                     <span class="circle-small"></span>
+                     <div class="order-open-right">
+                         <ul>
+                             <li class="order-li-tit">{{records.recContent}}</li>
+                             <li class="order-li-con">{{records.recDate | formatDate:'yyyy-MM-dd hh:mm:ss'}}</li>
+                         </ul>
+                     </div>
+                 </div>
+                {{else}}
+                 <div class="order-open-row">
+                     <span class="span-circle-little"></span>
+                     <div class="order-open-right">
+                         <ul>
+                             <li class="order-li-tit">{{records.recContent}}</li>
+                             <li class="order-li-con">{{records.recDate | formatDate:'yyyy-MM-dd hh:mm:ss'}}</li>
+                         </ul>
+                     </div>
+                 </div>
+                {{/if}}
+             {{/if}}
+             {{/each}}
+             <div class="order-open-btn" id="btnExpend" onclick="showOpen();">
+                 <span class="ico-spot-down"></span><p>展开</p>
+             </div>
+         </div>
+       </div>
+       <div class="order-detail-top">
+           <p class="order-top-p1">订单编号<span>{{data.orderCode}}</span></p>
+           <p class="order-top-p2">电子票码<num>{{data.eticketCode}}</num></p>
+       </div>
+       <!-- 门票信息 -->
+      
+       <div class="order-ticket">
+           <div class="order-tit"><span></span>门票信息</div>
+           {{each data.productList as product}}
+           <div class="order-ticket-tit"><span>{{product.productName}}</span><a href="javascript:;" onclick="ratedClick('{{product.productId}}');" class="btn-link btn-small">评价</a></div>
+               {{each product.versionList as version}}
+               <div class="order-ticket-price">
+                  <label class="order-label">{{version.versionName}}</label><span>&yen;{{version.price}}X{{version.num}}</span>
+               </div>
+               <div class="order-ticket-num">
+                    <span>已验证X{{version.verified}}</span><span>未验证X{{version.noVerified}}</span><span>已退票X{{version.refunded}}</span>
+                    <a href="javascript:;" onclick="refundClick('{{version.versionId}}');" class="order-apply-btn">申请退票</a>
+                </div>
+                {{/each}}
+            <div class="order-line"></div>
+            <div class="order-date">
+              <label class="order-label">出游日期</label><span>{{product.travelDate}}</span>
+            </div>
+            <div class="order-validity">
+              <label class="order-label">门票有效期</label><span>{{product.validate}}</span>
+            </div>
+            <div class="order-explain">
+              <label class="order-label">退款说明</label><span>{{product.refundInfo}}</span>
+            </div>
+           {{/each}}
+       </div>
+     
+       <div class="order-bg-2"></div>
+       <!-- 订单信息 -->
+       <div class="order-msg">
+           <div class="order-tit"><span></span>订单信息</div>
+           <div><label class="order-label">订单金额</label><num>&yen;{{data.orderMoney}}</num></div>
+           <div><label class="order-label">付款方式</label><span>{{data.orderType}}</span></div>
+           <div><label class="order-label">下单时间</label><span>{{data.orderTime}}</span></div>
+           <div><label class="order-label">出游日期</label><span>{{data.payTime}}</span></div>
+       </div>
+       <!-- 联系人信息 -->
+       <div class="order-people">
+           <div class="order-tit"><span></span>联系人信息</div>
+           <div class="order-phone"><label class="order-label">手机</label><span>{{data.contactPhone}}</span></div>
+       </div>
+       <div class="order-bg-2"></div>
+       <!-- 出游人信息 -->
+       <div class="order-travel">
+           <div class="order-tit"><span></span>出游人信息</div>
+           {{each data.productList as product}}
+            {{each product.versionList as version}}
+            <div class="order-ticket-tit">{{version.versionName}}</div>
+                {{each version.CertificateStr as cert idx}}
+               <div class="order-travel-con"><label class="order-label">出游人{{idx+1}}</label><span>{{cert.name}}</span></div>
+                {{/each}}
+            <div class="order-line"></div>
+            {{/each}}
+           {{/each}}
+       </div>
+          <div class="order-detail-bottom">
+              <a href="javascript:;" onclick="delClick('{{data.orderId}}');" class="btn-link btn-small btn-mar-r">删除</a>
+              <!--<a href="javascript:;" onclick="buyClick('{{data.productId}}');" class="btn-link btn-small btn-mar-r">再次购买</a>-->
+          </div>
+      </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":{
+	"codeImg":"../testdata/personcenter/recommond/erweima_03.png",
+  "username":"羊羊羊",
+  "sex":"man",
+  "code":"OWFKLSF58FKDS",
+  "headImg":"../testdata/personcenter/recommond/headaa.jpg"
+ }
+}

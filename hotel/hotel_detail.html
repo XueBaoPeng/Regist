@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>酒店设施详情</title>
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/hotel.css" rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/widget/jquery.raty/jquery.raty.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll.js"></script>  
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/hotel/hotel_detail.js"></script>    
+</head>
+<body>
+<div class="container-detail" id="container">
+  <script type="text/html" id="template">
+    <ul class="contentList">
+      <li>
+        <div class="title">{{data.hotelName}}</div>
+        <div class="stars" id="spotStar" data-number="{{data.hotelLeve}}">   </div>    
+        <div class="clear"></div>
+        <p class="hotelType">{{data.hotelType}}</p>
+      </li>
+      {{if data.hotelTels!=""}}
+      <li onclick="showTel('{{data.hotelTels}}')">
+        <img src="../src/images/hotel/icon/iconfont-dianhua.svg" class="phone">
+        {{if data.hotelTels!=""}}
+         	{{each data.hotelTels as hotelTels i}}
+        	<span class="phoneNumber">{{hotelTels}}</span>
+        	{{/each}}
+        {{else}}
+        	<span class="phoneNumber">酒店尚未预留电话</span>        	
+     	{{/if}}       
+      </li>
+      {{/if}}      
+      <li>
+        <span>开业年份:</span> <span class="distance">{{data.hotelOpenYear}}</span> <span>最后装修:</span> <span class="distance">{{data.hotelFinalFitting}}</span>
+        <span>楼高:</span> <span class="distance">{{data.hotelHighBuilding}}层</span> <span>房间数:</span> <span class="distance">{{data.hotelRoomNum}}间</span>
+      </li>
+     
+    </ul>
+    <div class="amenity">酒店基础设施</div>
+    <ul class="amenityList">
+      {{each data.hotelBones as hotelBones j}}
+      <li>
+      	<span class="hotel-cons hotel-cons-left {{hotelBones.src}}"></span><span class="hotel-cons-txt">{{hotelBones.txt}}</span>		
+      </li>
+      {{/each}}
+    </ul>
+    <div class="amenity">酒店服务</div>
+    <ul class="amenityList">
+      {{each data.hotelService as hotelService j}}
+      <li>      	
+        {{if hotelService.charge==true}}
+        	<span class="hotel-cons hotel-cons-left {{hotelService.src}}-charge"></span><span class="hotel-cons-txt">{{hotelService.txt}}</span>        
+        {{else}}    
+        	<span class="hotel-cons hotel-cons-left {{hotelService.src}}"></span>
+        	{{if hotelService.txt=="小时前台"}}
+        	<span class="hotel-cons-txt">24{{hotelService.txt}}</span>   
+        	{{else}}
+        	<span class="hotel-cons-txt">{{hotelService.txt}}</span>   
+        	{{/if}}
+        {{/if}}       	
+        {{if hotelService.price!=null}}
+        <span class="money">￥{{hotelService.price}}</span>
+        {{/if}}      
+      </li>
+      {{/each}}     
+      <!--<p style="color:#ccc">注： 酒店提供的服务收费情况请与酒店联系</p>-->
+    </ul>
+    
+    <div class="amenity">酒店政策</div>
+    <div class="policy">
+      <div class="item">
+        <span class="policyLeft">入住时间：</span>
+        <div class="policyRight"><span>{{ data.hotelPolicy.startTime}}以后</span></div>
+      </div>
+      <div class="item">
+        <span class="policyLeft">离店时间：</span>
+        <div class="policyRight"><span>{{ data.hotelPolicy.endTime}}以前</span></div>
+      </div>
+      {{if data.hotelPolicy.bill!=null}}
+      <div class="item">
+        <span class="policyLeft">酒店发票：</span>
+        <div class="policyRight"><span>{{data.hotelPolicy.bill}}</span></div>
+      </div>
+      {{/if}}
+      {{if data.hotelPolicy.remarks!=null}}
+      <div class="item">
+        <span class="policyLeft">备注：</span>
+        <div class="policyRight">        
+          <p>{{data.hotelPolicy.remarks }}</p>          
+        </div>
+      </div>
+      {{/if}}
+    </div>
+  </script> 	
+</div>
+	<div class="call-tel" id="call-tel">   
+	<script type="text/html" id="template2">
+	{{each data.hotelTels as hotelTels i}}
+    	<div class="call-tel-num" onclick="callTel(this)">{{hotelTels}}</div>
+    {{/each}}
+    	<div class="call-tel-cancel" onclick="cancel(this)">取消</div>    
+    </script>
+    </div>
+</body>
+</html>

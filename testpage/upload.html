@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>NIMG</title>
+    <script type="text/javascript" src="../src/js/lib/jquery/jquery-2.2.0.js"></script>
+</head>
+<body>
+<form id="fileinfo">
+    Choose file: <input name="act" type="input" placeholder="act"> <input name="param" type="input" placeholder="param">
+    <input id="inputfile" name="userfile" type="file">
+</form>
+</br></br>
+<div id="feedback"></div>
+</br><img id="img" src=""/> <img id="img2" src=""/></br><img id="img3" src=""/>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var host = 'http://123.56.129.234:9000/';
+        var upload = function(){
+            var formData = new FormData($("#fileinfo")[0]);
+            $.ajax({
+                url : host + '21/upload',
+                type : 'POST',
+                data : formData,
+                cache : false,
+                contentType : false,
+                processData : false,
+                success : function(data){
+                    var strData = JSON.stringify(data);
+                    var strUrl = host + data.data[0].url;
+                    var strUrl2 = strUrl.substring(0, strUrl.lastIndexOf('.')) + '-175-100' + strUrl.substring(strUrl.lastIndexOf('.'));
+                    var strUrl3 = strUrl.substring(0, strUrl.lastIndexOf('.')) + '-gray' + strUrl.substring(strUrl.lastIndexOf('.'));
+                    $("#feedback").html(strData);
+                    $("#img").attr('src', strUrl);
+                    $("#img2").attr('src', strUrl2);
+                    $("#img3").attr('src', strUrl3);
+                },
+                error : function(data){
+                }
+            })
+        }
+        $("#inputfile").change(function(){
+            upload();
+        });
+    });
+
+
+</script>
+</body></html>

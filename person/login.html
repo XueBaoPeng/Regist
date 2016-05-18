@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/normalize.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/person.css">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/person/login.js"></script>
+</head>
+<body class="body-bg">
+    <header class="header">登录
+        <span class="header-left"></span>
+    </header>
+    <section class="section">
+        <form id="loginForm" action="" method="">
+            <div class="section-input">
+                <span class="login-name">用户名</span>
+                <input type="text" class="input-width" id="txtLoginName" name="txtLoginName" value="" placeholder="手机号/用户号/账户名" />
+                <span id="btnClear" class="ico-x"></span>
+            </div>
+            <div class="section-input">
+                <span class="login-password">密码</span>
+                <input type="password" class="input-width" id="txtPwd" name="txtPwd" value=""  placeholder="6-20位数字、字母、符号组合"/>
+                <span id="btnEye" class="password-eye"></span>
+            </div>
+            <input id="btnLogin" class="login-btn" disabled="disabled" type="button" value="登录"/>
+        </form>
+        <p class="login-forget">
+            <a href="forgot_pwd.html" class="frist-forget">忘记密码?</a>
+            <a href="register.html" class="last-forget">立即注册</a>
+        </p>
+    </section>
+
+</body>
+</html>

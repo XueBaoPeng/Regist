@@ -1,0 +1,67 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": {
+    "id": "10000",
+    "bannerImg": "../src/images/spot/detaila.png",
+    "title": "[春节][玫瑰哦塞班4晚6日半自助游]北京触发韩亚转机酒店自由搭",
+    "prompt": "需在出游当天14:00前预定/预定后2I型哦啊哈斯可入园",
+    "travelDate": "",
+    "ticketType": [
+      {
+        "versionId": "2001",
+        "name": "成人票",
+        "discount": "0.4",
+        "price": "40",
+        "originalPrice": "100"
+      },
+      {
+        "versionId": "2002",
+        "name": "儿童 平日票",
+        "discount": "0.6",
+        "price": "60",
+        "originalPrice": "100"
+      },
+      {
+        "versionId": "2003",
+        "name": "老人 周末票",
+        "discount": "0.5",
+        "price": "50",
+        "originalPrice": "100"
+      }
+    ],
+    "reserveNotice": "费用包含 雅乐不滑雪场入场门票一张/人",
+    "useRule": "门票出行日当天有效;仅限单次使用;开园时间可用。",
+    "refundRule": "门票出行日当天有效;仅限单次使用;开园时间可用。",
+    "rules": {
+      "buyRule": "购买规则",
+      "useRule": "使用规则",
+      "refundRule": "退票规则"
+    },
+    "evaluates": [{
+      "headImg": "../src/images/guide/touxianhg.svg",
+      "nickname": "aaa",
+      "content": "网上预订很方便，体验非常不错，下次还会光顾,网上预订很方便，体验非常不错，下次还会光顾",
+      "pubDate": "2016-03-01",
+      "reply": "谢谢！我们努力为您提供百分服务",
+      "likeCount": "30",
+      "comImages":["../src/images/guide/line2.jpg","../src/images/guide/line3.jpg","../src/images/guide/line4.jpg"]
+    },{
+      "headImg": "../src/images/guide/touxianhg.svg",
+      "nickname": "bbb",
+      "content": "网上预订很方便，体验非常不错，下次还会光顾",
+      "pubDate": "2016-03-02",
+      "reply": "谢谢！我们努力为您提供百分服务",
+      "likeCount": "50",
+      "comImages":["../src/images/guide/line4.jpg"]
+    },{
+      "headImg": "../src/images/guide/touxianhg.svg",
+      "nickname": "ccc",
+      "content": "网上预订很方便，体验非常不错，下次还会光顾",
+      "pubDate": "2016-03-03",
+      "reply": "谢谢！我们努力为您提供百分服务",
+      "likeCount": "30",
+      "comImages":["../src/images/guide/line3.jpg","../src/images/guide/line4.jpg"]
+    }]
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <title>联系人详情</title>
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/personcenter.css" rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>    
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/personcenter/contacts_detail.js"></script>
+</head>
+<body>
+     <div class="container" id="container">
+       <script type="text/html" id="template">
+         <div class="top">
+             <img src="../src/images/personcenter/headaa.jpg" class="headImg">
+             <div class="topRight">
+                 <div class="user">
+                    <span class="userName">{{data.name}}</span>
+                   {{if data.sex=="man"}}
+                   <div class="sex man"></div>
+                   {{else}}
+                   <div class="sex woman"></div>
+                   {{/if}}
+                    {{if data.collect}}
+                   <div class="star"></div>
+                   {{else}}
+                   <div class="star starHui"></div>
+                   {{/if}}
+                 </div>
+                 <p class="name">用户名：{{data.nickname}}</p>
+             </div>
+         </div>
+         <div class="bar">
+            <span class="text">佣金总计</span>
+            <span class="price">{{data.totalMoney}}元</span>
+         </div>
+         <div class="remark" onclick="detailClick(this)" data-url="set_remark.html">
+           <span class="remarkLeft">设置备注名</span>
+           <img src="../src/images/area/btn.svg" class="remarkRight">
+         </div>
+       </script>
+     </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+"code":0,
+"msg":"业务信息",
+	"data":{
+		"position":"4.89",
+		"facilities":"4.89",
+		"feeling":"4.89",
+		"clearing":"4.89",
+		"service":"4.89",
+		"costeffective":"4.89",
+		"statistics":{
+			"all":"2343",
+			"good":"43",
+			"middle":"43",
+			"bad":"43",
+			"haspic":"43"			
+		},		
+		"goodRate":"98.9",
+		"comment":[{
+            "commentName":"张三",
+            "commentNamePicture":"../src/images/hotel/touxiang.png",
+            "commentContent":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod blibendum laoreet.Proin gravida dolorsit amet lacus accumsanet viverra justo commodo.Proin sodales pulvinar...",
+            "commentPicture":["../src/images/hotel/dianpingtu_1.png",
+        				"../src/images/hotel/dianpingtu_3.png",
+        				"../src/images/hotel/dianpingtu_1.png",
+            			"../src/images/hotel/dianpingtu_1.png",
+            			"../src/images/hotel/dianpingtu_3.png",
+            			"../src/images/hotel/dianpingtu_5.png"],
+            "commentDate":"2016-01-10",
+            "commentTime":"12:23",
+            "commentAnswer":"技术等哈说简单的骄傲时间都会散的，适合设的是大家的卡死了 开始倒计时卡登记的骄傲是快乐的，骄傲的人是快乐。"            
+        },{
+            "commentName":"王五",
+            "commentNamePicture":"../src/images/hotel/touxiang.png",
+            "commentContent":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod blibendum laoreet.Proin gravida dolorsit amet lacus accumsanet viverra justo commodo.Proin sodales pulvinar...",
+        	"commentDate":"2016-01-10",
+            "commentTime":"12:23"            
+        },{
+            "commentName":"李四",
+            "commentNamePicture":"../src/images/hotel/touxiang.png",
+            "commentContent":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod blibendum laoreet.Proin gravida dolorsit amet lacus accumsanet viverra justo commodo.Proin sodales pulvinar...",
+            "commentPicture":["../src/images/hotel/dianpingtu_1.png",
+        				"../src/images/hotel/dianpingtu_5.png",
+        				"../src/images/hotel/dianpingtu_3.png",            			
+            			"../src/images/hotel/dianpingtu_6.png"],
+            "commentDate":"2016-01-10",
+            "commentTime":"12:23",
+            "commentAnswer":"技术等哈说简单的骄傲时间都会散的，适合设的是大家的卡死了 开始倒计时卡登记的骄傲是快乐的，骄傲的人是快乐。"            
+        },{           
+            "commentNamePicture":"../src/images/hotel/touxiang.png",
+            "commentContent":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod blibendum laoreet.Proin gravida dolorsit amet lacus accumsanet viverra justo commodo.Proin sodales pulvinar...",
+           	"commentDate":"2016-01-10",
+            "commentTime":"12:23"                    
+        }]
+	}
+}

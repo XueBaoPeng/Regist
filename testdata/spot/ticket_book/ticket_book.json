@@ -1,0 +1,88 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": [
+    {
+      "id": "5001",
+      "spotId": "1002",
+      "thumbnail": "../testdata/spot/ticket_book/img/spot1.png",
+      "title": "黄鹤楼大门票",
+      "salesNum": "600",
+      "discount": true,
+      "coupon": false,
+      "ticketType": [
+        {
+          "versionId": "2001",
+          "name": "儿童 周末票",
+          "discount": "0.7",
+          "price": "56",
+          "originalPrice": "80"
+        },
+        {
+          "versionId": "2002",
+          "name": "成人票",
+          "discount": "0.8",
+          "price": "80",
+          "originalPrice": "100"
+        },
+        {
+          "versionId": "2003",
+          "name": "老人票",
+          "discount": "0.8",
+          "price": "80",
+          "originalPrice": "100"
+        }
+      ]
+    },
+    {
+      "id": "5002",
+      "spotId": "1003",
+      "thumbnail": "../testdata/spot/ticket_book/img/spot2.png",
+      "title": "圆明园",
+      "salesNum": "600",
+      "discount": true,
+      "coupon": false,
+      "ticketType": [
+        {
+          "versionId": "2001",
+          "name": "儿童 周末票",
+          "discount": "0.7",
+          "price": "56",
+          "originalPrice": "80"
+        },
+        {
+          "versionId": "2002",
+          "name": "成人票",
+          "discount": "0.8",
+          "price": "80",
+          "originalPrice": "100"
+        }
+      ]
+    },
+    {
+      "id": "5003",
+      "spotId": "1004",
+      "thumbnail": "../testdata/spot/ticket_book/img/spot3.png",
+      "title": "黑龙潭景区",
+      "salesNum": "800",
+      "discount": true,
+      "coupon": false,
+      "ticketType": [
+        {
+          "versionId": "2001",
+          "name": "儿童 周末票",
+          "discount": "0.7",
+          "price": "56",
+          "originalPrice": "80"
+        },
+        {
+          "versionId": "2002",
+          "name": "成人票",
+          "discount": "0.8",
+          "price": "80",
+          "originalPrice": "100"
+        }
+      ]
+    }
+  ]
+}

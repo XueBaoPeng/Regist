@@ -1,0 +1,57 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":{"attention":  
+					[{"id":"0","name":"李白","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+		      {"id":"1","name":"李二白","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+		      {"id":"2","name":"李三白","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+		      {"id":"3","name":"李四白","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+		      {"id":"4","name":"李四白","headImg":"../testdata/personcenter/friend_list/tou_09.png"}],
+		"noAttention":[{
+		    	"letter":"a",
+		    	"friendList":
+		    	[{"id":"5","name":"安妮","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"6","name":"安全","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"7","name":"安利","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"8","name":"安排","headImg":"../testdata/personcenter/friend_list/tou_09.png"}]
+		      },
+		      {"letter":"b",
+		    	"friendList":
+		    	[{"id":"5","name":"安妮","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"6","name":"安全","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"7","name":"安利","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"8","name":"安排","headImg":"../testdata/personcenter/friend_list/tou_09.png"}]
+		      },
+		      {"letter":"c",
+		    	"friendList":
+		    	[ {"id":"9","name":"保安","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"10","name":"变态","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"11","name":"巴西","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"12","name":"贝壳","headImg":"../testdata/personcenter/friend_list/tou_09.png"}]
+		      },
+		      {"letter":"d",
+		    	"friendList":
+		    	[ {"id":"13","name":"曹操","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+				    {"id":"14","name":"曹植","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+				    {"id":"15","name":"陈水","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+				    {"id":"16","name":"蔡蔡","headImg":"../testdata/personcenter/friend_list/tou_09.png"}]
+		      },
+		      {"letter":"e",
+		    	"friendList":
+		    	[ {"id":"0","name":"饿了吗","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"0","name":"饿了吗","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"0","name":"饿了吗","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"0","name":"饿了吗","headImg":"../testdata/personcenter/friend_list/tou_09.png"}]
+		      },
+		      {"letter":"f",
+		    	"friendList":
+		    	[ {"id":"0","name":"房子","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"0","name":"房子","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"0","name":"房子","headImg":"../testdata/personcenter/friend_list/tou_09.png"},
+			      {"id":"0","name":"房子","headImg":"../testdata/personcenter/friend_list/tou_09.png"}]
+		      }
+		      ]
+		    }
+}
+
+

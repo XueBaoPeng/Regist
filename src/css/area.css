@@ -1,0 +1,126 @@
+/*首页index.html*/
+/*swipe*/
+.swiper-container { width: 100%; height: 100%; }
+.swiper-slide { text-align: center; font-size: 18px; background: #fff; /* Center slide text vertically */
+display: -webkit-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; }
+/*swipe*/
+
+.container { width: 100%; }
+.banner { width: 100%; position: relative; overflow: hidden; }
+.swiper-area { overflow: hidden; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.four-type-ul { width: 100%; height: 90px; margin-top: 10px;background: #ffffff; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.four-type-ul-li { height: 100%; width: 25%; float: left; text-align: center; }
+.four-type-ul-li-img { height: 45px; margin-top: 10px; }
+.four-type-ul-li-text { width: 100%; height: 30px; line-height: 30px; text-align: center; font-size: 1.2rem; }
+.mini-banner { width: 100%; margin-top: 10px; padding: 10px; background: #ffffff; border-top: 1px solid #ddd; padding-bottom: 0; }
+.mini-banner-img { width: 100%; height: 100%; }
+.three-ul { width: 100%; overflow: hidden; border-bottom: 1px solid #ccc; background: #ffffff; padding-left: 10px; }
+.three-ul-li { width: 32.3%; float: left; border-right: 1px solid #eee; }
+.three-ul li:last-child { border: none; }
+.three-ul-li-img { width: 100%; }
+/*玩转本地*/
+.play-area { width: 100%; clear: both; margin-top: 10px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.play-area-tit { padding: 0 4%; height: 47px; line-height: 47px; background: #fff; }
+.play-area-tit-img { float: left; margin-top: 13px; width: 18px; height: 18px; }
+.play-area-tit-span-text { float: left; margin-left: 5px; font-size: 1.5rem; color: #333; }
+.play-area-tit-span-more { float: right; font-size: 1.2rem; color: #999; }
+.play-area-con { position: relative; margin-bottom: 10px; background: #fff; }
+.play-area-pic { position: relative; }
+.play-area-pic img { width: 100%; }
+.play-area-tip { padding: 0 4%; height: 40px; line-height: 40px; border-bottom: 1px solid #ccc; }
+.play-area-tip p:nth-child(1) { font-size: 1.4rem; color: #333; width: 90%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; -moz-text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; }
+.play-area-tip p:nth-child(2) { font-size: 1.4rem; width: 90%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; -moz-text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; }
+.play-line { height: 1px; overflow: hidden; background: #ccc; }
+.play-area-price { position: absolute; right: 0; bottom: 10px; height: 32px; line-height: 32px; width: 85px; background: #FC8215; color: #fff; text-align: center; font-size: 2rem; }
+.num { font-size: 1.2rem; }
+
+
+
+
+
+/*promotion.html*/
+.promotion { background: #f6f6f6; font-size: 1.4rem; color: #333333; }
+.clear { clear: both; }
+.top { width: 100%; height: 115px; overflow: hidden; }
+.container .swiper-container-horizontal>.swiper-pagination { bottom: 10px; }
+.nav-ul { width: 100%; height: 45px; line-height: 45px; border-bottom: 1px solid #dbdbdb; font-size: 1.6rem; background: #eeeeee; }
+.nav-ul li { display: block; float: left; width: 21%; margin-left: 2%; margin-right: 14%; text-align: center; }
+.nav-ul li:last-child { margin-right: 0; }
+.nav-ul .active { height: 44px; }
+.main { width: 100%; }
+.main li { overflow: hidden; background: #ffffff; margin-bottom: 10px; padding-bottom: 10px; min-height: 115px; }
+.main li .spotLeft { float: left; width: 30.2%; margin-left: 13px; margin-top: 10px; position: relative; height: 90px; margin-bottom: 10px; }
+.main li .spotLeft .tip { position: absolute; top: 0; left: 0; z-index: 100; width: 63px; height: 19px; line-height: 17px; padding-left: 3px; font-size: 1.0rem; color: #ffffff; background-image: url("../images/area/bg.png"); background-size: 100% 100%; }
+.main li .spotLeft .wei { background-image: url("../images/area/bko_03.png"); background-size: 100% 100%; }
+.main li .spotLeft .spotImg { width: 100%;height: 95px; }
+.main li .spotRight { width: 62%; float: left; margin-left: 8px; }
+.main li .spotRight .title { font-size: 1.6rem; margin-top: 7px; line-height: 20px; height: 40px; text-overflow: ellipsis; overflow: hidden; }
+.main li .spotRight .comment { color: #666666; margin-top: 4px; }
+.main li .spotRight .price { width: 105px; float: right; margin-top: 3px; text-align: right;}
+.main li .spotRight .price span { color: #ff7803; font-size: 1.8rem; }
+.main li .spotRight .priceNo { float: right; margin-top: 5px; color: #c9c9c9; text-decoration: line-through; margin-right: 36px; }
+.main li .spotRight .area { float: left; margin-top: 3px; }
+.main li .spotRight .zhe { float: right; width: 18px; height: 14px; text-align: center; font-size: 1.2rem; background-image: url("../images/area/orange.png"); background-size: 100% 100%; color: #ffffff; margin-top: 5px; }
+.main li .spotRight .type { float: left; color: #666666; margin-top: 3px; margin-bottom: 3px; }
+.main .room li .spotRight .zhe { float: right; width: 18px; height: 14px; text-align: center; font-size: 1.2rem; background-image: url("../images/area/blue.png"); background-size: 100% 100%; color: #ffffff; margin-top: 3px; }
+.main .route li .spotRight .zhe { float: right; width: 18px; height: 14px; text-align: center; font-size: 1.2rem; background-image: url("../images/area/blue.png"); background-size: 100% 100%; color: #ffffff; margin-top: 3px; }
+.room, .route, .guide { display: none; }
+.guide li .spotRight .guideLeft { float: left; width: 87px; margin-top: 10px; }
+.guide li .spotRight .guideLeft .name { font-size: 1.6rem; }
+.guide li .spotRight .guideLeft .text { color: #666666; display: block; margin-top: 4px; }
+.guide li .spotRight .guideRight { float: right; text-align: right; }
+.guide li .spotRight .guideRight p { color: #fb8217; margin-top: 15px; }
+.guide li .spotRight .guideRight p span { font-size: 1.8rem; }
+.guide li .spotRight .guideRight .time { color: #666666; display: block; padding-top: 5px; }
+.guide li .spotRight .content { margin-top: 6px; color: #666666; line-height: 17px; }
+.guide li .spotLeft .tip { width: 40px; height: 16px; color: #ffffff; font-size: 1.2rem; background-image: url("../images/area/bkb_03.png"); background-size: 100% 100%; left: -2px; }
+
+
+
+/*local_round.html*/
+.local_round { background: #f6f6f6;font-size: 1.4rem; color: #333333;}
+#nav_ul_lr li { display: block; float: left; width: 21%; margin-left: 2%; margin-right: 2%; text-align: center; }
+#nav_ul_lr .current { height: 45px; color: #2796ef; border-bottom: 3px solid #2796ef; }
+#result_ul_lr .priceNo {margin-right: 10px;}
+
+
+/*city-search.html*/
+.city-tit { padding-left: 4%; height: 30px; line-height: 30px; background: #F6F6F6; font-size: 1.5rem; color: #333; }
+.city-now { padding-left: 4%; height: 45px; line-height: 45px; border-top: 1px solid #ccc; background: #fff; font-size: 1.5rem; color: #2396F1; }
+.city-now img { float: left; margin-right: 8px; margin-top: 13px; width: 18px; height: 18px; }
+.city-sort-tit { padding-left: 4%; height: 31px; line-height: 31px; background: #F6F6F6; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.city-sort-con li { padding-left: 4%; height: 43px; line-height: 43px; border-bottom: 1px solid #F0F0F0; background: #fff; font-size: 1.5rem; color: #373737; }
+.city-letter { position: absolute; right: 6.66%; top: 106px; color: #2396F1; }
+.city-letter li { margin-bottom: 6px; width: 15px; text-align: center; }
+
+
+/*departure-city.html*/
+.hotel-type { position: absolute; left: 0; z-index: 6; width: 100%; background: #fff; font-size: 1.5rem; color: #333; }
+.already-choice { padding: 0 4%; line-height: 55px; border-bottom: 1px solid #D3D3D3; background: #f6f6f6; overflow: hidden; }
+.already-ul { float: left; }
+.already-li { float: left; margin-right: 5px; }
+.clear-choice { float: right; margin-top: 13px; height: 28px; width: 73px; border: 1px solid #1F94F1; background: #F6F6F6; border-radius: 5px; text-align: center; }
+.choice-a { float: left; color: #333; }
+.choice-close { float: left; margin-top: 10px; display: inline-block; width: 12px; height: 12px; line-height: 8px; border-radius: 50%; background: #FB8315; text-align: center; color: #fff; font-size: 1.2rem; }
+/*按钮*/
+.hotel-opt-btn { padding-top: 15px; margin: 0 4%; overflow: hidden; }
+.hotel-opt-btn button { float: left; width: 50%; height: 43px; line-height: 43px; border: 0; }
+.hotel-opt-no { background: #F6F6F6; }
+.hotel-opt-yes { background: #2396F1; color: #fff; }
+/*分类内容*/
+.hotel-type-option { display: inline-block; width: 28.6%; background: #f6f6f6; }
+.option-ul { background: #F6F6F6; }
+.option-ul li { height: 53px; line-height: 53px; }
+.option-ul li a { margin-left: 11%; color: #333; }
+.option-tip { float: right; margin-top: 22px; margin-right: 10px; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: transparent; }
+.option-li-active { background: #fff; }
+.option-li-active .option-tip { background: #2396F1; }
+.hotel-type-detail { float: right; margin-right: 10%; width: 55%; background: #fff; overflow: hidden; }
+.hotel-type-detail li { padding-top: 19px; padding-bottom: 18px; border-bottom: 1px solid #F0F0F0; }
+.hotel-type-detail li span { display: inline-block; margin-bottom: 10px; padding: 0 2.6%; height: 30px; line-height: 30px; background: #F6F6F6; border: 1px solid #ccc; border-radius: 5px; }
+.hotel-type-detail li span.departure-active { background: #2396F1; border-color: #2396F1; color: #fff; }
+.hotel-type-detail .city-li-detail { border-bottom: 0; padding-bottom: 0; }
+/*字母排序*/
+.city-letter-departure { position: absolute; right: 2.66%; top: 65px; color: #2396F1; overflow: hidden; }
+.city-loading { float: left; width: 2px; height: 550px; background: #CACACA; }
+.city-letter-departure li { width: 25px; text-align: center; margin-bottom: 6px; }

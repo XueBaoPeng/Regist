@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>门票支付</title>
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/pay.css">   
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/hotel/pay_info.js"></script>
+</head>
+<body class="spot_pay_info">
+<div class="container">
+    <div class="pay-time">支付剩余时间：<span id="lastTime" class="countdown"></span></div>
+    <div id="orderInfo">
+        <script id="tempOrder" type="text/html">
+        <div class="pay-money main-bg">
+            <div class="total-money">支付金额<span class="paymoney">¥<span class="payAmount">{{data.orderPrice}}</span></span></div>
+            <p class="clear"></p>           
+        </div>
+        <!-- 订单详情 -->       
+        <div class="spot-product">
+            <div class="pro-title"><span>{{data.roomList.roomName}}</span></div>
+            <div class="pro-content">            
+            	<span><lable>早餐：</lable>
+            		{{if data.roomList.roomVerion.Breakfast=="Two"}}
+            		双早
+            		{{else if data.roomList.roomVerion.Breakfast=="One"}}
+            		单早
+            		{{else}}
+            		多早
+            		{{/if}}
+            	</span>
+            	<span><lable>宽带：</lable>
+            		{{if data.roomList.roomVerion.Broadband=="Free"}}
+            			免费
+            		{{else}}
+            		     收费
+            		{{/if}}            	
+            	</span>
+            	<span><lable>WIFI：</lable>            		
+            		{{if data.roomList.roomVerion.WIFI=="Free"}}
+            			免费
+            		{{else }}
+            		收费
+            		{{/if}}  
+            	</span>            
+            </div>
+            <div class="bed-type">
+            	<span><lable>床型大小：</lable>{{data.roomList.roomVerion.BedNum}}张{{data.roomList.roomVerion.BedName}}&nbsp; {{data.roomList.roomVerion.BedSize}}㎡ </span>
+            </div>
+            {{if data.roomList.roomVerion.GiftDes !=""}}
+            <div class="gift">
+            	<span>
+            		<lable>礼品：</lable>{{data.roomList.roomVerion.GiftDes}}
+            	</span>
+            </div>
+            {{/if}}       
+            {{if data.roomList.roomVerion.GiftUseDes!=""}}
+            <div class="use-rules">
+            	<span>
+            		<lable>使用规则：</lable>{{data.roomList.roomVerion.GiftUseDes}}
+            	</span>
+            </div>      
+            {{/if}}
+        </div>       
+        <div>
+            <ul class="order-detail main-bg">
+                <li><label>订单编号：</label><span>{{data.orderCode}}</span></li>
+                <li><label>入住时间：</label><span>{{data.startDate}}</span></li>
+                <li><label>退房时间：</label><span>{{data.endDate}}</span></li>
+                <li><label>房间数量：</label><span>{{data.num}}间</span></li>
+                <li><label>联&nbsp;&nbsp;系&nbsp;&nbsp;人：</label><span>{{data.contact}}</span></li>
+                <li><label>联系电话：</label><span>{{data.contactPhone}}</span></li>
+            </ul>
+        </div>
+        <input id="hidOrderCode" type="hidden" value="{{data.orderCode}}"/>
+        </script>
+    </div>
+    <!-- 支付方式 -->
+    <div class="pay-method main-bg">
+        <ul id="payType" class="ul-top">
+            <script id="tmplPayType" type="text/html">
+            <li><label class="method-tit">支付方式</label></li>
+            <li id="cashPay" class="pay cashPay" data-paytype="10">
+                <label>诚兑通余额：</label><span>¥</span><span class="cash">{{data.chengduitong}}</span>
+                <div class="item"></div>
+            </li>
+            <li id="rabbitPay" class="pay tubeiPay"  data-paytype="20">
+                <label>兔贝余额：</label><span class="tubei">{{data.tubei}}兔贝</span>
+                <div class="item"></div>
+            </li>
+            </script>
+        </ul>
+        <div class="pay-bg"></div>
+        <div class="pay-money">
+            <label>还需支付：</label><span>¥<span id="totalMoney" class="payment"></span></span>
+        </div>
+        <ul id="selectBankPay" class="ul-bot">
+            <script id="bindBank" type="text/html">
+                {{each data as bank index}}
+                <li data-paytype="0">
+                    <div class="ico-bank ico-bank-gs"></div>
+                    <div class="tip-top">{{bank.bankName}}尾号{{bank.cardNo}}</div>
+                    <div class="tip-bot">已绑定银行卡,直接付款</div>
+                    <div class="pic-opt"></div>
+                </li>
+                {{/each}}
+            </script>
+        </ul>
+        <ul id="selectPay" class="ul-bot">
+            <li data-paytype="1">
+                <div class="ico-pay-main"></div>
+                <div class="tip-top">银行卡支付</div>
+                <div class="tip-bot">支持储蓄卡信用卡,无需开通网银</div>
+                <div class="pic-opt"></div>
+            </li>
+            <li data-paytype="5">
+                <div class="ico-pay-weixin"></div>
+                <div class="tip-top">微信支付</div>
+                <div class="tip-bot">推荐安装微信5.0及以上的版本的试用</div>
+                <div class="pic-opt"></div>
+            </li>
+            <li class="li-zfb" data-paytype="4">
+                <div class="ico-pay-zfb"></div>
+                <div class="tip-top">支付宝支付</div>
+                <div class="tip-bot">推荐有支付宝账号的用户使用</div>
+                <div class="pic-opt"></div>
+                <!--<img src="images/opt_a.png"  alt="" class="pic-opt">-->
+            </li>
+        </ul>
+    </div>
+    <!-- 确认支付按钮 -->
+    <button id="btnPay" class="pay-confirm" onclick="payClick(this)">确认支付</button>
+</div>
+</body>
+</html>

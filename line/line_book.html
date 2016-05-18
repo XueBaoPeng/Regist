@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>填写下单</title>
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/common.css">
+    <link rel="stylesheet" href="../src/css/line.css">
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/line/line_book.js"></script>
+</head>
+<body class="info-write">
+    <div class="container">
+
+        <ul id="top-info" class="top-info">
+            <li>发团日期：<span id="labGroupDate"></span></li>
+        </ul>
+        <div id="roomList">
+            <script type="text/html" id="tmplRoomList">
+            <!-- option -->
+            <ul id="groupVersion" class="option">
+                <li id="adult" class="adult" data-id="3">
+                    <div class="opt-type">成人</div>
+                    <div class="opt-price">单价 ￥<span class="num">{{data.AdultPrice}}</span><span>/人</span></div>
+                    <div class="opt-num">
+                        <a id="add" class="minus disabled" onclick="minus(this);">-</a>
+                        <div class="amount">0</div>
+                        <a  class="add" onclick="add(this);">+</a>
+                    </div>
+                </li>
+                <li id="child" class="child" data-id="4">
+                    <div class="opt-type">儿童</div>
+                    <div class="opt-price">单价 ￥<span class="num">{{data.ChildrenPrice}}</span><span>/人</span></div>
+                    <div class="opt-num">
+                        <a class="minus disabled" onclick="minus(this);">-</a>
+                        <div class="amount">0</div>
+                        <a class="add" onclick="add(this);">+</a>
+                    </div>
+                </li>
+                <li id="single" class="single" data-id="2">
+                    <div class="opt-type">单房差</div>
+                    <div class="opt-price">单价 ￥<span class="num">{{data.SinglePrice}}</span><span>/人</span></div>
+                    <div class="opt-num">
+                        <a class="minus disabled" onclick="minus(this);">-</a>
+                        <div class="amount">0</div>
+                        <a  class="add disabled" onclick="add(this);">+</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- 温馨提示 -->
+            <div class="reminder">
+               <div class="reminder-con">
+                    <div class="reminder-tit">温馨提示</div>
+                    <div class="reminder-con-top">
+                        <span>{{#data.tips.routeRefund}}</span>{{data.tips.tip}}
+                    </div>
+                </div>
+            </div>
+            </script>
+        </div>
+        <!-- 联系人信息 -->
+        <div id="contact" class="contacts-msg">
+            <script id="tmplContacts" type="text/html">
+            <div class="contacts-tit">联系人信息</div>
+            <div class="name">
+                <label>姓名</label>
+                <input id="txtName" type="text" placeholder="姓名必填" value="{{data.userName}}">
+            </div>
+            <div class="phone">
+                <label>手机号</label>
+                <input id="txtPhone" type="text" placeholder="请输入11位手机号码" value="{{data.phone}}">
+                <span class="hide hyy-color">X</span>
+            </div>
+            </script>
+        </div>
+        <div id="room">
+        <!-- 游客信息 -->
+        <div class="tourist-msg">
+            <div class="tourist-tit">游客信息</div>
+            <div id="tourist" class="tourist-opt">
+                <script id="tmplTourist" type="text/html">
+                <ul class="tourist-opt">
+                    {{each data as item}}
+                    <li data-id="{{item.contactId}}" data-type="{{item.contactType}}" data-no="{{item.number}}"><div class="people"></div><span>{{item.contactName}}</span></li>
+                    {{/each}}
+                </ul>
+                {{if data.length>4}}
+                <span id="moreInfo" class="btn-down icon-exp-down" onclick="showMore(this)"></span>
+                <!--<img id="moreInfo" onclick="showMore(this)" name="img" src="../src/images/line/down.png" alt="" class="btn-down">-->
+                {{/if}}
+                </script>
+            </div>
+            <div id="touristList" class="tourist-one">
+            <!--<div class="tourist-bg clear"></div>-->
+            <!--<div class="tourist-name">-->
+                <!--<label>姓名</label>-->
+                <!--<input type="text" placeholder="必填" value="">-->
+            <!--</div>-->
+            <!--&lt;!&ndash; 证件类型 &ndash;&gt;-->
+            <!--<div class="tourist-type">-->
+                <!--<label>证件类型</label>-->
+                <!--<input type="text" placeholder="身份证">-->
+                <!--<img src="../src/images/line/down.png"  alt="" class="btn-down">-->
+            <!--</div>-->
+            <!--&lt;!&ndash; 证件号码 &ndash;&gt;-->
+            <!--<div class="tourist-id" onclick="isIdCardNo(num)">-->
+                <!--<label>证件号码</label>-->
+                <!--<input id="phone" type="text" placeholder="请输入证件号码" value="">-->
+                <!--<span class="hide">手机号码有误，请重填</span>-->
+            <!--</div>-->
+            </div>
+            </div>
+        </div>
+        <div class="book-temp"></div>
+        <!-- 确认信息 -->
+        <ul class="tourist-confirm add-posi">
+           <li class="tourist-li-left">订单总额：<span class="total-money">￥</span><num id="total">0.00</num></li>
+           <li class="tourist-li-right commit" onclick="commitClick();">确认行程</li>
+        </ul>
+    </div>
+</body>
+</html>

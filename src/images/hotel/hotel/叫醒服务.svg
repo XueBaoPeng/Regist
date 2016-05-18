@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>叫醒服务</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon" sketch:type="MSArtboardGroup" transform="translate(-232.000000, -415.000000)" stroke="#555555">
+            <g id="叫醒服务" sketch:type="MSLayerGroup" transform="translate(233.000000, 416.000000)">
+                <path d="M18.9965111,9.5528 C18.9965111,13.9712 15.3485852,17.5528 10.848363,17.5528 C6.34814074,17.5528 2.70021481,13.9712 2.70021481,9.5528 C2.70021481,5.1344 6.34814074,1.5528 10.848363,1.5528 C15.3485852,1.5528 18.9965111,5.1344 18.9965111,9.5528 L18.9965111,9.5528 Z" id="Stroke-1" sketch:type="MSShapeGroup"></path>
+                <path d="M1.30834815,5.57376 C0.697237037,4.93296 0.349311111,4.05376 0.415311111,3.10896 C0.542422222,1.30336 2.1362,-0.05824 3.97442222,0.06656 C4.69471852,0.11536 5.34575556,0.38496 5.86316296,0.80336" id="Stroke-3" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M20.3405481,5.57376 C20.9516593,4.93296 21.2995852,4.05376 21.2335852,3.10896 C21.1064741,1.30336 19.5126963,-0.05824 17.6744741,0.06656 C16.9541778,0.11536 16.3031407,0.38496 15.7857333,0.80336" id="Stroke-5" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M10.9012444,9.56568 L15.2621333,5.28408" id="Stroke-7" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M8.48776296,7.20592 L10.8482815,9.52352" id="Stroke-9" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M14.3452222,16.7716 L17.2264074,19.6004" id="Stroke-11" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+                <path d="M7.27018519,16.7716 L4.389,19.6004" id="Stroke-13" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

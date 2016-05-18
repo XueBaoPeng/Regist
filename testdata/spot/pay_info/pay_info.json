@@ -1,0 +1,31 @@
+{
+  "code": 0,
+  "msg": "业务信息",
+  "data": {
+    "orderId": "100000003",
+    "orderCode": "M22341213222",
+    "orderMoney": "160",
+    "productList": [
+      {
+        "productName": "亚布力滑雪场大门票",
+        "ticketType": [
+          {
+            "name": "成人平日票",
+            "versionId": "60001",
+            "num": "2",
+            "price": "60"
+          },
+          {
+            "name": "儿童平日票",
+            "versionId": "60002",
+            "num": "1",
+            "price": "30"
+          }
+        ]
+      }
+    ],
+    "linkman": "刘勇",
+    "telephone": "13500001111",
+    "effectiveTime":"30"
+  }
+}

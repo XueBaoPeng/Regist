@@ -1,0 +1,33 @@
+{
+"code":0,
+"msg":"业务信息",
+	"data":[{
+		"lineName":"北京秋景篇--京城秋色正宜人（北京7处公园秋景一日游)",
+		"lineImg":"../src/images/hotel/route_a.png",
+		"lineTheme":["山水景观","主题体验"],
+		"lineWay":"跟团",
+		"tripDay":"两天1晚",
+		"linePrice":"430",
+		"rules":[
+			{"discount":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]},
+			{"group":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]},
+			{"secondkill":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]},
+			{"ticket":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]}
+			] 
+		},
+		{
+		"lineName":"北京秋景篇--京城秋色正宜人（北京7处公园秋景一日游)",
+		"lineImg":"../src/images/hotel/route_b.png",
+		"lineTheme":["山水景观","主题体验"],
+		"lineWay":"自由行",
+		"tripDay":"两天1晚",
+		"linePrice":"430",
+		"rules":[
+			{"discount":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]},
+			{"group":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]},
+			{"secondkill":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]},
+			{"ticket":[{"id":1,"name":"六折促销"," discount":6},{"id":2,"name":"七折促销"," discount":7}]},
+			{"money":[{"id":1,"name":"满50减5元"," discount":5},{"id":2,"name":"七折促销"," discount":7}]}
+			] 		
+		}]
+}

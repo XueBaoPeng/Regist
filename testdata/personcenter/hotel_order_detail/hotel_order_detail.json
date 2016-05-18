@@ -1,0 +1,44 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":{
+	"orderId":"1",	
+	"orderPrice":"300",	
+	"records":[
+		{"recContent":"已准时到达,入住酒店。","recDate":"2016-01-07 15:50"},			
+		{"recContent":"酒店已确认,您的房间预定成功。","recDate":"2016-01-07 15:49"},
+		{"recContent":"订单已付款,等待酒店确认。","recDate":"2016-01-07 15:49"},
+		{"recContent":"订单提交。","recDate":"2016-01-07 15:49"}],				
+	"roomList":[{
+		"title":"北京雅乐大酒店",
+		"type":"标准大床房",
+		"price":"300",
+		"startTime":"2015/12/31",
+		"endTime":"2015/01/01",
+		"totalDay":"共一晚",
+		"num":"1",
+		"hotelBones":["单早","免费WIFI","无宽带"],
+		"people":"王晓",
+		"checkInTime":"14:00办理入住",
+		"gift":"1.入住即送两张观影票"
+	},{
+		"title":"北京雅乐大酒店",
+		"type":"标准大床房",
+		"price":"300",
+		"startTime":"2015/12/31",
+		"endTime":"2015/01/01",
+		"totalDay":"共一晚",
+		"num":"1",
+		"hotelBones":["单早","免费WIFI","无宽带"],
+		"people":"王晓",
+		"checkInTime":"14:00办理入住",
+		"gift":"1.入住即送两张观影票"
+	}],
+	
+	"invoice":"离店时向酒店前台索取",
+	"special":"无",
+	"orderCode":"19273672869847289",
+	"contact":"酒店前台",
+	"contactPhone":"18369956855"
+	}
+}

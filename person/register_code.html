@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册短信码</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/normalize.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/person.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/person/register.js"></script>
+</head>
+<body class="body-bg">
+<header class="header">注册
+    <span class="header-left"></span>
+</header>
+<section class="section">
+    <ul class="registe registe-bg ">
+        <li class="registe-num-num">输入手机号</li>
+        <li class="registe-tel-num">输入验证码</li>
+        <li>设置密码</li>
+    </ul>
+    <!--验证码--按钮变成下一步-------------->
+
+        <span class="registe-tel">请输入手机139269991688收到的短信校验码</span>
+        <div class="">
+            <span class="login-password ">校验码</span>
+            <input class="validate-num" type="text" name="" value=""  placeholder="短信校验码"/>
+            <span class="new-tel new-color " id="new-time" ><span id="time">5</span>秒后重发</span>
+            <span class="new-tel hide" id="new-tel" onclick="againSend(this)">重新发送</span>
+            <!--<span class="password-eye"></span>-->
+        </div>
+
+    <input class="login-btn" id="code_next" type="button"  value="下一步" onclick="nextCode(this)"/>
+</section>
+
+</body>
+</html>

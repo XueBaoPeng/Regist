@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人信息</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<link href="../src/css/common.css" rel="stylesheet">
+	<link href="../src/css/personcenter.css" rel="stylesheet">
+	<link href="../src/js/widget/calendar/mobiscroll.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../src/js/widget/jquery.fileupload/css/jquery.fileupload.css">
+	<link href="../src/js/widget/layer/need/layer.css" rel="stylesheet">			
+	<script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+	<script src="../src/js/lib/artTemplate/template.js"></script>
+	<script src="../src/js/widget/jquery.fileupload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="../src/js/widget/jquery.fileupload/js/jquery.iframe-transport.js"></script>
+    <script src="../src/js/widget/jquery.fileupload/js/jquery.fileupload.js"></script>
+	<script src="../src/js/widget/calendar/mobiscroll.js" type="text/javascript"></script>
+	<script src="../src/js/widget/layer/layer.js"></script>
+	<script src="../src/js/lib/fastclick.js"></script>
+	<script src="../src/js/util/webviewInterface.js"></script>
+	<script src="../src/js/util/common.js"></script>
+	<script src="../src/js/config.js"></script>
+	<script src="../src/js/dbutil.js"></script>
+	<script src="../src/js/personcenter/personal_msg.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div id="personInfo">
+			<script id="tmplPersonal" type="text/html">
+			<!-- 头像 -->
+			<div class="msg-head" >
+				<div class="msg-left">头像</div>
+				<div class="msg-right">
+					<span class="upload fileinput-button btn-upload person-load-btn">
+			            <i class="icon-plus icon-white"></i>
+			            <img id="headImg" src="{{data.userImg}}">
+			            <input id="fileupload" type="file" name="userfile"/>
+			        </span>
+			        <img src="../src/images/area/btn.svg" alt="link" class="msg-link">
+				</div>
+			</div>
+			<!-- 用户名 -->
+			<div class="msg-name clear">
+				<div class="msg-left">用户名</div>
+				<div class="msg-right">
+					<span class="msg-span" id="useName">{{data.userName}}</span>
+				</div>
+			</div>
+			<!-- 昵称 -->
+			<div id="perNick" class="msg-nickname clear" onclick="detailClick(this)" data-url="set_remark.html">
+				<div class="msg-left">昵称</div>
+				<div id="rightNick" class="msg-right">
+					<span class="msg-span" id="nickname">{{data.userNick}}</span>
+					<img src="../src/images/area/btn.svg" alt="link" class="msg-link">
+				</div>
+			</div>
+			<!-- 性别 -->
+			<div id="perSex" class="msg-sex clear">
+				<div class="msg-left">性别</div>
+				<div id="rightSex" class="msg-right">
+					<span class="msg-span" id="sex">{{data.sex}}</span>
+					<img src="../src/images/area/btn.svg" alt="link" class="msg-link">
+				</div>
+			</div>
+			<!-- 出生日期 -->
+			<div class="msg-date clear" onclick="birthdayDate()">
+				<div class="msg-left">出生日期</div>
+				<div class="msg-right" >
+					<input value="{{data.birthday}}" id="appDateTime" class="birthday-date"  readonly="readonly" name="appDateTime"  type="text">
+					<img src="../src/images/area/btn.svg" alt="link" class="msg-link" >
+				</div>
+			</div>
+			<!-- 手机号码 -->
+			<div class="msg-phone clear">
+				<div class="msg-left">手机号码</div>
+				<div class="msg-right">
+					<span class="msg-span" id="tel">{{data.phone}}</span>
+				</div>
+			</div>
+			</script>
+		</div>
+		<!-- 修改密码 -->
+		<div id="btnModifyPwd" class="msg-pwd clear">
+			<div class="msg-left">修改密码</div>
+			<div class="msg-right">
+				<img src="../src/images/area/btn.svg" alt="link" class="msg-link">
+			</div>
+		</div>
+		<!-- 退出 -->
+		<button id="btnExit" class="msg-quit">退出当前账号</button>
+
+	</div>
+	<div class="menu">
+		<div class="msg-head-bottom" >
+			<div class="paizhao">拍照</div>
+			<div class="choose">从手机相册选择</div>
+			<div class="cancel">取消</div>
+		</div>
+	</div>
+	<div id="winSex" class="menu">
+		<div><span id="finish">完成</span></div>
+		<ul id="ulType">
+			<li data-id="1">男</li>
+			<li data-id="2">女</li>
+			<li data-id="0">保密</li>
+		</ul>
+	</div>
+</body>
+</html>

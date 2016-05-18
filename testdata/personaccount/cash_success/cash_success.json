@@ -1,0 +1,9 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": {
+    "success":"提现申请成功",
+    "image":"../src/images/personaccount/success.png",
+    "time":"3个工作日"
+  }
+}

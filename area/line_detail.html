@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>线路详情</title>
+    <link href="../src/js/widget/swiper/swiper-3.2.7.min.css" rel="stylesheet">
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/pay.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/widget/swiper/swiper-3.2.7.min.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/area/line_detail.js"></script>
+</head>
+<body>
+<div class="goodDetail">
+    <script type="text/html" id="template">
+        <div class="goodDetailTop">
+            <div class="top">
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        {{each banner as bannerImg}}
+                        <li class="swiper-slide"><img src={{bannerImg}}></li>
+                        {{/each}}
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="bar">
+                <span class="barLeft">[{{travelType}}] {{startCity}}</span>
+
+                <span class="barRight">产品编号：{{goodsId}}</span>
+            </div>
+        </div>
+        <div class="detail">
+            <div class="title">
+                <!--[春节]<span><</span>美国塞班4晚6日半自助游<span>></span>，北京出发韩亚转机，酒店自由搭-->
+                {{travelTitle}}
+            </div>
+            <div class="price">
+                <p><span>￥{{travelPrice}}</span>起/人</p>
+
+                <p class="mount">{{buy}}人已购买</p>
+            </div>
+            <div class="discuss">
+                <p class="text">好评率</p>
+
+                <p class="percent">{{percent}}</p>
+                <ul class="star">
+                    {{each starArray as value}}
+                    {{if value.isYellow}}
+                    <li class="yellow"></li>
+                    {{/if}}
+                    {{if !value.isYellow}}
+                    <li class="grey"></li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="groom">
+            <div class="title">
+                <img src="../src/images/area/tui_03.jpg">
+                <span>{{groomTitle}}</span>
+
+                <div class="clear"></div>
+            </div>
+            <ul class="listText">
+                {{each groomList as item}}
+                <li>
+                    <img src="../src/images/area/starblack_03.jpg">
+                    <span>{{item}}</span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <ul class="tab">
+            <li class="routeTab current">行程介绍</li>
+            <li class="feeTab">费用说明</li>
+            <li class="bookTab">预定须知</li>
+            <li class="featureTab">产品特色</li>
+        </ul>
+        <div class="content">
+            <div class="item route">
+                {{each tripInfo.dayList as day}}
+                <div class="day">
+                    <div class="number">{{#day.title}}</div>
+                    <span class="pathTitle">{{#day.path}}</span>
+                    <div class="clear"></div>
+                    {{each day.detail as item}}
+                    <div class="pathDetail">
+                        <img src={{item.pathLogo}} class="pathLogo">
+                        <span class="pathDetailTitle">{{item.detailTitle}}</span>
+                        <div class="clear"></div>
+                        <div class="detailText">
+                            {{item.content}}
+                        </div>
+                        {{if item.spotImg}}
+                        <img src={{item.spotImg}} class="spotImg">
+                        {{/if}}
+                    </div>
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
+            <div class="item fee">
+                {{each fee.feeList as item}}
+                <div class="explain">
+                    <div class="explainTitle"><span>|</span>{{#item.title}}</div>
+                    <ol class="explainList">
+                        {{each item.content as text}}
+                        <li>
+                            {{#text.text}}
+                        </li>
+                        {{/each}}
+                    </ol>
+                </div>
+                {{/each}}
+            </div>
+            <div class="item book">
+                {{each book.bookList as item}}
+                <div class="explain">
+                    <div class="explainTitle"><span>|</span>{{#item.title}}</div>
+                    <ol class="explainList">
+                        {{each item.content as text}}
+                        <li>
+                            {{#text.text}}
+                        </li>
+                        {{/each}}
+                    </ol>
+                </div>
+                {{/each}}
+                {{if remark}}
+                <div class="remark">
+                    <div class="text">
+                        <p class="title">备注信息</p>
+                        <p>{{#remark}}</p>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+            <ul class="item feature">
+                {{each feature as item}}
+                <li>
+                    <img class="star" src="../src/images/area/starBlue_03.jpg">
+                    <span class="notice">{{item.title}}：</span>
+                    <span>{{item.content}}</span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="bottom">
+            <div class="call">
+                <div class="callBox">
+                    <img src="../src/images/area/call_03.jpg">
+                    <span>联系商家</span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="buy" onclick="detailClick(this)" data-url="line_info_write.html">立即购买</div>
+            <div class="clear"></div>
+            <div class="bottomBox">
+                <div class="telephone">
+                    <div class="notice">为了节省您的时间,请告知客服此产品的产品编号</div>
+                    <div class="goodsId">产品编号：503239</div>
+                    <div class="telephoneNumber">40081230600（免长途费）</div>
+                    <div class="callBtn">
+                        <div class="btnBox">
+                            <img src="../src/images/area/call2_03.jpg">
+                            <span>拨打电话</span>
+                        </div>
+                    </div>
+                    <div class="callBtn cancel">
+                        <div class="btnBox">
+                            <img src="../src/images/area/cancel_11.jpg">
+                            <span>关</span>闭
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-down"></div>
+                <div class="arrow-down2"></div>
+            </div>
+        </div>
+    </script>
+    <!-- 弹框 -->
+    <div class="jump-travel">
+        <div class="jump-tit">
+              <span>选择套餐</span>          
+              <img src="../src/images/area/close.png"  alt="" class="jump-close">
+        </div>
+        <div class="jump-con">
+            <div class="package-tit">
+                <span class="package-name">全程3星酒店豪华套餐</span>
+                <div class="package-book">订</div>
+                <div class="package-price">
+                    <span>&yen;6900</span>
+                    /人
+                </div>
+            </div>
+            <div class="package-con">
+                白庙其实只是俗称，真正的英文名叫，汉语为龙困死，灵光寺或是白龙寺。令人惊讶的是，这座惊世骇俗的宗教建筑居然是始建于1998年的现代建筑，泰国注明的建筑师耗尽毕生心血创造了他人生中的伟大作品。白庙的出现让越来越多的人知道了泰北小城青菜，越来越多的游客愿意驱车百里一渡它 的。
+            </div>
+            <div class="package-btn-up">
+                <img src="../src/images/area/up.png"  alt="">
+                <span>收起</span>
+            </div>
+        </div>
+        <div class="jump-bg"></div>
+        <div class="jump-con">
+            <div class="package-tit">
+                <span class="package-name">全程3星酒店豪华套餐</span>
+                <div class="package-book">订</div>
+                <div class="package-price">
+                    <span>&yen;6900</span>
+                    /人
+                </div>
+            </div>
+            <div class="package-con package-none">
+                白庙其实只是俗称，真正的英文名叫，汉语为龙困死，灵光寺或是白龙寺。令人惊讶的是，这座惊世骇俗的宗教建筑居然是始建于1998年的现代建筑，泰国注明的建筑师耗尽毕生心血创造了他人生中的伟大作品。白庙的出现让越来越多的人知道了泰北小城青菜，越来越多的游客愿意驱车百里一渡它 的。
+            </div>
+            <div class="package-btn-up">
+                <img src="../src/images/area/down.png"  alt="">
+                <span>展开</span>
+            </div>
+        </div>
+        <div class="jump-con">
+            <div class="package-tit">
+                <span class="package-name">全程3星酒店豪华套餐</span>
+                <div class="package-book">订</div>
+                <div class="package-price">
+                    <span>&yen;6900</span>
+                    /人
+                </div>
+            </div>
+            <div class="package-con">
+                白庙其实只是俗称，真正的英文名叫，汉语为龙困死，灵光寺或是白龙寺。令人惊讶的是，这座惊世骇俗的宗教建筑居然是始建于1998年的现代建筑，泰国注明的建筑师耗尽毕生心血创造了他人生中的伟大作品。白庙的出现让越来越多的人知道了泰北小城青菜，越来越多的游客愿意驱车百里一渡它 的。
+            </div>
+            <div class="package-btn-up">
+                <img src="../src/images/area/down.png"  alt="">
+                <span>展开</span>
+            </div>
+        </div>
+        <div class="jump-bg"></div>
+    </div>
+</div>
+</body>
+</html>

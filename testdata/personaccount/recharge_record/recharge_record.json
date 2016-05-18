@@ -1,0 +1,58 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": [{
+    "title": "本月",
+    "recharge":"520.00",
+    "num":[
+      {
+        "image":"../src/images/personaccount/pay-d.png",
+        "property":"充值支付宝",
+        "success":"充值成功",
+        "rise":"+10.00",
+        "time":"01-30 13:44"
+      },
+      {
+        "image":"../src/images/personaccount/pay-d.png",
+        "property":"充值支付宝",
+        "success":"充值成功",
+        "rise":"+10.00",
+        "time":"01-30 13:44"
+      },
+      {
+        "image":"../src/images/personaccount/pay-d.png",
+        "property":"充值支付宝",
+        "success":"充值成功",
+        "rise":"+10.00",
+        "time":"01-30 13:44"
+      }
+    ]
+  },
+    {
+      "title": "2015年2月",
+      "recharge":"充值520.00",
+      "num":[
+        {"image":"../src/images/personaccount/pay-d.png",
+          "property":"充值支付宝",
+          "success":"充值成功",
+          "rise":"+10.00",
+          "time":"01-30 13:44"
+        },
+        {
+          "image":"../src/images/personaccount/pay-d.png",
+          "property":"充值支付宝",
+          "success":"充值成功",
+          "rise":"+10.00",
+          "time":"01-30 13:44"
+        },
+        {
+          "image":"../src/images/personaccount/pay-d.png",
+          "property":"充值支付宝",
+          "success":"充值成功",
+          "rise":"+10.00",
+          "time":"01-30 13:44"
+        }
+      ]
+    }]
+}
+

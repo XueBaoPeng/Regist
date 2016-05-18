@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link href="../src/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/person.css">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/person/register.js"></script>
+</head>
+<body class="body-bg">
+<header class="header">注册
+    <span class="header-left"></span>
+
+</header>
+<section class="section">
+    <!--输入错误的弹出层  并且父级的padding-top:0-->
+    <div class="password-error hide" id="password-error"><span class="icon-tel">该手机已经注册，请重新输入</span></div>
+    <!--该号码已经注册，请直接登录  按钮文字变成发送校验码-->
+    <ul class="registe">
+        <li class="registe-tel-num">输入手机号</li>
+        <li>输入验证码</li>
+        <li>设置密码</li>
+    </ul>
+
+    <div class="">
+        <span class="login-name">手机号</span>
+        <input type="text" class="input-width" id="tel-num" name="" value="" placeholder="请输入手机号" />
+        <span class="ico-x hide"></span><!--小X隐藏-->
+    </div>
+    <input class="login-btn login-color" id="send-validate" type="button" value="发送校验码" onclick="sendValidate(this)"/>
+    <p class="login-forget forget-bg">
+        阅读并接受<a href="javascript:;">《嗨皮兔用户协议》</a>
+    </p>
+</section>
+
+</body>
+</html>

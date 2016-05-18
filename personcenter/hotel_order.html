@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>酒店订单</title>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+  <link href="../src/css/reset.css" rel="stylesheet">
+  <link href="../src/css/common.css" rel="stylesheet">
+  <link href="../src/css/personcenter.css" rel="stylesheet">
+  <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>  
+  <script src="../src/js/lib/fastclick.js"></script>
+  <script src="../src/js/lib/artTemplate/template.js"></script>
+  <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+  <script src="../src/js/util/pullIscroll.js"></script>
+  <script src="../src/js/util/webviewInterface.js"></script>
+  <script src="../src/js/util/common.js"></script>
+  <script src="../src/js/config.js"></script>
+  <script src="../src/js/dbutil.js"></script>
+  <script src="../src/js/personcenter/hotel_order.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id="contSearch" class="spot-order-search hide">
+        <div class="order-screen">
+            <div class="order-screen-tip">订单状态</div>
+            <div class="order-screen-option">
+                <ul id="ulOrderStatus">
+                    <li class="order-screen-active"><a href="javascript:;" data-value="0">全部</a></li>
+                    <li><a href="javascript:;" data-value="1">待付款</a></li>
+                    <li><a href="javascript:;" data-value="2">已付款</a></li>
+                    <li><a href="javascript:;" data-value="3">已完成</a></li>
+                    <li><a href="javascript:;" data-value="4">已关闭</a></li>
+                </ul>
+            </div>
+            <div class="order-screen-tip">下单时间</div>
+            <div class="order-screen-option">
+                <ul id="ulDateRange">
+                    <li class="order-screen-active"><a href="javascript:;" data-value="1">一周以内</a></li>
+                    <li><a href="javascript:;" data-value="2">一月以内</a></li>
+                    <li><a href="javascript:;" data-value="3">三月以内</a></li>
+                    <li><a href="javascript:;" data-value="4">三月以上</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="order-ctl">
+            <button id="btnClear" class="btn-hp btn-mid-whi left">清除</button>
+            <button id="btnConfirm" class="btn-hp btn-mid-org">确定</button>
+        </div>
+    </div>
+  <div class="screen-result" id="screen-result">
+    <div class="wrapper">
+      <div class="scroller">
+        <div class="pullDown">
+          <span>下拉刷新</span>
+        </div>
+        <div class="my-order" id="my-order">
+          <!-- 退款申请中 -->
+          <script type="text/html" id="template">
+            {{each data as item i}}
+            <div class="no-payment">
+	            <div class="my-order-tit">
+	                <span class="order-name">{{item.name}}</span>
+	                {{if item.status =="1"}}
+	                <span class="order-state">待付款</span>
+	                {{else if item.status =="2"}}
+	                <span class="order-state">已付款</span>
+	                {{else if item.status =="3"}}
+	                <span class="order-state">已完成</span>
+	                {{else}}
+	                <span class="order-state">交易关闭</span>
+	                {{/if}}
+	            </div>
+	            {{each item.roomList as roomList j}}
+	             	<div class="my-order-con">
+		                <div class="my-order-left">
+		                  <img src="{{roomList.roomImg}}" alt="">
+		                </div>
+		                <div class="my-order-right">
+		                  <p class="refund-type">{{roomList.roomName}}</p>                  
+		                  <p class="refund-date">{{roomList.startDate}}-{{roomList.endDate}}  {{roomList.num}}</p>
+		                  <p class="refund-num"><span>&yen;{{roomList.price}}</span> X {{roomList.roomNum}}间</p>
+		                </div>
+				          </div>
+	            {{/each}}
+	            <div class="my-order-result">
+	              		  订单金额：
+              	<span class="mon-sign">¥</span><span class="apply-money">{{item.totalMoney}}</span>
+                {{if item.status=="1"}}
+                <button class="my-order-pay" onclick="detailClick('{{item.id}}');">查看</button>
+                <button class="my-order-pay" onclick="payClick('{{item.id}}');">付款</button>
+                {{else if item.status=="2"}}
+                <button class="my-order-pay" onclick="detailClick('{{item.id}}')">查看</button>
+                {{else if item.status=="3"}}
+                <button class="my-order-pay" onclick="ratedClick('{{item.id}}');">评价</button>
+                <button class="my-order-pay" onclick="detailClick('{{item.id}}')">查看</button>
+                {{/if}}
+	            </div>
+            </div>
+            {{/each}}
+            </script>
+        </div>
+        <div class="pullUp">
+          <span>上拉加载更多</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

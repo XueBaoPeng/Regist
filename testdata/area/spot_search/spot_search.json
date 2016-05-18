@@ -1,0 +1,17 @@
+{
+  "list":[
+    {
+      "id":"0",
+      "thumbnail":"http://.....jpg",
+      "recommend ":"true",
+      "title":"标题",
+      "goodReputation":"100%",
+      "location":"北京",
+      "price":"100.00",
+      "originalPrice":"999.00",
+      "discount":"true",
+      "remnant":"true"
+    }
+  ]
+}
+

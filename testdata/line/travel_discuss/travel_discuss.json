@@ -1,0 +1,57 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data":{
+    "opinion":"98.9%",
+    "traffic":"4.98",
+    "stay":"4.98",
+    "schedule":"4.98",
+    "guide":"4.98",
+    "all":"34",
+    "good":"34",
+    "center":"34",
+    "differ":"34",
+    "pic":"34",
+    "user":[{
+      "pic":"../src/images/line/touxianhg.svg",
+      "name":"用户昵称",
+      "isPic":true,
+      "isOwner":false,
+      "num":"12",
+      "img":[
+       "../src/images/line/line-img1.jpg",
+        "../src/images/line/line2.jpg",
+        "../src/images/line/line3.jpg",
+        "../src/images/line/line4.jpg",
+        "../src/images/line/line5.jpg",
+        "../src/images/line/line6.jpg"
+      ],
+      "owner":"酒店回复：技术等哈说简单的骄傲时间都会散的，适合设的是大家的卡死了 开始倒计时卡登记的骄傲是快乐的，骄傲的人是快乐。",
+      "year":"2016-01-10",
+      "time":"12:23",
+      "evaluate":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod blibendum laoreet.Proin "
+    },
+      {
+        "pic":"../src/images/line/touxianhg.svg",
+        "name":"用户昵称",
+        "isPic":false,
+        "isOwner":true,
+        "num":"12",
+        "img":[
+          "../src/images/line/line-img1.jpg",
+          "../src/images/line/line2.jpg",
+          "../src/images/line/line3.jpg",
+          "../src/images/line/line4.jpg",
+          "../src/images/line/line5.jpg",
+          "../src/images/line/line6.jpg"
+        ],
+        "owner":"酒店回复：技术等哈说简单的骄傲时间都会散的，适合设的是大家的卡死了 开始倒计时卡登记的骄傲是快乐的，骄傲的人是快乐。",
+        "year":"2016-01-10",
+        "time":"12:23",
+        "isMore":true,
+        "evaluate":"Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean euismod blibendum laoreet.Proin gravidadolorsit amet lacus accumsanet viverra justo commodo.Proin sodales pulvinargravidadolorsit amet lacus accumsanet viverra justo commodo.Proin sodales pulvinar"
+      }
+    ]
+      }
+
+  }

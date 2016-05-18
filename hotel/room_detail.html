@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>酒店客房详情</title>
+    <link rel="stylesheet" href="../src/js/widget/layer/need/layer.css">
+    <link rel="stylesheet" href="../src/js/widget/lightGallery/css/lightgallery.css">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/pay.css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/widget/layer/layer.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lightgallery.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-thumbnail.js"></script>
+    <script src="../src/js/widget/lightGallery/js/lg-fullscreen.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/widget/bxslider/jquery.bxslider.min.js"></script>
+    <script src="../src/js/lib/fastclick.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/config.js"></script>
+    <script src="../src/js/dbutil.js"></script>
+    <script src="../src/js/hotel/room_detail.js"></script>
+</head>
+<body class="bg-color-white1 font-color1 hotel_roomInfo">
+<div class="container">
+    <!--<div class="wrapper" id="wrapper" style="overflow: auto; ">-->
+        <div id="roomDatail">
+        <script id="template" type="text/html">
+        <!--<div class="scroller" data-id={{data.hotelId}}>-->
+            <div class="title">{{data.title}} {{if data.Refund!=null}}( 支持退款 ){{/if}}</div>
+            <div class="imgList" id="imgBox">     
+                <!--<div class="imgBox" id="imgBox">-->
+                    {{each data.images as images i}}                   
+                    <a href="{{images}}"><img src="{{images}}" /></a>
+                    {{/each}}
+                <!--</div>-->
+            </div>
+            <div class="content_hinfo">
+                <div class="book_hinfo">现在就预订</div>
+                <p>       
+	                <span class="item">{{data.Breakfast}}</span>
+	                <span class="item">{{data.Broadband}}</span>
+	                <span class="item">{{data.WIFI}}</span>
+                <div class="itemRight">
+                    <span>￥{{data.price}}</span>/晚
+                </div>
+                </p>
+                <p>最大入住人数：{{data.personNum}}人</p>
+                <p> {{data.GiftDes}} <!--礼品: -->{{data.GiftUseDes}}</p>
+                <ul class="infoList">
+                    <li class="infonum">
+                        <p class="infoTitle">客户信息</p>
+                        <span>面积：{{data.area}}㎡</span>
+                        <span>楼层：{{data.floor}}层</span>
+                        <span>{{data.window}}</span>
+                        <span>{{data.scenery}}</span>
+                        <span>{{data.extrabed}}</span>
+                    </li>
+                    <li>
+                        <p class="infoTitle">可提供床型</p>
+                        <span>{{data.bedNum}}张{{data.bedName}}&nbsp; {{data.bedtype}}㎡ </span>                      
+                    </li>
+                    <li>
+                        <p class="infoTitle">取消政策</p>                        
+                        <p>
+                        	{{if data.cancelPolicy!=null}}
+                        	{{data.cancelPolicy}}
+                        	{{else}}
+                        	无
+                        	{{/if}}
+                        </p>
+                    </li>
+                    <li class="infonum">
+                        <p class="infoTitle">房间设施</p>
+                        {{each data.FacilityList as FacilityList i}}
+                        <span>{{FacilityList}}</span>
+                        {{/each}}
+                    </li>
+                </ul>
+            </div>
+  		 <!--</div>-->
+ 		</script>
+		</div>
+    <!--</div>-->
+    <div id="booking">
+    	<script id="template_1" type="text/html">
+    	<div class="btn-orange-large bookBtn" id="bookBtn" onclick="bookingClick()">立即预订</div>
+    	</script>
+    </div>
+</div>
+ <!--轮播图全屏预览-->
+<section id="showFull" class="photo-full hide">
+    <div class="oriphoto"><img src="" data-idx="" alt=""></div>
+    <div class="pho"></div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data": {
+    "success":"转账成功!",
+    "image":"../src/images/personaccount/success.png",
+    "gathering":"happyto13231（18500492847）",
+    "sum":"100.00"
+  }
+}

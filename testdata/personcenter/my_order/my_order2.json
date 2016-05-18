@@ -1,0 +1,67 @@
+{
+  "gorderList":
+  [
+    {
+      "title":"北京雅乐大酒店",
+      "status":"退款申请中",
+      "pay":"400.00",
+      "type":"2",
+      "orderList":[
+        {
+          "hotelImg": "data/line/eat_08.jpg",
+          "roomType": "标准大床房",
+          "time": "2016/01/09-2016/01/10",
+          "price": "200"
+        },
+        {
+          "hotelImg": "data/line/eat_08.jpg",
+          "roomType": "标准大床房",
+          "time": "2016/01/09-2016/01/10",
+          "price": "200"
+        }
+      ]
+    },
+    {
+      "title":"亚布力滑雪场",
+      "status":"待付款",
+      "pay":"400.00",
+      "type":"1",
+      "orderList":[
+        {
+          "hotelImg":"data/line/eat_08.jpg",
+          "roomType":"标准大床房",
+          "time":"2016/01/09-2016/01/10",
+          "orderItemList":[
+            {
+              "title":"成人平日票",
+              "price":"12",
+              "count":"1"
+            },
+            {
+              "title":"成人平日票",
+              "price":"12",
+              "count":"1"
+            }
+          ]
+        },
+        {
+          "hotelImg":"data/line/eat_08.jpg",
+          "roomType":"标准大床房",
+          "time": "2016/01/09-2016/01/10",
+          "orderItemList":[
+            {
+              "title":"成人平日票",
+              "price":"12",
+              "count":"1"
+            },
+            {
+              "title":"成人平日票",
+              "price":"12",
+              "count":"1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

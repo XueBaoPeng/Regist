@@ -1,0 +1,137 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":{
+	"orderId":"1",
+	"orderCode":"00221521",
+	"eticketCode":"45453451524745441525",	
+	"productList":[{
+		"productName": "亚布力滑雪场大门票1",
+		"versionList":[{
+			"versionName":"成人平时票",
+			"versionPrice":"15",
+			"versionNum":"5",
+			"verified":"2",
+			"noVerified":"2",
+			"refunded":"1"
+		},{
+          "versionName":"成人平时票",
+          "versionPrice":"15",
+          "versionNum":"5",
+          "verified":"2",
+          "noVerified":"2",
+          "refunded":"1"
+        },{
+          "versionName":"成人平时票",
+          "versionPrice":"15",
+          "versionNum":"5",
+          "verified":"2",
+          "noVerified":"2",
+          "refunded":"1"
+        }],
+		"travelDate":"2014-02-12",
+		"validate":"仅限游玩当日有效",
+		"refundInfo":"2015年12月30日0点前可退"
+	},{
+      "productName": "亚布力滑雪场大门票2",
+      "versionList":[{
+        "versionName":"成人平时票",
+        "versionPrice":"15",
+        "versionNum":"5",
+        "verified":"2",
+        "noVerified":"2",
+        "refunded":"1"
+      },{
+        "versionName":"成人平时票",
+        "versionPrice":"15",
+        "versionNum":"5",
+        "verified":"2",
+        "noVerified":"2",
+        "refunded":"1"
+      },{
+        "versionName":"成人平时票",
+        "versionPrice":"15",
+        "versionNum":"5",
+        "verified":"2",
+        "noVerified":"2",
+        "refunded":"1"
+      }],
+      "travelDate":"2014-02-12",
+      "validate":"仅限游玩当日有效",
+      "refundInfo":"2015年12月30日0点前可退"
+    },{
+      "productName": "亚布力滑雪场大门票3",
+      "versionList":[{
+        "versionName":"成人平时票",
+        "versionPrice":"15",
+        "versionNum":"5",
+        "verified":"2",
+        "noVerified":"2",
+        "refunded":"1"
+      },{
+        "versionName":"成人平时票",
+        "versionPrice":"15",
+        "versionNum":"5",
+        "verified":"2",
+        "noVerified":"2",
+        "refunded":"1"
+      },{
+        "versionName":"成人平时票",
+        "versionPrice":"15",
+        "versionNum":"5",
+        "verified":"2",
+        "noVerified":"2",
+        "refunded":"1"
+      }],
+      "travelDate":"2014-02-12",
+      "validate":"仅限游玩当日有效",
+      "refundInfo":"2015年12月30日0点前可退"
+    }],
+	"orderMoney":"201",
+    "orderType":"支付宝",
+	"orderTime":"2015-03-12 44:44:44",
+	"payTime":"2015-03-12 44:44:44",
+	"contactPhone":"13562498756",
+	"travelPerson":[{
+		"productName":"亚布力滑雪场大门票",
+		"persons":[{
+			"id":"1",
+			"name":"张三"
+		},
+		{
+			"id":"2",
+			"name":"李四"
+		},{
+			"id":"3",
+			"name":"王五"
+		}]
+	},
+      {
+        "productName":"亚布力滑雪场大门票",
+        "persons":[{
+          "id":"1",
+          "name":"张三"
+        },
+          {
+            "id":"2",
+            "name":"李四"
+          },{
+            "id":"3",
+            "name":"王五"
+          }]
+      }],
+	"records":[{
+		"recContent":"已准时到达,入住酒店。",
+		"recDate":"2016-01-07 15:50"
+		},{
+		"recContent":"酒店已确认,您的房间预定成功。",
+		"recDate":"2016-01-07 15:49"
+		},{
+		"recContent":"订单已付款,等待酒店确认。。",
+		"recDate":"2016-01-07 15:50"
+		},{
+		"recContent":"订单提交。",
+		"recDate":"2016-01-07 15:50"
+		}]	
+	}
+}

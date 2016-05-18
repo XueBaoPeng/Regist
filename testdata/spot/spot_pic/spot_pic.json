@@ -1,0 +1,28 @@
+{
+  "code":0,
+  "msg":"业务信息",
+  "data":[
+    {
+      "imageName":"图片名称1",
+      "imageUrl":"../src/images/spot/spot-pic1.png"
+    },{
+      "imageName":"图片名称2",
+      "imageUrl":"../src/images/spot/spot-pic2.png"
+    },{
+      "imageName":"图片名称3",
+      "imageUrl":"../src/images/spot/spot-pic2.png"
+    },{
+      "imageName":"图片名称4",
+      "imageUrl":"../src/images/spot/spot-pic1.png"
+    },{
+      "imageName":"图片名称5",
+      "imageUrl":"../src/images/spot/spot-pic2.png"
+    },{
+      "imageName":"图片名称6",
+      "imageUrl":"../src/images/spot/spot-pic2.png"
+    },{
+      "imageName":"图片名称7",
+      "imageUrl":"../src/images/spot/spot-pic1.png"
+    }
+  ]
+}

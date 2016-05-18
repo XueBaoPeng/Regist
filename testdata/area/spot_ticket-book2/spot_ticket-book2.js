@@ -1,0 +1,32 @@
+{
+  "list":[
+  {
+    "id":"0",
+    "thumbnail":"../testdata/area/spot_ticket-book2/img/spot1.png",
+    "title":"住宜兴开元精舍酒店",
+    "salesNum":"520",
+    "discount":false,
+    "coupon":true,
+    "ticketType":[
+      {"name":"儿童票","discount":"0.3","price":"20","originalPrice":"50"},
+      {"name":"成人票","discount":"0.4","price":"30","originalPrice":"60"},
+      {"name":"军人票","discount":"0.4","price":"30","originalPrice":"60"},
+      {"name":"老人票","discount":"0.4","price":"30","originalPrice":"60"}
+    ]
+  },
+  {
+    "id":"1",
+    "thumbnail":"../testdata/area/spot_ticket-book2/img/spot2.png",
+    "title":"标题",
+    "salesNum":"520",
+    "discount":true,
+    "coupon":true,
+    "ticketType":[
+      {"name":"成人票","discount":"0.5","price":"40","originalPrice":"70"},
+      {"name":"儿童票","discount":"0.6","price":"50","originalPrice":"80"},
+      {"name":"军人票","discount":"0.4","price":"30","originalPrice":"60"},
+      {"name":"老人票","discount":"0.4","price":"30","originalPrice":"60"}
+    ]
+  }
+]
+}

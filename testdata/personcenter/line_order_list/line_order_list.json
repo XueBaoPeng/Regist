@@ -1,0 +1,33 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":[{
+	"id":"1",
+	"name":"神州国旅",
+	"lineDescription":"【特价线路】昆明、大理、丽江、玉龙雪山5日火车双卧经典游",
+	"totalMoney":"2000",
+	"deptDate":"2016-2-12",
+	"status":"未付款"
+	},{
+	"id":"2",
+	"name":"长沙国际旅行社",
+	"lineDescription":"[春节]<普吉甲米6或7日游>甲米四岛 大堡礁 海边酒店 铁定发团",
+	"totalMoney":"2000",
+	"deptDate":"2016-2-12",
+	"status":"已付款"
+	},{
+	"id":"3",
+	"name":"长沙国际旅行社",
+	"lineDescription":"[春节]<普吉甲米6或7日游>甲米四岛 大堡礁 海边酒店 铁定发团",
+	"totalMoney":"2000",
+	"deptDate":"2016-2-12",
+	"status":"已参团"
+	},{
+	"id":"4",
+	"name":"神州国旅",
+	"lineDescription":"【特价线路】昆明、大理、丽江、玉龙雪山5日火车双卧经典游",
+	"totalMoney":"2000",
+	"deptDate":"2016-2-12",
+	"status":"未付款"
+	}]	
+}

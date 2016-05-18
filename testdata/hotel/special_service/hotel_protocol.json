@@ -1,0 +1,15 @@
+{
+"code":0,
+"msg":"业务信息",
+"data":{
+	"telephoneNumber":"010-3728736",
+	"phoneTime":"0:00-24:00",
+	"serviceItem":"接机服务、送机服务、叫车、包车、介绍导游、存取行李、收发快递、代买物品、送报纸。",
+	"serviceNote":"如需预订，请直接拨打预订电话进行预订。",
+	"photoList":[
+		{"src":"../src/images/hotel/room_09.jpg","txt":"客房图片1"},
+		{"src":"../src/images/hotel/room_09.jpg","txt":"客房图片1"},
+		{"src":"../src/images/hotel/room_09.jpg","txt":"客房图片1"}
+	]
+}
+}

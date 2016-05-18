@@ -1,0 +1,98 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no">
+    <title>导游支付</title>
+    <link href="../src/css/reset.css" rel="stylesheet">
+    <link href="../src/css/common.css" rel="stylesheet">
+    <link href="../src/css/area/guide_pay-info.css"  rel="stylesheet" type="text/css">
+    <script src="../src/js/lib/jquery/jquery-2.2.0.min.js"></script>
+    <script src="../src/js/lib/artTemplate/template.js"></script>
+    <script src="../src/js/lib/jquery/plugin/iscroll-probe.js"></script>
+    <script src="../src/js/util/pullIscroll.js"></script>
+    <script src="../src/js/util/common.js"></script>
+    <script src="../src/js/util/webviewInterface.js"></script>
+    <script src="../src/js/area/guide_pay_info.js"></script>
+</head>
+<body>
+    <div class="container">
+      <script type="text/html" id="template">
+        <!-- 支付剩余时间 -->
+        <div class="pay-time">
+            支付剩余时间：<span class="countdown">14:50:22</span>
+        </div>
+        <!-- 支付金额 -->
+        <div class="pay-money main-bg">
+            <div>支付金额<span class="paymoney">&yen;<span class="payAmount">{{pay}}</span></span></div>
+            <p class="clear">{{productName}}</p>
+        </div>
+        <!-- 订单详情 -->
+        <ul class="order-detail main-bg">
+            <li><label>订单编号：</label><span>{{orderId}}</span></li>
+            <li><label>出团日期：</label><span>{{startTime}}</span></li>
+            <li><label>回团日期：</label><span>{{backTime}}</span></li>
+            <li><label>出游人数：</label><span>{{adultAmount}}成人,{{childrenAmount}}儿童</span></li>
+            <li class="li-line"></li>
+            <li class="li-last-two"><label class="order-people">联系人：</label><span>{{linkman}}</span></li>
+            <li class="li-last"><label>联系电话：</label><span>{{telephone}}</span></li>
+        </ul>
+        <!-- 支付方式 -->
+        <div class="pay-method main-bg">
+            <ul class="ul-top">
+                <li><label class="method-tit">支付方式</label></li>
+                <li class="pay cashPay">
+                    <label>现金余额：</label>
+                    <span class="cash">&yen;{{cash}}</span>
+                    <div class="item"></div>
+                    <!--<img src="images/opt_b.png" alt="">-->
+                </li>
+                <li class="pay tubeiPay">
+                    <label>兔贝余额：</label>
+                    <span class="tubei">{{tubei}}兔贝</span>
+                    <div class="item"></div>
+                    <!--<img src="images/opt_b.png"  alt="">-->
+                </li>
+                <div class="pay-bg"></div>
+                <li>
+                    <label>还需支付：</label>
+                    <span>&yen;<span class="payment">{{pay}}</span></span>
+                </li>
+            </ul>
+            <ul class="ul-bot">
+                <li>
+                    <img src="../src/images/area/pay-a.png" alt="" class="pic-tip">
+                    <div class="tip-top">招商银行信用卡&nbsp;尾号2345</div>
+                    <div class="tip-bot">已绑定银行卡,直接付款</div>
+                    <div class="pic-opt"></div>
+                    <!--<img src="images/opt_a.png"  alt="" class="pic-opt">-->
+                </li>
+                <li>
+                    <img src="../src/images/area/pay-b.png" alt="" class="pic-tip2">
+                    <div class="tip-top">银行卡支付</div>
+                    <div class="tip-bot">支持储蓄卡信用卡,无需开通网银</div>
+                    <div class="pic-opt"></div>
+                    <!--<img src="images/opt_a.png"  alt="" class="pic-opt">-->
+                </li>
+                <li class="chooseThis">
+                    <img src="../src/images/area/pay-c.png" alt="" class="pic-tip3">
+                    <div class="tip-top">微信支付</div>
+                    <div class="tip-bot">推荐安装微信5.0及以上的版本的试用</div>
+                    <div class="pic-opt"></div>
+                    <!--<img src="images/opt_a.png"  alt="" class="pic-opt">-->
+                </li>
+                <li class="li-zfb">
+                    <img src="../src/images/area/pay-d.png" alt="" class="pic-tip4">
+                    <div class="tip-top">支付宝支付</div>
+                    <div class="tip-bot">推荐有支付宝账号的用户使用</div>
+                    <div class="pic-opt"></div>
+                    <!--<img src="images/opt_a.png"  alt="" class="pic-opt">-->
+                </li>
+            </ul>
+        </div>
+        <!-- 确认支付按钮 -->
+        <button class="pay-confirm" onclick="detailClick(this)" data-url="guide_order_success.html">确认支付</button>
+        </script>
+    </div>
+</body>
+</html>

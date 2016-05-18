@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>头像 </title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="头像-" sketch:type="MSLayerGroup">
+            <path d="M17.5135135,36 C27.1859599,36 35.027027,27.9411255 35.027027,18 C35.027027,8.0588745 27.1859599,0 17.5135135,0 C7.84106708,0 0,8.0588745 0,18 C0,27.9411255 7.84106708,36 17.5135135,36 Z" id="头像" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M9.1941305,14.6928201 C9.1941305,9.97395816 12.9164238,6.14826778 17.5077978,6.14826778 C22.0993183,6.14826778 25.8214163,9.97395816 25.8214163,14.6928201 C25.8214163,17.4990628 24.5052892,19.9889372 22.4729888,21.5467782 C26.2513645,22.9251715 29.3288576,25.8242008 31.0089336,29.527682 C33.5357159,26.4059247 35.055459,22.3927029 35.055459,18.0147113 C35.055459,8.06540586 27.2079882,0 17.5278272,0 C7.84747077,0 0,8.06540586 0,18.0147113 C0,22.3591632 1.49648943,26.3445188 3.98853783,29.4559331 C5.68077802,25.7755481 8.75656135,22.8983096 12.5259971,21.5340251 C10.5032229,19.9753808 9.1941305,17.4912301 9.1941305,14.6928201 Z" id="iconfont-touxiang" fill="#DFE6F2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
